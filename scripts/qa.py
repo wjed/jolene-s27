@@ -8,6 +8,11 @@ sense against today, duplicates, and copy problems.
     python scripts/qa.py
 
 Exit code is the number of ERROR findings; warnings do not fail.
+
+Note for browser QA: getBoundingClientRect is unreliable for CSS-transformed
+elements in the automation pane. The mobile drawer reported left=-248 while a
+screenshot showed it open. Assert on the data-open attribute, or take a
+screenshot; do not trust the rect.
 """
 
 from __future__ import annotations

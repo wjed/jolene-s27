@@ -38,7 +38,7 @@ seriously want.
 > question it raised, how it connects to what you want to understand.]
 >
 > My background: [ONE SENTENCE, relevant coursework, lab experience, technique].
-> [IF APPLICABLE: a sentence on what you can already do that is useful, 
+> [IF APPLICABLE: a sentence on what you can already do that is useful:
 > cell culture, R or Python, data entry on a clinical study.]
 >
 > Are you taking a summer student in 2027? If the program application should name

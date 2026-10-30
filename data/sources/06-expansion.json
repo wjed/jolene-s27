@@ -482,8 +482,9 @@
       ],
       "selectivity": "moderate",
       "notes": "Same town as the Jackson Laboratory, so one Bar Harbor application trip covers both, and this one is far less contested than JAX.",
-      "url_verified": true,
-      "url_confidence": "high"
+      "url_verified": false,
+      "url_confidence": "high",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser."
     },
     {
       "id": "md-anderson-summer",

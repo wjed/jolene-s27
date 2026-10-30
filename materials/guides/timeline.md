@@ -35,7 +35,7 @@ Nothing here is program-specific. All of it gets reused twenty times.
 
 Most 2027 applications open in this window.
 
-- [ ] **NIH SIP opens ~mid-November.** Biggest single opportunity on the list. 
+- [ ] **NIH SIP opens ~mid-November.** Biggest single opportunity on the list:
       one application, hundreds of labs. Do it the week it opens.
 - [ ] **Amgen Scholars opens 1 November.** Pick 3-5 host campuses. The essays
       overlap heavily, so each extra host costs maybe 40 minutes.
@@ -76,7 +76,7 @@ Most of the list is due here, clustered hard on **1 February**.
 - [ ] **31 January: Penn State PROMISE. CONFIRMED.**
 - [ ] **1 February:** the big cluster, all **confirmed**: St. Jude POE,
       Amgen Scholars (all US hosts), Penn State SURIP, UCSF SRTP,
-      **MSK MBSP. Note the 8:00 a.m. cutoff, not end of day**, Stanford SSRP,
+      **MSK MBSP: note the 8:00 a.m. cutoff, not end of day**, Stanford SSRP,
       and most Vanderbilt tracks. Plus CHOP CRISSP, Hopkins and Penn SUIP (projected).
 - [ ] **2 February: NYU SURP, 5pm. CONFIRMED.**
 - [ ] **3 February: Leadership Alliance and Mayo SURF. CONFIRMED.** Note both

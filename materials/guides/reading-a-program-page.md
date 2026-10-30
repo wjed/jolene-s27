@@ -41,8 +41,8 @@ with a long list is one where naming a mentor matters a great deal.
 - **Travel**: Jackson Lab and several others reimburse it; most do not.
 - **Length**: nine to eleven weeks, and whether it collides with anything.
 
-The dataset already has all of this, but verify it on the page before applying, 
-the stipend figures in particular are the fields most likely to be stale.
+The dataset already has all of this, but verify it on the page before applying.
+The stipend figures in particular are the fields most likely to be stale.
 
 ## Signs the page is from a previous cycle
 

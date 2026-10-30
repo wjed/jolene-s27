@@ -14,7 +14,7 @@ Three things, in roughly 100-150 words:
 
 1. **Something only true of this program.** A named faculty member, a center, a
    specific resource, the structure of the summer.
-2. **Why that matches what you want to do.** The connection stated explicitly. 
+2. **Why that matches what you want to do.** The connection stated explicitly:
    do not make the reader infer it.
 3. **What you would bring.** One line, concrete.
 

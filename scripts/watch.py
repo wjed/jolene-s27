@@ -111,7 +111,13 @@ def fetch(program: dict) -> dict:
         result.update(status="unreachable", reason=str(exc.reason)[:200])
         return result
     except Exception as exc: # noqa: BLE001 - a watcher must never die on one bad page
-        result.update(status="error", reason=f"{type(exc).__name__}: {exc}"[:200])
+        # Some hosts refuse a non-browser client at the connection level rather
+        # than with a 403. That is a block, not a dead link, so it should not be
+        # reported as broken every week.
+        name = type(exc).__name__
+        kind = "blocked" if name in ("RemoteDisconnected", "ConnectionResetError",
+                                     "IncompleteRead", "BadStatusLine") else "error"
+        result.update(status=kind, reason=f"{name}: {exc}"[:200])
         return result
 
     raw = payload.decode(charset, errors="replace")

@@ -47,7 +47,7 @@ CLINICAL & VOLUNTEER EXPERIENCE
 
 TECHNICAL SKILLS
 
-Laboratory: [PCR, cell culture, Western blot, immunohistochemistry, microscopy, 
+Laboratory: [PCR, cell culture, Western blot, immunohistochemistry, microscopy;
              only things you could do unsupervised tomorrow]
 Data: [R, Python, SPSS, Excel, REDCap, GraphPad Prism]
 Other: [Spanish (conversational), CITI human-subjects certification,
