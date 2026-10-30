@@ -371,7 +371,7 @@
         <td class="cell-num">${p.deadline ? urgencyPill(p) : urgencyPill(p)}</td>
         <td>${statusSelect(p.id)}</td>
         <td><span class="taglist">${trackTags(p, 2)}</span></td>
-        <td class="cell-num">${fmtMoney(p.stipend_usd) || '<span style="color:var(--ink-4)">, </span>'}</td>
+        <td class="cell-num">${fmtMoney(p.stipend_usd) || '<span style="color:var(--ink-4)">not stated</span>'}</td>
         <td><span class="cell-sub trunc" title="${esc(p.city)}">${esc(p.city)}</span></td>
       </tr>`).join("");
 
@@ -690,13 +690,13 @@
         ${prop("📍", "Location", esc(p.city))}
         ${prop("🚪", "Opens", p.opens ? fmtDate(p.opens, { month: "long", day: "numeric", year: "numeric" }) : '<span class="empty">Unknown</span>')}
         ${prop("⏱️", "Runs", p.program_dates ? esc(p.program_dates) : '<span class="empty">Not posted</span>')}
-        ${prop("#", "Length", p.duration_weeks ? p.duration_weeks + " weeks" : '<span class="empty">, </span>')}
+        ${prop("#", "Length", p.duration_weeks ? p.duration_weeks + " weeks" : '<span class="empty">Not stated</span>')}
         ${prop("💵", "Stipend", p.stipend_note ? esc(p.stipend_note) : (fmtMoney(p.stipend_usd) || '<span class="empty">Not stated</span>'))}
         ${prop("🏠", "Housing", esc(HOUSING_LABELS[p.housing] || p.housing))}
         ${prop("🎲", "Odds", tag(sel[0], sel[1]))}
         ${prop("🛂", "Citizenship", esc(CITIZENSHIP_LABELS[el_.citizenship] || el_.citizenship || ", "))}
         ${prop("📈", "Min GPA", el_.min_gpa ? String(el_.min_gpa) : '<span class="empty">None stated</span>')}
-        ${prop("🎓", "Class years", (el_.class_years || []).map((y) => tag(y, "gray")).join(" ") || '<span class="empty">, </span>')}
+        ${prop("🎓", "Class years", (el_.class_years || []).map((y) => tag(y, "gray")).join(" ") || '<span class="empty">Not stated</span>')}
         ${prop("≡", "Area", (p.tracks || []).map((t) => tag(TRACKS[t] ? TRACKS[t][0] : t, TRACKS[t] ? TRACKS[t][1] : "gray")).join(" "))}
       </div>
 
