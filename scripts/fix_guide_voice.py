@@ -143,9 +143,9 @@ def main() -> int:
         rel = path.relative_to(ROOT).as_posix()
         for number, line in enumerate(text.split("\n"), 1):
             for m in LEFTOVER.finditer(line):
-                problems.append(f"{rel}:{number} leftover {m.group(0)!r} — {line.strip()[:88]}")
+                problems.append(f"{rel}:{number} leftover {m.group(0)!r}, {line.strip()[:88]}")
             for m in BROKEN.finditer(line):
-                problems.append(f"{rel}:{number} agreement {m.group(0)!r} — {line.strip()[:88]}")
+                problems.append(f"{rel}:{number} agreement {m.group(0)!r}, {line.strip()[:88]}")
 
     print(f"rewrote {rewritten} file(s)")
     if problems:

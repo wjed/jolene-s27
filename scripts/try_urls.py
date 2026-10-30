@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Test candidate URLs in bulk and report which ones actually resolve.
 
-Used while curating data/sources/*.json — feed it candidates, keep the winners.
+Used while curating data/sources/*.json, feed it candidates, keep the winners.
 
     python scripts/try_urls.py candidates.txt
     python scripts/try_urls.py - < candidates.txt
@@ -43,7 +43,7 @@ def probe(entry: tuple[str, str]) -> tuple[str, str, str, str]:
         return label, f"HTTP {exc.code}", url, ""
     except urllib.error.URLError as exc:
         return label, "UNREACHABLE", url, str(exc.reason)[:80]
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc: # noqa: BLE001
         return label, type(exc).__name__, url, str(exc)[:80]
 
 

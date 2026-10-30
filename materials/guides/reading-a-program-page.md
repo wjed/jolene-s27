@@ -5,7 +5,7 @@ starting. This is the order to look for them.
 
 ---
 
-## The five disqualifiers — check these first
+## The five disqualifiers. Check these first
 
 Before reading a single word about the research, find:
 
@@ -21,7 +21,7 @@ Before reading a single word about the research, find:
    date, or later? St. Jude's deadline includes credentials. The Broad gave
    letters two extra days.
 
-If any of these rule you out, stop. That is a win — four hours saved.
+If any of these rule you out, stop. That is a win, four hours saved.
 
 ## Then find the mentor list
 
@@ -30,18 +30,18 @@ The most valuable page on any program site, and often two clicks deep:
 
 This is where the [why-this-program paragraph](../templates/why-this-program.md)
 and the [cold emails](../templates/cold-email-pi.md) come from. A program with no
-published mentor list is one where naming a mentor matters less — and a program
+published mentor list is one where naming a mentor matters less, and a program
 with a long list is one where naming a mentor matters a great deal.
 
 ## Then the practicalities
 
-- **Stipend** — and whether housing is separate. A $7,500 stipend with housing
+- **Stipend**, and whether housing is separate. A $7,500 stipend with housing
   included (Jackson Lab) is worth far more than $5,000 with no housing in Boston.
-- **Housing** — provided, subsidised, or your problem.
-- **Travel** — Jackson Lab and several others reimburse it; most do not.
-- **Length** — nine to eleven weeks, and whether it collides with anything.
+- **Housing**: provided, subsidised, or your problem.
+- **Travel**: Jackson Lab and several others reimburse it; most do not.
+- **Length**: nine to eleven weeks, and whether it collides with anything.
 
-The dataset already has all of this, but verify it on the page before applying —
+The dataset already has all of this, but verify it on the page before applying, 
 the stipend figures in particular are the fields most likely to be stale.
 
 ## Signs the page is from a previous cycle
@@ -60,12 +60,12 @@ python scripts/watch.py
 ```
 
 It flags any page that changes, and specifically any page that *starts*
-mentioning 2027 — which is almost always the week the new cycle goes live.
+mentioning 2027, which is almost always the week the new cycle goes live.
 
 ## When the page says almost nothing
 
 Some real programs have one thin paragraph and an email address. That is not a
-bad sign — it often means placements are arranged directly rather than through a
+bad sign, it often means placements are arranged directly rather than through a
 portal, which is good news for anyone willing to write an email.
 
 In that case skip the application entirely and go straight to a

@@ -51,7 +51,7 @@
         "developmental",
         "autism"
       ],
-      "focus": "Neurodevelopmental disorders research — autism, fragile X, ADHD.",
+      "focus": "Neurodevelopmental disorders research: autism, fragile X, ADHD.",
       "duration_weeks": 10,
       "stipend_usd": null,
       "housing": "not-provided",
@@ -111,7 +111,7 @@
         "personal-statement"
       ],
       "selectivity": "very-high",
-      "notes": "Excellent pay. Leans computational — a good fit if you have any coding or data analysis background. Pairs with Seattle Children's for one city.",
+      "notes": "Excellent pay. Leans computational: a good fit if you have any coding or data analysis background. Pairs with Seattle Children's for one city.",
       "url_confidence": "medium"
     },
     {
@@ -192,7 +192,7 @@
     },
     {
       "id": "nia-adrc-directory",
-      "name": "NIA Alzheimer's Disease Research Centers — directory",
+      "name": "NIA Alzheimer's Disease Research Centers: directory",
       "org": "National Institute on Aging",
       "city": "30+ centers nationally",
       "url": "https://www.nia.nih.gov/research/nia-funded-alzheimers-disease-research-centers",
@@ -224,7 +224,7 @@
         "cv"
       ],
       "selectivity": "moderate",
-      "notes": "Not a program — a hunting ground. Pick the three centers nearest you and email the education coordinator at each. Most do not advertise undergraduate slots but will take a strong student who asks. The single highest-leverage move for an Alzheimer's interest.",
+      "notes": "Not a program: a hunting ground. Pick the three centers nearest you and email the education coordinator at each. Most do not advertise undergraduate slots but will take a strong student who asks. The single highest-leverage move for an Alzheimer's interest.",
       "priority_hint": "portal",
       "url_confidence": "high",
       "url_verified": true
@@ -262,10 +262,10 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "The Penn State AHA-USF on your list is one instance of this. Other institutions host their own AHA-funded versions — worth finding the one nearest you.",
+      "notes": "The Penn State AHA-USF on your list is one instance of this. Other institutions host their own AHA-funded versions, worth finding the one nearest you.",
       "priority_hint": "portal",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false
     },
     {
@@ -302,7 +302,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Pairs with Boston Children's, which is adjacent — one Boston trip, several applications.",
+      "notes": "Pairs with Boston Children's, which is adjacent, one Boston trip, several applications.",
       "url_confidence": "low",
       "url_verified": true
     },
@@ -341,7 +341,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Requires prior lab experience — check you meet that bar before spending an application on it.",
+      "notes": "Requires prior lab experience. Check you meet that bar before spending an application on it.",
       "url_confidence": "medium"
     },
     {
@@ -379,7 +379,7 @@
       "selectivity": "very-high",
       "notes": "Columbia is also an Amgen Scholars host.",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false
     },
     {
@@ -453,7 +453,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Underrated — strong funding, full package, and a much smaller applicant pool than the coastal institutes.",
+      "notes": "Underrated: strong funding, full package, and a much smaller applicant pool than the coastal institutes.",
       "url_confidence": "medium",
       "url_verified": true
     },

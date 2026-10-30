@@ -1,4 +1,4 @@
-/* Research Finder — Summer 2027
+/* Research Finder: Summer 2027
  *
  * Styled after the Notion workspace UI. The tokens below were read off
  * Notion's own stylesheets rather than eyeballed: the ink rgb(55,53,47),
@@ -771,3 +771,34 @@ tr:hover .openbtn,
   .doc { font-size: 15px; }
   .doc pre { font-size: 12px; padding: 14px 12px; }
 }
+
+/* ------------------------------------------------- eligibility + profile */
+
+/* Marks a row that conflicts with the saved profile. Deliberately quiet: it is
+   a prompt to read the page, not a verdict. */
+.flag {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  background: var(--t-red-bg);
+  color: var(--t-red-fg);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: help;
+}
+
+select.sel--boxed,
+input.sel--boxed {
+  background: var(--page);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  padding: 0 8px;
+  height: 30px;
+  font-size: 14px;
+  color: var(--ink);
+}
+select.sel--boxed:hover,
+input.sel--boxed:hover { background: var(--hover-soft); }
+input.sel--boxed::placeholder { color: var(--ink-4); }

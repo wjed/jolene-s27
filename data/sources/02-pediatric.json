@@ -152,7 +152,7 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Hub page lists several distinct tracks. A third-party guide put the cardiovascular portal at mid-October 2026 to Feb 7, 2027 — verify on the official page.",
+      "notes": "Hub page lists several distinct tracks. A third-party guide put the cardiovascular portal at mid-October 2026 to Feb 7, 2027. Verify on the official page.",
       "url_confidence": "medium",
       "url_verified": true
     },
@@ -193,7 +193,7 @@
       "selectivity": "high",
       "notes": "",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false
     },
     {
@@ -269,10 +269,10 @@
       ],
       "selectivity": "very-high",
       "contact": "smart-program@bcm.edu",
-      "notes": "Official name is Summer Undergraduate Research Training, not \"Summer Medical and Research Training.\" 2027 application was slated to open in October 2026 — check now. Faculty mentor forms are due Jan 15, 2027, which hints the student deadline sits near it.",
+      "notes": "Official name is Summer Undergraduate Research Training, not \"Summer Medical and Research Training.\" 2027 application was slated to open in October 2026. Check now. Faculty mentor forms are due Jan 15, 2027, which hints the student deadline sits near it.",
       "url_confidence": "high",
       "url_verified": true,
-      "program_dates": "Jun 7 – Aug 6, 2027"
+      "program_dates": "Jun 7 - Aug 6, 2027"
     },
     {
       "id": "kennedy-krieger",
@@ -308,7 +308,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Excellent fit for developmental/behavioral pediatrics. Adjacent to Johns Hopkins — a Baltimore trip could cover both.",
+      "notes": "Excellent fit for developmental/behavioral pediatrics. Adjacent to Johns Hopkins, a Baltimore trip could cover both.",
       "url_confidence": "low",
       "url_verified": true
     },
@@ -345,7 +345,7 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Less saturated than CHOP but in the same region — a sensible safety in the Philadelphia corridor.",
+      "notes": "Less saturated than CHOP but in the same region, a sensible safety in the Philadelphia corridor.",
       "url_confidence": "low",
       "url_verified": true
     },
@@ -420,7 +420,7 @@
       "selectivity": "moderate",
       "notes": "Genuine safety school with real pediatric research. Applicant pools here are far smaller than at CHOP or St. Jude.",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false
     },
     {
@@ -507,7 +507,7 @@
         "clinical",
         "emergency-medicine"
       ],
-      "focus": "Hands-on pediatric emergency medicine clinical research — patient enrollment and data collection in the ED.",
+      "focus": "Hands-on pediatric emergency medicine clinical research, patient enrollment and data collection in the ED.",
       "stipend_usd": null,
       "housing": "not-provided",
       "deadline_status": "unknown",
@@ -526,14 +526,14 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "CORRECTION: the posted cycle is a FALL-SPRING internship (Sept 13, 2026 – May 15, 2027) whose deadline was Aug 10, 2026 and has passed — not a summer program. 15 hours/week onsite, ten interns taken. Real pediatric emergency-medicine patient contact, which is rare and valuable, so it is worth emailing to ask whether a summer 2027 session runs and when it opens. Do not plan the summer around this one.",
+      "notes": "CORRECTION: the posted cycle is a FALL-SPRING internship (Sept 13, 2026 - May 15, 2027) whose deadline was Aug 10, 2026 and has passed, not a summer program. 15 hours/week onsite, ten interns taken. Real pediatric emergency-medicine patient contact, which is rare and valuable, so it is worth emailing to ask whether a summer 2027 session runs and when it opens. Do not plan the summer around this one.",
       "url_confidence": "medium",
       "url_verified": true
     },
     {
       "id": "childrens-national-trainees",
       "name": "Research Trainees Summer Program",
-      "org": "Children's National Hospital — Center for Precision Medicine & Genomics",
+      "org": "Children's National Hospital: Center for Precision Medicine & Genomics",
       "city": "Washington, DC",
       "url": "https://research.childrensnational.org/",
       "tracks": [
@@ -562,7 +562,7 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "The 2026 cycle has closed and the 2027 posting was not up as of late October 2026 — this is one for the change-watcher to catch.",
+      "notes": "The 2026 cycle has closed and the 2027 posting was not up as of late October 2026. This is one for the change-watcher to catch.",
       "url_confidence": "low",
       "url_verified": true
     },
@@ -597,7 +597,7 @@
         "cv"
       ],
       "selectivity": "moderate",
-      "notes": "Their pediatric neurosciences/epilepsy work overlaps with the Boston Children's epilepsy interest — a good direct-email target.",
+      "notes": "Their pediatric neurosciences/epilepsy work overlaps with the Boston Children's epilepsy interest, a good direct-email target.",
       "url_confidence": "low",
       "url_verified": true
     },
@@ -633,7 +633,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Often filled by direct faculty contact rather than a central application — see the cold-email template in materials/.",
+      "notes": "Often filled by direct faculty contact rather than a central application, see the cold-email template in materials/.",
       "url_confidence": "low",
       "url_verified": true
     }

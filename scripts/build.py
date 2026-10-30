@@ -7,7 +7,7 @@ Outputs:
     data/programs.csv       flat export for Notion / Sheets / Excel
     data/deadlines.ics      calendar feed of deadlines and open dates
 
-Run:  python scripts/build.py
+Run: python scripts/build.py
 """
 
 from __future__ import annotations
@@ -112,7 +112,7 @@ def load_sources():
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError as exc:
-            errors.append(f"{path.name}: invalid JSON — {exc}")
+            errors.append(f"{path.name}: invalid JSON, {exc}")
             continue
 
         category = payload.get("category", path.stem)
@@ -224,7 +224,7 @@ def fold_ics(line):
     """Fold a content line to 75 octets, per RFC 5545 section 3.1.
 
     Continuation lines begin with a single space. Folding happens on octet
-    boundaries, so a split must not land inside a multi-byte UTF-8 sequence —
+    boundaries, so a split must not land inside a multi-byte UTF-8 sequence, 
     several program names carry em dashes and curly apostrophes.
     """
     data = line.encode("utf-8")
@@ -264,7 +264,7 @@ def write_ics(programs):
         "PRODID:-//jolene-s27//research-finder//EN",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
-        f"X-WR-CALNAME:{ics_escape('Research Apps — ' + CYCLE)}",
+        f"X-WR-CALNAME:{ics_escape('Research Apps, ' + CYCLE)}",
     ]
 
     def event(program, when, kind, summary, alarms):
@@ -280,7 +280,7 @@ def write_ics(programs):
             f"DTSTART;VALUE=DATE:{start}",
             f"DTEND;VALUE=DATE:{end}",
             f"SUMMARY:{ics_escape(summary)}",
-            f"DESCRIPTION:{ics_escape(program['org'] + ' — ' + program['city'] + '. Date status: ' + status_note + '. ' + program['url'])}",
+            f"DESCRIPTION:{ics_escape(program['org'] + ', ' + program['city'] + '. Date status: ' + status_note + '. ' + program['url'])}",
             f"URL:{ics_escape(program['url'])}",
             f"CATEGORIES:{ics_escape(kind)}",
         ]
@@ -306,7 +306,7 @@ def write_ics(programs):
                 program,
                 deadline,
                 "deadline",
-                f"DUE{marker}: {program['name']} — {program['org']}",
+                f"DUE{marker}: {program['name']}, {program['org']}",
                 [(14, "Two weeks out"), (3, "Three days out")],
             )
             count += 1
@@ -316,7 +316,7 @@ def write_ics(programs):
                 program,
                 opens,
                 "opens",
-                f"Opens: {program['name']} — {program['org']}",
+                f"Opens: {program['name']}, {program['org']}",
                 [(1, "Opens tomorrow")],
             )
             count += 1

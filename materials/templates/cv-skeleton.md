@@ -1,4 +1,4 @@
-# Research CV — skeleton
+# Research CV: skeleton
 
 One page. Two only if there is genuinely a second page of content, which at this
 stage there usually is not.
@@ -18,17 +18,17 @@ EDUCATION
 [University]                                                  [City, State]
 B.S. in [Major], expected [Month Year]                        GPA: [X.XX / 4.00]
   Minor in [X]
-  Relevant coursework: [4–6 courses that matter — biochem, neuroscience,
+  Relevant coursework: [4-6 courses that matter, biochem, neuroscience,
   statistics, organic chemistry, research methods. Not intro bio.]
   [Honors, dean's list, scholarships]
 
 
 RESEARCH EXPERIENCE
 
-[Lab or Project Name], [Institution]                          [Month Year–present]
+[Lab or Project Name], [Institution]                          [Month Year-present]
 Supervisor: [Dr. Name]
   · [What the lab studies, in one line of plain English.]
-  · [What YOU did — the technique, the assay, the dataset, the protocol.
+  · [What YOU did, the technique, the assay, the dataset, the protocol.
      Start with a verb. "Performed," "Analyzed," "Maintained," "Coded."]
   · [A result, output or responsibility: a poster, a presentation, a dataset
      you owned, a protocol you ran unsupervised.]
@@ -40,17 +40,17 @@ was and what you did.]
 
 CLINICAL & VOLUNTEER EXPERIENCE
 
-[Role], [Organization]                                        [Month Year–Month Year]
+[Role], [Organization]                                        [Month Year-Month Year]
   · [What you did and roughly how many hours.]
   · [Anything involving responsibility, patients, or data.]
 
 
 TECHNICAL SKILLS
 
-Laboratory: [PCR, cell culture, Western blot, immunohistochemistry, microscopy —
+Laboratory: [PCR, cell culture, Western blot, immunohistochemistry, microscopy, 
              only things you could do unsupervised tomorrow]
-Data:       [R, Python, SPSS, Excel, REDCap, GraphPad Prism]
-Other:      [Spanish (conversational), CITI human-subjects certification,
+Data: [R, Python, SPSS, Excel, REDCap, GraphPad Prism]
+Other: [Spanish (conversational), CITI human-subjects certification,
              IRB protocol experience]
 
 
@@ -77,13 +77,13 @@ AWARDS & HONORS
   nothing. "Mouse colony management, genotyping by PCR" says a lot.
 - **Quantify where it is honest.** "Enrolled 40 patients," "analysed 12 months of
   registry data."
-- **One page, 10–11pt, generous margins.** A cramped two-pager reads worse than a
+- **One page, 10-11pt, generous margins.** A cramped two-pager reads worse than a
   clean one-pager.
 - **Export to PDF**, named `Lastname-Firstname-CV.pdf`. Never send a .docx.
 
 ## If the research section is thin
 
-Normal for a rising junior, and not disqualifying — Seattle Children's explicitly
+Normal for a rising junior, and not disqualifying, Seattle Children's explicitly
 prioritises first-time research interns, and plenty of others take students with
 no bench experience at all.
 

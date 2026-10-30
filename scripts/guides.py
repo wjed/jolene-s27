@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Render materials/*.md into site/data/guides.json so the site can show them.
 
-The markdown files stay the source of truth — they are pleasant to edit and they
-version well — but nobody should have to read raw markdown on GitHub to use this.
+The markdown files stay the source of truth. They are pleasant to edit and they
+version well, but nobody should have to read raw markdown on GitHub to use this.
 This renders them to HTML that the site displays as ordinary pages.
 
 Deliberately a small, specific renderer rather than a dependency: it handles the
@@ -23,15 +23,15 @@ MATERIALS = ROOT / "materials"
 
 # Order and presentation of the guides in the sidebar.
 GUIDES = [
-    ("timeline",               "guides/timeline.md",                 "📌", "What to do when"),
-    ("how-to-get-picked",      "guides/how-to-get-picked.md",        "🎯", "How to get picked"),
-    ("reading-a-program-page", "guides/reading-a-program-page.md",   "🔍", "Reading a program page"),
-    ("personal-statement",     "templates/personal-statement.md",    "✍️", "Personal statement"),
-    ("cv-skeleton",            "templates/cv-skeleton.md",           "📄", "CV skeleton"),
+    ("timeline", "guides/timeline.md", "📌", "What to do when"),
+    ("how-to-get-picked", "guides/how-to-get-picked.md", "🎯", "How to get picked"),
+    ("reading-a-program-page", "guides/reading-a-program-page.md", "🔍", "Reading a program page"),
+    ("personal-statement", "templates/personal-statement.md", "✍️", "Personal statement"),
+    ("cv-skeleton", "templates/cv-skeleton.md", "📄", "CV skeleton"),
     ("recommendation-request", "templates/recommendation-request.md", "💌", "Asking for letters"),
-    ("cold-email-pi",          "templates/cold-email-pi.md",         "📧", "Emailing a lab"),
-    ("why-this-program",       "templates/why-this-program.md",      "🏫", "Why this program"),
-    ("overview",               "README.md",                          "🗂️", "How to use all this"),
+    ("cold-email-pi", "templates/cold-email-pi.md", "📧", "Emailing a lab"),
+    ("why-this-program", "templates/why-this-program.md", "🏫", "Why this program"),
+    ("overview", "README.md", "🗂️", "How to use all this"),
 ]
 
 # Relative markdown links between the files become in-app page links.
@@ -118,7 +118,7 @@ def render(md: str) -> str:
         line = lines[i]
         stripped = line.strip()
 
-        # fenced code block — must come first, since its contents are literal
+        # fenced code block, must come first, since its contents are literal
         # (the CV skeleton is one big pre-formatted block and its column
         # alignment is the whole point)
         if stripped.startswith("```"):

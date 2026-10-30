@@ -25,7 +25,7 @@ SOURCES = ROOT / "data" / "sources"
 
 PSU_PROMISE = {
     "id": "psu-promise",
-    "name": "PROMISE — Research Training in Oncology and Medicine to Inspire Student Engagement",
+    "name": "PROMISE, Research Training in Oncology and Medicine to Inspire Student Engagement",
     "org": "Penn State College of Medicine / Penn State Cancer Institute",
     "city": "Hershey, PA",
     "url": "https://med.psu.edu/education/certificate-and-undergraduate/promise",
@@ -41,11 +41,11 @@ PSU_PROMISE = {
         "class_years": ["sophomore", "junior", "senior"],
         "citizenship": "unspecified",
         "min_gpa": None,
-        "notes": "STEM majors who have completed at least two years of college — rising juniors and seniors. Engineering, computer science, statistics and biological sciences all count. Students underrepresented in the biomedical workforce are encouraged to apply.",
+        "notes": "STEM majors who have completed at least two years of college, rising juniors and seniors. Engineering, computer science, statistics and biological sciences all count. Students underrepresented in the biomedical workforce are encouraged to apply.",
     },
     "requires": ["cv", "personal-statement"],
     "selectivity": "high",
-    "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on the original list — it is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
+    "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on the original list. It is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
     "url_verified": True,
     "url_confidence": "high",
 }
@@ -53,7 +53,7 @@ PSU_PROMISE = {
 ECU_SBRP = {
     "id": "ecu-sbrp",
     "name": "Summer Biomedical Research Program (SBRP)",
-    "org": "East Carolina University — Brody School of Medicine",
+    "org": "East Carolina University, Brody School of Medicine",
     "city": "Greenville, NC",
     "url": "https://medicine.ecu.edu/sbrp/",
     "tracks": ["basic-science", "translational"],
@@ -68,7 +68,7 @@ ECU_SBRP = {
         "class_years": ["sophomore", "junior"],
         "citizenship": "unspecified",
         "min_gpa": None,
-        "notes": "Undergraduates. An older ECU document describes the program as targeting students from underrepresented, low-socioeconomic or rural backgrounds — confirm current rules on the page.",
+        "notes": "Undergraduates. An older ECU document describes the program as targeting students from underrepresented, low-socioeconomic or rural backgrounds. Confirm current rules on the page.",
     },
     "requires": ["transcript", "cv", "personal-statement"],
     "selectivity": "moderate",

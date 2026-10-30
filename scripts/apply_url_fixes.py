@@ -3,7 +3,7 @@
 
 Every replacement below was confirmed with scripts/try_urls.py. Domains listed
 in BLOCKS_BOTS refuse automated requests outright (403 even with a browser
-user-agent), so their URLs cannot be machine-verified — they get a flag instead
+user-agent), so their URLs cannot be machine-verified, they get a flag instead
 of a guess, and the watcher reports them separately rather than as broken.
 
 Safe to re-run: it only writes when something actually changes.
@@ -88,7 +88,7 @@ BLOCKS_BOTS = {
 }
 
 BLOCK_NOTE = (
-    "This site blocks automated link checks, so the watcher cannot verify it — "
+    "This site blocks automated link checks, so the watcher cannot verify it, "
     "open it in a browser."
 )
 

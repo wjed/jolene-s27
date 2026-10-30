@@ -1,6 +1,6 @@
 {
   "cycle": "Summer 2027",
-  "generated": "2026-10-30T11:04:07+00:00",
+  "generated": "2026-10-30T12:05:36+00:00",
   "count": 104,
   "tracks": [
     "aging",
@@ -101,7 +101,7 @@
         ],
         "citizenship": "us-or-pr",
         "min_gpa": null,
-        "notes": "RISING SENIORS ONLY — you must be entering the summer before your final year of undergrad. That is exactly this year."
+        "notes": "RISING SENIORS ONLY: you must be entering the summer before your final year of undergrad. That is exactly this year."
       },
       "requires": [
         "transcript",
@@ -111,7 +111,7 @@
       ],
       "selectivity": "very-high",
       "contact": "surp@fredhutch.org",
-      "notes": "PERFECT TIMING FIT: restricted to rising seniors, which is precisely your junior summer. The 2026 deadline was Jan 9. Fred Hutch said 2027 info posts in November. Early deadline — do it in the December block.",
+      "notes": "PERFECT TIMING FIT: restricted to rising seniors, which is precisely your junior summer. The 2026 deadline was Jan 9. Fred Hutch said 2027 info posts in November. Early deadline. Do it in the December block.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "url_verified": true,
@@ -145,7 +145,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Must be available for the entire nine weeks. The Broad said 2027 eligibility criteria would be updated in October 2026 — check now."
+        "notes": "Must be available for the entire nine weeks. The Broad said 2027 eligibility criteria would be updated in October 2026. Check now."
       },
       "requires": [
         "transcript",
@@ -155,7 +155,7 @@
       ],
       "selectivity": "very-high",
       "contact": "bsrp@broadinstitute.org",
-      "notes": "2026 cycle closed Jan 11 with letters due Jan 13. A third-party listing shows an anticipated 1/11/27. Early deadline — do not let this one slip behind the February cluster.",
+      "notes": "2026 cycle closed Jan 11 with letters due Jan 13. A third-party listing shows an anticipated 1/11/27. Early deadline. Do not let this one slip behind the February cluster.",
       "url_confidence": "high",
       "category": "National & flagship programs",
       "source_file": "03-national-flagship.json"
@@ -194,10 +194,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "CONFIRMED on the page: applications open 16 Nov 2026 and close 13 Jan 2027, programme runs 7 Jun – 13 Aug 2027. An informational webinar runs 19 Nov. Several tracks sit behind this one page — read it properly and pick the right one. Houston also has Baylor SMART and Texas Children's, so one city covers three applications.",
+      "notes": "CONFIRMED on the page: applications open 16 Nov 2026 and close 13 Jan 2027, programme runs 7 Jun - 13 Aug 2027. An informational webinar runs 19 Nov. Several tracks sit behind this one page. Read it properly and pick the right one. Houston also has Baylor SMART and Texas Children's, so one city covers three applications.",
       "url_verified": true,
       "url_confidence": "high",
-      "program_dates": "Jun 7 – Aug 13, 2027",
+      "program_dates": "Jun 7 - Aug 13, 2027",
       "category": "Second-pass additions",
       "source_file": "06-expansion.json"
     },
@@ -236,14 +236,14 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 1. Strong fit for developmental/behavioral work. CONFIRMED on the page: opens Dec 1, 2026, closes Jan 14, 2027 at 5pm ET. That is far earlier than the February cluster — it is one of the first deadlines in the whole cycle.",
+      "notes": "Flagged on your list: opens Dec 1. Strong fit for developmental/behavioral work. CONFIRMED on the page: opens Dec 1, 2026, closes Jan 14, 2027 at 5pm ET. That is far earlier than the February cluster. It is one of the first deadlines in the whole cycle.",
       "url_confidence": "high",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
     {
       "id": "iu-inspire",
-      "name": "INSPIRE — Investigating Neurosciences Summer Program",
+      "name": "INSPIRE: Investigating Neurosciences Summer Program",
       "org": "Indiana University School of Medicine (Stark Neurosciences)",
       "city": "Indianapolis, IN",
       "url": "https://medicine.iu.edu/research-centers/neurosciences/education/INSPIRE",
@@ -278,7 +278,7 @@
       ],
       "selectivity": "high",
       "contact": "mneuro@iu.edu",
-      "notes": "2027 applications were slated to open in October 2026 — worth checking right now.",
+      "notes": "2027 applications were slated to open in October 2026, worth checking right now.",
       "url_confidence": "high",
       "category": "On the original list",
       "source_file": "01-her-list.json"
@@ -320,7 +320,7 @@
       "selectivity": "very-high",
       "notes": "",
       "url_confidence": "medium",
-      "program_dates": "Jun 7 – Aug 7, 2027",
+      "program_dates": "Jun 7 - Aug 7, 2027",
       "category": "National & flagship programs",
       "source_file": "03-national-flagship.json"
     },
@@ -358,7 +358,7 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Same institution as INSPIRE on your list — you may be able to be considered for several IU tracks at once. Worth asking the program coordinator.",
+      "notes": "Same institution as INSPIRE on your list: you may be able to be considered for several IU tracks at once. Worth asking the program coordinator.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "Academic medical centers & med school SURPs",
@@ -458,7 +458,7 @@
         "genomics",
         "oncology"
       ],
-      "focus": "Ten weeks of genetics and genomics research with an independent project and a written report — unusually strong mentorship structure.",
+      "focus": "Ten weeks of genetics and genomics research with an independent project and a written report, unusually strong mentorship structure.",
       "duration_weeks": 10,
       "stipend_usd": 7500,
       "stipend_note": "$7,500 plus room, board AND travel",
@@ -484,7 +484,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "CONFIRMED DATE: Jan 25, 2027 at 5pm ET. Best total compensation package on this whole list — stipend plus room, board and travel. Applications open November 2026.",
+      "notes": "CONFIRMED DATE: Jan 25, 2027 at 5pm ET. Best total compensation package on this whole list, stipend plus room, board and travel. Applications open November 2026.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "category": "National & flagship programs",
@@ -492,7 +492,7 @@
     },
     {
       "id": "psu-promise",
-      "name": "PROMISE — Research Training in Oncology and Medicine to Inspire Student Engagement",
+      "name": "PROMISE: Research Training in Oncology and Medicine to Inspire Student Engagement",
       "org": "Penn State College of Medicine / Penn State Cancer Institute",
       "city": "Hershey, PA",
       "url": "https://med.psu.edu/education/certificate-and-undergraduate/promise",
@@ -516,17 +516,17 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "STEM majors who have completed at least two years of college — rising juniors and seniors. Engineering, computer science, statistics and biological sciences all count. Students underrepresented in the biomedical workforce are encouraged to apply."
+        "notes": "STEM majors who have completed at least two years of college, rising juniors and seniors. Engineering, computer science, statistics and biological sciences all count. Students underrepresented in the biomedical workforce are encouraged to apply."
       },
       "requires": [
         "cv",
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on your list — it is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
+      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on your list. It is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
       "url_verified": true,
       "url_confidence": "high",
-      "program_dates": "May 24 – Jul 31, 2027",
+      "program_dates": "May 24 - Jul 31, 2027",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -564,7 +564,7 @@
         "personal-statement"
       ],
       "selectivity": "very-high",
-      "notes": "Excellent pay. Leans computational — a good fit if you have any coding or data analysis background. Pairs with Seattle Children's for one city.",
+      "notes": "Excellent pay. Leans computational: a good fit if you have any coding or data analysis background. Pairs with Seattle Children's for one city.",
       "url_confidence": "medium",
       "category": "Neuroscience, Alzheimer's & specialty focus",
       "source_file": "05-neuro-and-specialty.json"
@@ -608,13 +608,13 @@
       "notes": "BEST VALUE PER UNIT OF EFFORT. You can apply to as many US hosts as you like, and much of the essay content is reusable across them. Applications open Nov 1, 2026. CONFIRMED on the page: Feb 1, 2027 for all US hosts.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
-      "program_dates": "Varies by host, roughly May 17 – Aug 27, 2027",
+      "program_dates": "Varies by host, roughly May 17 - Aug 27, 2027",
       "category": "National & flagship programs",
       "source_file": "03-national-flagship.json"
     },
     {
       "id": "washu-biomedrap",
-      "name": "BioMedRAP — Biomedical Research Apprenticeship Program",
+      "name": "BioMedRAP: Biomedical Research Apprenticeship Program",
       "org": "Washington University in St. Louis",
       "city": "St. Louis, MO",
       "url": "https://dbbs.wustl.edu/programs/",
@@ -766,7 +766,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Pairs with Boston Children's, which is adjacent — one Boston trip, several applications.",
+      "notes": "Pairs with Boston Children's, which is adjacent, one Boston trip, several applications.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "Neuroscience, Alzheimer's & specialty focus",
@@ -964,7 +964,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Same institution as CanSUR — check whether one application covers both.",
+      "notes": "Same institution as CanSUR. Check whether one application covers both.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "On the original list",
@@ -1084,7 +1084,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Excellent fit for developmental/behavioral pediatrics. Adjacent to Johns Hopkins — a Baltimore trip could cover both.",
+      "notes": "Excellent fit for developmental/behavioral pediatrics. Adjacent to Johns Hopkins, a Baltimore trip could cover both.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "Pediatric & children's hospital research",
@@ -1114,7 +1114,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Undergraduate program — distinct from MSK's HOPP Summer Student Program, which is high-school only."
+        "notes": "Undergraduate program: distinct from MSK's HOPP Summer Student Program, which is high-school only."
       },
       "requires": [
         "transcript",
@@ -1123,10 +1123,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one — your list had the right one. CONFIRMED on the page: portal opens Nov 2, 2026 and closes Feb 1, 2027 at 8:00 a.m. — a morning cutoff, not end of day.",
+      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one, so your list had the right one. CONFIRMED on the page: portal opens Nov 2, 2026 and closes Feb 1, 2027 at 8:00 a.m., a morning cutoff, not end of day.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "Jun 1 – Aug 6, 2027",
+      "program_dates": "Jun 1 - Aug 6, 2027",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -1142,7 +1142,7 @@
         "clinical",
         "basic-science"
       ],
-      "focus": "Pediatric cancer and catastrophic disease — basic, translational, or clinical placements.",
+      "focus": "Pediatric cancer and catastrophic disease: basic, translational, or clinical placements.",
       "duration_weeks": 11,
       "stipend_usd": 6600,
       "stipend_note": "$600/week",
@@ -1158,7 +1158,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": 3.4,
-        "notes": "Minimum 3.40 GPA overall and in math/science. Prior research experience expected. Must be able to start May 10, May 17, May 24, or Jun 1, 2027 — otherwise ineligible."
+        "notes": "Minimum 3.40 GPA overall and in math/science. Prior research experience expected. Must be able to start May 10, May 17, May 24, or Jun 1, 2027, otherwise ineligible."
       },
       "requires": [
         "transcript",
@@ -1167,7 +1167,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Flagship pediatric program. Submit the application without waiting on letters — St. Jude wants credentials in by mid-to-late December, and the Feb 1 deadline covers the application AND all credentials.",
+      "notes": "Flagship pediatric program. Submit the application without waiting on letters, St. Jude wants credentials in by mid-to-late December, and the Feb 1 deadline covers the application AND all credentials.",
       "url_confidence": "high",
       "category": "On the original list",
       "source_file": "01-her-list.json"
@@ -1213,7 +1213,7 @@
     {
       "id": "childrens-national-trainees",
       "name": "Research Trainees Summer Program",
-      "org": "Children's National Hospital — Center for Precision Medicine & Genomics",
+      "org": "Children's National Hospital: Center for Precision Medicine & Genomics",
       "city": "Washington, DC",
       "url": "https://research.childrensnational.org/",
       "tracks": [
@@ -1242,7 +1242,7 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "The 2026 cycle has closed and the 2027 posting was not up as of late October 2026 — this is one for the change-watcher to catch.",
+      "notes": "The 2026 cycle has closed and the 2027 posting was not up as of late October 2026. This is one for the change-watcher to catch.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "Pediatric & children's hospital research",
@@ -1250,8 +1250,8 @@
     },
     {
       "id": "stanford-ssrp",
-      "name": "SSRP–Amgen Scholars Program",
-      "org": "Stanford University — Biosciences",
+      "name": "SSRP-Amgen Scholars Program",
+      "org": "Stanford University: Biosciences",
       "city": "Stanford, CA",
       "url": "https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/",
       "tracks": [
@@ -1283,7 +1283,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "This is the UNDERGRADUATE Stanford program. Not to be confused with SIMR, which is widely recommended online but is for high school students — worth knowing before wasting an application. CONFIRMED on the page: opens 1 Nov 2026, closes 1 Feb 2027, matching the Amgen Scholars date across all US hosts. Note the page labels the cycle \"2026 SSRP\" even though it is the summer 2027 intake.",
+      "notes": "This is the UNDERGRADUATE Stanford program. Not to be confused with SIMR, which is widely recommended online but is for high school students, worth knowing before wasting an application. CONFIRMED on the page: opens 1 Nov 2026, closes 1 Feb 2027, matching the Amgen Scholars date across all US hosts. Note the page labels the cycle \"2026 SSRP\" even though it is the summer 2027 intake.",
       "url_verified": true,
       "url_confidence": "high",
       "program_dates": "Through Aug 14, 2027",
@@ -1301,7 +1301,7 @@
         "public-health",
         "pre-health"
       ],
-      "focus": "Free summer enrichment at academic health centers — clinical exposure, MCAT and admissions prep rather than bench research.",
+      "focus": "Free summer enrichment at academic health centers, clinical exposure, MCAT and admissions prep rather than bench research.",
       "duration_weeks": 6,
       "stipend_usd": 600,
       "stipend_note": "Stipend plus housing and meals, no cost to attend",
@@ -1316,7 +1316,7 @@
         ],
         "citizenship": "us-or-pr",
         "min_gpa": 2.5,
-        "notes": "Primarily freshmen and sophomores — likely TOO EARLY for a rising senior, listed for completeness."
+        "notes": "Primarily freshmen and sophomores: likely TOO EARLY for a rising senior, listed for completeness."
       },
       "requires": [
         "transcript",
@@ -1324,7 +1324,7 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Aimed at freshmen and sophomores, so almost certainly too early for a rising senior — listed so the set is honest about what exists. Skip it unless you want clinical exposure rather than research.",
+      "notes": "Aimed at freshmen and sophomores, so almost certainly too early for a rising senior. Listed so the set is honest about what exists. Skip it unless you want clinical exposure rather than research.",
       "url_confidence": "high",
       "category": "National & flagship programs",
       "source_file": "03-national-flagship.json"
@@ -1364,7 +1364,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Requires prior lab experience — check you meet that bar before spending an application on it.",
+      "notes": "Requires prior lab experience. Check you meet that bar before spending an application on it.",
       "url_confidence": "medium",
       "category": "Neuroscience, Alzheimer's & specialty focus",
       "source_file": "05-neuro-and-specialty.json"
@@ -1481,7 +1481,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Pairs with UPMC Children's Hospital of Pittsburgh, also on your list — same city, two applications.",
+      "notes": "Pairs with UPMC Children's Hospital of Pittsburgh, also on your list, same city, two applications.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "Academic medical centers & med school SURPs",
@@ -1521,7 +1521,7 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Wake Forest runs a major Alzheimer's Disease Research Center — relevant given the INSPIRE interest.",
+      "notes": "Wake Forest runs a major Alzheimer's Disease Research Center, relevant given the INSPIRE interest.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "Academic medical centers & med school SURPs",
@@ -1565,7 +1565,7 @@
       "selectivity": "high",
       "notes": "",
       "url_confidence": "medium",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false,
       "category": "Academic medical centers & med school SURPs",
       "source_file": "04-academic-medical-centers.json"
@@ -1605,10 +1605,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "UCSF is also an Amgen Scholars host — check whether one application can serve both. CONFIRMED on the page: opens Nov 1, 2026, closes Feb 1, 2027 at 11:59 p.m.",
+      "notes": "UCSF is also an Amgen Scholars host. Check whether one application can serve both. CONFIRMED on the page: opens Nov 1, 2026, closes Feb 1, 2027 at 11:59 p.m.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "May 30 – Aug 7, 2027",
+      "program_dates": "May 30 - Aug 7, 2027",
       "category": "Academic medical centers & med school SURPs",
       "source_file": "04-academic-medical-centers.json"
     },
@@ -1687,7 +1687,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Underrated — strong funding, full package, and a much smaller applicant pool than the coastal institutes.",
+      "notes": "Underrated: strong funding, full package, and a much smaller applicant pool than the coastal institutes.",
       "url_confidence": "medium",
       "url_verified": true,
       "category": "Neuroscience, Alzheimer's & specialty focus",
@@ -1771,7 +1771,7 @@
       "selectivity": "high",
       "notes": "",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false,
       "category": "Pediatric & children's hospital research",
       "source_file": "02-pediatric.json"
@@ -1779,7 +1779,7 @@
     {
       "id": "penn-suip",
       "name": "Summer Undergraduate Internship Program (SUIP)",
-      "org": "University of Pennsylvania — Biomedical Graduate Studies",
+      "org": "University of Pennsylvania: Biomedical Graduate Studies",
       "city": "Philadelphia, PA",
       "url": "https://www.med.upenn.edu/suip/",
       "tracks": [
@@ -1810,7 +1810,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Can be combined geographically with CHOP — same campus block.",
+      "notes": "Can be combined geographically with CHOP: same campus block.",
       "url_confidence": "medium",
       "category": "On the original list",
       "source_file": "01-her-list.json"
@@ -2012,7 +2012,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Heavily chemistry-leaning — a fit only if you want molecular work rather than clinical.",
+      "notes": "Heavily chemistry-leaning, a fit only if you want molecular work rather than clinical.",
       "url_confidence": "medium",
       "url_verified": true,
       "category": "Academic medical centers & med school SURPs",
@@ -2055,7 +2055,7 @@
       "notes": "Flagged on your list: opens Dec 1.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "May 24 – Jul 31, 2027",
+      "program_dates": "May 24 - Jul 31, 2027",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -2132,7 +2132,7 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Less saturated than CHOP but in the same region — a sensible safety in the Philadelphia corridor.",
+      "notes": "Less saturated than CHOP but in the same region, a sensible safety in the Philadelphia corridor.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "Pediatric & children's hospital research",
@@ -2173,7 +2173,7 @@
       "selectivity": "moderate",
       "notes": "Genuine safety school with real pediatric research. Applicant pools here are far smaller than at CHOP or St. Jude.",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false,
       "category": "Pediatric & children's hospital research",
       "source_file": "02-pediatric.json"
@@ -2213,7 +2213,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Third Cleveland option alongside the two Case Western programs — one city, three applications.",
+      "notes": "Third Cleveland option alongside the two Case Western programs, one city, three applications.",
       "url_confidence": "medium",
       "url_verified": true,
       "category": "Academic medical centers & med school SURPs",
@@ -2294,7 +2294,7 @@
       ],
       "selectivity": "high",
       "notes": "The 2027 cycle page is already up, which puts it ahead of most. Cheaper Boston-area alternative: Worcester costs far less to live in than Boston or Cambridge.",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_confidence": "medium",
       "category": "Second-pass additions",
       "source_file": "06-expansion.json"
@@ -2335,7 +2335,7 @@
       "selectivity": "high",
       "notes": "",
       "url_confidence": "medium",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": true,
       "category": "Academic medical centers & med school SURPs",
       "source_file": "04-academic-medical-centers.json"
@@ -2376,7 +2376,7 @@
       "selectivity": "high",
       "notes": "Less saturated than the Manhattan programs while still being a strong NYC medical school.",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": true,
       "category": "Academic medical centers & med school SURPs",
       "source_file": "04-academic-medical-centers.json"
@@ -2414,10 +2414,10 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "The Penn State AHA-USF on your list is one instance of this. Other institutions host their own AHA-funded versions — worth finding the one nearest you.",
+      "notes": "The Penn State AHA-USF on your list is one instance of this. Other institutions host their own AHA-funded versions, worth finding the one nearest you.",
       "priority_hint": "portal",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false,
       "category": "Neuroscience, Alzheimer's & specialty focus",
       "source_file": "05-neuro-and-specialty.json"
@@ -2459,10 +2459,10 @@
       ],
       "selectivity": "very-high",
       "contact": "smart-program@bcm.edu",
-      "notes": "Official name is Summer Undergraduate Research Training, not \"Summer Medical and Research Training.\" 2027 application was slated to open in October 2026 — check now. Faculty mentor forms are due Jan 15, 2027, which hints the student deadline sits near it.",
+      "notes": "Official name is Summer Undergraduate Research Training, not \"Summer Medical and Research Training.\" 2027 application was slated to open in October 2026. Check now. Faculty mentor forms are due Jan 15, 2027, which hints the student deadline sits near it.",
       "url_confidence": "high",
       "url_verified": true,
-      "program_dates": "Jun 7 – Aug 6, 2027",
+      "program_dates": "Jun 7 - Aug 6, 2027",
       "category": "Pediatric & children's hospital research",
       "source_file": "02-pediatric.json"
     },
@@ -2583,7 +2583,7 @@
       "selectivity": "very-high",
       "notes": "Columbia is also an Amgen Scholars host.",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false,
       "category": "Neuroscience, Alzheimer's & specialty focus",
       "source_file": "05-neuro-and-specialty.json"
@@ -2614,7 +2614,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Must be at least a junior at the time of application and a declared pre-medical student. The program targets students from underserved racial and ethnic groups or socioeconomically disadvantaged backgrounds, and looks for demonstrated engagement with underserved communities — check whether you are eligible before spending time on it."
+        "notes": "Must be at least a junior at the time of application and a declared pre-medical student. The program targets students from underserved racial and ethnic groups or socioeconomically disadvantaged backgrounds, and looks for demonstrated engagement with underserved communities. Check whether you are eligible before spending time on it."
       },
       "requires": [
         "transcript",
@@ -2623,7 +2623,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "One of the few genuinely pre-med-oriented programs here rather than a PhD-pipeline one, and it covers expenses and housing. Eligibility is specific, so read it first. Second Weill Cornell route alongside the pediatrics internship already on the list. The linked page is the medical education programs index — T-SRF is listed there.",
+      "notes": "One of the few genuinely pre-med-oriented programs here rather than a PhD-pipeline one, and it covers expenses and housing. Eligibility is specific, so read it first. Second Weill Cornell route alongside the pediatrics internship already on the list. The linked page is the medical education programs index, T-SRF is listed there.",
       "url_verified": true,
       "url_confidence": "medium",
       "category": "Second-pass additions",
@@ -2665,7 +2665,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "One portal, many tracks — high value per application. Well-run program with a strong record of placing students into PhD programs. CONFIRMED on the page: applications open Nov 1, 2026 and close between Jan 16 and Feb 15, 2027 depending on the track, with most on Feb 1. Check the specific track's date — the earliest is Jan 16.",
+      "notes": "One portal, many tracks: high value per application. Well-run program with a strong record of placing students into PhD programs. CONFIRMED on the page: applications open Nov 1, 2026 and close between Jan 16 and Feb 15, 2027 depending on the track, with most on Feb 1. Check the specific track's date; the earliest is Jan 16.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "program_dates": "Through Aug 6, 2027",
@@ -2709,7 +2709,7 @@
       "notes": "CONFIRMED on the page: Feb 2, 2027 at 5 p.m.",
       "url_confidence": "high",
       "url_verified": true,
-      "program_dates": "Jun 1 – Jul 30, 2027",
+      "program_dates": "Jun 1 - Jul 30, 2027",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -2758,7 +2758,7 @@
     },
     {
       "id": "mayo-surf",
-      "name": "Summer Undergraduate Research Fellowship (SURF) — Biomedical Research",
+      "name": "Summer Undergraduate Research Fellowship (SURF), Biomedical Research",
       "org": "Mayo Clinic",
       "city": "Rochester, MN",
       "url": "https://college.mayo.edu/academics/biomedical-research-training/summer-undergraduate-research-fellowship-surf/",
@@ -2790,10 +2790,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages. CONFIRMED on the page: application window Nov 1, 2026 – Feb 3, 2027.",
+      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages. CONFIRMED on the page: application window Nov 1, 2026 - Feb 3, 2027.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "Jun 1 – Aug 6, 2027",
+      "program_dates": "Jun 1 - Aug 6, 2027",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -2832,7 +2832,7 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Hub page lists several distinct tracks. A third-party guide put the cardiovascular portal at mid-October 2026 to Feb 7, 2027 — verify on the official page.",
+      "notes": "Hub page lists several distinct tracks. A third-party guide put the cardiovascular portal at mid-October 2026 to Feb 7, 2027. Verify on the official page.",
       "url_confidence": "medium",
       "url_verified": true,
       "category": "Pediatric & children's hospital research",
@@ -2841,7 +2841,7 @@
     {
       "id": "ecu-sbrp",
       "name": "Summer Biomedical Research Program (SBRP)",
-      "org": "East Carolina University — Brody School of Medicine",
+      "org": "East Carolina University: Brody School of Medicine",
       "city": "Greenville, NC",
       "url": "https://medicine.ecu.edu/sbrp/",
       "tracks": [
@@ -2862,7 +2862,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Undergraduates. An older ECU document describes the program as targeting students from underrepresented, low-socioeconomic or rural backgrounds — confirm current rules on the page."
+        "notes": "Undergraduates. An older ECU document describes the program as targeting students from underrepresented, low-socioeconomic or rural backgrounds. Confirm current rules on the page."
       },
       "requires": [
         "transcript",
@@ -2870,10 +2870,10 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "IDENTIFIED: this was the bare 'Summer Biomedical Research Program' entry on your list. The 2026 cycle closed 13 February and the 2025 cohort ran 27 May - 25 July. Smaller applicant pool than the national programs, and regionally adjacent to the Old Dominion entry. The 2027 cycle opens Nov 2, 2026 and runs May 24 – Jul 23, 2027. The 2027 deadline is not posted yet; the 2026 cycle closed Feb 13.",
+      "notes": "IDENTIFIED: this was the bare 'Summer Biomedical Research Program' entry on your list. The 2026 cycle closed 13 February and the 2025 cohort ran 27 May - 25 July. Smaller applicant pool than the national programs, and regionally adjacent to the Old Dominion entry. The 2027 cycle opens Nov 2, 2026 and runs May 24 - Jul 23, 2027. The 2027 deadline is not posted yet; the 2026 cycle closed Feb 13.",
       "url_verified": true,
       "url_confidence": "high",
-      "program_dates": "May 24 – Jul 23, 2027",
+      "program_dates": "May 24 - Jul 23, 2027",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -2911,15 +2911,15 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Same institution as SURIP — one visit, two applications.",
+      "notes": "Same institution as SURIP: one visit, two applications.",
       "url_confidence": "high",
-      "program_dates": "May 24 – Jul 27, 2027",
+      "program_dates": "May 24 - Jul 27, 2027",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
     {
       "id": "nsf-reu-bio",
-      "name": "REU Sites — Biological Sciences (search portal)",
+      "name": "REU Sites: Biological Sciences (search portal)",
       "org": "National Science Foundation",
       "city": "Hundreds of sites nationally",
       "url": "https://www.nsf.gov/funding/initiatives/reu/search",
@@ -3000,10 +3000,10 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "HIGHEST PRIORITY. One application reaches an enormous number of labs, and you can email individual PIs directly to improve your odds — that outreach is what actually gets people placed. The 2026 cycle closed Feb 18; 2027 is expected to open mid-November 2026 and close mid-February 2027. Verify at training.nih.gov/sip.",
+      "notes": "HIGHEST PRIORITY. One application reaches an enormous number of labs, and you can email individual PIs directly to improve your odds, that outreach is what actually gets people placed. The 2026 cycle closed Feb 18; 2027 is expected to open mid-November 2026 and close mid-February 2027. Verify at training.nih.gov/sip.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false,
       "category": "National & flagship programs",
       "source_file": "03-national-flagship.json"
@@ -3097,7 +3097,7 @@
         "developmental",
         "autism"
       ],
-      "focus": "Neurodevelopmental disorders research — autism, fragile X, ADHD.",
+      "focus": "Neurodevelopmental disorders research: autism, fragile X, ADHD.",
       "duration_weeks": 10,
       "stipend_usd": null,
       "housing": "not-provided",
@@ -3199,7 +3199,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Different from every other program here: the applicant writes a research PROPOSAL with a prospective mentor rather than just an essay. That means contacting a mentor early is not optional, it is the application. Budget far more time than a standard app — but the proposal itself is excellent practice for graduate fellowships later.",
+      "notes": "Different from every other program here: the applicant writes a research PROPOSAL with a prospective mentor rather than just an essay. That means contacting a mentor early is not optional; it is the application. Budget far more time than a standard app, but the proposal itself is excellent practice for graduate fellowships later.",
       "url_verified": true,
       "url_confidence": "high",
       "category": "Second-pass additions",
@@ -3238,7 +3238,7 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "CONFIRMED: Mar 15, 2027, program runs Jun 7 - Aug 13, 2027. Valuable as a LATE deadline — a real second chance if February brings rejections.",
+      "notes": "CONFIRMED: Mar 15, 2027, program runs Jun 7 - Aug 13, 2027. Valuable as a LATE deadline, a real second chance if February brings rejections.",
       "priority_hint": "late-backup",
       "url_confidence": "high",
       "category": "National & flagship programs",
@@ -3286,7 +3286,7 @@
     },
     {
       "id": "uchicago-bsd",
-      "name": "Biological Sciences Division — summer research",
+      "name": "Biological Sciences Division: summer research",
       "org": "University of Chicago",
       "city": "Chicago, IL",
       "url": "https://biosciences.uchicago.edu/",
@@ -3316,7 +3316,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "CORRECTED: the Pritzker Summer Research Program page, with its 30 Nov 2026 deadline, is for the University of Chicago's own MEDICAL students — not undergraduates. Do not chase that date. UChicago is a Leadership Alliance member institution, so the SR-EIP application is the reliable undergraduate route in; this hub is the place to look for a direct lab contact. Comer Children's is the pediatric angle.",
+      "notes": "CORRECTED: the Pritzker Summer Research Program page, with its 30 Nov 2026 deadline, is for the University of Chicago's own MEDICAL students, not undergraduates. Do not chase that date. UChicago is a Leadership Alliance member institution, so the SR-EIP application is the reliable undergraduate route in; this hub is the place to look for a direct lab contact. Comer Children's is the pediatric angle.",
       "url_verified": true,
       "url_confidence": "medium",
       "category": "Second-pass additions",
@@ -3354,7 +3354,7 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "Pairs geographically with Stowers, also in Kansas City — two solid programs in a city almost nobody applies to from the coasts.",
+      "notes": "Pairs geographically with Stowers, also in Kansas City, two solid programs in a city almost nobody applies to from the coasts.",
       "url_verified": true,
       "url_confidence": "medium",
       "category": "Second-pass additions",
@@ -3468,7 +3468,7 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "Third Indiana option alongside INSPIRE and the IU summer research program — one application trip, three shots, and INSPIRE was already on the original list.",
+      "notes": "Third Indiana option alongside INSPIRE and the IU summer research program. One application trip, three shots, and INSPIRE was already on the original list.",
       "url_verified": true,
       "url_confidence": "medium",
       "category": "Second-pass additions",
@@ -3524,7 +3524,7 @@
         "clinical",
         "emergency-medicine"
       ],
-      "focus": "Hands-on pediatric emergency medicine clinical research — patient enrollment and data collection in the ED.",
+      "focus": "Hands-on pediatric emergency medicine clinical research, patient enrollment and data collection in the ED.",
       "stipend_usd": null,
       "housing": "not-provided",
       "deadline_status": "unknown",
@@ -3543,7 +3543,7 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "CORRECTION: the posted cycle is a FALL-SPRING internship (Sept 13, 2026 – May 15, 2027) whose deadline was Aug 10, 2026 and has passed — not a summer program. 15 hours/week onsite, ten interns taken. Real pediatric emergency-medicine patient contact, which is rare and valuable, so it is worth emailing to ask whether a summer 2027 session runs and when it opens. Do not plan the summer around this one.",
+      "notes": "CORRECTION: the posted cycle is a FALL-SPRING internship (Sept 13, 2026 - May 15, 2027) whose deadline was Aug 10, 2026 and has passed, not a summer program. 15 hours/week onsite, ten interns taken. Real pediatric emergency-medicine patient contact, which is rare and valuable, so it is worth emailing to ask whether a summer 2027 session runs and when it opens. Do not plan the summer around this one.",
       "url_confidence": "medium",
       "url_verified": true,
       "category": "Pediatric & children's hospital research",
@@ -3551,7 +3551,7 @@
     },
     {
       "id": "nia-adrc-directory",
-      "name": "NIA Alzheimer's Disease Research Centers — directory",
+      "name": "NIA Alzheimer's Disease Research Centers: directory",
       "org": "National Institute on Aging",
       "city": "30+ centers nationally",
       "url": "https://www.nia.nih.gov/research/nia-funded-alzheimers-disease-research-centers",
@@ -3583,7 +3583,7 @@
         "cv"
       ],
       "selectivity": "moderate",
-      "notes": "Not a program — a hunting ground. Pick the three centers nearest you and email the education coordinator at each. Most do not advertise undergraduate slots but will take a strong student who asks. The single highest-leverage move for an Alzheimer's interest.",
+      "notes": "Not a program: a hunting ground. Pick the three centers nearest you and email the education coordinator at each. Most do not advertise undergraduate slots but will take a strong student who asks. The single highest-leverage move for an Alzheimer's interest.",
       "priority_hint": "portal",
       "url_confidence": "high",
       "url_verified": true,
@@ -3623,14 +3623,14 @@
       "selectivity": "moderate",
       "notes": "Flagged on your list: opens Jan 2.",
       "url_confidence": "high",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false,
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
     {
       "id": "pathways-to-science",
-      "name": "Pathways to Science — summer research database",
+      "name": "Pathways to Science: summer research database",
       "org": "Institute for Broadening Participation",
       "city": "National",
       "url": "https://www.pathwaystoscience.org/programhub.aspx?sort=UGS-Summer",
@@ -3698,7 +3698,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Jan 23. Single-lab internship — a specific, direct email to the PI matters more here than a generic application.",
+      "notes": "Flagged on your list: opens Jan 23. Single-lab internship, a specific, direct email to the PI matters more here than a generic application.",
       "url_confidence": "high",
       "category": "On the original list",
       "source_file": "01-her-list.json"
@@ -3735,7 +3735,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Often filled by direct faculty contact rather than a central application — see the cold-email template in materials/.",
+      "notes": "Often filled by direct faculty contact rather than a central application, see the cold-email template in materials/.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "Pediatric & children's hospital research",
@@ -3772,7 +3772,7 @@
         "cv"
       ],
       "selectivity": "moderate",
-      "notes": "Genuine safety. Ohio now has five options on this list — Cincinnati, Nationwide, the two Case Western programs, Cleveland Clinic and this.",
+      "notes": "Genuine safety. Ohio now has five options on this list, Cincinnati, Nationwide, the two Case Western programs, Cleveland Clinic and this.",
       "url_verified": true,
       "url_confidence": "medium",
       "category": "Second-pass additions",
@@ -3850,7 +3850,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 1. The landing page lists several distinct tracks — pick the one that matches.",
+      "notes": "Flagged on your list: opens Dec 1. The landing page lists several distinct tracks. Pick the one that matches.",
       "url_confidence": "high",
       "category": "On the original list",
       "source_file": "01-her-list.json"
@@ -3887,7 +3887,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Second UT Southwestern route alongside SURF, which is also an Amgen host — three paths into the same institution.",
+      "notes": "Second UT Southwestern route alongside SURF, which is also an Amgen host, three paths into the same institution.",
       "url_verified": true,
       "url_confidence": "high",
       "category": "Second-pass additions",
@@ -3922,7 +3922,7 @@
       },
       "requires": [],
       "selectivity": "moderate",
-      "notes": "The weakest entry on your list unless you have an ODU connection — this is a general campus page, not a competitive national program.",
+      "notes": "The weakest entry on your list unless you have an ODU connection. This is a general campus page, not a competitive national program.",
       "url_confidence": "low",
       "category": "On the original list",
       "source_file": "01-her-list.json"
@@ -3958,7 +3958,7 @@
         "cv"
       ],
       "selectivity": "moderate",
-      "notes": "Their pediatric neurosciences/epilepsy work overlaps with the Boston Children's epilepsy interest — a good direct-email target.",
+      "notes": "Their pediatric neurosciences/epilepsy work overlaps with the Boston Children's epilepsy interest, a good direct-email target.",
       "url_confidence": "low",
       "url_verified": true,
       "category": "Pediatric & children's hospital research",
@@ -3997,14 +3997,14 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Pairs with Pitt's other summer programs — same city, one trip.",
+      "notes": "Pairs with Pitt's other summer programs: same city, one trip.",
       "url_confidence": "high",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
     {
       "id": "aamc-summer-database",
-      "name": "Summer Undergraduate Research Programs — searchable database",
+      "name": "Summer Undergraduate Research Programs: searchable database",
       "org": "Association of American Medical Colleges",
       "city": "National",
       "url": "https://students-residents.aamc.org/phd-biomedical-science/summer-undergraduate-research-programs",
@@ -4153,7 +4153,7 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Same town as the Jackson Laboratory, so one Bar Harbor application trip covers both — and this one is far less contested than JAX.",
+      "notes": "Same town as the Jackson Laboratory, so one Bar Harbor application trip covers both, and this one is far less contested than JAX.",
       "url_verified": true,
       "url_confidence": "high",
       "category": "Second-pass additions",

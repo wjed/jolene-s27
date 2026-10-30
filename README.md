@@ -14,7 +14,7 @@ applying in the Summer 2027 cycle.
 ## Why this exists
 
 The starting point was a list of 24 programs in Notion. It had the right
-instincts — St. Jude, CHOP, Cincinnati Children's, Yale Child Study — but as a
+instincts, St. Jude, CHOP, Cincinnati Children's, Yale Child Study, but as a
 flat list it could not answer the questions that actually matter: *what is open
 today, what is due first, what am I not eligible for, and what am I missing?*
 
@@ -26,33 +26,39 @@ This repo answers those, and adds 80 programs that were not on the list.
 |---|---|
 | **[The site](https://wjed.github.io/jolene-s27/)** | Filterable database, prioritised action plan, application tracker, timeline |
 | **[`data/`](data/)** | The dataset: JSON, a CSV export, and an `.ics` calendar with reminders |
-| **[`materials/`](materials/)** | Source markdown for the nine guides and templates. They are rendered onto the site at build time by `scripts/guides.py` — nobody has to read them on GitHub. |
+| **[`materials/`](materials/)** | Source markdown for the nine guides and templates. They are rendered onto the site at build time by `scripts/guides.py`, nobody has to read them on GitHub. |
 | **[`scripts/`](scripts/)** | Build, validate, link-check and watch |
 
 ### Design
 
 The interface follows Notion's workspace conventions, because that is what this
 is actually used in alongside. The tokens were read off Notion's own stylesheets
-rather than approximated — the ink `rgb(55,53,47)`, the hover
-`rgba(25,23,17,.075)`, the hairline `rgba(55,53,47,.09)`, the blue
+rather than approximated, the ink `rgb(55,53,47)`, the hover
+`rgba(25,23,17.075)`, the hairline `rgba(55,53,47.09)`, the blue
 `rgb(35,131,226)`, the inset-plus-halo focus ring, Inter with lining numerals,
 and the standard database select palette for the pills.
 
 That means a page sidebar, database views (table / board / gallery), select
-pills that keep one colour per option, and a peek panel with a property table —
+pills that keep one colour per option, and a peek panel with a property table, 
 the same moves a Notion database makes.
 
 ### The site, specifically
 
-- **The plan** — not a list but an ordered set of actions: what is accepting
+- **The plan**: not a list but an ordered set of actions: what is accepting
   applications today, which applications give the best return, what is due in 30
   days, what to do monthly.
-- **All programs** — filter by research area, deadline month, housing, stipend,
+- **All programs**: filter by research area, deadline month, housing, stipend,
   citizenship requirement and how competitive it is.
-- **My applications** — per-program status, a requirements checklist and notes.
+- **My eligibility** - your year, GPA and citizenship, kept in the browser. The
+  three things that rule applications out before anyone reads them are in the
+  data, so every program that conflicts gets flagged with the reason, and a
+  "Fits my profile" filter appears.
+- **Copy for Notion** - copies whatever is on screen as a Markdown table, which
+  Notion pastes as a real database.
+- **My applications**: per-program status, a requirements checklist and notes.
   Stored in the browser only; nothing is uploaded anywhere. Use **Backup** before
   clearing cookies.
-- **Timeline** — every opening date and deadline in order.
+- **Timeline**. Every opening date and deadline in order.
 
 ## The honest part: which dates are real
 
@@ -61,10 +67,10 @@ Of 104 programs, as of **30 October 2026**:
 | | |
 |---|---|
 | **16** | deadline confirmed on the program's own page |
-| **48** | projected from a previous cycle — shown with an `est.` marker |
+| **48** | projected from a previous cycle, shown with an `est.` marker |
 | **37** | nothing posted yet |
 
-This is not sloppiness in the data — it is the actual state of the world in late
+This is not sloppiness in the data. It is the actual state of the world in late
 October. Most Summer 2027 cycles have not opened. Rather than guess and present
 guesses as fact, every date carries its status, and the watcher checks the real
 pages weekly.
@@ -85,7 +91,7 @@ python scripts/watch.py
 Fetches all 85 program pages, compares each against the previous run, and reports:
 
 - pages whose content changed since last time
-- **pages that have started mentioning 2027** — usually the week the new cycle goes live
+- **pages that have started mentioning 2027**: usually the week the new cycle goes live
 - links that broke
 - redirects worth folding back into the data
 
@@ -96,7 +102,7 @@ Exit codes: `0` nothing notable · `1` broken links · `2` changes · `3` both.
 
 ## Running it locally
 
-No dependencies beyond Python 3.9+ — the scripts are stdlib only and the site is
+No dependencies beyond Python 3.9+, the scripts are stdlib only and the site is
 plain HTML, CSS and JavaScript with no build step.
 
 ```bash
@@ -144,7 +150,7 @@ unknown enum values, duplicate ids and relative URLs.
 }
 ```
 
-`deadline_status` must be `confirmed`, `projected`, `unknown` or `rolling` — and
+`deadline_status` must be `confirmed`, `projected`, `unknown` or `rolling`, and
 only use `confirmed` for a date read off the program's own page.
 
 ## Keeping dates honest
@@ -152,7 +158,7 @@ only use `confirmed` for a date read off the program's own page.
 Two scripts do this, and they are deliberately separate:
 
 - `scripts/watch.py` runs weekly and says **which pages changed**.
-- `scripts/extract_dates.py` says **what they now say** — it pulls candidate
+- `scripts/extract_dates.py` says **what they now say**: it pulls candidate
   deadline sentences off every page so they can be read and promoted by hand.
 
 Nothing promotes a date automatically, because three separate traps turned up in
@@ -162,7 +168,7 @@ two sweeps:
 - Children's National's page describes a **fall-spring** internship whose
   deadline passed in August 2026, not a summer program.
 - The University of Chicago Pritzker page advertises a **30 November 2026**
-  deadline — which would have been the most urgent item on the entire list — but
+  deadline, which would have been the most urgent item on the entire list, but
   the surrounding text shows it is for UChicago's own **medical students**.
 
 Each was caught by reading the sentence around the date. A regex finds the
@@ -175,11 +181,11 @@ python scripts/extract_dates.py --all    # every page
 
 ## Where to start
 
-1. Read **[the timeline](materials/guides/timeline.md)** — what to do between now
+1. Read **[the timeline](materials/guides/timeline.md)**: what to do between now
    and February.
 2. Ask for **letters of recommendation** by mid-November. It is the only item
    that depends on someone else.
 3. Apply to the **three already open**: Johns Hopkins Pathway, Cincinnati
    Children's SURF, INSPIRE.
-4. **[Cold-email PIs](materials/templates/cold-email-pi.md)** — fifteen minutes
+4. **[Cold-email PIs](materials/templates/cold-email-pi.md)**: fifteen minutes
    each, and the thing most likely to change an outcome.

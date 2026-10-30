@@ -1,6 +1,6 @@
 # How these decisions actually get made
 
-Useful context for where to spend effort. None of this is a secret — it is just
+Useful context for where to spend effort. None of this is a secret. It is just
 not written down anywhere an applicant naturally looks.
 
 ---
@@ -49,7 +49,7 @@ Roughly in order:
 2. **Evidence of follow-through.** Ten weeks is short. They are looking for signs
    someone will not need babysitting: a project you ran, a protocol you handled,
    a semester of consistent lab hours, a job that required showing up.
-3. **A real reason for the area.** Not passion — a question. "I want to understand
+3. **A real reason for the area.** Not passion, a question. "I want to understand
    why seizure burden predicts developmental outcome" tells a reader where to
    route the file.
 4. **Letters.** Mostly used as corroboration. A detailed letter from someone who
@@ -84,7 +84,7 @@ with a few of these in it deliberately.
 ## On the thin-experience problem
 
 If your research experience is light, that is the normal state for a rising junior
-and several programs are built for it — Seattle Children's explicitly prioritises
+and several programs are built for it, Seattle Children's explicitly prioritises
 first-time research interns, and NSF REUs are designed as entry points.
 
 What helps: a serious course project described as research, specific technical
@@ -95,7 +95,7 @@ work. What does not help: apologising for it in the personal statement.
 
 These programs run acceptance rates in the low single digits to low teens. Strong
 applicants get rejected from most places they apply. The right response is volume
-on the reusable applications plus a handful of genuinely attainable targets — not
+on the reusable applications plus a handful of genuinely attainable targets, not
 six perfect applications to six famous programs.
 
 Twelve to twenty applications is a reasonable target for this cycle, and the

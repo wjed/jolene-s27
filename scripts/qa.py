@@ -67,7 +67,7 @@ def main() -> int:
 
     for name, (keys, field, is_list) in maps.items():
         if not keys:
-            err(f"could not parse {name} out of app.js — check the regex")
+            err(f"could not parse {name} out of app.js. Check the regex")
             continue
         seen = set()
         for p in programs:
@@ -81,7 +81,7 @@ def main() -> int:
                 seen.add(p[field])
         missing = seen - keys
         if missing:
-            err(f"{name} has no entry for {sorted(missing)} — the UI will print the raw slug")
+            err(f"{name} has no entry for {sorted(missing)}, the UI will print the raw slug")
         unused = keys - seen
         if unused:
             warn(f"{name} defines unused keys {sorted(unused)}")

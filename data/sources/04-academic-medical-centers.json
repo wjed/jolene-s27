@@ -36,10 +36,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "UCSF is also an Amgen Scholars host — check whether one application can serve both. CONFIRMED on the page: opens Nov 1, 2026, closes Feb 1, 2027 at 11:59 p.m.",
+      "notes": "UCSF is also an Amgen Scholars host. Check whether one application can serve both. CONFIRMED on the page: opens Nov 1, 2026, closes Feb 1, 2027 at 11:59 p.m.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "May 30 – Aug 7, 2027"
+      "program_dates": "May 30 - Aug 7, 2027"
     },
     {
       "id": "vanderbilt-vssa",
@@ -77,7 +77,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "One portal, many tracks — high value per application. Well-run program with a strong record of placing students into PhD programs. CONFIRMED on the page: applications open Nov 1, 2026 and close between Jan 16 and Feb 15, 2027 depending on the track, with most on Feb 1. Check the specific track's date — the earliest is Jan 16.",
+      "notes": "One portal, many tracks: high value per application. Well-run program with a strong record of placing students into PhD programs. CONFIRMED on the page: applications open Nov 1, 2026 and close between Jan 16 and Feb 15, 2027 depending on the track, with most on Feb 1. Check the specific track's date; the earliest is Jan 16.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "program_dates": "Through Aug 6, 2027"
@@ -122,7 +122,7 @@
     },
     {
       "id": "washu-biomedrap",
-      "name": "BioMedRAP — Biomedical Research Apprenticeship Program",
+      "name": "BioMedRAP: Biomedical Research Apprenticeship Program",
       "org": "Washington University in St. Louis",
       "city": "St. Louis, MO",
       "url": "https://dbbs.wustl.edu/programs/",
@@ -197,7 +197,7 @@
       "selectivity": "high",
       "notes": "",
       "url_confidence": "medium",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false
     },
     {
@@ -276,7 +276,7 @@
       "selectivity": "high",
       "notes": "",
       "url_confidence": "medium",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": true
     },
     {
@@ -315,7 +315,7 @@
       "selectivity": "high",
       "notes": "Less saturated than the Manhattan programs while still being a strong NYC medical school.",
       "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": true
     },
     {
@@ -353,7 +353,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Third Cleveland option alongside the two Case Western programs — one city, three applications.",
+      "notes": "Third Cleveland option alongside the two Case Western programs, one city, three applications.",
       "url_confidence": "medium",
       "url_verified": true
     },
@@ -391,7 +391,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Pairs with UPMC Children's Hospital of Pittsburgh, also on your list — same city, two applications.",
+      "notes": "Pairs with UPMC Children's Hospital of Pittsburgh, also on your list, same city, two applications.",
       "url_confidence": "low",
       "url_verified": true
     },
@@ -583,7 +583,7 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Same institution as INSPIRE on your list — you may be able to be considered for several IU tracks at once. Worth asking the program coordinator.",
+      "notes": "Same institution as INSPIRE on your list: you may be able to be considered for several IU tracks at once. Worth asking the program coordinator.",
       "url_confidence": "low",
       "url_verified": true
     },
@@ -621,7 +621,7 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Wake Forest runs a major Alzheimer's Disease Research Center — relevant given the INSPIRE interest.",
+      "notes": "Wake Forest runs a major Alzheimer's Disease Research Center, relevant given the INSPIRE interest.",
       "url_confidence": "low",
       "url_verified": true
     },
@@ -698,7 +698,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Heavily chemistry-leaning — a fit only if you want molecular work rather than clinical.",
+      "notes": "Heavily chemistry-leaning, a fit only if you want molecular work rather than clinical.",
       "url_confidence": "medium",
       "url_verified": true
     },

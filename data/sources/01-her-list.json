@@ -3,7 +3,7 @@
   "programs": [
     {
       "id": "iu-inspire",
-      "name": "INSPIRE — Investigating Neurosciences Summer Program",
+      "name": "INSPIRE: Investigating Neurosciences Summer Program",
       "org": "Indiana University School of Medicine (Stark Neurosciences)",
       "city": "Indianapolis, IN",
       "url": "https://medicine.iu.edu/research-centers/neurosciences/education/INSPIRE",
@@ -38,7 +38,7 @@
       ],
       "selectivity": "high",
       "contact": "mneuro@iu.edu",
-      "notes": "2027 applications were slated to open in October 2026 — worth checking right now.",
+      "notes": "2027 applications were slated to open in October 2026, worth checking right now.",
       "url_confidence": "high"
     },
     {
@@ -74,7 +74,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Pairs with Pitt's other summer programs — same city, one trip.",
+      "notes": "Pairs with Pitt's other summer programs: same city, one trip.",
       "url_confidence": "high"
     },
     {
@@ -89,7 +89,7 @@
         "clinical",
         "basic-science"
       ],
-      "focus": "Pediatric cancer and catastrophic disease — basic, translational, or clinical placements.",
+      "focus": "Pediatric cancer and catastrophic disease: basic, translational, or clinical placements.",
       "duration_weeks": 11,
       "stipend_usd": 6600,
       "stipend_note": "$600/week",
@@ -105,7 +105,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": 3.4,
-        "notes": "Minimum 3.40 GPA overall and in math/science. Prior research experience expected. Must be able to start May 10, May 17, May 24, or Jun 1, 2027 — otherwise ineligible."
+        "notes": "Minimum 3.40 GPA overall and in math/science. Prior research experience expected. Must be able to start May 10, May 17, May 24, or Jun 1, 2027, otherwise ineligible."
       },
       "requires": [
         "transcript",
@@ -114,7 +114,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Flagship pediatric program. Submit the application without waiting on letters — St. Jude wants credentials in by mid-to-late December, and the Feb 1 deadline covers the application AND all credentials.",
+      "notes": "Flagship pediatric program. Submit the application without waiting on letters, St. Jude wants credentials in by mid-to-late December, and the Feb 1 deadline covers the application AND all credentials.",
       "url_confidence": "high"
     },
     {
@@ -223,7 +223,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 1. The landing page lists several distinct tracks — pick the one that matches.",
+      "notes": "Flagged on your list: opens Dec 1. The landing page lists several distinct tracks. Pick the one that matches.",
       "url_confidence": "high"
     },
     {
@@ -261,7 +261,7 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 1. Strong fit for developmental/behavioral work. CONFIRMED on the page: opens Dec 1, 2026, closes Jan 14, 2027 at 5pm ET. That is far earlier than the February cluster — it is one of the first deadlines in the whole cycle.",
+      "notes": "Flagged on your list: opens Dec 1. Strong fit for developmental/behavioral work. CONFIRMED on the page: opens Dec 1, 2026, closes Jan 14, 2027 at 5pm ET. That is far earlier than the February cluster. It is one of the first deadlines in the whole cycle.",
       "url_confidence": "high"
     },
     {
@@ -297,7 +297,7 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Jan 23. Single-lab internship — a specific, direct email to the PI matters more here than a generic application.",
+      "notes": "Flagged on your list: opens Jan 23. Single-lab internship, a specific, direct email to the PI matters more here than a generic application.",
       "url_confidence": "high"
     },
     {
@@ -337,11 +337,11 @@
       "notes": "Flagged on your list: opens Dec 1.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "May 24 – Jul 31, 2027"
+      "program_dates": "May 24 - Jul 31, 2027"
     },
     {
       "id": "mayo-surf",
-      "name": "Summer Undergraduate Research Fellowship (SURF) — Biomedical Research",
+      "name": "Summer Undergraduate Research Fellowship (SURF), Biomedical Research",
       "org": "Mayo Clinic",
       "city": "Rochester, MN",
       "url": "https://college.mayo.edu/academics/biomedical-research-training/summer-undergraduate-research-fellowship-surf/",
@@ -373,15 +373,15 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages. CONFIRMED on the page: application window Nov 1, 2026 – Feb 3, 2027.",
+      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages. CONFIRMED on the page: application window Nov 1, 2026 - Feb 3, 2027.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "Jun 1 – Aug 6, 2027"
+      "program_dates": "Jun 1 - Aug 6, 2027"
     },
     {
       "id": "penn-suip",
       "name": "Summer Undergraduate Internship Program (SUIP)",
-      "org": "University of Pennsylvania — Biomedical Graduate Studies",
+      "org": "University of Pennsylvania: Biomedical Graduate Studies",
       "city": "Philadelphia, PA",
       "url": "https://www.med.upenn.edu/suip/",
       "tracks": [
@@ -412,7 +412,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Can be combined geographically with CHOP — same campus block.",
+      "notes": "Can be combined geographically with CHOP: same campus block.",
       "url_confidence": "medium"
     },
     {
@@ -487,7 +487,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Same institution as CanSUR — check whether one application covers both.",
+      "notes": "Same institution as CanSUR. Check whether one application covers both.",
       "url_confidence": "low",
       "url_verified": true
     },
@@ -597,7 +597,7 @@
       },
       "requires": [],
       "selectivity": "moderate",
-      "notes": "The weakest entry on your list unless you have an ODU connection — this is a general campus page, not a competitive national program.",
+      "notes": "The weakest entry on your list unless you have an ODU connection. This is a general campus page, not a competitive national program.",
       "url_confidence": "low"
     },
     {
@@ -624,7 +624,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Undergraduate program — distinct from MSK's HOPP Summer Student Program, which is high-school only."
+        "notes": "Undergraduate program: distinct from MSK's HOPP Summer Student Program, which is high-school only."
       },
       "requires": [
         "transcript",
@@ -633,10 +633,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one — your list had the right one. CONFIRMED on the page: portal opens Nov 2, 2026 and closes Feb 1, 2027 at 8:00 a.m. — a morning cutoff, not end of day.",
+      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one, so your list had the right one. CONFIRMED on the page: portal opens Nov 2, 2026 and closes Feb 1, 2027 at 8:00 a.m., a morning cutoff, not end of day.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "Jun 1 – Aug 6, 2027"
+      "program_dates": "Jun 1 - Aug 6, 2027"
     },
     {
       "id": "musc-surp",
@@ -713,7 +713,7 @@
       "notes": "CONFIRMED on the page: Feb 2, 2027 at 5 p.m.",
       "url_confidence": "high",
       "url_verified": true,
-      "program_dates": "Jun 1 – Jul 30, 2027"
+      "program_dates": "Jun 1 - Jul 30, 2027"
     },
     {
       "id": "psu-aha-usf",
@@ -749,9 +749,9 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Same institution as SURIP — one visit, two applications.",
+      "notes": "Same institution as SURIP: one visit, two applications.",
       "url_confidence": "high",
-      "program_dates": "May 24 – Jul 27, 2027"
+      "program_dates": "May 24 - Jul 27, 2027"
     },
     {
       "id": "rutgers-rwjms-neuro",
@@ -786,13 +786,13 @@
       "selectivity": "moderate",
       "notes": "Flagged on your list: opens Jan 2.",
       "url_confidence": "high",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false
     },
     {
       "id": "ecu-sbrp",
       "name": "Summer Biomedical Research Program (SBRP)",
-      "org": "East Carolina University — Brody School of Medicine",
+      "org": "East Carolina University: Brody School of Medicine",
       "city": "Greenville, NC",
       "url": "https://medicine.ecu.edu/sbrp/",
       "tracks": [
@@ -813,7 +813,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Undergraduates. An older ECU document describes the program as targeting students from underrepresented, low-socioeconomic or rural backgrounds — confirm current rules on the page."
+        "notes": "Undergraduates. An older ECU document describes the program as targeting students from underrepresented, low-socioeconomic or rural backgrounds. Confirm current rules on the page."
       },
       "requires": [
         "transcript",
@@ -821,14 +821,14 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "IDENTIFIED: this was the bare 'Summer Biomedical Research Program' entry on your list. The 2026 cycle closed 13 February and the 2025 cohort ran 27 May - 25 July. Smaller applicant pool than the national programs, and regionally adjacent to the Old Dominion entry. The 2027 cycle opens Nov 2, 2026 and runs May 24 – Jul 23, 2027. The 2027 deadline is not posted yet; the 2026 cycle closed Feb 13.",
+      "notes": "IDENTIFIED: this was the bare 'Summer Biomedical Research Program' entry on your list. The 2026 cycle closed 13 February and the 2025 cohort ran 27 May - 25 July. Smaller applicant pool than the national programs, and regionally adjacent to the Old Dominion entry. The 2027 cycle opens Nov 2, 2026 and runs May 24 - Jul 23, 2027. The 2027 deadline is not posted yet; the 2026 cycle closed Feb 13.",
       "url_verified": true,
       "url_confidence": "high",
-      "program_dates": "May 24 – Jul 23, 2027"
+      "program_dates": "May 24 - Jul 23, 2027"
     },
     {
       "id": "psu-promise",
-      "name": "PROMISE — Research Training in Oncology and Medicine to Inspire Student Engagement",
+      "name": "PROMISE: Research Training in Oncology and Medicine to Inspire Student Engagement",
       "org": "Penn State College of Medicine / Penn State Cancer Institute",
       "city": "Hershey, PA",
       "url": "https://med.psu.edu/education/certificate-and-undergraduate/promise",
@@ -852,17 +852,17 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "STEM majors who have completed at least two years of college — rising juniors and seniors. Engineering, computer science, statistics and biological sciences all count. Students underrepresented in the biomedical workforce are encouraged to apply."
+        "notes": "STEM majors who have completed at least two years of college, rising juniors and seniors. Engineering, computer science, statistics and biological sciences all count. Students underrepresented in the biomedical workforce are encouraged to apply."
       },
       "requires": [
         "cv",
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on your list — it is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
+      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on your list. It is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
       "url_verified": true,
       "url_confidence": "high",
-      "program_dates": "May 24 – Jul 31, 2027"
+      "program_dates": "May 24 - Jul 31, 2027"
     }
   ]
 }

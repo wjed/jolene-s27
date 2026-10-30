@@ -1,10 +1,10 @@
 # Asking for letters of recommendation
 
 Most programs on this list want two letters. The same two letters go everywhere,
-so this is a one-time cost — but only if you ask early and make it easy.
+so this is a one-time cost, but only if you ask early and make it easy.
 
 **Ask by the end of November.** Faculty write letters in batches, and the
-December–January window is when every pre-med in the country is asking.
+December-January window is when every pre-med in the country is asking.
 
 ---
 
@@ -12,7 +12,7 @@ December–January window is when every pre-med in the country is asking.
 
 In order of usefulness:
 
-1. **A research mentor** — anyone who has seen you work in a lab, even briefly.
+1. **A research mentor**: anyone who has seen you work in a lab, even briefly.
    Nothing else is as persuasive.
 2. **A professor from a small, hard course** where you spoke up and did well.
    A seminar or lab course beats a 400-person lecture every time.
@@ -23,7 +23,7 @@ from a postdoc beats a vague one from a department chair.
 
 ## The email
 
-> **Subject:** Letter of recommendation — summer research applications (due
+> **Subject:** Letter of recommendation, summer research applications (due
 > early February)
 >
 > Dear Professor [NAME],
@@ -32,7 +32,7 @@ from a postdoc beats a vague one from a department chair.
 > [AREA], and I am hoping you would be willing to write me a letter of
 > recommendation.
 >
-> I took [COURSE] with you in [TERM] and [SPECIFIC THING — the project you did,
+> I took [COURSE] with you in [TERM] and [SPECIFIC THING, the project you did,
 > something you contributed, the grade if it is good]. [IF A RESEARCH MENTOR:
 > what you worked on and what you handled independently.]
 >
@@ -46,7 +46,7 @@ from a postdoc beats a vague one from a department chair.
 > - a short note on what I have been doing since your course
 >
 > Would you be willing? If you do not feel you could write a strong letter, I
-> would completely understand — I would rather know now.
+> would completely understand, I would rather know now.
 >
 > Thank you for considering it.
 >
@@ -59,15 +59,15 @@ is far better than a tepid letter you never see.
 
 Everything that makes writing easier makes the letter better:
 
-1. **CV** — current.
-2. **Personal statement** — the draft is fine. It tells them the story to
+1. **CV**: current.
+2. **Personal statement**: the draft is fine. It tells them the story to
    corroborate.
-3. **Program list with deadlines** — export the CSV from the site, or send the
+3. **Program list with deadlines**: export the CSV from the site, or send the
    site link.
-4. **A reminder of who you are** — a short paragraph: the course, the term, what
+4. **A reminder of who you are**: a short paragraph: the course, the term, what
    you did well, anything memorable. Professors teach hundreds of students a
    year and this is a kindness, not an imposition.
-5. **What to emphasise** — if a program wants independence, say so.
+5. **What to emphasise**: if a program wants independence, say so.
 
 ## Managing it afterwards
 

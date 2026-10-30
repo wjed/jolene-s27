@@ -111,7 +111,7 @@
     },
     "iu-inspire": {
       "id": "iu-inspire",
-      "name": "INSPIRE — Investigating Neurosciences Summer Program",
+      "name": "INSPIRE : Investigating Neurosciences Summer Program",
       "org": "Indiana University School of Medicine (Stark Neurosciences)",
       "url": "https://medicine.iu.edu/research-centers/neurosciences/education/INSPIRE",
       "checked": "2026-10-30T00:54:58+00:00",
@@ -219,7 +219,7 @@
     },
     "psu-promise": {
       "id": "psu-promise",
-      "name": "PROMISE — Research Training in Oncology and Medicine to Inspire Student Engagement",
+      "name": "PROMISE : Research Training in Oncology and Medicine to Inspire Student Engagement",
       "org": "Penn State College of Medicine / Penn State Cancer Institute",
       "url": "https://med.psu.edu/education/certificate-and-undergraduate/promise",
       "checked": "2026-10-30T00:54:59+00:00",
@@ -287,7 +287,7 @@
     },
     "washu-biomedrap": {
       "id": "washu-biomedrap",
-      "name": "BioMedRAP — Biomedical Research Apprenticeship Program",
+      "name": "BioMedRAP : Biomedical Research Apprenticeship Program",
       "org": "Washington University in St. Louis",
       "url": "https://dbbs.wustl.edu/programs/",
       "checked": "2026-10-30T00:54:59+00:00",
@@ -548,7 +548,7 @@
     "childrens-national-trainees": {
       "id": "childrens-national-trainees",
       "name": "Research Trainees Summer Program",
-      "org": "Children's National Hospital — Center for Precision Medicine & Genomics",
+      "org": "Children's National Hospital : Center for Precision Medicine & Genomics",
       "url": "https://research.childrensnational.org/",
       "checked": "2026-10-30T00:55:00+00:00",
       "status": "ok",
@@ -567,8 +567,8 @@
     },
     "stanford-ssrp": {
       "id": "stanford-ssrp",
-      "name": "SSRP–Amgen Scholars Program",
-      "org": "Stanford University — Biosciences",
+      "name": "SSRP-Amgen Scholars Program",
+      "org": "Stanford University : Biosciences",
       "url": "https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/",
       "checked": "2026-10-30T00:55:00+00:00",
       "status": "ok",
@@ -800,7 +800,7 @@
     "penn-suip": {
       "id": "penn-suip",
       "name": "Summer Undergraduate Internship Program (SUIP)",
-      "org": "University of Pennsylvania — Biomedical Graduate Studies",
+      "org": "University of Pennsylvania : Biomedical Graduate Studies",
       "url": "https://www.med.upenn.edu/suip/",
       "checked": "2026-10-30T00:55:01+00:00",
       "status": "ok",
@@ -1217,7 +1217,7 @@
     },
     "mayo-surf": {
       "id": "mayo-surf",
-      "name": "Summer Undergraduate Research Fellowship (SURF) — Biomedical Research",
+      "name": "Summer Undergraduate Research Fellowship (SURF) : Biomedical Research",
       "org": "Mayo Clinic",
       "url": "https://college.mayo.edu/academics/biomedical-research-training/summer-undergraduate-research-fellowship-surf/",
       "checked": "2026-10-30T00:55:03+00:00",
@@ -1255,7 +1255,7 @@
     "ecu-sbrp": {
       "id": "ecu-sbrp",
       "name": "Summer Biomedical Research Program (SBRP)",
-      "org": "East Carolina University — Brody School of Medicine",
+      "org": "East Carolina University : Brody School of Medicine",
       "url": "https://medicine.ecu.edu/sbrp/",
       "checked": "2026-10-30T00:55:03+00:00",
       "status": "blocked",
@@ -1290,7 +1290,7 @@
     },
     "nsf-reu-bio": {
       "id": "nsf-reu-bio",
-      "name": "REU Sites — Biological Sciences (search portal)",
+      "name": "REU Sites : Biological Sciences (search portal)",
       "org": "National Science Foundation",
       "url": "https://www.nsf.gov/funding/initiatives/reu/search",
       "checked": "2026-10-30T00:55:03+00:00",
@@ -1444,7 +1444,7 @@
     },
     "uchicago-bsd": {
       "id": "uchicago-bsd",
-      "name": "Biological Sciences Division — summer research",
+      "name": "Biological Sciences Division : summer research",
       "org": "University of Chicago",
       "url": "https://biosciences.uchicago.edu/",
       "checked": "2026-10-30T00:55:04+00:00",
@@ -1576,7 +1576,7 @@
     },
     "nia-adrc-directory": {
       "id": "nia-adrc-directory",
-      "name": "NIA Alzheimer's Disease Research Centers — directory",
+      "name": "NIA Alzheimer's Disease Research Centers : directory",
       "org": "National Institute on Aging",
       "url": "https://www.nia.nih.gov/research/nia-funded-alzheimers-disease-research-centers",
       "checked": "2026-10-30T00:55:04+00:00",
@@ -1605,7 +1605,7 @@
     },
     "pathways-to-science": {
       "id": "pathways-to-science",
-      "name": "Pathways to Science — summer research database",
+      "name": "Pathways to Science : summer research database",
       "org": "Institute for Broadening Participation",
       "url": "https://www.pathwaystoscience.org/programhub.aspx?sort=UGS-Summer",
       "checked": "2026-10-30T00:55:04+00:00",
@@ -1787,7 +1787,7 @@
     },
     "aamc-summer-database": {
       "id": "aamc-summer-database",
-      "name": "Summer Undergraduate Research Programs — searchable database",
+      "name": "Summer Undergraduate Research Programs : searchable database",
       "org": "Association of American Medical Colleges",
       "url": "https://students-residents.aamc.org/phd-biomedical-science/summer-undergraduate-research-programs",
       "checked": "2026-10-30T00:55:05+00:00",

@@ -3,7 +3,7 @@
 
 Why this exists: as of late 2026 most Summer 2027 cycles are not posted yet, so
 the dataset is full of projected dates. Rather than guess, this watches the real
-pages and tells you the week a page changes — which is almost always the week
+pages and tells you the week a page changes, which is almost always the week
 the new dates drop.
 
     python scripts/watch.py              fetch, compare, report, save state
@@ -47,7 +47,7 @@ NOISE = [
     re.compile(r"<svg\b.*?</svg>", re.S | re.I),
     re.compile(r"csrf[-_]?token[\"':=\s]+[\w-]+", re.I),
     re.compile(r"nonce=[\"'][^\"']+[\"']", re.I),
-    re.compile(r"\b\d{10,13}\b"),  # epoch timestamps in cache-busting query strings
+    re.compile(r"\b\d{10,13}\b"), # epoch timestamps in cache-busting query strings
 ]
 
 TAGS = re.compile(r"<[^>]+>")
@@ -110,7 +110,7 @@ def fetch(program: dict) -> dict:
     except urllib.error.URLError as exc:
         result.update(status="unreachable", reason=str(exc.reason)[:200])
         return result
-    except Exception as exc:  # noqa: BLE001 - a watcher must never die on one bad page
+    except Exception as exc: # noqa: BLE001 - a watcher must never die on one bad page
         result.update(status="error", reason=f"{type(exc).__name__}: {exc}"[:200])
         return result
 
@@ -147,7 +147,7 @@ def main() -> int:
     args = parser.parse_args()
 
     if not PROGRAMS.is_file():
-        raise SystemExit("data/programs.json missing — run scripts/build.py first")
+        raise SystemExit("data/programs.json missing, run scripts/build.py first")
 
     programs = json.loads(PROGRAMS.read_text(encoding="utf-8"))["programs"]
     state = load_state()
@@ -196,7 +196,7 @@ def main() -> int:
 
     # Human-readable report, also used as the body of the CI issue.
     report = [
-        f"# Watch report — {state['last_run'][:10]}",
+        f"# Watch report, {state['last_run'][:10]}",
         "",
         f"Checked **{len(results)}** program pages: {ok_count} OK, "
         f"{len(broken)} problems, {len(blocked)} bot-blocked, {len(skipped)} skipped. "
@@ -207,7 +207,7 @@ def main() -> int:
     if new_2027:
         report += ["## Pages that just started mentioning 2027", ""]
         for r in new_2027:
-            report.append(f"- **{r['name']}** ({r['org']}) — [page]({r['url']})")
+            report.append(f"- **{r['name']}** ({r['org']}), [page]({r['url']})")
             if r["dates_found"]:
                 report.append(f"  - dates on page: {', '.join(r['dates_found'][:6])}")
             if r["status_phrases"]:
@@ -218,7 +218,7 @@ def main() -> int:
         report += ["## Pages whose content changed", ""]
         for r in changed:
             arrow = f"{r['_delta']:+d} chars"
-            report.append(f"- **{r['name']}** ({r['org']}) — {arrow} — [page]({r['url']})")
+            report.append(f"- **{r['name']}** ({r['org']}), {arrow}, [page]({r['url']})")
             fresh = [d for d in r["dates_found"] if d not in r["_was"]]
             if fresh:
                 report.append(f"  - new dates on page: {', '.join(fresh[:6])}")
@@ -229,7 +229,7 @@ def main() -> int:
     if broken:
         report += ["## Links that need fixing", ""]
         for r in broken:
-            report.append(f"- **{r['name']}** ({r['org']}) — {r['reason']} — `{r['url']}`")
+            report.append(f"- **{r['name']}** ({r['org']}), {r['reason']}, `{r['url']}`")
         report.append("")
 
     if blocked:
@@ -238,7 +238,7 @@ def main() -> int:
             "",
         ]
         for r in blocked:
-            report.append(f"- **{r['name']}** ({r['org']}) — {r['reason']} — [page]({r['url']})")
+            report.append(f"- **{r['name']}** ({r['org']}), {r['reason']}, [page]({r['url']})")
         report.append("")
 
     redirects = [r for r in results if r.get("redirected")]
@@ -258,7 +258,7 @@ def main() -> int:
     else:
         for bucket, label in ((broken, "broken"), (changed, "changed"), (new_2027, "new-2027")):
             for r in bucket:
-                print(f"{label}: {r['name']} — {r['url']}")
+                print(f"{label}: {r['name']}, {r['url']}")
 
     code = 0
     if broken:
