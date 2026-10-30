@@ -29,6 +29,19 @@ This repo answers those, and adds 80 programs that were not on the list.
 | **[`materials/`](materials/)** | CV skeleton, personal statement template, recommendation requests, cold-email template, strategy guides |
 | **[`scripts/`](scripts/)** | Build, validate, link-check and watch |
 
+### Design
+
+The interface follows Notion's workspace conventions, because that is what this
+is actually used in alongside. The tokens were read off Notion's own stylesheets
+rather than approximated — the ink `rgb(55,53,47)`, the hover
+`rgba(25,23,17,.075)`, the hairline `rgba(55,53,47,.09)`, the blue
+`rgb(35,131,226)`, the inset-plus-halo focus ring, Inter with lining numerals,
+and the standard database select palette for the pills.
+
+That means a page sidebar, database views (table / board / gallery), select
+pills that keep one colour per option, and a peek panel with a property table —
+the same moves a Notion database makes.
+
 ### The site, specifically
 
 - **The plan** — not a list but an ordered set of actions: what is accepting
