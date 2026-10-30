@@ -1,7 +1,13 @@
 # Jolene VanderHeyden: application facts
 
-Everything an application form or Claude might ask for, in one place. Taken
+Setup completed: `[ not yet ]`
+
+Everything an application form or Claude might ask for, in one place. Started
 from her LinkedIn in October 2026.
+
+When Claude finishes the one-time setup it rewrites this file with the blanks
+filled and a date on the line above. That line is how it knows not to
+interview you twice, so keep it.
 
 **Fill in the `[ ]` fields before using this.** Claude is instructed never to
 guess them, so a blank here means it will stop and ask.
@@ -75,7 +81,7 @@ Course instruction support for Introductory Psychology: grading, proctoring.
 | Stop The Bleed | STOP THE BLEED | |
 | Diversity in Health Care Certified | Penn State College of Medicine | |
 
-The three CITI certificates matter more than she probably realises. Programs
+The three CITI certificates matter more than she probably realizes. Programs
 ask whether applicants have human subjects training, and most undergraduates
 have none. Put them on the CV and mention them in any application that
 involves patient or participant data.
@@ -88,9 +94,9 @@ working with kids."
 
 Useful framings for "why this area":
 - How mood and anxiety disorders present in children differently than adults
-- Developmental and behavioural pediatrics
+- Developmental and behavioral pediatrics
 - Pediatric neurology, including the epilepsy work at Boston Children's
-- Anything combining patient contact with measurable behavioural data, which is
+- Anything combining patient contact with measurable behavioral data, which is
   what she already does in the lab
 
 ## Recommenders

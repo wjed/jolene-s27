@@ -40,7 +40,7 @@ protocol, you dealt with a result that did not work.
 If you have little or no formal research experience: say so without apology and
 lean on transferable evidence, a hard course with a project component, a data
 analysis you did, a job that required precision and follow-through. Several
-programs on this list (Seattle Children's especially) explicitly prioritise
+programs on this list (Seattle Children's especially) explicitly prioritize
 students *without* prior research experience.
 
 **Paragraph 3, what you want to work on (120-180 words)**

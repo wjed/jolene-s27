@@ -61,7 +61,7 @@ Roughly in order:
 
 - Enthusiasm as such. Everyone is enthusiastic.
 - Volume of extracurriculars unrelated to research or clinical work.
-- Prestige-signalling about the program in the essay. They know it is good.
+- Prestige-signaling about the program in the essay. They know it is good.
 - A longer personal statement. Over-length is a mild negative.
 
 ## The three asymmetries worth exploiting
@@ -84,7 +84,7 @@ with a few of these in it deliberately.
 ## On the thin-experience problem
 
 If your research experience is light, that is the normal state for a rising junior
-and several programs are built for it, Seattle Children's explicitly prioritises
+and several programs are built for it, Seattle Children's explicitly prioritizes
 first-time research interns, and NSF REUs are designed as entry points.
 
 What helps: a serious course project described as research, specific technical

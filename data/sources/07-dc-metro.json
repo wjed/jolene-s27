@@ -51,7 +51,7 @@
       "requires": ["cv", "personal-statement", "1-lor"],
       "selectivity": "high",
       "near_home": true,
-      "notes": "Roughly an hour from Leesburg. Lombardi is an NCI comprehensive cancer centre, and the neuroscience department is strong. Hub page: look under education and training for the summer listings.",
+      "notes": "Roughly an hour from Leesburg. Lombardi is an NCI comprehensive cancer center, and the neuroscience department is strong. Hub page: look under education and training for the summer listings.",
       "url_verified": true,
       "url_confidence": "low"
     },
@@ -78,7 +78,7 @@
       "requires": ["cv", "personal-statement"],
       "selectivity": "moderate",
       "near_home": true,
-      "notes": "GW's paediatrics department is based at Children's National, so an email here can lead to the same place by another route.",
+      "notes": "GW's pediatrics department is based at Children's National, so an email here can lead to the same place by another route.",
       "url_verified": true,
       "url_confidence": "medium"
     },
@@ -157,7 +157,7 @@
       },
       "requires": ["transcript", "cv", "personal-statement", "1-lor"],
       "selectivity": "high",
-      "notes": "About two hours from Leesburg, so a weekend drive home rather than a commute. In-state and a strong paediatrics department.",
+      "notes": "About two hours from Leesburg, so a weekend drive home rather than a commute. In-state and a strong pediatrics department.",
       "url_verified": true,
       "url_confidence": "low"
     }

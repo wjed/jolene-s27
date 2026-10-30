@@ -34,8 +34,8 @@
     "3-lor": "3 letters of recommendation",
   };
 
-  /* Each select option keeps one colour everywhere it appears, the way a
-   * Notion database assigns a colour per option. */
+  /* Each select option keeps one color everywhere it appears, the way a
+   * Notion database assigns a color per option. */
   const TRACKS = {
     pediatrics: ["Pediatrics", "pink", "🧸"],
     oncology: ["Oncology", "red", "🎗️"],
@@ -244,7 +244,7 @@
   // -------------------------------------------------------------- urgency
 
   /* A program is either not open yet, open with a deadline ahead, past, or
-   * undated. Collapsed into one label plus a Notion colour. */
+   * undated. Collapsed into one label plus a Notion color. */
   function urgency(p) {
     const opens = parseDate(p.opens);
     const dl = parseDate(p.deadline);

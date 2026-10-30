@@ -61,7 +61,7 @@ Pulled from the dataset. Use these as the starting point:
 | **Vanderbilt VSSA** | Name the sub-track (neuroscience, cancer biology, immunology) rather than the umbrella. |
 | **Boston Children's epilepsy lab** | A single lab: the paragraph is effectively a cold email. Name Dr. Loddenkemper's work directly. |
 | **CHOP CRISSP** | Enormous institution; naming a division and a faculty member is what separates applications. |
-| **Seattle Children's** | They prioritise first-time research interns. If your experience is thin, that is an argument *for* you here. Make it. |
+| **Seattle Children's** | They prioritize first-time research interns. If your experience is thin, that is an argument *for* you here. Make it. |
 
 ## Check before sending
 

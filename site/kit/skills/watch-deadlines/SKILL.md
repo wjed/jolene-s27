@@ -30,7 +30,7 @@ wrong. Three real examples from building this list:
 
 - Van Andel Institute's "Feb. 25, 2027" is a fundraising gala.
 - Children's National's page describes a fall-spring internship whose deadline
-  passed in August 2026, not a summer programme.
+  passed in August 2026, not a summer program.
 - The University of Chicago Pritzker page advertises a 30 November 2026
   deadline, which is for UChicago's own **medical students**.
 

@@ -37,7 +37,7 @@ with a long list is one where naming a mentor matters a great deal.
 
 - **Stipend**, and whether housing is separate. A $7,500 stipend with housing
   included (Jackson Lab) is worth far more than $5,000 with no housing in Boston.
-- **Housing**: provided, subsidised, or your problem.
+- **Housing**: provided, subsidized, or your problem.
 - **Travel**: Jackson Lab and several others reimburse it; most do not.
 - **Length**: nine to eleven weeks, and whether it collides with anything.
 

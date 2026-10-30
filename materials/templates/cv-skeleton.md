@@ -75,7 +75,7 @@ AWARDS & HONORS
   "Maintained cell cultures."
 - **Be specific about skills.** "Proficient in laboratory techniques" says
   nothing. "Mouse colony management, genotyping by PCR" says a lot.
-- **Quantify where it is honest.** "Enrolled 40 patients," "analysed 12 months of
+- **Quantify where it is honest.** "Enrolled 40 patients," "analyzed 12 months of
   registry data."
 - **One page, 10-11pt, generous margins.** A cramped two-pager reads worse than a
   clean one-pager.
@@ -84,7 +84,7 @@ AWARDS & HONORS
 ## If the research section is thin
 
 Normal for a rising junior, and not disqualifying, Seattle Children's explicitly
-prioritises first-time research interns, and plenty of others take students with
+prioritizes first-time research interns, and plenty of others take students with
 no bench experience at all.
 
 What to do: promote a serious course project into the research section with its

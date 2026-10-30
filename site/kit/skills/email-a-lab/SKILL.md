@@ -18,7 +18,7 @@ Fifteen minutes per email. Three or four per program she seriously wants.
 1. Open the program page and find the faculty or mentor list. It is usually two
    clicks deep, under "Faculty", "Mentors", "Research areas" or "Labs".
 2. Shortlist two or three whose work connects to developmental psychology,
-   pediatrics, mood and anxiety disorders, or behavioural measurement. Those are
+   pediatrics, mood and anxiety disorders, or behavioral measurement. Those are
    her actual interests; do not shortlist on prestige.
 3. Look up one recent paper each on PubMed. Read the abstract properly.
 4. Check the lab is active. If the most recent paper is from 2019, it may be

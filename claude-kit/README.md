@@ -1,27 +1,49 @@
 # Your Claude kit
 
-Four files that give Claude everything it needs to help with these
-applications, so you never have to explain yourself twice.
+Everything Claude needs to help with these applications, so you never have
+to explain yourself twice. Set it up once and it remembers.
 
-## The five minute version
+## How this works
+
+**You set it up once.** After that, every chat already knows who you are and
+you just ask for what you want.
 
 1. Download the kit and unzip it.
-2. Fill in the `[ ]` blanks in `jolene-profile.md`: email, phone, address, GPA.
-   Takes two minutes. Claude is told never to guess these, so a blank means it
-   will stop and ask rather than invent something.
-3. Start a Claude chat and attach `CLAUDE.md`, `jolene-profile.md`, and your
-   resume.
-4. Say what you want. For example: *"Help me apply to the Jackson Lab Summer
-   Student Program."*
+2. Start a Claude chat, attach `CLAUDE.md` and `jolene-profile.md`, and say
+   hello.
+3. Claude interviews you. It asks for your resume, a few blanks like your GPA
+   and address, some samples of your writing, and the things that make an
+   application good, such as why pediatrics and what you actually do in the
+   lab. It asks in small rounds, not all at once.
+4. **At the end it hands you a filled-in `jolene-profile.md`. Save that over
+   the old one.** This is the step that matters: it is what stops you being
+   asked the same questions again.
+5. Done. From then on, just say what you want: *"Help me apply to the Jackson
+   Lab Summer Student Program."*
 
-That is enough to be useful immediately.
+If you would rather fill the blanks in yourself first, you can. Claude will
+skip the questions it no longer needs.
+
+## After setup, almost nothing needs maintaining
+
+Tell Claude when one of these changes, and it will give you an updated profile
+to save. There is no routine to keep up with.
+
+- Your GPA, once a semester
+- A new job, lab role or certification
+- A recommender saying yes, or no
+- A new version of your resume
+
+Two things look after themselves: which programs have posted their 2027 dates,
+via the weekly check, and which applications you have submitted, which the site
+remembers.
 
 ## What is in the box
 
 | File | What it is for |
 |---|---|
 | `CLAUDE.md` | Background: who you are, what you are applying to, and how you want to be helped. Attach this every time. |
-| `jolene-profile.md` | Every fact a form might ask for, in one place. Fill in the blanks once. |
+| `jolene-profile.md` | Every fact a form might ask for. Claude fills this in during setup and hands it back for you to save. |
 | `skills/fill-application/` | Fills an application form in the browser from your profile, and stops at anything it should not answer alone |
 | `skills/email-a-lab/` | Researches a lab, then drafts a short specific email to the professor |
 | `skills/watch-deadlines/` | A weekly check of which programs have posted their 2027 dates |

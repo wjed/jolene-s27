@@ -67,7 +67,7 @@ Everything that makes writing easier makes the letter better:
 4. **A reminder of who you are**: a short paragraph: the course, the term, what
    you did well, anything memorable. Professors teach hundreds of students a
    year and this is a kindness, not an imposition.
-5. **What to emphasise**: if a program wants independence, say so.
+5. **What to emphasize**: if a program wants independence, say so.
 
 ## Managing it afterwards
 

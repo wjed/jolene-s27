@@ -40,7 +40,7 @@ rather than approximated, the ink `rgb(55,53,47)`, the hover
 and the standard database select palette for the pills.
 
 That means a page sidebar, database views (table / board / gallery), select
-pills that keep one colour per option, and a peek panel with a property table, 
+pills that keep one color per option, and a peek panel with a property table, 
 the same moves a Notion database makes.
 
 ### The site, specifically

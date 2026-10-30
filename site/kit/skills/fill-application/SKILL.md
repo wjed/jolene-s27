@@ -49,7 +49,7 @@ These are the only part worth real time.
 to the word limit. Do not rewrite it for each program.
 
 **Why this program.** This one is written fresh every time. It must name
-something that exists only at this program: a named faculty member, a centre, a
+something that exists only at this program: a named faculty member, a center, a
 specific resource, the structure of the summer. If the program page lists
 mentors, pick two or three whose work genuinely connects to developmental
 psychology, pediatrics or mood disorders, read one abstract each, and reference
