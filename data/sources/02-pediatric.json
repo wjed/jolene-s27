@@ -1,0 +1,643 @@
+{
+  "category": "Pediatric & children's hospital research",
+  "programs": [
+    {
+      "id": "seattle-childrens-sssp",
+      "name": "Summer Scholars Program",
+      "org": "Seattle Children's Research Institute",
+      "city": "Seattle, WA",
+      "url": "https://www.seattlechildrens.org/research/centers-programs/science-education-department/summer-scholars-program/",
+      "tracks": [
+        "pediatrics",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Nine-week paid pediatric research internship; first-time research interns are prioritized.",
+      "duration_weeks": 9,
+      "stipend_usd": 7100,
+      "stipend_note": "$7,100 stipend plus $400 food stipend and an ORCA transit card",
+      "housing": "not-provided",
+      "opens": "2026-11-17",
+      "deadline": "2027-01-02",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Must be enrolled and in good standing. Students graduating before or during the program are NOT eligible. No graduate or medical students. Prior research experience not required."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Strong stipend and explicitly friendly to students without much research experience. 2026 cycle: opened Nov 17, apps due Jan 2, letters due Jan 16.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "bch-newborn-medicine",
+      "name": "Newborn Medicine Summer Student Research Program",
+      "org": "Boston Children's Hospital / Beth Israel Deaconess",
+      "city": "Boston, MA",
+      "url": "https://www.childrenshospital.org/services/newborn-medicine",
+      "tracks": [
+        "pediatrics",
+        "neonatal",
+        "clinical",
+        "basic-science"
+      ],
+      "focus": "Neonatal and newborn medicine research for undergraduates and medical students.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-01-23",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "contact": "NewbornSummerStudentProgram@childrens.harvard.edu",
+      "notes": "2026 cycle: applications due Jan 23, letters due Jan 30. A second Boston Children's door beyond the epilepsy lab.",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "bch-coach",
+      "name": "College COACH Program",
+      "org": "Boston Children's Hospital",
+      "city": "Boston, MA",
+      "url": "https://research.childrenshospital.org/",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "basic-science"
+      ],
+      "focus": "Paid ten-week undergraduate research internship placed across hospital departments.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-15",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "Runs on a short, unusual timeline: an interest form around mid-December, then individual department postings in early January, decisions in March. Watch it weekly rather than waiting for one deadline.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "nationwide-childrens",
+      "name": "Summer Research Internships (Office of Trainee Affairs)",
+      "org": "Nationwide Children's Hospital / Abigail Wexner Research Institute",
+      "city": "Columbus, OH",
+      "url": "https://www.nationwidechildrens.org/research/office-of-trainee-affairs",
+      "tracks": [
+        "pediatrics",
+        "basic-science",
+        "translational",
+        "cardiovascular"
+      ],
+      "focus": "Several pediatric research tracks including cardiovascular research and REaCH-LABS (child health equity and outcomes).",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": "2026-10-15",
+      "deadline": "2027-02-07",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Hub page lists several distinct tracks. A third-party guide put the cardiovascular portal at mid-October 2026 to Feb 7, 2027 — verify on the official page.",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "chla-summer",
+      "name": "Summer Student Research Program",
+      "org": "Children's Hospital Los Angeles (Saban Research Institute)",
+      "city": "Los Angeles, CA",
+      "url": "https://www.chla.org/research/education-training",
+      "tracks": [
+        "pediatrics",
+        "basic-science",
+        "translational",
+        "oncology"
+      ],
+      "focus": "Pediatric research at the Saban Research Institute.",
+      "duration_weeks": 10,
+      "stipend_usd": 4000,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "",
+      "url_confidence": "low",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "url_verified": false
+    },
+    {
+      "id": "lurie-childrens",
+      "name": "Summer Research Program",
+      "org": "Stanley Manne Children's Research Institute (Lurie Children's)",
+      "city": "Chicago, IL",
+      "url": "https://research.luriechildrens.org/",
+      "tracks": [
+        "pediatrics",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Pediatric research affiliated with Northwestern Feinberg School of Medicine.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-15",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "texas-childrens-baylor-smart",
+      "name": "Summer Undergraduate Research Training (SMART) Program",
+      "org": "Baylor College of Medicine / Texas Children's Hospital",
+      "city": "Houston, TX",
+      "url": "https://www.bcm.edu/education/graduate-school-of-biomedical-sciences/degree-programs-and-certificates/smart-program",
+      "tracks": [
+        "pediatrics",
+        "basic-science",
+        "translational",
+        "oncology"
+      ],
+      "focus": "Nine paid weeks of biomedical research across a very broad range of areas, plus seminars and career development.",
+      "duration_weeks": 9,
+      "stipend_usd": 4500,
+      "housing": "provided",
+      "stipend_note": "Designated housing near Baylor College of Medicine",
+      "opens": "2026-10-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "contact": "smart-program@bcm.edu",
+      "notes": "Official name is Summer Undergraduate Research Training, not \"Summer Medical and Research Training.\" 2027 application was slated to open in October 2026 — check now. Faculty mentor forms are due Jan 15, 2027, which hints the student deadline sits near it.",
+      "url_confidence": "high",
+      "url_verified": true
+    },
+    {
+      "id": "kennedy-krieger",
+      "name": "Maryland Center for Developmental Disabilities / research internships",
+      "org": "Kennedy Krieger Institute",
+      "city": "Baltimore, MD",
+      "url": "https://www.kennedykrieger.org/training",
+      "tracks": [
+        "pediatrics",
+        "neuroscience",
+        "developmental",
+        "clinical"
+      ],
+      "focus": "Pediatric developmental disabilities, neurodevelopment and rehabilitation research.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "Excellent fit for developmental/behavioral pediatrics. Adjacent to Johns Hopkins — a Baltimore trip could cover both.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "nemours",
+      "name": "Summer Undergraduate Research Program",
+      "org": "Nemours Children's Health",
+      "city": "Wilmington, DE",
+      "url": "https://www.nemours.org/pediatric-research.html",
+      "tracks": [
+        "pediatrics",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Pediatric research including orthopedics, cardiology and biomedical engineering.",
+      "duration_weeks": 10,
+      "stipend_usd": 4000,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "moderate",
+      "notes": "Less saturated than CHOP but in the same region — a sensible safety in the Philadelphia corridor.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "rady-childrens",
+      "name": "Summer Research Internship",
+      "org": "Rady Children's Hospital / UC San Diego",
+      "city": "San Diego, CA",
+      "url": "https://www.rchsd.org/research-innovation/",
+      "tracks": [
+        "pediatrics",
+        "genomics",
+        "translational"
+      ],
+      "focus": "Pediatric genomics and translational research, including the Rady Children's Institute for Genomic Medicine.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-15",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "Rare pediatric genomics angle if that interests her.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "arkansas-childrens",
+      "name": "Summer Undergraduate Research Program",
+      "org": "Arkansas Children's Research Institute",
+      "city": "Little Rock, AR",
+      "url": "https://www.archildrens.org/research",
+      "tracks": [
+        "pediatrics",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Pediatric research with a strong nutrition and child health component.",
+      "duration_weeks": 10,
+      "stipend_usd": 4000,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "moderate",
+      "notes": "Genuine safety school with real pediatric research. Applicant pools here are far smaller than at CHOP or St. Jude.",
+      "url_confidence": "low",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "url_verified": false
+    },
+    {
+      "id": "phoenix-childrens",
+      "name": "Summer Research Internship",
+      "org": "Phoenix Children's Hospital",
+      "city": "Phoenix, AZ",
+      "url": "https://phoenixchildrens.org/research",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Pediatric clinical and translational research.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-15",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "primary-childrens-utah",
+      "name": "Pediatric Research Summer Program",
+      "org": "University of Utah / Primary Children's Hospital",
+      "city": "Salt Lake City, UT",
+      "url": "https://medicine.utah.edu/pediatrics/education",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Pediatric research in the University of Utah Department of Pediatrics.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "childrens-national-ed",
+      "name": "Emergency Department Clinical Research Internship",
+      "org": "Children's National Hospital",
+      "city": "Washington, DC",
+      "url": "https://www.childrensnational.org/for-healthcare-professionals/healthcare-education/research-education/emergency-department-clinical-research-internship",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "emergency-medicine"
+      ],
+      "focus": "Hands-on pediatric emergency medicine clinical research — patient enrollment and data collection in the ED.",
+      "duration_weeks": 12,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-01-31",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Roughly 30 hours/week onsite."
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "Unusually strong clinical-contact experience for a pre-med application — real patient interaction, not just bench work. Most recent published cycle was summer 2024, so confirm it is still running.",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "childrens-national-trainees",
+      "name": "Research Trainees Summer Program",
+      "org": "Children's National Hospital — Center for Precision Medicine & Genomics",
+      "city": "Washington, DC",
+      "url": "https://research.childrensnational.org/",
+      "tracks": [
+        "pediatrics",
+        "genomics",
+        "basic-science"
+      ],
+      "focus": "Undergraduate placements with faculty in precision medicine and genomics research.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "The 2026 cycle has closed and the 2027 posting was not up as of late October 2026 — this is one for the change-watcher to catch.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "cook-childrens",
+      "name": "Summer Research Program",
+      "org": "Cook Children's Health Care System",
+      "city": "Fort Worth, TX",
+      "url": "https://www.cookchildrens.org/",
+      "tracks": [
+        "pediatrics",
+        "clinical"
+      ],
+      "focus": "Pediatric clinical research, including a notable pediatric epilepsy and neurosciences group.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv"
+      ],
+      "selectivity": "moderate",
+      "notes": "Their pediatric neurosciences/epilepsy work overlaps with the Boston Children's epilepsy interest — a good direct-email target.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "ucsf-benioff-peds",
+      "name": "Pediatrics summer research (Benioff Children's)",
+      "org": "UCSF Benioff Children's Hospitals",
+      "city": "San Francisco, CA",
+      "url": "https://pediatrics.ucsf.edu/education",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Pediatric research across UCSF's Department of Pediatrics.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "Often filled by direct faculty contact rather than a central application — see the cold-email template in materials/.",
+      "url_confidence": "low",
+      "url_verified": true
+    }
+  ]
+}

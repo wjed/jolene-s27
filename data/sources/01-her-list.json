@@ -1,0 +1,844 @@
+{
+  "category": "On the original list",
+  "programs": [
+    {
+      "id": "iu-inspire",
+      "name": "INSPIRE — Investigating Neurosciences Summer Program",
+      "org": "Indiana University School of Medicine (Stark Neurosciences)",
+      "city": "Indianapolis, IN",
+      "url": "https://medicine.iu.edu/research-centers/neurosciences/education/INSPIRE",
+      "tracks": [
+        "neuroscience",
+        "alzheimers",
+        "basic-science"
+      ],
+      "focus": "Alzheimer's disease and neurodegeneration research in the Stark Neurosciences Research Institute.",
+      "duration_weeks": 8,
+      "stipend_usd": 4000,
+      "housing": "provided-nonlocal",
+      "opens": "2026-10-01",
+      "deadline": "2027-01-15",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "us-pr-or-f1",
+        "min_gpa": null,
+        "notes": "Program page says freshman-senior; a press release emphasizes freshmen/sophomores. High school students are not accepted."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "contact": "mneuro@iu.edu",
+      "notes": "2027 applications were slated to open in October 2026 — worth checking right now.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "chp-pittsburgh",
+      "name": "Summer Research Training Program",
+      "org": "UPMC Children's Hospital of Pittsburgh",
+      "city": "Pittsburgh, PA",
+      "url": "https://www.chp.edu/research/about/training-program",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Pediatric clinical and translational research across hospital departments.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Confirm current-cycle eligibility on the program page."
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "Pairs with Pitt's other summer programs — same city, one trip.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "stjude-poe",
+      "name": "Pediatric Oncology Education (POE)",
+      "org": "St. Jude Children's Research Hospital",
+      "city": "Memphis, TN",
+      "url": "https://www.stjude.org/education-training/research-training/undergraduate/poe.html",
+      "tracks": [
+        "pediatrics",
+        "oncology",
+        "clinical",
+        "basic-science"
+      ],
+      "focus": "Pediatric cancer and catastrophic disease — basic, translational, or clinical placements.",
+      "duration_weeks": 11,
+      "stipend_usd": 6600,
+      "stipend_note": "$600/week",
+      "housing": "provided-nonlocal",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": 3.4,
+        "notes": "Minimum 3.40 GPA overall and in math/science. Prior research experience expected. Must be able to start May 10, May 17, May 24, or Jun 1, 2027 — otherwise ineligible."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Flagship pediatric program. Submit the application without waiting on letters — St. Jude wants credentials in by mid-to-late December, and the Feb 1 deadline covers the application AND all credentials.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "chop-crissp",
+      "name": "CHOP Research Institute Summer Scholars Program (CRISSP)",
+      "org": "Children's Hospital of Philadelphia",
+      "city": "Philadelphia, PA",
+      "url": "https://www.research.chop.edu/crissp",
+      "tracks": [
+        "pediatrics",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Mentored pediatric biomedical research with a cohort seminar series.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Typically rising juniors/seniors; cannot have graduated before the program starts."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "One of the most competitive pediatric programs in the country.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "weill-cornell-peds",
+      "name": "Department of Pediatrics Summer Internship",
+      "org": "Weill Cornell Medicine",
+      "city": "New York, NY",
+      "url": "https://pediatrics.weill.cornell.edu/education/department-pediatrics-summer-internship",
+      "tracks": [
+        "pediatrics",
+        "clinical"
+      ],
+      "focus": "Pediatric clinical research with Weill Cornell pediatrics faculty.",
+      "duration_weeks": 8,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-08",
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Flagged on the original list: opens Dec 8.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "childrens-colorado",
+      "name": "Research Training & Internships",
+      "org": "Children's Hospital Colorado",
+      "city": "Aurora, CO",
+      "url": "https://www.childrenscolorado.org/research-innovation/training-and-internships/",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Multiple pediatric research internship tracks across the institute.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "Flagged on the original list: opens Dec 1. The landing page lists several distinct tracks — pick the one that matches.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "yale-child-study",
+      "name": "Undergraduate Research Assistant / PGA Internship",
+      "org": "Yale Child Study Center",
+      "city": "New Haven, CT",
+      "url": "https://medicine.yale.edu/childstudy/education-and-training/undergraduate-pga/interns/",
+      "tracks": [
+        "pediatrics",
+        "neuroscience",
+        "psychology",
+        "clinical"
+      ],
+      "focus": "Child psychiatry, developmental and autism research at the Child Study Center.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Flagged on the original list: opens Dec 1. Strong fit for developmental/behavioral work.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "bch-loddenkemper-epilepsy",
+      "name": "Pediatric Epilepsy Research Internship (Loddenkemper Lab)",
+      "org": "Boston Children's Hospital",
+      "city": "Boston, MA",
+      "url": "https://research.childrenshospital.org/research-units/loddenkemper-research-laboratory-research/pediatric-epilepsy-research-internship",
+      "tracks": [
+        "pediatrics",
+        "neuroscience",
+        "clinical"
+      ],
+      "focus": "Pediatric epilepsy and EEG research in a single high-output lab.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2027-01-23",
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "Flagged on the original list: opens Jan 23. Single-lab internship — a specific, direct email to the PI matters more here than a generic application.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "psu-surip",
+      "name": "Summer Undergraduate Research Internship Program (SURIP)",
+      "org": "Penn State College of Medicine",
+      "city": "Hershey, PA",
+      "url": "https://med.psu.edu/education/certificate-and-undergraduate/summer-undergrad-internship-surip",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience"
+      ],
+      "focus": "Biomedical research across Penn State College of Medicine departments.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Flagged on the original list: opens Dec 1.",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "mayo-surf",
+      "name": "Summer Undergraduate Research Fellowship (SURF) — Biomedical Research",
+      "org": "Mayo Clinic",
+      "city": "Rochester, MN",
+      "url": "https://college.mayo.edu/academics/biomedical-research-training/summer-undergraduate-research-fellowship-surf/",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "clinical"
+      ],
+      "focus": "Ten weeks of mentored biomedical research at Mayo Clinic with a strong professional-development core.",
+      "duration_weeks": 10,
+      "stipend_usd": 7000,
+      "housing": "stipend-covers",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.0,
+        "notes": "Must have completed sophomore year by program start."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages.",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "penn-suip",
+      "name": "Summer Undergraduate Internship Program (SUIP)",
+      "org": "University of Pennsylvania — Biomedical Graduate Studies",
+      "city": "Philadelphia, PA",
+      "url": "https://www.med.upenn.edu/suip/",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience"
+      ],
+      "focus": "Biomedical research at Penn Med with PhD-track mentoring and graduate-school prep.",
+      "duration_weeks": 10,
+      "stipend_usd": 5500,
+      "housing": "provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": "Oriented toward students planning a PhD or MD-PhD."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Can be combined geographically with CHOP — same campus block.",
+      "url_confidence": "medium"
+    },
+    {
+      "id": "hopkins-pathway-sip",
+      "name": "Summer Internship Program (Pathway)",
+      "org": "Johns Hopkins School of Medicine",
+      "city": "Baltimore, MD",
+      "url": "https://www.hopkinsmedicine.org/som/pathway/summer-internship-program",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "clinical"
+      ],
+      "focus": "Mentored biomedical research at Johns Hopkins School of Medicine.",
+      "duration_weeks": 9,
+      "stipend_usd": 4500,
+      "housing": "varies",
+      "opens": "2026-10-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Flagged on the original list as OPEN NOW. This is one to do first.",
+      "priority_hint": "open-now",
+      "url_confidence": "medium"
+    },
+    {
+      "id": "cwru-hlb",
+      "name": "Heart, Lung and Blood (HLB) Summer Research Program",
+      "org": "Case Western Reserve University School of Medicine",
+      "city": "Cleveland, OH",
+      "url": "https://case.edu/medicine/",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "cardiovascular"
+      ],
+      "focus": "NHLBI-aligned cardiovascular, pulmonary and hematologic research.",
+      "duration_weeks": 10,
+      "stipend_usd": 4500,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Same institution as CanSUR — check whether one application covers both.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "cwru-cansur",
+      "name": "Cancer-focused Summer Undergraduate Research (CanSUR)",
+      "org": "Case Comprehensive Cancer Center",
+      "city": "Cleveland, OH",
+      "url": "https://case.edu/cancer/",
+      "tracks": [
+        "oncology",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Cancer biology and cancer health-disparities research.",
+      "duration_weeks": 10,
+      "stipend_usd": 4500,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "cincinnati-surf",
+      "name": "Summer Undergraduate Research Fellowship (SURF)",
+      "org": "Cincinnati Children's Hospital Medical Center",
+      "city": "Cincinnati, OH",
+      "url": "https://www.cincinnatichildrens.org/education/research",
+      "tracks": [
+        "pediatrics",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Pediatric biomedical research at one of the largest children's research institutes.",
+      "duration_weeks": 10,
+      "stipend_usd": 4500,
+      "housing": "provided",
+      "opens": "2026-10-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Flagged on the original list as OPEN NOW. Top-tier pediatric research fit.",
+      "priority_hint": "open-now",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "odu-student-research",
+      "name": "Student Research Programs",
+      "org": "Old Dominion University",
+      "city": "Norfolk, VA",
+      "url": "https://www.odu.edu/research",
+      "tracks": [
+        "basic-science"
+      ],
+      "focus": "Campus-level undergraduate research program listings.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [],
+      "selectivity": "moderate",
+      "notes": "Weakest entry on the original list unless there is an ODU connection — this is a general campus page, not a competitive national program.",
+      "url_confidence": "low"
+    },
+    {
+      "id": "msk-mbsp",
+      "name": "Mechanistic Biology Summer Program (MBSP)",
+      "org": "Memorial Sloan Kettering Cancer Center",
+      "city": "New York, NY",
+      "url": "https://www.mskcc.org/education-training/summer-scientific-undergraduate-programs/mechanistic-biology-summer-program",
+      "tracks": [
+        "oncology",
+        "basic-science"
+      ],
+      "focus": "Mechanistic cancer biology in Sloan Kettering Institute labs.",
+      "duration_weeks": 10,
+      "stipend_usd": 6000,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Undergraduate program — distinct from MSK's HOPP Summer Student Program, which is high-school only."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one — the original list had the right one.",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "musc-surp",
+      "name": "Summer Undergraduate Research Program",
+      "org": "Medical University of South Carolina",
+      "city": "Charleston, SC",
+      "url": "https://gradstudies.musc.edu/",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience"
+      ],
+      "focus": "Biomedical research across MUSC colleges.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "nyu-langone-surp",
+      "name": "Summer Undergraduate Research Program (SURP)",
+      "org": "NYU Grossman School of Medicine",
+      "city": "New York, NY",
+      "url": "https://med.nyu.edu/education/",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience"
+      ],
+      "focus": "Biomedical research at NYU Langone with PhD-pipeline mentoring.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "psu-aha-usf",
+      "name": "AHA Undergraduate Summer Fellowship (AHA-USF)",
+      "org": "Penn State College of Medicine",
+      "city": "Hershey, PA",
+      "url": "https://med.psu.edu/education/certificate-and-undergraduate/aha-usf",
+      "tracks": [
+        "cardiovascular",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "American Heart Association-funded cardiovascular and stroke research.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Same institution as SURIP — one visit, two applications.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "rutgers-rwjms-neuro",
+      "name": "Neuroscience & Cell Biology Summer Research",
+      "org": "Rutgers Robert Wood Johnson Medical School",
+      "city": "Piscataway, NJ",
+      "url": "https://rwjms.rutgers.edu/department/neuroscience-cell-biology/about",
+      "tracks": [
+        "neuroscience",
+        "basic-science"
+      ],
+      "focus": "Neuroscience and cell biology research in RWJMS labs.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2027-01-02",
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "Flagged on the original list: opens Jan 2.",
+      "url_confidence": "high",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "url_verified": false
+    },
+    {
+      "id": "unidentified-summer-biomed",
+      "name": "Summer Biomedical Research Program (needs identifying)",
+      "org": "Unknown — from the original list",
+      "city": "Unknown",
+      "url": "https://www.google.com/search?q=%22Summer+Biomedical+Research+Program%22+undergraduate+2027",
+      "tracks": [
+        "basic-science"
+      ],
+      "focus": "The original list had a bare \"Summer Biomedical Research Program\" with no institution. Several schools use that exact name.",
+      "duration_weeks": null,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [],
+      "selectivity": "moderate",
+      "notes": "ACTION: needs the original link from Notion to identify which school this was.",
+      "needs_input": true,
+      "url_confidence": "none"
+    },
+    {
+      "id": "unidentified-promise",
+      "name": "PROMISE — Training in Oncology and Medicine to Inspire Students",
+      "org": "Unknown — from the original list",
+      "city": "Unknown",
+      "url": "https://www.google.com/search?q=PROMISE+%22Training+in+Oncology+and+Medicine+to+Inspire+Students%22",
+      "tracks": [
+        "oncology"
+      ],
+      "focus": "Oncology-focused undergraduate pipeline program; the institution was not captured in the original list.",
+      "duration_weeks": null,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [],
+      "selectivity": "moderate",
+      "notes": "ACTION: needs the original link from Notion.",
+      "needs_input": true,
+      "url_confidence": "none"
+    }
+  ]
+}

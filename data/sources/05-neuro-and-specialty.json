@@ -1,0 +1,497 @@
+{
+  "category": "Neuroscience, Alzheimer's & specialty focus",
+  "programs": [
+    {
+      "id": "hopkins-jhibs",
+      "name": "Johns Hopkins Internship in Brain Sciences (JHIBS)",
+      "org": "Johns Hopkins University",
+      "city": "Baltimore, MD",
+      "url": "https://neuroscience.jhu.edu/",
+      "tracks": [
+        "neuroscience",
+        "basic-science",
+        "clinical"
+      ],
+      "focus": "Brain sciences research spanning neurology, neurosurgery and neuroscience.",
+      "duration_weeks": 8,
+      "stipend_usd": 4000,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Third Hopkins/Baltimore option alongside the Pathway SIP and Kennedy Krieger.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "ucdavis-mind",
+      "name": "Summer Research Internship",
+      "org": "UC Davis MIND Institute",
+      "city": "Sacramento, CA",
+      "url": "https://health.ucdavis.edu/mind-institute/",
+      "tracks": [
+        "neuroscience",
+        "pediatrics",
+        "developmental",
+        "autism"
+      ],
+      "focus": "Neurodevelopmental disorders research — autism, fragile X, ADHD.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-15",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "One of the best neurodevelopmental research centers in the country. A direct lab email works better than a central application here.",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "allen-institute",
+      "name": "Summer Internship Program",
+      "org": "Allen Institute",
+      "city": "Seattle, WA",
+      "url": "https://alleninstitute.org/careers/internships/",
+      "tracks": [
+        "neuroscience",
+        "computational",
+        "basic-science"
+      ],
+      "focus": "Large-scale brain science and computational neuroscience.",
+      "duration_weeks": 10,
+      "stipend_usd": 7000,
+      "stipend_note": "Paid internship at a competitive hourly rate",
+      "housing": "not-provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-01-31",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Some tracks expect programming experience."
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "very-high",
+      "notes": "Excellent pay. Leans computational — a fit if she has any coding or data analysis background. Pairs with Seattle Children's for one city.",
+      "url_confidence": "medium"
+    },
+    {
+      "id": "salk-surf",
+      "name": "Heithoff-Brody Summer Scholars",
+      "org": "Salk Institute for Biological Studies",
+      "city": "La Jolla, CA",
+      "url": "https://www.salk.edu/about/education-outreach/",
+      "tracks": [
+        "neuroscience",
+        "basic-science",
+        "oncology"
+      ],
+      "focus": "Eight weeks of research at a renowned independent biology institute.",
+      "duration_weeks": 8,
+      "stipend_usd": 5000,
+      "housing": "varies",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Very small cohort, very high prestige.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "wisconsin-adrc",
+      "name": "Alzheimer's Disease Research Center summer research",
+      "org": "University of Wisconsin-Madison",
+      "city": "Madison, WI",
+      "url": "https://adrc.wisc.edu/",
+      "tracks": [
+        "alzheimers",
+        "neuroscience",
+        "clinical",
+        "aging"
+      ],
+      "focus": "Alzheimer's disease clinical and imaging research at a major NIA-funded center.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "If the INSPIRE Alzheimer's angle is the real interest, the national network of NIA-funded ADRCs is the thing to mine. There are more than 30, and most take undergrads by direct arrangement rather than a posted program.",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "nia-adrc-directory",
+      "name": "NIA Alzheimer's Disease Research Centers — directory",
+      "org": "National Institute on Aging",
+      "city": "30+ centers nationally",
+      "url": "https://www.nia.nih.gov/research/nia-funded-alzheimers-disease-research-centers",
+      "tracks": [
+        "alzheimers",
+        "neuroscience",
+        "aging",
+        "clinical"
+      ],
+      "focus": "The master directory of NIA-funded Alzheimer's Disease Research Centers.",
+      "duration_weeks": null,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "rolling",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv"
+      ],
+      "selectivity": "moderate",
+      "notes": "Not a program — a hunting ground. Pick the three centers nearest to her and email the education coordinator at each. Most do not advertise undergraduate slots but will take a strong student who asks. The single highest-leverage move for an Alzheimer's interest.",
+      "priority_hint": "portal",
+      "url_confidence": "high",
+      "url_verified": true
+    },
+    {
+      "id": "aha-summer-undergrad",
+      "name": "Summer Undergraduate Research Programs",
+      "org": "American Heart Association",
+      "city": "Multiple host institutions",
+      "url": "https://professional.heart.org/en/research-programs/aha-funding-opportunities",
+      "tracks": [
+        "cardiovascular",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "AHA-funded summer research in cardiovascular and cerebrovascular science at host institutions nationally.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "varies",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "The Penn State AHA-USF on her original list is one instance of this. Other institutions host their own AHA-funded versions — worth finding the one nearest her.",
+      "priority_hint": "portal",
+      "url_confidence": "low",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "url_verified": false
+    },
+    {
+      "id": "dana-farber-cure",
+      "name": "CURE Summer Program (Continuing Umbrella of Research Experiences)",
+      "org": "Dana-Farber/Harvard Cancer Center",
+      "city": "Boston, MA",
+      "url": "https://www.dana-farber.org/research",
+      "tracks": [
+        "oncology",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Cancer research mentoring at a top comprehensive cancer center.",
+      "duration_weeks": 9,
+      "stipend_usd": 5000,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Pairs with Boston Children's, which is adjacent — one Boston trip, several applications.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "harvard-shurp",
+      "name": "Summer Honors Undergraduate Research Program (SHURP)",
+      "org": "Harvard Medical School",
+      "city": "Boston, MA",
+      "url": "https://www.hms.harvard.edu/dms/diversity/shurp/",
+      "tracks": [
+        "basic-science",
+        "neuroscience",
+        "oncology"
+      ],
+      "focus": "Ten weeks of bench research in Harvard Medical School labs.",
+      "duration_weeks": 10,
+      "stipend_usd": 6000,
+      "stipend_note": "Stipend plus housing and travel",
+      "housing": "provided",
+      "opens": "2026-11-15",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.0,
+        "notes": "Requires at least one semester of college-level lab research experience."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Requires prior lab experience — check she meets that bar before spending an application on it.",
+      "url_confidence": "medium"
+    },
+    {
+      "id": "columbia-zuckerman",
+      "name": "Summer undergraduate research (Zuckerman Institute)",
+      "org": "Columbia University",
+      "city": "New York, NY",
+      "url": "https://zuckermaninstitute.columbia.edu/education-training",
+      "tracks": [
+        "neuroscience",
+        "basic-science",
+        "computational"
+      ],
+      "focus": "Systems and cellular neuroscience at Columbia's Zuckerman Mind Brain Behavior Institute.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Columbia is also an Amgen Scholars host.",
+      "url_confidence": "low",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "url_verified": false
+    },
+    {
+      "id": "cedars-sinai",
+      "name": "Graduate Research Internship / summer research",
+      "org": "Cedars-Sinai Medical Center",
+      "city": "Los Angeles, CA",
+      "url": "https://www.cedars-sinai.edu/research.html",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience"
+      ],
+      "focus": "Translational biomedical research at a large private academic medical center.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Pairs with CHLA for a Los Angeles trip.",
+      "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "stowers",
+      "name": "Summer Scholars Program",
+      "org": "Stowers Institute for Medical Research",
+      "city": "Kansas City, MO",
+      "url": "https://www.stowers.org/",
+      "tracks": [
+        "basic-science",
+        "developmental"
+      ],
+      "focus": "Ten weeks of developmental and regenerative biology research.",
+      "duration_weeks": 10,
+      "stipend_usd": 5500,
+      "stipend_note": "Stipend plus housing and travel",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Underrated — strong funding, full package, and a much smaller applicant pool than the coastal institutes.",
+      "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "benaroya",
+      "name": "Summer Internship Program",
+      "org": "Benaroya Research Institute",
+      "city": "Seattle, WA",
+      "url": "https://www.benaroyaresearch.org/",
+      "tracks": [
+        "immunology",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Autoimmune disease and immunology research, including type 1 diabetes.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "moderate",
+      "notes": "Fourth Seattle option alongside Seattle Children's, Fred Hutch and the Allen Institute. Seattle is unusually dense with good programs.",
+      "url_confidence": "low"
+    }
+  ]
+}

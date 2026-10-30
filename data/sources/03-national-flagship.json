@@ -1,0 +1,518 @@
+{
+  "category": "National & flagship programs",
+  "programs": [
+    {
+      "id": "nih-sip",
+      "name": "Summer Internship Program in Biomedical Research (SIP)",
+      "org": "National Institutes of Health",
+      "city": "Bethesda, MD (and other NIH campuses)",
+      "url": "https://www.training.nih.gov/programs/sip",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "clinical",
+        "neuroscience",
+        "oncology",
+        "pediatrics"
+      ],
+      "focus": "The largest biomedical summer research program in the country. One application reaches hundreds of NIH intramural labs across every institute, including NICHD (pediatrics), NINDS (neuro) and NCI (cancer).",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "stipend_note": "Stipend scales with education level; housing not provided",
+      "housing": "not-provided",
+      "opens": "2026-11-15",
+      "deadline": "2027-02-15",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": "US citizens or permanent residents, enrolled at least half time. Must be 17 by program start."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "HIGHEST PRIORITY ADD. Single application, enormous number of labs, and she can email individual PIs directly to boost her odds — that outreach is what actually gets people placed. 2026 cycle closed Feb 18; 2027 expected to open mid-November 2026 and close mid-February 2027. Verify at training.nih.gov/sip.",
+      "priority_hint": "top-pick",
+      "url_confidence": "high",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "url_verified": false
+    },
+    {
+      "id": "amgen-scholars",
+      "name": "Amgen Scholars Program (US)",
+      "org": "14 host universities nationally",
+      "city": "Multiple (Caltech, Columbia, Duke, Harvard, Hopkins, UCLA, UCSF, UNC, UT Southwestern, WashU, Yale and more)",
+      "url": "https://amgenscholars.com/us-program/",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience",
+        "oncology"
+      ],
+      "focus": "Premier national undergraduate research program with a shared symposium; each host institution runs its own application and its own labs.",
+      "duration_weeks": 10,
+      "stipend_usd": 6000,
+      "stipend_note": "Varies by host; most include housing and travel",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.2,
+        "notes": "Sophomores, juniors, or non-graduating seniors at accredited four-year schools. Minimum 3.2 cumulative GPA. Oriented toward students interested in a PhD or MD-PhD."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "BEST VALUE PER UNIT OF EFFORT. She can apply to as many US hosts as she likes, and much of the essay content is reusable across them. Applications open Nov 1, 2026; a third-party guide puts the deadline at Feb 1, 2027 for all US hosts — confirm per host.",
+      "priority_hint": "top-pick",
+      "url_confidence": "high"
+    },
+    {
+      "id": "jackson-lab-ssp",
+      "name": "Summer Student Program (SSP)",
+      "org": "The Jackson Laboratory",
+      "city": "Bar Harbor, ME and Farmington, CT",
+      "url": "https://www.jax.org/ssp",
+      "tracks": [
+        "basic-science",
+        "genomics",
+        "oncology"
+      ],
+      "focus": "Ten weeks of genetics and genomics research with an independent project and a written report — unusually strong mentorship structure.",
+      "duration_weeks": 10,
+      "stipend_usd": 7500,
+      "stipend_note": "$7,500 plus room, board AND travel",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-01-25",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "High school seniors and undergraduates. Deadline is 5:00 p.m. ET."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "CONFIRMED DATE: Jan 25, 2027 at 5pm ET. Best total compensation package on this whole list — stipend plus room, board and travel. Applications open November 2026.",
+      "priority_hint": "top-pick",
+      "url_confidence": "high"
+    },
+    {
+      "id": "leadership-alliance-sreip",
+      "name": "Summer Research Early Identification Program (SR-EIP)",
+      "org": "The Leadership Alliance",
+      "city": "Multiple member institutions (Brown, Columbia, Cornell, Harvard, Hopkins, Yale, Vanderbilt and more)",
+      "url": "https://theleadershipalliance.org/summer-research-early-identification-program",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "clinical",
+        "neuroscience",
+        "public-health"
+      ],
+      "focus": "One application, many elite host institutions, plus a national research symposium at the end of the summer.",
+      "duration_weeks": 9,
+      "stipend_usd": 4000,
+      "stipend_note": "Varies by host; travel and housing typically covered",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.0,
+        "notes": "Must have at least one semester remaining after the program."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Like Amgen, one application maps to many institutions. Opens Nov 1. Recent cycles closed in early February (Feb 3, 2025; Feb 1 listed by several campuses for 2027).",
+      "priority_hint": "top-pick",
+      "url_confidence": "high"
+    },
+    {
+      "id": "broad-bsrp",
+      "name": "Broad Summer Research Program (BSRP)",
+      "org": "Broad Institute of MIT and Harvard",
+      "city": "Cambridge, MA",
+      "url": "https://www.broadinstitute.org/bsrp/broad-summer-research-program-bsrp",
+      "tracks": [
+        "basic-science",
+        "genomics",
+        "oncology",
+        "neuroscience"
+      ],
+      "focus": "Nine weeks of genomics, cancer and neuroscience research at one of the strongest genomics institutes in the world.",
+      "duration_weeks": 9,
+      "stipend_usd": 5400,
+      "stipend_note": "$5,400 plus free housing at partner university facilities and travel to/from Boston",
+      "housing": "provided",
+      "opens": "2026-10-01",
+      "deadline": "2027-01-11",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Must be available for the entire nine weeks. The Broad said 2027 eligibility criteria would be updated in October 2026 — check now."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "contact": "bsrp@broadinstitute.org",
+      "notes": "2026 cycle closed Jan 11 with letters due Jan 13. A third-party listing shows an anticipated 1/11/27. Early deadline — do not let this one slip behind the February cluster.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "fred-hutch-surp",
+      "name": "Summer Undergraduate Research Program (SURP)",
+      "org": "Fred Hutchinson Cancer Center",
+      "city": "Seattle, WA",
+      "url": "https://www.fredhutch.org/en/education-training/undergraduate-students/pathways-undergraduate-researchers.html",
+      "tracks": [
+        "oncology",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Independent research in basic and cancer biology at Fred Hutch.",
+      "duration_weeks": 9,
+      "stipend_usd": 7304,
+      "stipend_note": "Approximately $7,304 plus up to $450 travel allowance",
+      "housing": "varies",
+      "opens": "2026-11-01",
+      "deadline": "2027-01-09",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": "RISING SENIORS ONLY — must be entering the summer before the final year of undergrad. This is exactly her year."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "contact": "surp@fredhutch.org",
+      "notes": "PERFECT TIMING FIT: restricted to rising seniors, which is precisely her junior summer. 2026 deadline was Jan 9. Fred Hutch said 2027 info posts in November. Early deadline — do it in the December block.",
+      "priority_hint": "top-pick",
+      "url_confidence": "high",
+      "url_verified": true
+    },
+    {
+      "id": "cshl-urp",
+      "name": "Undergraduate Research Program (URP)",
+      "org": "Cold Spring Harbor Laboratory",
+      "city": "Cold Spring Harbor, NY",
+      "url": "https://www.cshl.edu/education/undergraduate-research-program/",
+      "tracks": [
+        "basic-science",
+        "genomics",
+        "neuroscience",
+        "oncology"
+      ],
+      "focus": "Ten fully subsidized weeks of research at a legendary molecular biology institute, ending in a formal presentation.",
+      "duration_weeks": 10,
+      "stipend_usd": 6000,
+      "stipend_note": "$6,000 for personal expenses; accommodation and meals largely covered. Travel not reimbursed.",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-01-15",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Sophomores and juniors. First-year students considered only in exceptional cases."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Deadline has been Jan 15 in both 2025 and 2026, so mid-January 2027 is a safe planning assumption. Enormous prestige for a PhD-track application.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "mit-msrp",
+      "name": "MIT Summer Research Program (MSRP)",
+      "org": "Massachusetts Institute of Technology",
+      "city": "Cambridge, MA",
+      "url": "https://oge.mit.edu/msrp/",
+      "tracks": [
+        "basic-science",
+        "neuroscience",
+        "bioengineering"
+      ],
+      "focus": "Nine weeks of research in MIT labs with heavy graduate-school preparation.",
+      "duration_weeks": 9,
+      "stipend_usd": 6000,
+      "stipend_note": "Stipend plus housing, travel and meal allowance",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-01-15",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.5,
+        "notes": "Oriented toward students planning a PhD."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "",
+      "url_confidence": "medium"
+    },
+    {
+      "id": "rockefeller-surf",
+      "name": "Summer Undergraduate Research Fellowship (SURF)",
+      "org": "The Rockefeller University",
+      "city": "New York, NY",
+      "url": "https://www.rockefeller.edu/education-and-training/surf/",
+      "tracks": [
+        "basic-science",
+        "neuroscience",
+        "immunology"
+      ],
+      "focus": "Ten weeks of bench research at a pure-research biomedical institute with an excellent mentoring reputation.",
+      "duration_weeks": 10,
+      "stipend_usd": 6000,
+      "stipend_note": "Stipend plus housing",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "",
+      "url_confidence": "medium"
+    },
+    {
+      "id": "nsf-reu-bio",
+      "name": "REU Sites — Biological Sciences (search portal)",
+      "org": "National Science Foundation",
+      "city": "Hundreds of sites nationally",
+      "url": "https://www.nsf.gov/funding/initiatives/reu/search",
+      "tracks": [
+        "basic-science",
+        "neuroscience",
+        "bioengineering",
+        "public-health"
+      ],
+      "focus": "The master index of NSF-funded Research Experiences for Undergraduates. Each site applies separately; stipends are standardized and housing is usually covered.",
+      "duration_weeks": 10,
+      "stipend_usd": 6000,
+      "stipend_note": "Typically $6,000-$7,000 plus housing and travel",
+      "housing": "provided",
+      "opens": "2026-10-01",
+      "deadline": "2027-02-15",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": "NSF REUs require US citizenship or permanent residency. Most exclude graduating seniors."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Not one program but a portal to hundreds. Filter by Biological Sciences and by state. Deadlines run from December to March, so check it monthly. Housing and travel are usually covered, which makes REUs cheaper than many hospital programs.",
+      "priority_hint": "portal",
+      "url_confidence": "high"
+    },
+    {
+      "id": "pathways-to-science",
+      "name": "Pathways to Science — summer research database",
+      "org": "Institute for Broadening Participation",
+      "city": "National",
+      "url": "https://www.pathwaystoscience.org/programhub.aspx?sort=UGS-Summer",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "public-health"
+      ],
+      "focus": "The best free aggregator of funded undergraduate summer research programs, searchable by discipline and deadline.",
+      "duration_weeks": null,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "rolling",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [],
+      "selectivity": "moderate",
+      "notes": "Use this as a monthly sweep to catch programs this list does not have. Sort by deadline.",
+      "priority_hint": "portal",
+      "url_confidence": "high"
+    },
+    {
+      "id": "shpep",
+      "name": "Summer Health Professions Education Program (SHPEP)",
+      "org": "Robert Wood Johnson Foundation (multiple host schools)",
+      "city": "Multiple academic health centers",
+      "url": "https://www.shpep.org/",
+      "tracks": [
+        "clinical",
+        "public-health",
+        "pre-health"
+      ],
+      "focus": "Free summer enrichment at academic health centers — clinical exposure, MCAT and admissions prep rather than bench research.",
+      "duration_weeks": 6,
+      "stipend_usd": 600,
+      "stipend_note": "Stipend plus housing and meals, no cost to attend",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 2.5,
+        "notes": "Primarily freshmen and sophomores — likely TOO EARLY for a rising senior, listed for completeness."
+      },
+      "requires": [
+        "transcript",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "moderate",
+      "notes": "Probably not a fit for her year, but included so the list is honest about what exists. Skip unless she wants clinical exposure over research.",
+      "url_confidence": "high"
+    },
+    {
+      "id": "nyscf-internship",
+      "name": "NYSCF Summer Research Internship",
+      "org": "New York Stem Cell Foundation",
+      "city": "New York, NY",
+      "url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/nyscf-summer-research-internship",
+      "tracks": [
+        "basic-science",
+        "stem-cell",
+        "neuroscience"
+      ],
+      "focus": "Stem cell and neurodegeneration research in NYC.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-03-15",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Deadline is 5:00 p.m. ET."
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "CONFIRMED: Mar 15, 2027, program runs Jun 7 - Aug 13, 2027. Valuable as a LATE deadline — a real second chance if February brings rejections.",
+      "priority_hint": "late-backup",
+      "url_confidence": "high"
+    }
+  ]
+}
