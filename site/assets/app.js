@@ -83,6 +83,7 @@
 
   const PAGES = {
     profile: { icon: "🎓", title: "My eligibility", crumb: "My eligibility" },
+    kit: { icon: "✨", title: "Your Claude kit", crumb: "Your Claude kit" },
     plan: { icon: "🎯", title: "The Plan", crumb: "The Plan" },
     programs: { icon: "📊", title: "All Programs", crumb: "All Programs" },
     tracker: { icon: "✅", title: "My Applications", crumb: "My Applications" },
@@ -95,6 +96,7 @@
   let GUIDES = [];
   let guideSlug = null;
   let profile = loadProfile();
+  let KIT = { files: [], zip: "", zip_bytes: 0 };
   let tracker = loadTracker();
   let page = "plan";
   let dbView = "table";
@@ -589,6 +591,70 @@
     return `<div class="stats">${stats}</div>` + renderBoard(touched, "status");
   }
 
+  // ---------------------------------------------------------------- kit page
+
+  function kb(n) { return n ? Math.max(1, Math.round(n / 1024)) + " KB" : ""; }
+
+  function renderKit() {
+    const rows = KIT.files.map((f) => `
+      <div class="kitrow">
+        <span class="kitrow__icon">${f.icon}</span>
+        <div class="kitrow__main">
+          <div class="kitrow__name">${esc(f.name)}</div>
+          <div class="kitrow__blurb">${esc(f.blurb)}</div>
+        </div>
+        <a class="openbtn kitrow__dl" href="${esc(f.path)}" download>Download</a>
+      </div>`).join("");
+
+    return `
+      <div class="callout callout--blue">
+        <span class="ci">✨</span>
+        <div>
+          <p>These files give Claude everything it needs to help with these applications,
+          so you never have to explain yourself twice. Attach them to a chat and ask for
+          what you want.</p>
+          <p>Claude can also fill the forms in your browser, draft emails to labs, and check
+          every Monday whether a program has posted its 2027 dates.</p>
+        </div>
+      </div>
+
+      <a class="btn" href="${esc(KIT.zip)}" download style="margin:2px 0 6px">
+        Download the kit${KIT.zip_bytes ? " (" + kb(KIT.zip_bytes) + ")" : ""}
+      </a>
+      <p class="note" style="margin-top:6px">One zip with all six files. Or take them one at a time below.</p>
+
+      <h2 class="h2">Five minutes to set up<span class="n">4 steps</span></h2>
+      <ol class="doc" style="padding-left:1.5em;max-width:640px">
+        <li>Download and unzip the kit.</li>
+        <li>Open <code>jolene-profile.md</code> and fill in the blanks: email, phone,
+            address, GPA. Claude is told never to guess these, so a blank means it asks
+            you rather than inventing something.</li>
+        <li>Start a Claude chat and attach <code>CLAUDE.md</code>,
+            <code>jolene-profile.md</code> and your resume.</li>
+        <li>Ask for what you want. For example:
+            <em>"Help me apply to the Jackson Lab Summer Student Program."</em></li>
+      </ol>
+
+      <h2 class="h2">What is in it<span class="n">${KIT.files.length}</span></h2>
+      <div class="kitlist">${rows}</div>
+
+      <h2 class="h2">Things to try saying</h2>
+      <div class="kitsay">
+        <p>"Fill this application in from my profile."</p>
+        <p>"Who should I email at Cincinnati Children's, and draft it."</p>
+        <p>"Every Monday at 8am, check which programs posted 2027 dates and tell me what changed."</p>
+        <p>"Rewrite my why-this-program paragraph for St. Jude POE."</p>
+        <p>"What is due in the next three weeks, and what should I do first?"</p>
+      </div>
+
+      <div class="callout callout--yellow" style="margin-top:22px">
+        <span class="ci">⚠️</span>
+        <div><p>Claude will not click submit, and it will not send an email for you.
+        It drafts and fills, then hands it back. That is deliberate: you should read
+        anything with your name on it before it goes anywhere.</p></div>
+      </div>`;
+  }
+
   // ------------------------------------------------------------ profile page
 
   const CLASS_YEARS = [
@@ -810,6 +876,7 @@
                          : `<div class="empty"><strong>Guide not found</strong></div>`;
       return;
     }
+    if (page === "kit") { host.innerHTML = renderKit(); return; }
     if (page === "profile") { host.innerHTML = renderProfile(); return; }
     if (page === "plan") { host.innerHTML = renderPlan(); return; }
     if (page === "tracker") { host.innerHTML = renderTracker(); return; }
@@ -1099,10 +1166,14 @@
     fetch("data/guides.json", { cache: "no-cache" })
       .then((r) => (r.ok ? r.json() : { guides: [] }))
       .catch(() => ({ guides: [] })),
+    fetch("data/kit.json", { cache: "no-cache" })
+      .then((r) => (r.ok ? r.json() : { files: [] }))
+      .catch(() => ({ files: [] })),
   ])
-    .then(([payload, guidePayload]) => {
+    .then(([payload, guidePayload, kitPayload]) => {
       DATA = payload;
       GUIDES = guidePayload.guides || [];
+      KIT = kitPayload && kitPayload.files ? kitPayload : KIT;
       document.getElementById("loading").remove();
       document.getElementById("foot-meta").textContent =
         `${payload.count} programs · built ${(payload.generated || "").slice(0, 10)}`;

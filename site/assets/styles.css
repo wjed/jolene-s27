@@ -802,3 +802,37 @@ input.sel--boxed {
 select.sel--boxed:hover,
 input.sel--boxed:hover { background: var(--hover-soft); }
 input.sel--boxed::placeholder { color: var(--ink-4); }
+
+/* ------------------------------------------------------------- Claude kit */
+
+.kitlist { border-top: 1px solid var(--rule); margin-top: 6px; }
+
+.kitrow {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 11px 6px;
+  border-bottom: 1px solid var(--rule);
+}
+.kitrow:hover { background: var(--hover-soft); }
+.kitrow__icon { font-size: 17px; line-height: 1.3; flex: none; }
+.kitrow__main { flex: 1; min-width: 0; }
+.kitrow__name { font-size: 14px; font-weight: 500; }
+.kitrow__blurb { font-size: 13px; color: var(--ink-2); margin-top: 1px; }
+.kitrow__dl { opacity: 1; flex: none; align-self: center; text-decoration: none; }
+
+.kitsay p {
+  margin: 0 0 1px;
+  padding: 8px 11px;
+  background: var(--hover-soft);
+  border-radius: var(--radius);
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.kitsay p:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+.kitsay p:last-child { border-radius: 0 0 var(--radius) var(--radius); }
+
+@media (max-width: 560px) {
+  .kitrow { flex-wrap: wrap; }
+  .kitrow__dl { margin-left: 28px; }
+}

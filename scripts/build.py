@@ -21,6 +21,7 @@ import pathlib
 import sys
 
 import guides
+import kit
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "data" / "sources"
@@ -384,6 +385,7 @@ def main():
     if needs_input:
         print(f"  needs input: {needs_input} (missing links from the original list)")
     guides.write()
+    kit.write()
     stamp_assets()
     print(f"  wrote      : data/programs.json, site/data/programs.json")
     print(f"               {csv_path.relative_to(ROOT).as_posix()}")

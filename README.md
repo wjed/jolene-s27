@@ -26,6 +26,7 @@ This repo answers those, and adds 80 programs that were not on the list.
 |---|---|
 | **[The site](https://wjed.github.io/jolene-s27/)** | Filterable database, prioritised action plan, application tracker, timeline |
 | **[`data/`](data/)** | The dataset: JSON, a CSV export, and an `.ics` calendar with reminders |
+| **[`claude-kit/`](claude-kit/)** | Files she can attach to a Claude chat so it has full context: who she is, every fact a form asks for, and three skills (fill an application in the browser, email a lab, watch deadlines weekly). Published to the site as individual downloads and a zip by `scripts/kit.py`. |
 | **[`materials/`](materials/)** | Source markdown for the nine guides and templates. They are rendered onto the site at build time by `scripts/guides.py`, nobody has to read them on GitHub. |
 | **[`scripts/`](scripts/)** | Build, validate, link-check and watch |
 
