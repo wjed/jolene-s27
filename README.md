@@ -101,6 +101,29 @@ Running it during the build caught 43 dead or redirected URLs in the first pass.
 
 Exit codes: `0` nothing notable · `1` broken links · `2` changes · `3` both.
 
+## Testing
+
+`site/qa.js` is a browser regression suite covering every filter, sort, view,
+page, guide, download and persistence path, 150 assertions in all. It is not
+linked from the page. Open the site and run it from the console:
+
+```js
+await fetch("qa.js").then(r => r.text()).then(eval);
+QA.reset(); await QA.runParts(["pages", "views", "chips", "sort"]);
+await QA.runParts(["peek", "tracker", "timeline", "eligibility", "exports", "resilience"]);
+```
+
+Split into parts because a full run exceeds a single automation call. It checks
+things a spot check misses: that every chip's badge count matches the rows it
+actually shows, that two chips intersect rather than union, that each sortable
+column reverses, that all 110 programs open a peek without throwing, that the
+export honors the active filter, and that corrupt localStorage does not break
+the page.
+
+One rule encoded in it: never assert on `getBoundingClientRect` for a
+CSS-transformed element. It returns stale values under automation while a
+screenshot shows the element in its final position.
+
 ## Running it locally
 
 No dependencies beyond Python 3.9+, the scripts are stdlib only and the site is
