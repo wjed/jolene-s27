@@ -17,9 +17,9 @@
       "duration_weeks": 9,
       "stipend_usd": 5000,
       "housing": "varies",
-      "opens": "2026-12-01",
+      "opens": "2026-11-01",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -36,9 +36,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "UCSF is also an Amgen Scholars host — check whether one application can serve both.",
+      "notes": "UCSF is also an Amgen Scholars host — check whether one application can serve both. CONFIRMED on the page: opens Nov 1, 2026, closes Feb 1, 2027 at 11:59 p.m.",
       "url_confidence": "medium",
-      "url_verified": true
+      "url_verified": true,
+      "program_dates": "May 30 – Aug 7, 2027"
     },
     {
       "id": "vanderbilt-vssa",
@@ -59,7 +60,7 @@
       "housing": "provided",
       "opens": "2026-11-01",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -76,9 +77,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "One portal, many tracks — high value per application. Well-run program with a strong record of placing students into PhD programs.",
+      "notes": "One portal, many tracks — high value per application. Well-run program with a strong record of placing students into PhD programs. CONFIRMED on the page: applications open Nov 1, 2026 and close between Jan 16 and Feb 15, 2027 depending on the track, with most on Feb 1. Check the specific track's date — the earliest is Jan 16.",
       "priority_hint": "top-pick",
-      "url_confidence": "high"
+      "url_confidence": "high",
+      "program_dates": "Through Aug 6, 2027"
     },
     {
       "id": "utsw-surf",
@@ -243,7 +245,7 @@
       "name": "Summer Undergraduate Research Program (SURP)",
       "org": "Icahn School of Medicine at Mount Sinai",
       "city": "New York, NY",
-      "url": "https://icahn.mssm.edu/education/graduate-school",
+      "url": "https://icahn.mssm.edu/education/non-degree/surp4us",
       "tracks": [
         "basic-science",
         "translational",
@@ -273,7 +275,7 @@
       ],
       "selectivity": "high",
       "notes": "",
-      "url_confidence": "low",
+      "url_confidence": "medium",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
       "url_verified": true
     },

@@ -43,21 +43,24 @@ This repo answers those, and adds 61 programs that were not on the list.
 
 ## The honest part: which dates are real
 
-Of 85 programs, as of **29 October 2026**:
+Of 85 programs, as of **30 October 2026**:
 
 | | |
 |---|---|
-| **3** | deadline confirmed on the program's own page |
-| **53** | projected from a previous cycle — shown with an `est.` marker |
-| **27** | nothing posted yet |
+| **14** | deadline confirmed on the program's own page |
+| **44** | projected from a previous cycle — shown with an `est.` marker |
+| **25** | nothing posted yet |
 
 This is not sloppiness in the data — it is the actual state of the world in late
 October. Most Summer 2027 cycles have not opened. Rather than guess and present
 guesses as fact, every date carries its status, and the watcher checks the real
 pages weekly.
 
-**Confirmed so far:** Jackson Laboratory 25 Jan 2027 (5pm ET) · St. Jude POE
-1 Feb 2027 · NYSCF 15 Mar 2027.
+**Confirmed so far**, earliest first: Yale Child Study **14 Jan** (5pm ET) ·
+Jackson Laboratory **25 Jan** (5pm ET) · Penn State PROMISE **31 Jan** ·
+Amgen Scholars, St. Jude POE, Penn State SURIP, MSK MBSP (8am), UCSF SRTP,
+Vanderbilt VSSA **1 Feb** · NYU SURP **2 Feb** · Leadership Alliance,
+Mayo SURF **3 Feb** · Penn State AHA-USF **15 Feb** · NYSCF **15 Mar**.
 
 ## The watcher
 
@@ -130,13 +133,25 @@ unknown enum values, duplicate ids and relative URLs.
 `deadline_status` must be `confirmed`, `projected`, `unknown` or `rolling` — and
 only use `confirmed` for a date read off the program's own page.
 
-## Two entries need a link
+## Keeping dates honest
 
-Two items came across from the original list without an institution attached and
-could not be identified: **"Summer Biomedical Research Program"** and **"PROMISE
-— Training in Oncology and Medicine to Inspire Students"**. Both appear in the
-site's plan view under *Needs a link*. Finding the original Notion links takes a
-minute and both entries can then be filled in properly.
+Two scripts do this, and they are deliberately separate:
+
+- `scripts/watch.py` runs weekly and says **which pages changed**.
+- `scripts/extract_dates.py` says **what they now say** — it pulls candidate
+  deadline sentences off every page so they can be read and promoted by hand.
+
+Nothing promotes a date automatically. Program pages are full of dates that are
+not deadlines: a sweep found "Feb. 25, 2027" on the Van Andel site, which is a
+fundraising gala, and the Children's National page turned out to describe a
+fall-spring internship whose deadline had already passed. Both were caught by
+reading the surrounding sentence. A regex finds the candidate; a person confirms
+it.
+
+```bash
+python scripts/extract_dates.py          # pages mentioning a 2027 date
+python scripts/extract_dates.py --all    # every page
+```
 
 ## Where to start
 

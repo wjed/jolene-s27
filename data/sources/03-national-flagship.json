@@ -66,7 +66,7 @@
       "housing": "provided",
       "opens": "2026-11-01",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -85,7 +85,8 @@
       "selectivity": "very-high",
       "notes": "BEST VALUE PER UNIT OF EFFORT. She can apply to as many US hosts as she likes, and much of the essay content is reusable across them. Applications open Nov 1, 2026; a third-party guide puts the deadline at Feb 1, 2027 for all US hosts — confirm per host.",
       "priority_hint": "top-pick",
-      "url_confidence": "high"
+      "url_confidence": "high",
+      "program_dates": "Varies by host, roughly May 17 – Aug 27, 2027"
     },
     {
       "id": "jackson-lab-ssp",
@@ -147,8 +148,8 @@
       "stipend_note": "Varies by host; travel and housing typically covered",
       "housing": "provided",
       "opens": "2026-11-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline": "2027-02-03",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -165,7 +166,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Like Amgen, one application maps to many institutions. Opens Nov 1. Recent cycles closed in early February (Feb 3, 2025; Feb 1 listed by several campuses for 2027).",
+      "notes": "Like Amgen, one application maps to many institutions. Opens Nov 1. Recent cycles closed in early February (Feb 3, 2025; Feb 1 listed by several campuses for 2027). CONFIRMED on the page: Feb 3, 2027, and the deadline covers the whole package including two letters and official transcripts.",
       "priority_hint": "top-pick",
       "url_confidence": "high"
     },
@@ -324,7 +325,8 @@
       ],
       "selectivity": "very-high",
       "notes": "",
-      "url_confidence": "medium"
+      "url_confidence": "medium",
+      "program_dates": "Jun 7 – Aug 7, 2027"
     },
     {
       "id": "rockefeller-surf",

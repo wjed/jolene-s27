@@ -243,8 +243,8 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2026-12-01",
-      "deadline": null,
-      "deadline_status": "unknown",
+      "deadline": "2027-01-14",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -261,7 +261,7 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Flagged on the original list: opens Dec 1. Strong fit for developmental/behavioral work.",
+      "notes": "Flagged on the original list: opens Dec 1. Strong fit for developmental/behavioral work. CONFIRMED on the page: opens Dec 1, 2026, closes Jan 14, 2027 at 5pm ET. That is far earlier than the February cluster — it is one of the first deadlines in the whole cycle.",
       "url_confidence": "high"
     },
     {
@@ -317,7 +317,7 @@
       "housing": "provided",
       "opens": "2026-12-01",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -336,7 +336,8 @@
       "selectivity": "high",
       "notes": "Flagged on the original list: opens Dec 1.",
       "url_confidence": "medium",
-      "url_verified": true
+      "url_verified": true,
+      "program_dates": "May 24 – Jul 31, 2027"
     },
     {
       "id": "mayo-surf",
@@ -354,8 +355,8 @@
       "stipend_usd": 7000,
       "housing": "stipend-covers",
       "opens": "2026-11-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline": "2027-02-03",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -372,9 +373,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages.",
+      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages. CONFIRMED on the page: application window Nov 1, 2026 – Feb 3, 2027.",
       "url_confidence": "medium",
-      "url_verified": true
+      "url_verified": true,
+      "program_dates": "Jun 1 – Aug 6, 2027"
     },
     {
       "id": "penn-suip",
@@ -612,9 +614,9 @@
       "duration_weeks": 10,
       "stipend_usd": 6000,
       "housing": "varies",
-      "opens": "2026-12-01",
+      "opens": "2026-11-02",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -631,9 +633,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one — the original list had the right one.",
+      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one — the original list had the right one. CONFIRMED on the page: portal opens Nov 2, 2026 and closes Feb 1, 2027 at 8:00 a.m. — a morning cutoff, not end of day.",
       "url_confidence": "medium",
-      "url_verified": true
+      "url_verified": true,
+      "program_dates": "Jun 1 – Aug 6, 2027"
     },
     {
       "id": "musc-surp",
@@ -678,7 +681,7 @@
       "name": "Summer Undergraduate Research Program (SURP)",
       "org": "NYU Grossman School of Medicine",
       "city": "New York, NY",
-      "url": "https://med.nyu.edu/education/",
+      "url": "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/summer-undergraduate-research-program",
       "tracks": [
         "basic-science",
         "translational",
@@ -689,8 +692,8 @@
       "stipend_usd": 5000,
       "housing": "provided",
       "opens": "2026-12-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline": "2027-02-02",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -707,9 +710,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "",
-      "url_confidence": "low",
-      "url_verified": true
+      "notes": "CONFIRMED on the page: Feb 2, 2027 at 5 p.m.",
+      "url_confidence": "high",
+      "url_verified": true,
+      "program_dates": "Jun 1 – Jul 30, 2027"
     },
     {
       "id": "psu-aha-usf",
@@ -727,8 +731,8 @@
       "stipend_usd": 5000,
       "housing": "varies",
       "opens": "2026-12-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline": "2027-02-15",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -746,7 +750,8 @@
       ],
       "selectivity": "high",
       "notes": "Same institution as SURIP — one visit, two applications.",
-      "url_confidence": "high"
+      "url_confidence": "high",
+      "program_dates": "May 24 – Jul 27, 2027"
     },
     {
       "id": "rutgers-rwjms-neuro",
@@ -785,60 +790,79 @@
       "url_verified": false
     },
     {
-      "id": "unidentified-summer-biomed",
-      "name": "Summer Biomedical Research Program (needs identifying)",
-      "org": "Unknown — from the original list",
-      "city": "Unknown",
-      "url": "https://www.google.com/search?q=%22Summer+Biomedical+Research+Program%22+undergraduate+2027",
+      "id": "ecu-sbrp",
+      "name": "Summer Biomedical Research Program (SBRP)",
+      "org": "East Carolina University — Brody School of Medicine",
+      "city": "Greenville, NC",
+      "url": "https://medicine.ecu.edu/sbrp/",
       "tracks": [
-        "basic-science"
+        "basic-science",
+        "translational"
       ],
-      "focus": "The original list had a bare \"Summer Biomedical Research Program\" with no institution. Several schools use that exact name.",
-      "duration_weeks": null,
+      "focus": "Basic science research at the Brody School of Medicine and ECU Health, with lab safety training and career workshops.",
+      "duration_weeks": 9,
       "stipend_usd": null,
       "housing": "varies",
-      "opens": null,
-      "deadline": null,
-      "deadline_status": "unknown",
+      "opens": "2026-11-02",
+      "deadline": "2027-02-13",
+      "deadline_status": "projected",
       "eligibility": {
-        "class_years": [],
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": ""
+        "notes": "Undergraduates. An older ECU document describes the program as targeting students from underrepresented, low-socioeconomic or rural backgrounds — confirm current rules on the page."
       },
-      "requires": [],
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement"
+      ],
       "selectivity": "moderate",
-      "notes": "ACTION: needs the original link from Notion to identify which school this was.",
-      "needs_input": true,
-      "url_confidence": "none"
+      "notes": "IDENTIFIED: this was the bare 'Summer Biomedical Research Program' entry on the original list. The 2026 cycle closed 13 February and the 2025 cohort ran 27 May - 25 July. Smaller applicant pool than the national programs, and regionally adjacent to the Old Dominion entry. The 2027 cycle opens Nov 2, 2026 and runs May 24 – Jul 23, 2027. The 2027 deadline is not posted yet; the 2026 cycle closed Feb 13.",
+      "url_verified": true,
+      "url_confidence": "high",
+      "program_dates": "May 24 – Jul 23, 2027"
     },
     {
-      "id": "unidentified-promise",
-      "name": "PROMISE — Training in Oncology and Medicine to Inspire Students",
-      "org": "Unknown — from the original list",
-      "city": "Unknown",
-      "url": "https://www.google.com/search?q=PROMISE+%22Training+in+Oncology+and+Medicine+to+Inspire+Students%22",
+      "id": "psu-promise",
+      "name": "PROMISE — Research Training in Oncology and Medicine to Inspire Student Engagement",
+      "org": "Penn State College of Medicine / Penn State Cancer Institute",
+      "city": "Hershey, PA",
+      "url": "https://med.psu.edu/education/certificate-and-undergraduate/promise",
       "tracks": [
-        "oncology"
+        "oncology",
+        "basic-science",
+        "translational"
       ],
-      "focus": "Oncology-focused undergraduate pipeline program; the institution was not captured in the original list.",
+      "focus": "NCI-funded, team-based cancer research with weekly career-development sessions, ending in a poster symposium.",
       "duration_weeks": null,
       "stipend_usd": null,
       "housing": "varies",
-      "opens": null,
-      "deadline": null,
-      "deadline_status": "unknown",
+      "opens": "2026-12-01",
+      "deadline": "2027-01-31",
+      "deadline_status": "confirmed",
       "eligibility": {
-        "class_years": [],
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": ""
+        "notes": "STEM majors who have completed at least two years of college — rising juniors and seniors. Engineering, computer science, statistics and biological sciences all count. Students underrepresented in the biomedical workforce are encouraged to apply."
       },
-      "requires": [],
-      "selectivity": "moderate",
-      "notes": "ACTION: needs the original link from Notion.",
-      "needs_input": true,
-      "url_confidence": "none"
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on the original list — it is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
+      "url_verified": true,
+      "url_confidence": "high",
+      "program_dates": "May 24 – Jul 31, 2027"
     }
   ]
 }

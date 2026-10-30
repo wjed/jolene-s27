@@ -639,6 +639,7 @@
       ["Location", p.city],
       ["Deadline", p.deadline ? `${fmtDate(p.deadline, { month: "long", day: "numeric", year: "numeric" })}${p.deadline_status === "confirmed" ? "" : " (projected)"}` : "not posted"],
       ["Opens", p.opens ? fmtDate(p.opens, { month: "long", day: "numeric", year: "numeric" }) : "unknown"],
+      ["Runs", p.program_dates || "not posted"],
       ["Length", p.duration_weeks ? `${p.duration_weeks} weeks` : "—"],
       ["Stipend", p.stipend_note || fmtMoney(p.stipend_usd) || "not stated"],
       ["Housing", HOUSING_LABELS[p.housing] || p.housing],

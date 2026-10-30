@@ -2,10 +2,13 @@
 
 Dated from **late October 2026** for a **Summer 2027** cycle.
 
-The shape of the problem: three programs are confirmed open or confirmed-dated
-right now, a wall of deadlines lands between **9 January and 15 February 2027**,
-and most 2027 pages are not posted yet. So the work splits cleanly into *build
-the reusable assets now* and *apply in a burst in January*.
+The shape of the problem: fourteen deadlines are now confirmed on the programs'
+own pages, the wall lands between **9 January and 15 February 2027**, and the
+rest of the 2027 pages are still unposted. So the work splits cleanly into
+*build the reusable assets now* and *apply in a burst in January*.
+
+The earliest confirmed deadline is **Yale Child Study on 14 January** — three
+weeks before the February cluster, and easy to miss.
 
 ---
 
@@ -52,7 +55,11 @@ Most 2027 applications open in this window.
 - [ ] **9 January:** **Fred Hutch SURP** — rising seniors only, so this is the
       year it is available to her.
 - [ ] **11 January:** Broad Institute BSRP (projected).
+- [ ] **14 January: Yale Child Study, 5pm ET — CONFIRMED.** The first confirmed
+      deadline of the cycle and the easiest to lose track of.
 - [ ] **15 January:** Cold Spring Harbor URP (projected), INSPIRE, MIT MSRP.
+- [ ] **16 January:** earliest Vanderbilt VSSA track closes — the tracks close on
+      different dates through 15 February, so check hers specifically.
 
 Holidays eat this window. Anything not drafted by 20 December gets done badly.
 
@@ -62,12 +69,20 @@ Most of the list is due here, clustered hard on **1 February**.
 
 - [ ] **23 January:** Boston Children's epilepsy internship opens; Newborn
       Medicine deadline.
-- [ ] **25 January:** Jackson Lab, 5pm ET. Confirmed.
-- [ ] **1 February:** the big cluster — St. Jude POE (confirmed), Amgen Scholars,
-      Leadership Alliance, CHOP CRISSP, Mayo SURF, Hopkins, Penn SUIP, Vanderbilt,
-      and roughly thirty more.
+- [ ] **25 January: Jackson Lab, 5pm ET — CONFIRMED.**
+- [ ] **31 January: Penn State PROMISE — CONFIRMED.**
+- [ ] **1 February:** the big cluster, all **confirmed**: St. Jude POE,
+      Amgen Scholars (all US hosts), Penn State SURIP, UCSF SRTP,
+      **MSK MBSP — note the 8:00 a.m. cutoff, not end of day**, and most
+      Vanderbilt tracks. Plus CHOP CRISSP, Hopkins and Penn SUIP (projected).
+- [ ] **2 February: NYU SURP, 5pm — CONFIRMED.**
+- [ ] **3 February: Leadership Alliance and Mayo SURF — CONFIRMED.** Note both
+      are the 3rd, not the 1st. The Leadership Alliance deadline covers the
+      whole package, letters and official transcripts included.
 - [ ] **7 February:** Nationwide Children's (projected).
-- [ ] **15 February:** NIH SIP (projected), NSF REU sites.
+- [ ] **13 February:** ECU Brody SBRP (projected — 2027 cycle opens 2 November).
+- [ ] **15 February:** **Penn State AHA-USF (confirmed)**, latest Vanderbilt
+      tracks, NIH SIP (projected), NSF REU sites.
 
 **Do not leave 1 February to the last week.** Thirty applications sharing one
 deadline is the single biggest failure mode in this cycle. Work backwards: a

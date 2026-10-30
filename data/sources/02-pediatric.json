@@ -271,7 +271,8 @@
       "contact": "smart-program@bcm.edu",
       "notes": "Official name is Summer Undergraduate Research Training, not \"Summer Medical and Research Training.\" 2027 application was slated to open in October 2026 — check now. Faculty mentor forms are due Jan 15, 2027, which hints the student deadline sits near it.",
       "url_confidence": "high",
-      "url_verified": true
+      "url_verified": true,
+      "program_dates": "Jun 7 – Aug 6, 2027"
     },
     {
       "id": "kennedy-krieger",
@@ -507,12 +508,9 @@
         "emergency-medicine"
       ],
       "focus": "Hands-on pediatric emergency medicine clinical research — patient enrollment and data collection in the ED.",
-      "duration_weeks": 12,
       "stipend_usd": null,
       "housing": "not-provided",
-      "opens": "2026-11-01",
-      "deadline": "2027-01-31",
-      "deadline_status": "projected",
+      "deadline_status": "unknown",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -521,14 +519,14 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Roughly 30 hours/week onsite."
+        "notes": "Roughly 15 hours/week onsite during the fall-spring session."
       },
       "requires": [
         "cv",
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "Unusually strong clinical-contact experience for a pre-med application — real patient interaction, not just bench work. Most recent published cycle was summer 2024, so confirm it is still running.",
+      "notes": "CORRECTION: the posted cycle is a FALL-SPRING internship (Sept 13, 2026 – May 15, 2027) whose deadline was Aug 10, 2026 and has passed — not a summer program. 15 hours/week onsite, ten interns taken. Real pediatric emergency-medicine patient contact, which is rare and valuable, so it is worth emailing to ask whether a summer 2027 session runs and when it opens. Do not plan the summer around this one.",
       "url_confidence": "medium",
       "url_verified": true
     },

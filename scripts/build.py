@@ -171,6 +171,7 @@ CSV_COLUMNS = [
     "opens",
     "deadline",
     "deadline_status",
+    "program_dates",
     "duration_weeks",
     "stipend_usd",
     "housing",

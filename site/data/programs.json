@@ -1,6 +1,6 @@
 {
   "cycle": "Summer 2027",
-  "generated": "2026-10-30T00:11:46+00:00",
+  "generated": "2026-10-30T00:22:51+00:00",
   "count": 85,
   "tracks": [
     "aging",
@@ -160,6 +160,46 @@
       "source_file": "03-national-flagship.json"
     },
     {
+      "id": "yale-child-study",
+      "name": "Undergraduate Research Assistant / PGA Internship",
+      "org": "Yale Child Study Center",
+      "city": "New Haven, CT",
+      "url": "https://medicine.yale.edu/childstudy/education-and-training/undergraduate-pga/interns/",
+      "tracks": [
+        "pediatrics",
+        "neuroscience",
+        "psychology",
+        "clinical"
+      ],
+      "focus": "Child psychiatry, developmental and autism research at the Child Study Center.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-01-14",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Flagged on the original list: opens Dec 1. Strong fit for developmental/behavioral work. CONFIRMED on the page: opens Dec 1, 2026, closes Jan 14, 2027 at 5pm ET. That is far earlier than the February cluster — it is one of the first deadlines in the whole cycle.",
+      "url_confidence": "high",
+      "category": "On the original list",
+      "source_file": "01-her-list.json"
+    },
+    {
       "id": "iu-inspire",
       "name": "INSPIRE — Investigating Neurosciences Summer Program",
       "org": "Indiana University School of Medicine (Stark Neurosciences)",
@@ -238,6 +278,7 @@
       "selectivity": "very-high",
       "notes": "",
       "url_confidence": "medium",
+      "program_dates": "Jun 7 – Aug 7, 2027",
       "category": "National & flagship programs",
       "source_file": "03-national-flagship.json"
     },
@@ -408,23 +449,23 @@
       "source_file": "03-national-flagship.json"
     },
     {
-      "id": "childrens-national-ed",
-      "name": "Emergency Department Clinical Research Internship",
-      "org": "Children's National Hospital",
-      "city": "Washington, DC",
-      "url": "https://www.childrensnational.org/for-healthcare-professionals/healthcare-education/research-education/emergency-department-clinical-research-internship",
+      "id": "psu-promise",
+      "name": "PROMISE — Research Training in Oncology and Medicine to Inspire Student Engagement",
+      "org": "Penn State College of Medicine / Penn State Cancer Institute",
+      "city": "Hershey, PA",
+      "url": "https://med.psu.edu/education/certificate-and-undergraduate/promise",
       "tracks": [
-        "pediatrics",
-        "clinical",
-        "emergency-medicine"
+        "oncology",
+        "basic-science",
+        "translational"
       ],
-      "focus": "Hands-on pediatric emergency medicine clinical research — patient enrollment and data collection in the ED.",
-      "duration_weeks": 12,
+      "focus": "NCI-funded, team-based cancer research with weekly career-development sessions, ending in a poster symposium.",
+      "duration_weeks": null,
       "stipend_usd": null,
-      "housing": "not-provided",
-      "opens": "2026-11-01",
+      "housing": "varies",
+      "opens": "2026-12-01",
       "deadline": "2027-01-31",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -433,18 +474,19 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Roughly 30 hours/week onsite."
+        "notes": "STEM majors who have completed at least two years of college — rising juniors and seniors. Engineering, computer science, statistics and biological sciences all count. Students underrepresented in the biomedical workforce are encouraged to apply."
       },
       "requires": [
         "cv",
         "personal-statement"
       ],
-      "selectivity": "moderate",
-      "notes": "Unusually strong clinical-contact experience for a pre-med application — real patient interaction, not just bench work. Most recent published cycle was summer 2024, so confirm it is still running.",
-      "url_confidence": "medium",
+      "selectivity": "high",
+      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on the original list — it is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
       "url_verified": true,
-      "category": "Pediatric & children's hospital research",
-      "source_file": "02-pediatric.json"
+      "url_confidence": "high",
+      "program_dates": "May 24 – Jul 31, 2027",
+      "category": "On the original list",
+      "source_file": "01-her-list.json"
     },
     {
       "id": "allen-institute",
@@ -486,45 +528,6 @@
       "source_file": "05-neuro-and-specialty.json"
     },
     {
-      "id": "psu-aha-usf",
-      "name": "AHA Undergraduate Summer Fellowship (AHA-USF)",
-      "org": "Penn State College of Medicine",
-      "city": "Hershey, PA",
-      "url": "https://med.psu.edu/education/certificate-and-undergraduate/aha-usf",
-      "tracks": [
-        "cardiovascular",
-        "basic-science",
-        "translational"
-      ],
-      "focus": "American Heart Association-funded cardiovascular and stroke research.",
-      "duration_weeks": 10,
-      "stipend_usd": 5000,
-      "housing": "varies",
-      "opens": "2026-12-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior"
-        ],
-        "citizenship": "us-or-pr",
-        "min_gpa": null,
-        "notes": ""
-      },
-      "requires": [
-        "transcript",
-        "cv",
-        "personal-statement",
-        "2-lor"
-      ],
-      "selectivity": "high",
-      "notes": "Same institution as SURIP — one visit, two applications.",
-      "url_confidence": "high",
-      "category": "On the original list",
-      "source_file": "01-her-list.json"
-    },
-    {
       "id": "amgen-scholars",
       "name": "Amgen Scholars Program (US)",
       "org": "14 host universities nationally",
@@ -543,7 +546,7 @@
       "housing": "provided",
       "opens": "2026-11-01",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -563,6 +566,7 @@
       "notes": "BEST VALUE PER UNIT OF EFFORT. She can apply to as many US hosts as she likes, and much of the essay content is reusable across them. Applications open Nov 1, 2026; a third-party guide puts the deadline at Feb 1, 2027 for all US hosts — confirm per host.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
+      "program_dates": "Varies by host, roughly May 17 – Aug 27, 2027",
       "category": "National & flagship programs",
       "source_file": "03-national-flagship.json"
     },
@@ -1018,9 +1022,9 @@
       "duration_weeks": 10,
       "stipend_usd": 6000,
       "housing": "varies",
-      "opens": "2026-12-01",
+      "opens": "2026-11-02",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -1037,9 +1041,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one — the original list had the right one.",
+      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one — the original list had the right one. CONFIRMED on the page: portal opens Nov 2, 2026 and closes Feb 1, 2027 at 8:00 a.m. — a morning cutoff, not end of day.",
       "url_confidence": "medium",
       "url_verified": true,
+      "program_dates": "Jun 1 – Aug 6, 2027",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -1359,49 +1364,6 @@
       "source_file": "04-academic-medical-centers.json"
     },
     {
-      "id": "leadership-alliance-sreip",
-      "name": "Summer Research Early Identification Program (SR-EIP)",
-      "org": "The Leadership Alliance",
-      "city": "Multiple member institutions (Brown, Columbia, Cornell, Harvard, Hopkins, Yale, Vanderbilt and more)",
-      "url": "https://theleadershipalliance.org/summer-research-early-identification-program",
-      "tracks": [
-        "basic-science",
-        "translational",
-        "clinical",
-        "neuroscience",
-        "public-health"
-      ],
-      "focus": "One application, many elite host institutions, plus a national research symposium at the end of the summer.",
-      "duration_weeks": 9,
-      "stipend_usd": 4000,
-      "stipend_note": "Varies by host; travel and housing typically covered",
-      "housing": "provided",
-      "opens": "2026-11-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior"
-        ],
-        "citizenship": "us-or-pr",
-        "min_gpa": 3.0,
-        "notes": "Must have at least one semester remaining after the program."
-      },
-      "requires": [
-        "transcript",
-        "cv",
-        "personal-statement",
-        "2-lor"
-      ],
-      "selectivity": "high",
-      "notes": "Like Amgen, one application maps to many institutions. Opens Nov 1. Recent cycles closed in early February (Feb 3, 2025; Feb 1 listed by several campuses for 2027).",
-      "priority_hint": "top-pick",
-      "url_confidence": "high",
-      "category": "National & flagship programs",
-      "source_file": "03-national-flagship.json"
-    },
-    {
       "id": "wake-forest-summer",
       "name": "Summer Research Opportunities",
       "org": "Wake Forest University School of Medicine / Atrium Health",
@@ -1500,9 +1462,9 @@
       "duration_weeks": 9,
       "stipend_usd": 5000,
       "housing": "varies",
-      "opens": "2026-12-01",
+      "opens": "2026-11-01",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -1519,9 +1481,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "UCSF is also an Amgen Scholars host — check whether one application can serve both.",
+      "notes": "UCSF is also an Amgen Scholars host — check whether one application can serve both. CONFIRMED on the page: opens Nov 1, 2026, closes Feb 1, 2027 at 11:59 p.m.",
       "url_confidence": "medium",
       "url_verified": true,
+      "program_dates": "May 30 – Aug 7, 2027",
       "category": "Academic medical centers & med school SURPs",
       "source_file": "04-academic-medical-centers.json"
     },
@@ -1932,46 +1895,6 @@
       "source_file": "04-academic-medical-centers.json"
     },
     {
-      "id": "mayo-surf",
-      "name": "Summer Undergraduate Research Fellowship (SURF) — Biomedical Research",
-      "org": "Mayo Clinic",
-      "city": "Rochester, MN",
-      "url": "https://college.mayo.edu/academics/biomedical-research-training/summer-undergraduate-research-fellowship-surf/",
-      "tracks": [
-        "basic-science",
-        "translational",
-        "clinical"
-      ],
-      "focus": "Ten weeks of mentored biomedical research at Mayo Clinic with a strong professional-development core.",
-      "duration_weeks": 10,
-      "stipend_usd": 7000,
-      "housing": "stipend-covers",
-      "opens": "2026-11-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior"
-        ],
-        "citizenship": "us-or-pr",
-        "min_gpa": 3.0,
-        "notes": "Must have completed sophomore year by program start."
-      },
-      "requires": [
-        "transcript",
-        "cv",
-        "personal-statement",
-        "2-lor"
-      ],
-      "selectivity": "very-high",
-      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages.",
-      "url_confidence": "medium",
-      "url_verified": true,
-      "category": "On the original list",
-      "source_file": "01-her-list.json"
-    },
-    {
       "id": "psu-surip",
       "name": "Summer Undergraduate Research Internship Program (SURIP)",
       "org": "Penn State College of Medicine",
@@ -1988,7 +1911,7 @@
       "housing": "provided",
       "opens": "2026-12-01",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -2008,6 +1931,7 @@
       "notes": "Flagged on the original list: opens Dec 1.",
       "url_confidence": "medium",
       "url_verified": true,
+      "program_dates": "May 24 – Jul 31, 2027",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -2212,51 +2136,11 @@
       "source_file": "04-academic-medical-centers.json"
     },
     {
-      "id": "nyu-langone-surp",
-      "name": "Summer Undergraduate Research Program (SURP)",
-      "org": "NYU Grossman School of Medicine",
-      "city": "New York, NY",
-      "url": "https://med.nyu.edu/education/",
-      "tracks": [
-        "basic-science",
-        "translational",
-        "neuroscience"
-      ],
-      "focus": "Biomedical research at NYU Langone with PhD-pipeline mentoring.",
-      "duration_weeks": 10,
-      "stipend_usd": 5000,
-      "housing": "provided",
-      "opens": "2026-12-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior"
-        ],
-        "citizenship": "us-or-pr",
-        "min_gpa": null,
-        "notes": ""
-      },
-      "requires": [
-        "transcript",
-        "cv",
-        "personal-statement",
-        "2-lor"
-      ],
-      "selectivity": "very-high",
-      "notes": "",
-      "url_confidence": "low",
-      "url_verified": true,
-      "category": "On the original list",
-      "source_file": "01-her-list.json"
-    },
-    {
       "id": "mount-sinai-surp",
       "name": "Summer Undergraduate Research Program (SURP)",
       "org": "Icahn School of Medicine at Mount Sinai",
       "city": "New York, NY",
-      "url": "https://icahn.mssm.edu/education/graduate-school",
+      "url": "https://icahn.mssm.edu/education/non-degree/surp4us",
       "tracks": [
         "basic-science",
         "translational",
@@ -2286,7 +2170,7 @@
       ],
       "selectivity": "high",
       "notes": "",
-      "url_confidence": "low",
+      "url_confidence": "medium",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
       "url_verified": true,
       "category": "Academic medical centers & med school SURPs",
@@ -2414,6 +2298,7 @@
       "notes": "Official name is Summer Undergraduate Research Training, not \"Summer Medical and Research Training.\" 2027 application was slated to open in October 2026 — check now. Faculty mentor forms are due Jan 15, 2027, which hints the student deadline sits near it.",
       "url_confidence": "high",
       "url_verified": true,
+      "program_dates": "Jun 7 – Aug 6, 2027",
       "category": "Pediatric & children's hospital research",
       "source_file": "02-pediatric.json"
     },
@@ -2558,7 +2443,7 @@
       "housing": "provided",
       "opens": "2026-11-01",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -2575,11 +2460,137 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "One portal, many tracks — high value per application. Well-run program with a strong record of placing students into PhD programs.",
+      "notes": "One portal, many tracks — high value per application. Well-run program with a strong record of placing students into PhD programs. CONFIRMED on the page: applications open Nov 1, 2026 and close between Jan 16 and Feb 15, 2027 depending on the track, with most on Feb 1. Check the specific track's date — the earliest is Jan 16.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
+      "program_dates": "Through Aug 6, 2027",
       "category": "Academic medical centers & med school SURPs",
       "source_file": "04-academic-medical-centers.json"
+    },
+    {
+      "id": "nyu-langone-surp",
+      "name": "Summer Undergraduate Research Program (SURP)",
+      "org": "NYU Grossman School of Medicine",
+      "city": "New York, NY",
+      "url": "https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-sciences/summer-undergraduate-research-program",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience"
+      ],
+      "focus": "Biomedical research at NYU Langone with PhD-pipeline mentoring.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "provided",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-02",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "CONFIRMED on the page: Feb 2, 2027 at 5 p.m.",
+      "url_confidence": "high",
+      "url_verified": true,
+      "program_dates": "Jun 1 – Jul 30, 2027",
+      "category": "On the original list",
+      "source_file": "01-her-list.json"
+    },
+    {
+      "id": "leadership-alliance-sreip",
+      "name": "Summer Research Early Identification Program (SR-EIP)",
+      "org": "The Leadership Alliance",
+      "city": "Multiple member institutions (Brown, Columbia, Cornell, Harvard, Hopkins, Yale, Vanderbilt and more)",
+      "url": "https://theleadershipalliance.org/summer-research-early-identification-program",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "clinical",
+        "neuroscience",
+        "public-health"
+      ],
+      "focus": "One application, many elite host institutions, plus a national research symposium at the end of the summer.",
+      "duration_weeks": 9,
+      "stipend_usd": 4000,
+      "stipend_note": "Varies by host; travel and housing typically covered",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-03",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.0,
+        "notes": "Must have at least one semester remaining after the program."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Like Amgen, one application maps to many institutions. Opens Nov 1. Recent cycles closed in early February (Feb 3, 2025; Feb 1 listed by several campuses for 2027). CONFIRMED on the page: Feb 3, 2027, and the deadline covers the whole package including two letters and official transcripts.",
+      "priority_hint": "top-pick",
+      "url_confidence": "high",
+      "category": "National & flagship programs",
+      "source_file": "03-national-flagship.json"
+    },
+    {
+      "id": "mayo-surf",
+      "name": "Summer Undergraduate Research Fellowship (SURF) — Biomedical Research",
+      "org": "Mayo Clinic",
+      "city": "Rochester, MN",
+      "url": "https://college.mayo.edu/academics/biomedical-research-training/summer-undergraduate-research-fellowship-surf/",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "clinical"
+      ],
+      "focus": "Ten weeks of mentored biomedical research at Mayo Clinic with a strong professional-development core.",
+      "duration_weeks": 10,
+      "stipend_usd": 7000,
+      "housing": "stipend-covers",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-03",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.0,
+        "notes": "Must have completed sophomore year by program start."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages. CONFIRMED on the page: application window Nov 1, 2026 – Feb 3, 2027.",
+      "url_confidence": "medium",
+      "url_verified": true,
+      "program_dates": "Jun 1 – Aug 6, 2027",
+      "category": "On the original list",
+      "source_file": "01-her-list.json"
     },
     {
       "id": "nationwide-childrens",
@@ -2621,6 +2632,85 @@
       "url_verified": true,
       "category": "Pediatric & children's hospital research",
       "source_file": "02-pediatric.json"
+    },
+    {
+      "id": "ecu-sbrp",
+      "name": "Summer Biomedical Research Program (SBRP)",
+      "org": "East Carolina University — Brody School of Medicine",
+      "city": "Greenville, NC",
+      "url": "https://medicine.ecu.edu/sbrp/",
+      "tracks": [
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Basic science research at the Brody School of Medicine and ECU Health, with lab safety training and career workshops.",
+      "duration_weeks": 9,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": "2026-11-02",
+      "deadline": "2027-02-13",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Undergraduates. An older ECU document describes the program as targeting students from underrepresented, low-socioeconomic or rural backgrounds — confirm current rules on the page."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "IDENTIFIED: this was the bare 'Summer Biomedical Research Program' entry on the original list. The 2026 cycle closed 13 February and the 2025 cohort ran 27 May - 25 July. Smaller applicant pool than the national programs, and regionally adjacent to the Old Dominion entry. The 2027 cycle opens Nov 2, 2026 and runs May 24 – Jul 23, 2027. The 2027 deadline is not posted yet; the 2026 cycle closed Feb 13.",
+      "url_verified": true,
+      "url_confidence": "high",
+      "program_dates": "May 24 – Jul 23, 2027",
+      "category": "On the original list",
+      "source_file": "01-her-list.json"
+    },
+    {
+      "id": "psu-aha-usf",
+      "name": "AHA Undergraduate Summer Fellowship (AHA-USF)",
+      "org": "Penn State College of Medicine",
+      "city": "Hershey, PA",
+      "url": "https://med.psu.edu/education/certificate-and-undergraduate/aha-usf",
+      "tracks": [
+        "cardiovascular",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "American Heart Association-funded cardiovascular and stroke research.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-15",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Same institution as SURIP — one visit, two applications.",
+      "url_confidence": "high",
+      "program_dates": "May 24 – Jul 27, 2027",
+      "category": "On the original list",
+      "source_file": "01-her-list.json"
     },
     {
       "id": "nsf-reu-bio",
@@ -2986,6 +3076,42 @@
       "source_file": "01-her-list.json"
     },
     {
+      "id": "childrens-national-ed",
+      "name": "Emergency Department Clinical Research Internship",
+      "org": "Children's National Hospital",
+      "city": "Washington, DC",
+      "url": "https://www.childrensnational.org/for-healthcare-professionals/healthcare-education/research-education/emergency-department-clinical-research-internship",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "emergency-medicine"
+      ],
+      "focus": "Hands-on pediatric emergency medicine clinical research — patient enrollment and data collection in the ED.",
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Roughly 15 hours/week onsite during the fall-spring session."
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "CORRECTION: the posted cycle is a FALL-SPRING internship (Sept 13, 2026 – May 15, 2027) whose deadline was Aug 10, 2026 and has passed — not a summer program. 15 hours/week onsite, ten interns taken. Real pediatric emergency-medicine patient contact, which is rare and valuable, so it is worth emailing to ask whether a summer 2027 session runs and when it opens. Do not plan the summer around this one.",
+      "url_confidence": "medium",
+      "url_verified": true,
+      "category": "Pediatric & children's hospital research",
+      "source_file": "02-pediatric.json"
+    },
+    {
       "id": "nia-adrc-directory",
       "name": "NIA Alzheimer's Disease Research Centers — directory",
       "org": "National Institute on Aging",
@@ -3061,36 +3187,6 @@
       "url_confidence": "high",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
       "url_verified": false,
-      "category": "On the original list",
-      "source_file": "01-her-list.json"
-    },
-    {
-      "id": "unidentified-promise",
-      "name": "PROMISE — Training in Oncology and Medicine to Inspire Students",
-      "org": "Unknown — from the original list",
-      "city": "Unknown",
-      "url": "https://www.google.com/search?q=PROMISE+%22Training+in+Oncology+and+Medicine+to+Inspire+Students%22",
-      "tracks": [
-        "oncology"
-      ],
-      "focus": "Oncology-focused undergraduate pipeline program; the institution was not captured in the original list.",
-      "duration_weeks": null,
-      "stipend_usd": null,
-      "housing": "varies",
-      "opens": null,
-      "deadline": null,
-      "deadline_status": "unknown",
-      "eligibility": {
-        "class_years": [],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": ""
-      },
-      "requires": [],
-      "selectivity": "moderate",
-      "notes": "ACTION: needs the original link from Notion.",
-      "needs_input": true,
-      "url_confidence": "none",
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -3280,36 +3376,6 @@
       "source_file": "01-her-list.json"
     },
     {
-      "id": "unidentified-summer-biomed",
-      "name": "Summer Biomedical Research Program (needs identifying)",
-      "org": "Unknown — from the original list",
-      "city": "Unknown",
-      "url": "https://www.google.com/search?q=%22Summer+Biomedical+Research+Program%22+undergraduate+2027",
-      "tracks": [
-        "basic-science"
-      ],
-      "focus": "The original list had a bare \"Summer Biomedical Research Program\" with no institution. Several schools use that exact name.",
-      "duration_weeks": null,
-      "stipend_usd": null,
-      "housing": "varies",
-      "opens": null,
-      "deadline": null,
-      "deadline_status": "unknown",
-      "eligibility": {
-        "class_years": [],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": ""
-      },
-      "requires": [],
-      "selectivity": "moderate",
-      "notes": "ACTION: needs the original link from Notion to identify which school this was.",
-      "needs_input": true,
-      "url_confidence": "none",
-      "category": "On the original list",
-      "source_file": "01-her-list.json"
-    },
-    {
       "id": "cook-childrens",
       "name": "Summer Research Program",
       "org": "Cook Children's Health Care System",
@@ -3380,46 +3446,6 @@
       ],
       "selectivity": "high",
       "notes": "Pairs with Pitt's other summer programs — same city, one trip.",
-      "url_confidence": "high",
-      "category": "On the original list",
-      "source_file": "01-her-list.json"
-    },
-    {
-      "id": "yale-child-study",
-      "name": "Undergraduate Research Assistant / PGA Internship",
-      "org": "Yale Child Study Center",
-      "city": "New Haven, CT",
-      "url": "https://medicine.yale.edu/childstudy/education-and-training/undergraduate-pga/interns/",
-      "tracks": [
-        "pediatrics",
-        "neuroscience",
-        "psychology",
-        "clinical"
-      ],
-      "focus": "Child psychiatry, developmental and autism research at the Child Study Center.",
-      "duration_weeks": 10,
-      "stipend_usd": null,
-      "housing": "not-provided",
-      "opens": "2026-12-01",
-      "deadline": null,
-      "deadline_status": "unknown",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior",
-          "senior"
-        ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": ""
-      },
-      "requires": [
-        "cv",
-        "personal-statement",
-        "1-lor"
-      ],
-      "selectivity": "high",
-      "notes": "Flagged on the original list: opens Dec 1. Strong fit for developmental/behavioral work.",
       "url_confidence": "high",
       "category": "On the original list",
       "source_file": "01-her-list.json"
