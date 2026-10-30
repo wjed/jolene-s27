@@ -294,7 +294,7 @@
   function renderTable(list) {
     const head = COLUMNS.map(([key, ico, label, sortKey]) => {
       const active = sortKey && sortBy === sortKey;
-      return `<th${sortKey ? ` data-sort="${sortKey}"` : ""}${active ? ` aria-sort="${sortDir === 1 ? "ascending" : "descending"}"` : ""}>
+      return `<th scope="col"${sortKey ? ` data-sort="${sortKey}"` : ""}${active ? ` aria-sort="${sortDir === 1 ? "ascending" : "descending"}"` : ""}>
         <span class="pico">${ico}</span>${esc(label)}${active ? (sortDir === 1 ? " ↑" : " ↓") : ""}</th>`;
     }).join("");
 
@@ -820,16 +820,29 @@
     });
 
     document.addEventListener("keydown", (ev) => {
-      if (ev.key === "Escape") closePeek();
+      if (ev.key === "Escape") {
+        closePeek();
+        document.getElementById("sidebar").dataset.open = "false";
+      }
       if (ev.key === "/" && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
         const q = document.getElementById("q");
         if (q) { ev.preventDefault(); q.focus(); }
       }
     });
 
-    document.getElementById("menu-btn").addEventListener("click", () => {
-      const sb = document.getElementById("sidebar");
-      sb.dataset.open = sb.dataset.open === "true" ? "false" : "true";
+    const sidebar = document.getElementById("sidebar");
+
+    document.getElementById("menu-btn").addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      sidebar.dataset.open = sidebar.dataset.open === "true" ? "false" : "true";
+    });
+
+    // Tapping the page behind the open drawer should dismiss it, the way any
+    // mobile nav does; otherwise the only way out is picking a page.
+    document.addEventListener("click", (ev) => {
+      if (sidebar.dataset.open !== "true") return;
+      if (ev.target.closest("#sidebar") || ev.target.closest("#menu-btn")) return;
+      sidebar.dataset.open = "false";
     });
 
     // theme

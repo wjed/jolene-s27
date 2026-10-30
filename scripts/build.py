@@ -16,6 +16,7 @@ import csv
 import datetime as dt
 import hashlib
 import json
+import re
 import pathlib
 import sys
 
@@ -218,6 +219,32 @@ def write_csv(programs):
     return path
 
 
+
+def fold_ics(line):
+    """Fold a content line to 75 octets, per RFC 5545 section 3.1.
+
+    Continuation lines begin with a single space. Folding happens on octet
+    boundaries, so a split must not land inside a multi-byte UTF-8 sequence —
+    several program names carry em dashes and curly apostrophes.
+    """
+    data = line.encode("utf-8")
+    if len(data) <= 75:
+        return line
+
+    pieces = []
+    start, limit = 0, 75
+    while start < len(data):
+        end = min(start + limit, len(data))
+        # 0b10xxxxxx marks a UTF-8 continuation byte: back off it
+        while start < end < len(data) and (data[end] & 0xC0) == 0x80:
+            end -= 1
+        pieces.append(data[start:end].decode("utf-8"))
+        start = end
+        limit = 74  # the leading space counts toward the 75
+
+    return '\r\n '.join(pieces)
+
+
 def ics_escape(text):
     return (
         str(text)
@@ -296,9 +323,38 @@ def write_ics(programs):
 
     lines.append("END:VCALENDAR")
     path = ROOT / "data" / "deadlines.ics"
-    path.write_text("\r\n".join(lines) + "\r\n", encoding="utf-8")
+    body = '\r\n'.join(fold_ics(line) for line in lines) + '\r\n'
+    # write_text would translate each \n to \r\n on Windows, giving \r\r\n
+    path.write_bytes(body.encode("utf-8"))
     mirror_to_site(path)
     return path, count
+
+
+
+def stamp_assets():
+    """Version the CSS/JS links by content hash.
+
+    GitHub Pages caches assets, so without this a deploy can hand someone new
+    HTML alongside a stale script. The hash changes only when the file does.
+    """
+    index = ROOT / "site" / "index.html"
+    html = index.read_text(encoding="utf-8")
+    original = html
+
+    for name in ("assets/styles.css", "assets/app.js"):
+        path = ROOT / "site" / name
+        if not path.is_file():
+            continue
+        digest = hashlib.sha1(path.read_bytes()).hexdigest()[:8]
+        html = re.sub(
+            re.escape(name) + r'(\?v=[0-9a-f]+)?"',
+            name + "?v=" + digest + '"',
+            html,
+        )
+
+    if html != original:
+        index.write_text(html, encoding="utf-8")
+    return html != original
 
 
 def main():
@@ -328,6 +384,7 @@ def main():
     if needs_input:
         print(f"  needs input: {needs_input} (missing links from the original list)")
     guides.write()
+    stamp_assets()
     print(f"  wrote      : data/programs.json, site/data/programs.json")
     print(f"               {csv_path.relative_to(ROOT).as_posix()}")
     print(f"               {ics_path.relative_to(ROOT).as_posix()} ({event_count} events)")
