@@ -58,6 +58,7 @@
 
   --sans: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
           Helvetica, "Apple Color Emoji", Arial, sans-serif;
+  --mono: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
 
   --sidebar-w: 248px;
   --content-w: 1100px;
@@ -662,4 +663,92 @@ tr:hover .openbtn,
 @media print {
   .sidebar, .topbar, .views, .toolbar, .filterbar, .openbtn, .status { display: none !important; }
   .page { max-width: none; padding: 0; }
+}
+
+/* ------------------------------------------------------- guide documents */
+
+/* Rendered from materials/*.md at build time. Notion's reading measure is
+   narrow on purpose; long lines are the main thing that makes a doc feel
+   like a wall of text. */
+.doc { max-width: 708px; font-size: 16px; line-height: 1.5; padding-bottom: 40px; }
+
+.doc h2 {
+  font-size: 24px; font-weight: 600; letter-spacing: -0.021em;
+  margin: 30px 0 2px; padding-top: 2px;
+}
+.doc h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 22px 0 1px; }
+.doc h4 { font-size: 16px; font-weight: 600; margin: 18px 0 1px; }
+
+.doc p { margin: 2px 0; padding: 3px 2px; }
+
+.doc ul, .doc ol { margin: 2px 0; padding-left: 1.7em; }
+.doc li { padding: 2px 0; }
+.doc li::marker { color: var(--ink-3); }
+.doc ul ul, .doc ol ol, .doc ul ol, .doc ol ul { margin: 0; }
+
+/* task lists keep markdown's checked state as a read-only mark */
+.doc li.task { list-style: none; display: flex; gap: 9px; align-items: flex-start; margin-left: -1.4em; }
+.doc li.task .box {
+  flex: none; width: 15px; height: 15px; margin-top: 4px;
+  border: 1.3px solid var(--ink-3); border-radius: 2px; position: relative;
+}
+.doc li.task .box.on { background: var(--blue); border-color: var(--blue); }
+.doc li.task .box.on::after {
+  content: ""; position: absolute; left: 4px; top: 1px;
+  width: 4px; height: 8px; border: solid #fff; border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.doc a {
+  border-bottom: 1px solid var(--rule-strong);
+  text-decoration: none;
+}
+.doc a:hover { background: var(--hover); border-bottom-color: var(--ink-2); }
+
+.doc strong { font-weight: 600; }
+
+.doc code {
+  background: rgba(135, 131, 120, 0.15);
+  color: #eb5757;
+  font-family: var(--mono, "SFMono-Regular", Menlo, Consolas, monospace);
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+}
+
+.doc pre {
+  background: var(--sidebar);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  overflow-x: auto;
+  margin: 8px 0;
+  font-size: 13px;
+  line-height: 1.45;
+  tab-size: 2;
+}
+.doc pre code { background: none; color: var(--ink); padding: 0; font-size: inherit; }
+
+.doc blockquote {
+  margin: 8px 0;
+  padding: 2px 0 2px 14px;
+  border-left: 3px solid currentColor;
+  font-size: 15px;
+}
+.doc blockquote p { margin: 2px 0; }
+
+.doc hr.divider { margin: 24px 0; }
+
+.doc-table { overflow-x: auto; margin: 10px 0; }
+.doc-table table { border-collapse: collapse; font-size: 14px; min-width: 100%; }
+.doc-table th, .doc-table td {
+  border: 1px solid var(--rule);
+  padding: 7px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+.doc-table th { background: var(--hover-soft); font-weight: 500; font-size: 12px; color: var(--ink-2); }
+
+@media (max-width: 860px) {
+  .doc { font-size: 15px; }
+  .doc pre { font-size: 12px; padding: 14px 12px; }
 }

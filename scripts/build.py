@@ -19,6 +19,8 @@ import json
 import pathlib
 import sys
 
+import guides
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "data" / "sources"
 CYCLE = "Summer 2027"
@@ -325,6 +327,7 @@ def main():
     print(f"  dates      : {confirmed} confirmed, {projected} projected, {unknown} unknown")
     if needs_input:
         print(f"  needs input: {needs_input} (missing links from the original list)")
+    guides.write()
     print(f"  wrote      : data/programs.json, site/data/programs.json")
     print(f"               {csv_path.relative_to(ROOT).as_posix()}")
     print(f"               {ics_path.relative_to(ROOT).as_posix()} ({event_count} events)")

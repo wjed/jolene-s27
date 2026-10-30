@@ -90,6 +90,8 @@
   // ---------------------------------------------------------------- state
 
   let DATA = { programs: [], cycle: "", generated: "", count: 0 };
+  let GUIDES = [];
+  let guideSlug = null;
   let tracker = loadTracker();
   let page = "plan";
   let dbView = "table";
@@ -287,7 +289,7 @@
     ["city",     "Aa", "Location",    "city"],
   ];
 
-  const COL_W = { name: 330, org: 190, deadline: 120, status: 118, tracks: 170, stipend: 82, city: 130 };
+  const COL_W = { name: 300, org: 232, deadline: 120, status: 118, tracks: 150, stipend: 82, city: 128 };
 
   function renderTable(list) {
     const head = COLUMNS.map(([key, ico, label, sortKey]) => {
@@ -301,16 +303,16 @@
         <td>
           <div class="cell-name">
             <span class="emoji">${iconFor(p)}</span>
-            <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.name)}</a>
+            <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" title="${esc(p.name)}">${esc(p.name)}</a>
             <button class="openbtn" data-peek="${esc(p.id)}" type="button">OPEN</button>
           </div>
         </td>
-        <td><span class="cell-sub trunc">${esc(p.org)}</span></td>
+        <td><span class="cell-sub trunc" title="${esc(p.org)}">${esc(p.org)}</span></td>
         <td class="cell-num">${p.deadline ? urgencyPill(p) : urgencyPill(p)}</td>
         <td>${statusSelect(p.id)}</td>
         <td><span class="taglist">${trackTags(p, 2)}</span></td>
         <td class="cell-num">${fmtMoney(p.stipend_usd) || '<span style="color:var(--ink-4)">—</span>'}</td>
-        <td><span class="cell-sub trunc">${esc(p.city)}</span></td>
+        <td><span class="cell-sub trunc" title="${esc(p.city)}">${esc(p.city)}</span></td>
       </tr>`).join("");
 
     const cols = COLUMNS.map(([key]) => `<col style="width:${COL_W[key]}px">`).join("");
@@ -462,7 +464,7 @@
         acceptingNow, (p) => "Due " + fmtDate(p.deadline))}
 
       ${block("Highest-value applications",
-        "Ranked for a rising senior aiming at pediatric and neuro research. Four of these are <strong>one application, many labs or institutions</strong> — the best return on a single essay you will find: NIH SIP, Amgen Scholars, the Leadership Alliance and Vanderbilt's umbrella program. Fred Hutch is here because it is restricted to rising seniors, which is exactly her year.",
+        "Ranked for a rising senior aiming at pediatric and neuro research. Four of these are <strong>one application, many labs or institutions</strong> — the best return on a single essay you will find: NIH SIP, Amgen Scholars, the Leadership Alliance and Vanderbilt's umbrella program. Fred Hutch is here because it is restricted to rising seniors, which is exactly your year.",
         topPicks, (p) => "Due " + fmtDate(p.deadline))}
 
       ${block("Due in the next 30 days", "Sorted by how little time is left.",
@@ -620,15 +622,20 @@
   const DB_VIEWS = [["table", "⊞", "Table"], ["board", "▦", "Board"], ["gallery", "⊡", "Gallery"]];
 
   function renderChrome() {
-    const meta = PAGES[page];
+    const guide = page === "guide" ? GUIDES.find((g) => g.slug === guideSlug) : null;
+    const meta = guide
+      ? { icon: guide.icon, title: guide.title, crumb: guide.title }
+      : PAGES[page];
     document.getElementById("page-head").hidden = false;
     document.getElementById("page-icon").textContent = meta.icon;
     document.getElementById("page-title").textContent = meta.title;
-    document.getElementById("page-sub").innerHTML = SUBS[page] || "";
+    document.getElementById("page-sub").innerHTML = guide ? "" : (SUBS[page] || "");
     document.getElementById("crumb-page").textContent = meta.crumb;
 
     document.querySelectorAll("#pagenav button").forEach((b) =>
-      b.setAttribute("aria-selected", String(b.dataset.view === page)));
+      b.setAttribute("aria-selected", String(page !== "guide" && b.dataset.view === page)));
+    document.querySelectorAll("#guidenav button").forEach((b) =>
+      b.setAttribute("aria-selected", String(page === "guide" && b.dataset.guide === guideSlug)));
 
     const views = document.getElementById("views");
     const toolbar = document.getElementById("toolbar");
@@ -670,6 +677,12 @@
   function renderContent() {
     const host = document.getElementById("content");
 
+    if (page === "guide") {
+      const g = GUIDES.find((x) => x.slug === guideSlug);
+      host.innerHTML = g ? `<article class="doc">${g.html}</article>`
+                         : `<div class="empty"><strong>Guide not found</strong></div>`;
+      return;
+    }
     if (page === "plan") { host.innerHTML = renderPlan(); return; }
     if (page === "tracker") { host.innerHTML = renderTracker(); return; }
     if (page === "timeline") { host.innerHTML = renderTimeline(); return; }
@@ -695,6 +708,23 @@
     document.getElementById("n-tracker").textContent = t || "";
   }
 
+  function openGuide(slug) {
+    if (!GUIDES.some((g) => g.slug === slug)) return;
+    page = "guide";
+    guideSlug = slug;
+    document.getElementById("sidebar").dataset.open = "false";
+    if (location.hash !== "#guide/" + slug) history.replaceState(null, "", "#guide/" + slug);
+    render();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function buildGuideNav() {
+    document.getElementById("guidenav").innerHTML = GUIDES.map((g) =>
+      `<button role="tab" data-guide="${esc(g.slug)}" aria-selected="false">
+         <span class="emoji">${g.icon}</span><span class="label">${esc(g.title)}</span>
+       </button>`).join("");
+  }
+
   // --------------------------------------------------------------- events
 
   function wire() {
@@ -702,9 +732,17 @@
       const b = ev.target.closest("button[data-view]");
       if (!b) return;
       page = b.dataset.view;
+      guideSlug = null;
+      if (location.hash) history.replaceState(null, "", location.pathname + location.search);
       document.getElementById("sidebar").dataset.open = "false";
       render();
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.getElementById("guidenav").addEventListener("click", (ev) => {
+      const b = ev.target.closest("button[data-guide]");
+      if (!b) return;
+      openGuide(b.dataset.guide);
     });
 
     document.getElementById("views").addEventListener("click", (ev) => {
@@ -746,6 +784,8 @@
         renderContent();
         return;
       }
+      const gl = ev.target.closest("a[data-guide]");
+      if (gl) { ev.preventDefault(); openGuide(gl.dataset.guide); return; }
       const peek = ev.target.closest("[data-peek]");
       if (peek) { openPeek(peek.dataset.peek); return; }
       if (ev.target.closest("#peek-close") || ev.target.id === "scrim") closePeek();
@@ -841,14 +881,27 @@
 
   // ----------------------------------------------------------------- boot
 
-  fetch("data/programs.json", { cache: "no-cache" })
-    .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-    .then((payload) => {
+  Promise.all([
+    fetch("data/programs.json", { cache: "no-cache" }).then((r) => {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    }),
+    // Guides are a nice-to-have: a failure here must not take the database down.
+    fetch("data/guides.json", { cache: "no-cache" })
+      .then((r) => (r.ok ? r.json() : { guides: [] }))
+      .catch(() => ({ guides: [] })),
+  ])
+    .then(([payload, guidePayload]) => {
       DATA = payload;
+      GUIDES = guidePayload.guides || [];
       document.getElementById("loading").remove();
       document.getElementById("foot-meta").textContent =
         `${payload.count} programs · built ${(payload.generated || "").slice(0, 10)}`;
+      buildGuideNav();
       wire();
+
+      const m = /^#guide\/([a-z0-9-]+)$/.exec(location.hash || "");
+      if (m && GUIDES.some((g) => g.slug === m[1])) { page = "guide"; guideSlug = m[1]; }
       render();
     })
     .catch((err) => {

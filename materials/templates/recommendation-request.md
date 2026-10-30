@@ -1,7 +1,7 @@
 # Asking for letters of recommendation
 
 Most programs on this list want two letters. The same two letters go everywhere,
-so this is a one-time cost — but only if she asks early and makes it easy.
+so this is a one-time cost — but only if you ask early and make it easy.
 
 **Ask by the end of November.** Faculty write letters in batches, and the
 December–January window is when every pre-med in the country is asking.
@@ -12,13 +12,13 @@ December–January window is when every pre-med in the country is asking.
 
 In order of usefulness:
 
-1. **A research mentor** — anyone who has seen her work in a lab, even briefly.
+1. **A research mentor** — anyone who has seen you work in a lab, even briefly.
    Nothing else is as persuasive.
-2. **A professor from a small, hard course** where she spoke up and did well.
+2. **A professor from a small, hard course** where you spoke up and did well.
    A seminar or lab course beats a 400-person lecture every time.
 3. **A clinical or volunteer supervisor**, if the program is clinically oriented.
 
-Avoid: a famous professor who cannot pick her out of a crowd. A detailed letter
+Avoid: a famous professor who cannot pick you out of a crowd. A detailed letter
 from a postdoc beats a vague one from a department chair.
 
 ## The email
@@ -32,9 +32,9 @@ from a postdoc beats a vague one from a department chair.
 > [AREA], and I am hoping you would be willing to write me a letter of
 > recommendation.
 >
-> I took [COURSE] with you in [TERM] and [SPECIFIC THING — the project she did,
-> something she contributed, the grade if it is good]. [IF A RESEARCH MENTOR:
-> what she worked on and what she handled independently.]
+> I took [COURSE] with you in [TERM] and [SPECIFIC THING — the project you did,
+> something you contributed, the grade if it is good]. [IF A RESEARCH MENTOR:
+> what you worked on and what you handled independently.]
 >
 > Most deadlines fall between **9 January and 15 February 2027**, and most
 > programs collect letters through an online form that emails you a link
@@ -53,7 +53,7 @@ from a postdoc beats a vague one from a department chair.
 > [NAME]
 
 That last paragraph matters. It gives a lukewarm writer a graceful exit, which
-is far better than a tepid letter she never sees.
+is far better than a tepid letter you never see.
 
 ## The packet to attach
 
@@ -64,15 +64,15 @@ Everything that makes writing easier makes the letter better:
    corroborate.
 3. **Program list with deadlines** — export the CSV from the site, or send the
    site link.
-4. **A reminder of who she is** — a short paragraph: the course, the term, what
-   she did well, anything memorable. Professors teach hundreds of students a
+4. **A reminder of who you are** — a short paragraph: the course, the term, what
+   you did well, anything memorable. Professors teach hundreds of students a
    year and this is a kindness, not an imposition.
 5. **What to emphasise** — if a program wants independence, say so.
 
 ## Managing it afterwards
 
 - Log each recommender and each program in the tracker's notes field.
-- Most portals email the recommender a link only *after* she submits her part.
+- Most portals email the recommender a link only *after* you submit your part.
   Submit early so they have runway. St. Jude explicitly says to submit without
   waiting for letters.
 - Send a reminder **ten days before** the deadline if the portal still shows the

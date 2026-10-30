@@ -21,7 +21,7 @@ Before reading a single word about the research, find:
    date, or later? St. Jude's deadline includes credentials. The Broad gave
    letters two extra days.
 
-If any of these rule her out, stop. That is a win — four hours saved.
+If any of these rule you out, stop. That is a win — four hours saved.
 
 ## Then find the mentor list
 
@@ -37,7 +37,7 @@ with a long list is one where naming a mentor matters a great deal.
 
 - **Stipend** — and whether housing is separate. A $7,500 stipend with housing
   included (Jackson Lab) is worth far more than $5,000 with no housing in Boston.
-- **Housing** — provided, subsidised, or her problem.
+- **Housing** — provided, subsidised, or your problem.
 - **Travel** — Jackson Lab and several others reimburse it; most do not.
 - **Length** — nine to eleven weeks, and whether it collides with anything.
 

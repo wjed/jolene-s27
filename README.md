@@ -26,7 +26,7 @@ This repo answers those, and adds 80 programs that were not on the list.
 |---|---|
 | **[The site](https://wjed.github.io/jolene-s27/)** | Filterable database, prioritised action plan, application tracker, timeline |
 | **[`data/`](data/)** | The dataset: JSON, a CSV export, and an `.ics` calendar with reminders |
-| **[`materials/`](materials/)** | CV skeleton, personal statement template, recommendation requests, cold-email template, strategy guides |
+| **[`materials/`](materials/)** | Source markdown for the nine guides and templates. They are rendered onto the site at build time by `scripts/guides.py` — nobody has to read them on GitHub. |
 | **[`scripts/`](scripts/)** | Build, validate, link-check and watch |
 
 ### Design

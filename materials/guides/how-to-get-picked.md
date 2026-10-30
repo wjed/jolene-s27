@@ -31,29 +31,29 @@ application:
   These are hard filters.
 - **Availability for the full term.** St. Jude requires one of four specific start
   dates and rejects applicants who cannot make one. The Broad requires all nine
-  weeks. If she has a conflict, address it before applying, not after.
+  weeks. If you have a conflict, address it before applying, not after.
 - **Completeness.** Letters that arrive after the deadline sink otherwise strong
   applications. St. Jude's deadline covers credentials too.
 
-The site's filters exist mostly to stop her spending four hours on a program she
-is not eligible for.
+The site's filters exist mostly to stop you spending four hours on a program you
+are not eligible for.
 
 ## What the faculty review is weighing
 
 Roughly in order:
 
 1. **Fit with a specific lab.** The single biggest factor, and the one most
-   within her control. An application that names a PI, references their work, and
-   says why, lands in a different pile. If she has emailed that PI and they said
+   within your control. An application that names a PI, references their work, and
+   says why, lands in a different pile. If you have emailed that PI and they said
    yes, it is a different pile again.
 2. **Evidence of follow-through.** Ten weeks is short. They are looking for signs
-   someone will not need babysitting: a project she ran, a protocol she handled,
+   someone will not need babysitting: a project you ran, a protocol you handled,
    a semester of consistent lab hours, a job that required showing up.
 3. **A real reason for the area.** Not passion — a question. "I want to understand
    why seizure burden predicts developmental outcome" tells a reader where to
    route the file.
 4. **Letters.** Mostly used as corroboration. A detailed letter from someone who
-   supervised her beats a glowing one from someone who taught her in a lecture.
+   supervised you beats a glowing one from someone who taught you in a lecture.
 5. **Grades and coursework.** Matter at the screen, matter less here, as long as
    the relevant courses are there.
 
@@ -83,12 +83,12 @@ with a few of these in it deliberately.
 
 ## On the thin-experience problem
 
-If her research experience is light, that is the normal state for a rising junior
+If your research experience is light, that is the normal state for a rising junior
 and several programs are built for it — Seattle Children's explicitly prioritises
 first-time research interns, and NSF REUs are designed as entry points.
 
 What helps: a serious course project described as research, specific technical
-skills she can actually perform, and a letter from someone who has watched her
+skills you can actually perform, and a letter from someone who has watched you
 work. What does not help: apologising for it in the personal statement.
 
 ## A realistic expectation

@@ -44,9 +44,9 @@ Most 2027 applications open in this window.
 - [ ] **St. Jude POE opened 1 November**, deadline **1 February** — and that
       deadline covers letters too. They advise getting credentials in by
       mid-to-late December.
-- [ ] **Cold-email PIs.** Three or four per program she seriously wants.
+- [ ] **Cold-email PIs.** Three or four per program you seriously want.
       [Template](../templates/cold-email-pi.md). Do this *before* the application,
-      so she can name a mentor who has already said yes.
+      so you can name a mentor who has already said yes.
 - [ ] **1 December:** Seattle Children's, Children's Colorado and Yale Child Study
       open. Weill Cornell opens 8 December.
 
@@ -54,15 +54,15 @@ Most 2027 applications open in this window.
 
 - [ ] **2 January:** Seattle Children's deadline (projected), Rutgers RWJMS opens.
 - [ ] **9 January:** **Fred Hutch SURP** — rising seniors only, so this is the
-      year it is available to her.
+      year it is available to you.
 - [ ] **11 January:** Broad Institute BSRP (projected).
 - [ ] **13 January: MD Anderson CATALYST — CONFIRMED.** Opens 16 November, so
-      there is plenty of runway if she starts it in the November block.
+      there is plenty of runway if you start it in the November block.
 - [ ] **14 January: Yale Child Study, 5pm ET — CONFIRMED.** The first confirmed
       deadline of the cycle and the easiest to lose track of.
 - [ ] **15 January:** Cold Spring Harbor URP (projected), INSPIRE, MIT MSRP.
 - [ ] **16 January:** earliest Vanderbilt VSSA track closes — the tracks close on
-      different dates through 15 February, so check hers specifically.
+      different dates through 15 February, so check yours specifically.
 
 Holidays eat this window. Anything not drafted by 20 December gets done badly.
 
@@ -109,9 +109,9 @@ third of them done by 20 January, two-thirds by 27 January.
 Most programs decide between late March and mid-April. Amgen notifies by end of
 March; St. Jude by around 1 April.
 
-If nothing lands: the ADRC route, direct PI emails, and her own university's
+If nothing lands: the ADRC route, direct PI emails, and your own university's
 summer research funding are all still live in April. A summer in a home-campus
-lab with a real project is worth more than a prestigious program she did not get.
+lab with a real project is worth more than a prestigious program you did not get.
 
 ---
 

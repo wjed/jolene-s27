@@ -8,8 +8,8 @@ Several entries on this list — the Boston Children's epilepsy lab, the UC Davi
 MIND Institute, the NIA Alzheimer's centers, UCSF pediatrics — are effectively
 *only* reachable this way.
 
-A good cold email takes fifteen minutes. Send three or four per program she
-seriously wants.
+A good cold email takes fifteen minutes. Send three or four per program you
+seriously want.
 
 ---
 
@@ -34,11 +34,11 @@ seriously wants.
 > for summer 2027. I am writing because I would like to work in your lab.
 >
 > I read your [YEAR] paper on [SPECIFIC TOPIC — the actual finding, not the
-> title]. [ONE SENTENCE THAT SHOWS SHE READ IT: something that surprised her, a
-> question it raised, how it connects to what she wants to understand.]
+> title]. [ONE SENTENCE THAT SHOWS YOU READ IT: something that surprised you, a
+> question it raised, how it connects to what you want to understand.]
 >
 > My background: [ONE SENTENCE — relevant coursework, lab experience, technique].
-> [IF APPLICABLE: a sentence on what she can already do that is useful —
+> [IF APPLICABLE: a sentence on what you can already do that is useful —
 > cell culture, R or Python, data entry on a clinical study.]
 >
 > Are you taking a summer student in 2027? If the program application should name
@@ -56,7 +56,7 @@ seriously wants.
 1. Open the program page, find the faculty or mentor list.
 2. No list? Search the department site for the research area.
 3. Open two or three recent papers from each candidate on PubMed. If the
-   abstracts bore her, she has saved herself a summer.
+   abstracts bore you, you have saved yourself a summer.
 4. Check they are actually active — a lab whose last paper was 2019 may be
    winding down.
 5. Get the email from the faculty page, not from a paper's corresponding-author
@@ -67,7 +67,7 @@ seriously wants.
 - **"Yes, name me"** — excellent. Put it in the application immediately and say
   so explicitly: *"Dr. X has agreed to host me."* That line is worth a lot.
 - **"I am not taking students but talk to Dr. Y"** — a warm introduction. Use it.
-- **"Apply through the central program"** — neutral, but she is now a name they
+- **"Apply through the central program"** — neutral, but you are now a name they
   have seen rather than one of 400 files.
 - **Silence** — the normal outcome. Not personal. Send more.
 

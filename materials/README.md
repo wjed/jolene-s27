@@ -1,7 +1,7 @@
 # Application materials
 
 Everything in here is a starting point, not a finished document. The parts in
-`[SQUARE BRACKETS]` are the parts only Jolene can fill in — and they are the only
+`[SQUARE BRACKETS]` are the parts only you can fill in — and they are the only
 parts a reader actually cares about.
 
 ## The one idea worth internalising
@@ -10,9 +10,9 @@ Almost every applicant writes some version of *"I have always been passionate
 about helping children and I am eager to learn."* Selection committees read
 hundreds of those. They are not evidence of anything.
 
-What gets someone selected is **specificity**: a particular question she finds
-interesting, a particular reason this lab can answer it, and some evidence she
-can be useful in a lab for ten weeks. One concrete sentence about a paper she
+What gets someone selected is **specificity**: a particular question you find
+interesting, a particular reason this lab can answer it, and some evidence you
+can be useful in a lab for ten weeks. One concrete sentence about a paper you
 read beats three paragraphs of enthusiasm.
 
 ## What to build, in order

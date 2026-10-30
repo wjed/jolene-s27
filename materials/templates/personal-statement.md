@@ -37,9 +37,9 @@ protocol, you dealt with a result that did not work.
 > [WHAT WENT WRONG OR SURPRISED YOU]. That taught me [SOMETHING REAL ABOUT
 > RESEARCH, not a platitude]."
 
-If she has little or no formal research experience: say so without apology and
+If you have little or no formal research experience: say so without apology and
 lean on transferable evidence — a hard course with a project component, a data
-analysis she did, a job that required precision and follow-through. Several
+analysis you did, a job that required precision and follow-through. Several
 programs on this list (Seattle Children's especially) explicitly prioritise
 students *without* prior research experience.
 
@@ -62,10 +62,10 @@ this paragraph could have been addressed to any other institution.
 
 MD, PhD, MD-PhD, or honestly undecided between them — all fine. What is not fine
 is vagueness that reads as not having thought about it. If undecided, say what
-the summer would help her decide.
+the summer would help you decide.
 
 Note: Amgen Scholars, SUIP, MSRP and BioMedRAP are explicitly PhD-pipeline
-programs. If she is aiming MD-only, those are a weaker fit than the
+programs. If you are aiming MD-only, those are a weaker fit than the
 hospital-based programs, and the statement should not pretend otherwise.
 
 ---
@@ -82,13 +82,13 @@ hospital-based programs, and the statement should not pretend otherwise.
 
 ## Three openings that work
 
-1. **The question.** Open with the thing she genuinely wants to know, then how
-   she came to care about it.
+1. **The question.** Open with the thing you genuinely want to know, then how
+   you came to care about it.
 2. **The moment.** A specific scene — in a lab, a clinic, a classroom — and the
    question it raised. Earns its place only if it leads somewhere.
-3. **The problem.** Something unresolved in the field, and where she wants to
-   stand in relation to it. Strongest option if she has read real literature;
-   risky if she has not.
+3. **The problem.** Something unresolved in the field, and where you want to
+   stand in relation to it. Strongest option if you have read real literature;
+   risky if you have not.
 
 Avoid: quotations from famous scientists, dictionary definitions, "webster's
-defines", and childhood-illness framing unless it is genuinely hers to tell.
+defines", and childhood-illness framing unless it is genuinely yours to tell.

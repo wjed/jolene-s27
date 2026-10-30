@@ -28,27 +28,27 @@ RESEARCH EXPERIENCE
 [Lab or Project Name], [Institution]                          [Month Year–present]
 Supervisor: [Dr. Name]
   · [What the lab studies, in one line of plain English.]
-  · [What SHE did — the technique, the assay, the dataset, the protocol.
+  · [What YOU did — the technique, the assay, the dataset, the protocol.
      Start with a verb. "Performed," "Analyzed," "Maintained," "Coded."]
   · [A result, output or responsibility: a poster, a presentation, a dataset
-     she owned, a protocol she ran unsupervised.]
+     you owned, a protocol you ran unsupervised.]
 
 [Course-based research, independent project, or honors thesis also goes here.
 A serious semester project counts as research experience. Say what the question
-was and what she did.]
+was and what you did.]
 
 
 CLINICAL & VOLUNTEER EXPERIENCE
 
 [Role], [Organization]                                        [Month Year–Month Year]
-  · [What she did and roughly how many hours.]
+  · [What you did and roughly how many hours.]
   · [Anything involving responsibility, patients, or data.]
 
 
 TECHNICAL SKILLS
 
 Laboratory: [PCR, cell culture, Western blot, immunohistochemistry, microscopy —
-             only things she could do unsupervised tomorrow]
+             only things you could do unsupervised tomorrow]
 Data:       [R, Python, SPSS, Excel, REDCap, GraphPad Prism]
 Other:      [Spanish (conversational), CITI human-subjects certification,
              IRB protocol experience]
