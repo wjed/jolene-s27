@@ -1,6 +1,6 @@
 # Summer 2027 Research Finder
 
-A searchable database of **85 undergraduate summer research programs**, a
+A searchable database of **104 undergraduate summer research programs**, a
 deadline-aware application tracker, a set of application templates, and a watcher
 that notices when program pages change.
 
@@ -18,7 +18,7 @@ instincts — St. Jude, CHOP, Cincinnati Children's, Yale Child Study — but as
 flat list it could not answer the questions that actually matter: *what is open
 today, what is due first, what am I not eligible for, and what am I missing?*
 
-This repo answers those, and adds 61 programs that were not on the list.
+This repo answers those, and adds 80 programs that were not on the list.
 
 ## What is here
 
@@ -43,24 +43,25 @@ This repo answers those, and adds 61 programs that were not on the list.
 
 ## The honest part: which dates are real
 
-Of 85 programs, as of **30 October 2026**:
+Of 104 programs, as of **30 October 2026**:
 
 | | |
 |---|---|
-| **14** | deadline confirmed on the program's own page |
-| **44** | projected from a previous cycle — shown with an `est.` marker |
-| **25** | nothing posted yet |
+| **16** | deadline confirmed on the program's own page |
+| **48** | projected from a previous cycle — shown with an `est.` marker |
+| **37** | nothing posted yet |
 
 This is not sloppiness in the data — it is the actual state of the world in late
 October. Most Summer 2027 cycles have not opened. Rather than guess and present
 guesses as fact, every date carries its status, and the watcher checks the real
 pages weekly.
 
-**Confirmed so far**, earliest first: Yale Child Study **14 Jan** (5pm ET) ·
-Jackson Laboratory **25 Jan** (5pm ET) · Penn State PROMISE **31 Jan** ·
-Amgen Scholars, St. Jude POE, Penn State SURIP, MSK MBSP (8am), UCSF SRTP,
-Vanderbilt VSSA **1 Feb** · NYU SURP **2 Feb** · Leadership Alliance,
-Mayo SURF **3 Feb** · Penn State AHA-USF **15 Feb** · NYSCF **15 Mar**.
+**Confirmed so far**, earliest first: MD Anderson CATALYST **13 Jan** ·
+Yale Child Study **14 Jan** (5pm ET) · Jackson Laboratory **25 Jan** (5pm ET) ·
+Penn State PROMISE **31 Jan** · Amgen Scholars, St. Jude POE, Penn State SURIP,
+MSK MBSP (8am), UCSF SRTP, Stanford SSRP, Vanderbilt VSSA **1 Feb** ·
+NYU SURP **2 Feb** · Leadership Alliance, Mayo SURF **3 Feb** ·
+Penn State AHA-USF **15 Feb** · NYSCF **15 Mar**.
 
 ## The watcher
 
@@ -141,12 +142,18 @@ Two scripts do this, and they are deliberately separate:
 - `scripts/extract_dates.py` says **what they now say** — it pulls candidate
   deadline sentences off every page so they can be read and promoted by hand.
 
-Nothing promotes a date automatically. Program pages are full of dates that are
-not deadlines: a sweep found "Feb. 25, 2027" on the Van Andel site, which is a
-fundraising gala, and the Children's National page turned out to describe a
-fall-spring internship whose deadline had already passed. Both were caught by
-reading the surrounding sentence. A regex finds the candidate; a person confirms
-it.
+Nothing promotes a date automatically, because three separate traps turned up in
+two sweeps:
+
+- Van Andel's "Feb. 25, 2027" is a **fundraising gala**.
+- Children's National's page describes a **fall-spring** internship whose
+  deadline passed in August 2026, not a summer program.
+- The University of Chicago Pritzker page advertises a **30 November 2026**
+  deadline — which would have been the most urgent item on the entire list — but
+  the surrounding text shows it is for UChicago's own **medical students**.
+
+Each was caught by reading the sentence around the date. A regex finds the
+candidate; a person confirms it.
 
 ```bash
 python scripts/extract_dates.py          # pages mentioning a 2027 date

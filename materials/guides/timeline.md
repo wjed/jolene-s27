@@ -2,13 +2,14 @@
 
 Dated from **late October 2026** for a **Summer 2027** cycle.
 
-The shape of the problem: fourteen deadlines are now confirmed on the programs'
+The shape of the problem: sixteen deadlines are now confirmed on the programs'
 own pages, the wall lands between **9 January and 15 February 2027**, and the
 rest of the 2027 pages are still unposted. So the work splits cleanly into
 *build the reusable assets now* and *apply in a burst in January*.
 
-The earliest confirmed deadline is **Yale Child Study on 14 January** — three
-weeks before the February cluster, and easy to miss.
+The earliest confirmed deadlines are **MD Anderson CATALYST on 13 January** and
+**Yale Child Study on 14 January** — three weeks before the February cluster,
+and easy to miss.
 
 ---
 
@@ -55,6 +56,8 @@ Most 2027 applications open in this window.
 - [ ] **9 January:** **Fred Hutch SURP** — rising seniors only, so this is the
       year it is available to her.
 - [ ] **11 January:** Broad Institute BSRP (projected).
+- [ ] **13 January: MD Anderson CATALYST — CONFIRMED.** Opens 16 November, so
+      there is plenty of runway if she starts it in the November block.
 - [ ] **14 January: Yale Child Study, 5pm ET — CONFIRMED.** The first confirmed
       deadline of the cycle and the easiest to lose track of.
 - [ ] **15 January:** Cold Spring Harbor URP (projected), INSPIRE, MIT MSRP.
@@ -73,8 +76,8 @@ Most of the list is due here, clustered hard on **1 February**.
 - [ ] **31 January: Penn State PROMISE — CONFIRMED.**
 - [ ] **1 February:** the big cluster, all **confirmed**: St. Jude POE,
       Amgen Scholars (all US hosts), Penn State SURIP, UCSF SRTP,
-      **MSK MBSP — note the 8:00 a.m. cutoff, not end of day**, and most
-      Vanderbilt tracks. Plus CHOP CRISSP, Hopkins and Penn SUIP (projected).
+      **MSK MBSP — note the 8:00 a.m. cutoff, not end of day**, Stanford SSRP,
+      and most Vanderbilt tracks. Plus CHOP CRISSP, Hopkins and Penn SUIP (projected).
 - [ ] **2 February: NYU SURP, 5pm — CONFIRMED.**
 - [ ] **3 February: Leadership Alliance and Mayo SURF — CONFIRMED.** Note both
       are the 3rd, not the 1st. The Leadership Alliance deadline covers the
@@ -83,6 +86,9 @@ Most of the list is due here, clustered hard on **1 February**.
 - [ ] **13 February:** ECU Brody SBRP (projected — 2027 cycle opens 2 November).
 - [ ] **15 February:** **Penn State AHA-USF (confirmed)**, latest Vanderbilt
       tracks, NIH SIP (projected), NSF REU sites.
+- [ ] **22 February:** Caltech SURF (projected). Different from everything else
+      here — the application IS a research proposal written with a prospective
+      mentor, so contact has to happen weeks earlier. Start it in January.
 
 **Do not leave 1 February to the last week.** Thirty applications sharing one
 deadline is the single biggest failure mode in this cycle. Work backwards: a

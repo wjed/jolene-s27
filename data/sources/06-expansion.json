@@ -1,0 +1,715 @@
+{
+  "category": "Second-pass additions",
+  "programs": [
+    {
+      "id": "caltech-surf",
+      "name": "Summer Undergraduate Research Fellowships (SURF)",
+      "org": "California Institute of Technology",
+      "city": "Pasadena, CA",
+      "url": "https://sfp.caltech.edu/undergraduate-research/programs/surf",
+      "tracks": [
+        "basic-science",
+        "neuroscience",
+        "bioengineering",
+        "computational"
+      ],
+      "focus": "Ten weeks on a project the student proposes themselves, written up as a formal proposal with a mentor and presented at a seminar day.",
+      "duration_weeks": 10,
+      "stipend_usd": 7000,
+      "housing": "varies",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-22",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Open to students from any institution, not only Caltech."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "Different from every other program here: the applicant writes a research PROPOSAL with a prospective mentor rather than just an essay. That means contacting a mentor early is not optional, it is the application. Budget far more time than a standard app — but the proposal itself is excellent practice for graduate fellowships later.",
+      "url_verified": true,
+      "url_confidence": "high"
+    },
+    {
+      "id": "aamc-summer-database",
+      "name": "Summer Undergraduate Research Programs — searchable database",
+      "org": "Association of American Medical Colleges",
+      "city": "National",
+      "url": "https://students-residents.aamc.org/phd-biomedical-science/summer-undergraduate-research-programs",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "clinical",
+        "public-health"
+      ],
+      "focus": "The AAMC's own index of summer research programs at US medical schools, searchable by state and institution.",
+      "duration_weeks": null,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "rolling",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [],
+      "selectivity": "moderate",
+      "notes": "Complements Pathways to Science rather than duplicating it: this one is specifically medical schools, which is exactly the right slice. Worth a monthly sweep alongside the NSF REU portal.",
+      "priority_hint": "portal",
+      "url_verified": true,
+      "url_confidence": "high"
+    },
+    {
+      "id": "janelia-undergrad",
+      "name": "Undergraduate Scholars / student programs",
+      "org": "HHMI Janelia Research Campus",
+      "city": "Ashburn, VA",
+      "url": "https://www.janelia.org/you-janelia/students-and-postdocs",
+      "tracks": [
+        "neuroscience",
+        "computational",
+        "basic-science",
+        "bioengineering"
+      ],
+      "focus": "Neuroscience and imaging research at HHMI's dedicated research campus, with an unusually strong tools-and-methods culture.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "very-high",
+      "notes": "Small and very selective. Best fit if she has any computational or imaging leaning. Housing on campus is typically included.",
+      "url_verified": true,
+      "url_confidence": "medium"
+    },
+    {
+      "id": "connecticut-childrens",
+      "name": "Research & Innovation summer opportunities",
+      "org": "Connecticut Children's",
+      "city": "Hartford, CT",
+      "url": "https://www.connecticutchildrens.org/research-and-innovation",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Pediatric clinical and translational research, affiliated with UConn Health.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "Close to Yale, so a New Haven / Hartford trip could cover both this and the Child Study Center. Smaller applicant pool than the big-name children's hospitals.",
+      "url_verified": true,
+      "url_confidence": "medium"
+    },
+    {
+      "id": "riley-iu-peds",
+      "name": "Department of Pediatrics research opportunities (Riley Children's)",
+      "org": "Indiana University School of Medicine / Riley Children's Health",
+      "city": "Indianapolis, IN",
+      "url": "https://medicine.iu.edu/pediatrics/research",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Pediatric research across IU's Department of Pediatrics at Riley Children's.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "Third Indiana option alongside INSPIRE and the IU summer research program — one application trip, three shots, and INSPIRE was already on the original list.",
+      "url_verified": true,
+      "url_confidence": "medium"
+    },
+    {
+      "id": "lebonheur-uthsc",
+      "name": "Department of Pediatrics research (Le Bonheur)",
+      "org": "UT Health Science Center / Le Bonheur Children's Hospital",
+      "city": "Memphis, TN",
+      "url": "https://www.uthsc.edu/pediatrics/research/",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Pediatric research at Le Bonheur, including a well-regarded neuroscience and epilepsy group.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv"
+      ],
+      "selectivity": "moderate",
+      "notes": "Same city as St. Jude. If she is applying to POE anyway, a direct email here costs nothing and the pediatric epilepsy work overlaps with the Boston Children's interest. Likely arranged by direct contact rather than a portal.",
+      "url_verified": true,
+      "url_confidence": "medium"
+    },
+    {
+      "id": "childrens-mercy",
+      "name": "Children's Mercy Research Institute training",
+      "org": "Children's Mercy Kansas City",
+      "city": "Kansas City, MO",
+      "url": "https://www.childrensmercy.org/childrens-mercy-research-institute/",
+      "tracks": [
+        "pediatrics",
+        "genomics",
+        "translational"
+      ],
+      "focus": "Pediatric research with notable strength in genomic medicine and precision therapeutics.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "notes": "Pairs geographically with Stowers, also in Kansas City — two solid programs in a city almost nobody applies to from the coasts.",
+      "url_verified": true,
+      "url_confidence": "medium"
+    },
+    {
+      "id": "akron-childrens",
+      "name": "Rebecca D. Considine Research Institute summer programs",
+      "org": "Akron Children's Hospital",
+      "city": "Akron, OH",
+      "url": "https://www.akronchildrens.org/Research-Institute.html",
+      "tracks": [
+        "pediatrics",
+        "clinical"
+      ],
+      "focus": "Pediatric clinical research at a mid-size children's hospital.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv"
+      ],
+      "selectivity": "moderate",
+      "notes": "Genuine safety. Ohio now has five options on this list — Cincinnati, Nationwide, the two Case Western programs, Cleveland Clinic and this.",
+      "url_verified": true,
+      "url_confidence": "medium"
+    },
+    {
+      "id": "umass-chan-surp",
+      "name": "Summer Undergraduate Research Program",
+      "org": "UMass Chan Medical School",
+      "city": "Worcester, MA",
+      "url": "https://www.umassmed.edu/gsbs/outreach-programs/summer-undergraduate-research-program/",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience"
+      ],
+      "focus": "Ten-week structured biomedical research experience through the Morningside Graduate School.",
+      "duration_weeks": 10,
+      "stipend_usd": 6000,
+      "housing": "varies",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "The 2027 cycle page is already up, which puts it ahead of most. Cheaper Boston-area alternative: Worcester costs far less to live in than Boston or Cambridge.",
+      "link_note": "This site blocks automated link checks, so the watcher cannot verify it — open it in a browser.",
+      "url_confidence": "medium"
+    },
+    {
+      "id": "marquette-biomedical",
+      "name": "Biomedical Sciences Summer Undergraduate Research Program",
+      "org": "Marquette University",
+      "city": "Milwaukee, WI",
+      "url": "https://www.marquette.edu/biomedical-sciences/summer-research-program.php",
+      "tracks": [
+        "basic-science",
+        "neuroscience",
+        "bioengineering"
+      ],
+      "focus": "Ten weeks of biomedical research with a strong neuroscience and rehabilitation engineering presence.",
+      "duration_weeks": 10,
+      "stipend_usd": 5000,
+      "housing": "varies",
+      "opens": "2026-12-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "moderate",
+      "notes": "Well-funded for its size and much less contested than the coastal programs. Realistic odds with a real stipend.",
+      "url_verified": true,
+      "url_confidence": "high"
+    },
+    {
+      "id": "stanford-ssrp",
+      "name": "SSRP–Amgen Scholars Program",
+      "org": "Stanford University — Biosciences",
+      "city": "Stanford, CA",
+      "url": "https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/",
+      "tracks": [
+        "basic-science",
+        "neuroscience",
+        "translational"
+      ],
+      "focus": "Nine weeks of bioscience research at Stanford; this is Stanford's Amgen Scholars host program.",
+      "duration_weeks": 9,
+      "stipend_usd": 6000,
+      "stipend_note": "Stipend plus housing and travel",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.2,
+        "notes": "Amgen Scholars rules apply: sophomores, juniors or non-graduating seniors, 3.2+ GPA, US citizen or permanent resident."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "This is the UNDERGRADUATE Stanford program. Not to be confused with SIMR, which is widely recommended online but is for high school students — worth knowing before wasting an application. CONFIRMED on the page: opens 1 Nov 2026, closes 1 Feb 2027, matching the Amgen Scholars date across all US hosts. Note the page labels the cycle \"2026 SSRP\" even though it is the summer 2027 intake.",
+      "url_verified": true,
+      "url_confidence": "high",
+      "program_dates": "Through Aug 14, 2027"
+    },
+    {
+      "id": "uchicago-bsd",
+      "name": "Biological Sciences Division — summer research",
+      "org": "University of Chicago",
+      "city": "Chicago, IL",
+      "url": "https://biosciences.uchicago.edu/",
+      "tracks": [
+        "basic-science",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Biomedical research across the Biological Sciences Division, with Comer Children's Hospital for pediatric projects.",
+      "duration_weeks": null,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "CORRECTED: the Pritzker Summer Research Program page, with its 30 Nov 2026 deadline, is for the University of Chicago's own MEDICAL students — not undergraduates. Do not chase that date. UChicago is a Leadership Alliance member institution, so the SR-EIP application is the reliable undergraduate route in; this hub is the place to look for a direct lab contact. Comer Children's is the pediatric angle.",
+      "url_verified": true,
+      "url_confidence": "medium"
+    },
+    {
+      "id": "mdibl",
+      "name": "Undergraduate research fellowships",
+      "org": "MDI Biological Laboratory",
+      "city": "Bar Harbor, ME",
+      "url": "https://mdibl.org/education/fellowships-training/undergraduate-and-high-school-programs/",
+      "tracks": [
+        "basic-science",
+        "developmental",
+        "aging"
+      ],
+      "focus": "Regeneration, aging and comparative biology at a small marine and biomedical research institute.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "moderate",
+      "notes": "Same town as the Jackson Laboratory, so one Bar Harbor application trip covers both — and this one is far less contested than JAX.",
+      "url_verified": true,
+      "url_confidence": "high"
+    },
+    {
+      "id": "md-anderson-summer",
+      "name": "CATALYST Summer Training Programs",
+      "org": "MD Anderson Cancer Center",
+      "city": "Houston, TX",
+      "url": "https://www.mdanderson.org/education-training/research-training/early-career-pathway-programs/summer-research-programs.html",
+      "tracks": [
+        "oncology",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Cancer research at the largest cancer center in the country, across several distinct summer tracks.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": "2026-11-16",
+      "deadline": "2027-01-13",
+      "deadline_status": "confirmed",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "CONFIRMED on the page: applications open 16 Nov 2026 and close 13 Jan 2027, programme runs 7 Jun – 13 Aug 2027. An informational webinar runs 19 Nov. Several tracks sit behind this one page — read it properly and pick the right one. Houston also has Baylor SMART and Texas Children's, so one city covers three applications.",
+      "url_verified": true,
+      "url_confidence": "high",
+      "program_dates": "Jun 7 – Aug 13, 2027"
+    },
+    {
+      "id": "emory-winship-scholars",
+      "name": "Winship Summer Scholars Research Program",
+      "org": "Winship Cancer Institute, Emory University",
+      "city": "Atlanta, GA",
+      "url": "https://winshipcancer.emory.edu/education-and-training/undergraduate-and-pre-college-programs/summer-scholars.php",
+      "tracks": [
+        "oncology",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Cancer research at Georgia's only NCI-designated comprehensive cancer center.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "Second Emory route alongside SURE, and more specific. Emory also connects to Children's Healthcare of Atlanta for pediatric work.",
+      "url_verified": true,
+      "url_confidence": "high"
+    },
+    {
+      "id": "utsw-simmons",
+      "name": "Simmons Cancer Center education & training",
+      "org": "UT Southwestern Harold C. Simmons Comprehensive Cancer Center",
+      "city": "Dallas, TX",
+      "url": "https://www.utsouthwestern.edu/departments/simmons/education-training/",
+      "tracks": [
+        "oncology",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Cancer-focused summer research training at UT Southwestern.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "Second UT Southwestern route alongside SURF, which is also an Amgen host — three paths into the same institution.",
+      "url_verified": true,
+      "url_confidence": "high"
+    },
+    {
+      "id": "roswell-park",
+      "name": "Summer education programs",
+      "org": "Roswell Park Comprehensive Cancer Center",
+      "city": "Buffalo, NY",
+      "url": "https://www.roswellpark.org/education",
+      "tracks": [
+        "oncology",
+        "basic-science",
+        "translational"
+      ],
+      "focus": "Cancer research at the oldest cancer center in the United States.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "moderate",
+      "notes": "Markedly less contested than MSK or Dana-Farber while still being an NCI comprehensive cancer center.",
+      "url_verified": true,
+      "url_confidence": "high"
+    },
+    {
+      "id": "barrow-neuro",
+      "name": "Education & training programs",
+      "org": "Barrow Neurological Institute",
+      "city": "Phoenix, AZ",
+      "url": "https://www.barrowneuro.org/for-physicians-researchers/education/",
+      "tracks": [
+        "neuroscience",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Neurology and neurosurgery research at one of the largest dedicated neurological institutes in the world.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "high",
+      "notes": "Strong clinical neuroscience exposure, which is harder to find than bench neuroscience. Pairs with Phoenix Children's for one city.",
+      "url_verified": true,
+      "url_confidence": "medium"
+    },
+    {
+      "id": "cornell-travelers",
+      "name": "Travelers Summer Research Fellowship (T-SRF)",
+      "org": "Weill Cornell Medicine",
+      "city": "New York, NY",
+      "url": "https://teach.weill.cornell.edu/medical-education/programs",
+      "tracks": [
+        "clinical",
+        "translational",
+        "pre-health"
+      ],
+      "focus": "Seven weeks of lab or clinical research for pre-medical students, with medical-school preparation alongside it. Roughly 25 students taken per summer.",
+      "duration_weeks": 7,
+      "stipend_usd": null,
+      "stipend_note": "Expenses covered and students housed on campus",
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Must be at least a junior at the time of application and a declared pre-medical student. The program targets students from underserved racial and ethnic groups or socioeconomically disadvantaged backgrounds, and looks for demonstrated engagement with underserved communities — check whether she is eligible before spending time on it."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "very-high",
+      "notes": "One of the few genuinely pre-med-oriented programs here rather than a PhD-pipeline one, and it covers expenses and housing. Eligibility is specific, so read it first. Second Weill Cornell route alongside the pediatrics internship already on the list. The linked page is the medical education programs index — T-SRF is listed there.",
+      "url_verified": true,
+      "url_confidence": "medium"
+    }
+  ]
+}
