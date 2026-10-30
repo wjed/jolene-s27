@@ -290,7 +290,7 @@
     ["oncology", "Oncology", (p) => (p.tracks || []).includes("oncology")],
     ["stipend", "Paid", (p) => !!p.stipend_usd],
     ["housing", "Housing included", (p) => ["provided", "provided-nonlocal", "stipend-covers"].includes(p.housing)],
-    ["no-citizen", "No US-citizen rule", (p) => !p.eligibility || p.eligibility.citizenship !== "us-or-pr"],
+    ["near-home", "🏠 Can live at home", (p) => !!p.near_home],
   ];
 
   const FIT_CHIP = ["fits-me", "Fits my profile", fitsMe];
@@ -758,7 +758,7 @@
         ${prop("⏱️", "Runs", p.program_dates ? esc(p.program_dates) : '<span class="empty">Not posted</span>')}
         ${prop("#", "Length", p.duration_weeks ? p.duration_weeks + " weeks" : '<span class="empty">Not stated</span>')}
         ${prop("💵", "Stipend", p.stipend_note ? esc(p.stipend_note) : (fmtMoney(p.stipend_usd) || '<span class="empty">Not stated</span>'))}
-        ${prop("🏠", "Housing", esc(HOUSING_LABELS[p.housing] || p.housing))}
+        ${prop("🏠", "Housing", esc(HOUSING_LABELS[p.housing] || p.housing) + (p.near_home ? " " + tag("commutable from Leesburg", "green") : ""))}
         ${prop("🎲", "Odds", tag(sel[0], sel[1]))}
         ${prop("🛂", "Citizenship", esc(CITIZENSHIP_LABELS[el_.citizenship] || el_.citizenship || ", "))}
         ${prop("📈", "Min GPA", el_.min_gpa ? String(el_.min_gpa) : '<span class="empty">None stated</span>')}

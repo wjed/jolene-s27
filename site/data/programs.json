@@ -1,7 +1,7 @@
 {
   "cycle": "Summer 2027",
-  "generated": "2026-10-30T12:14:43+00:00",
-  "count": 104,
+  "generated": "2026-10-30T12:21:17+00:00",
+  "count": 110,
   "tracks": [
     "aging",
     "alzheimers",
@@ -28,6 +28,7 @@
   ],
   "categories": [
     "Academic medical centers & med school SURPs",
+    "Commutable from home (DC metro and Virginia)",
     "National & flagship programs",
     "Neuroscience, Alzheimer's & specialty focus",
     "On the original list",
@@ -523,10 +524,11 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on your list. It is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
+      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on your list. It is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it. You are a Penn State student, so you apply here as an internal candidate, which is usually an advantage.",
       "url_verified": true,
       "url_confidence": "high",
       "program_dates": "May 24 - Jul 31, 2027",
+      "home_institution": true,
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -1044,9 +1046,10 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Third Hopkins/Baltimore option alongside the Pathway SIP and Kennedy Krieger.",
+      "notes": "Third Hopkins/Baltimore option alongside the Pathway SIP and Kennedy Krieger. Baltimore, about 70 minutes from Leesburg.",
       "url_confidence": "low",
       "url_verified": true,
+      "near_home": true,
       "category": "Neuroscience, Alzheimer's & specialty focus",
       "source_file": "05-neuro-and-specialty.json"
     },
@@ -1084,9 +1087,10 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Excellent fit for developmental/behavioral pediatrics. Adjacent to Johns Hopkins, a Baltimore trip could cover both.",
+      "notes": "Excellent fit for developmental/behavioral pediatrics. Adjacent to Johns Hopkins, a Baltimore trip could cover both. Baltimore, about 70 minutes from Leesburg. Doable as a commute, though a long one.",
       "url_confidence": "low",
       "url_verified": true,
+      "near_home": true,
       "category": "Pediatric & children's hospital research",
       "source_file": "02-pediatric.json"
     },
@@ -1242,9 +1246,10 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "The 2026 cycle has closed and the 2027 posting was not up as of late October 2026. This is one for the change-watcher to catch.",
+      "notes": "The 2026 cycle has closed and the 2027 posting was not up as of late October 2026. This is one for the change-watcher to catch. Downtown DC, about an hour from Leesburg.",
       "url_confidence": "low",
       "url_verified": true,
+      "near_home": true,
       "category": "Pediatric & children's hospital research",
       "source_file": "02-pediatric.json"
     },
@@ -1441,9 +1446,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Flagged on your list as OPEN NOW. This is one to do first.",
+      "notes": "Flagged on your list as OPEN NOW. This is one to do first. Baltimore, about 70 minutes from Leesburg.",
       "priority_hint": "open-now",
       "url_confidence": "medium",
+      "near_home": true,
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -2052,10 +2058,11 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 1.",
+      "notes": "Flagged on your list: opens Dec 1. You are a Penn State student, so you apply here as an internal candidate, which is usually an advantage.",
       "url_confidence": "medium",
       "url_verified": true,
       "program_dates": "May 24 - Jul 31, 2027",
+      "home_institution": true,
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -2508,6 +2515,47 @@
       "source_file": "04-academic-medical-centers.json"
     },
     {
+      "id": "howard-med",
+      "name": "Summer research programs",
+      "org": "Howard University College of Medicine",
+      "city": "Washington, DC",
+      "url": "https://medicine.howard.edu/",
+      "tracks": [
+        "basic-science",
+        "clinical",
+        "translational"
+      ],
+      "focus": "Biomedical research at a historically Black medical school, and one of the fourteen Amgen Scholars host sites.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": "2026-11-01",
+      "deadline": "2027-02-01",
+      "deadline_status": "projected",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "near_home": true,
+      "notes": "Worth knowing: Howard is an Amgen Scholars host, so the Amgen application you are already writing can be pointed here, at a campus an hour from home. Amgen covers housing anyway, but the option to commute is there.",
+      "url_verified": true,
+      "url_confidence": "low",
+      "category": "Commutable from home (DC metro and Virginia)",
+      "source_file": "07-dc-metro.json"
+    },
+    {
       "id": "duke-summer-research",
       "name": "Summer research programs (Graduate School / SROP)",
       "org": "Duke University",
@@ -2911,9 +2959,10 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Same institution as SURIP: one visit, two applications.",
+      "notes": "Same institution as SURIP: one visit, two applications. You are a Penn State student, so you apply here as an internal candidate, which is usually an advantage.",
       "url_confidence": "high",
       "program_dates": "May 24 - Jul 27, 2027",
+      "home_institution": true,
       "category": "On the original list",
       "source_file": "01-her-list.json"
     },
@@ -3000,11 +3049,12 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "HIGHEST PRIORITY. One application reaches an enormous number of labs, and you can email individual PIs directly to improve your odds, that outreach is what actually gets people placed. The 2026 cycle closed Feb 18; 2027 is expected to open mid-November 2026 and close mid-February 2027. Verify at training.nih.gov/sip.",
+      "notes": "HIGHEST PRIORITY. One application reaches an enormous number of labs, and you can email individual PIs directly to improve your odds, that outreach is what actually gets people placed. The 2026 cycle closed Feb 18; 2027 is expected to open mid-November 2026 and close mid-February 2027. Verify at training.nih.gov/sip. Bethesda is about 45 minutes from Leesburg. NIH pays a stipend and provides no housing, which makes it a far better deal if you are living at home.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false,
+      "near_home": true,
       "category": "National & flagship programs",
       "source_file": "03-national-flagship.json"
     },
@@ -3543,9 +3593,10 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "CORRECTION: the posted cycle is a FALL-SPRING internship (Sept 13, 2026 - May 15, 2027) whose deadline was Aug 10, 2026 and has passed, not a summer program. 15 hours/week onsite, ten interns taken. Real pediatric emergency-medicine patient contact, which is rare and valuable, so it is worth emailing to ask whether a summer 2027 session runs and when it opens. Do not plan the summer around this one.",
+      "notes": "CORRECTION: the posted cycle is a FALL-SPRING internship (Sept 13, 2026 - May 15, 2027) whose deadline was Aug 10, 2026 and has passed, not a summer program. 15 hours/week onsite, ten interns taken. Real pediatric emergency-medicine patient contact, which is rare and valuable, so it is worth emailing to ask whether a summer 2027 session runs and when it opens. Do not plan the summer around this one. Downtown DC, about an hour from Leesburg.",
       "url_confidence": "medium",
       "url_verified": true,
+      "near_home": true,
       "category": "Pediatric & children's hospital research",
       "source_file": "02-pediatric.json"
     },
@@ -3856,6 +3907,85 @@
       "source_file": "01-her-list.json"
     },
     {
+      "id": "inova-research",
+      "name": "Research and education programs",
+      "org": "Inova Health System",
+      "city": "Fairfax, VA",
+      "url": "https://www.inova.org/",
+      "tracks": [
+        "clinical",
+        "translational",
+        "pediatrics"
+      ],
+      "focus": "Northern Virginia's largest health system, with clinical and translational research including Inova Children's Hospital.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "near_home": true,
+      "notes": "About 35 minutes from Leesburg, so no housing cost. You already worked in Fairfax at Privia, so you know the area and may have a contact who can point you at the right person. This is a hub page: the summer research listings sit under research and education, and a direct email is likely to work better than a portal.",
+      "url_verified": true,
+      "url_confidence": "low",
+      "category": "Commutable from home (DC metro and Virginia)",
+      "source_file": "07-dc-metro.json"
+    },
+    {
+      "id": "gwu-smhs",
+      "name": "Research opportunities",
+      "org": "George Washington University School of Medicine",
+      "city": "Washington, DC",
+      "url": "https://smhs.gwu.edu/research",
+      "tracks": [
+        "clinical",
+        "translational",
+        "public-health"
+      ],
+      "focus": "Clinical and translational research in downtown DC, with ties to Children's National.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "not-provided",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
+      "selectivity": "moderate",
+      "near_home": true,
+      "notes": "GW's paediatrics department is based at Children's National, so an email here can lead to the same place by another route.",
+      "url_verified": true,
+      "url_confidence": "medium",
+      "category": "Commutable from home (DC metro and Virginia)",
+      "source_file": "07-dc-metro.json"
+    },
+    {
       "id": "utsw-simmons",
       "name": "Simmons Cancer Center education & training",
       "org": "UT Southwestern Harold C. Simmons Comprehensive Cancer Center",
@@ -4079,6 +4209,127 @@
       "url_confidence": "high",
       "category": "Second-pass additions",
       "source_file": "06-expansion.json"
+    },
+    {
+      "id": "fralin-vtc",
+      "name": "Summer research",
+      "org": "Fralin Biomedical Research Institute at Virginia Tech Carilion",
+      "city": "Roanoke, VA",
+      "url": "https://fbri.vtc.vt.edu/",
+      "tracks": [
+        "neuroscience",
+        "translational",
+        "basic-science"
+      ],
+      "focus": "Neuroscience-heavy institute with work on addiction, developmental neuroscience and human neuroimaging.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "moderate",
+      "notes": "Not commutable from Leesburg, but a genuinely strong neuroscience institute in Virginia that very few people outside the state apply to. The human neuroimaging work is close to what you already do in the lab.",
+      "url_verified": true,
+      "url_confidence": "low",
+      "category": "Commutable from home (DC metro and Virginia)",
+      "source_file": "07-dc-metro.json"
+    },
+    {
+      "id": "georgetown-med",
+      "name": "Summer research programs",
+      "org": "Georgetown University Medical Center",
+      "city": "Washington, DC",
+      "url": "https://som.georgetown.edu/",
+      "tracks": [
+        "clinical",
+        "basic-science",
+        "neuroscience",
+        "oncology"
+      ],
+      "focus": "Medical school research across neuroscience and the Lombardi Comprehensive Cancer Center.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "near_home": true,
+      "notes": "Roughly an hour from Leesburg. Lombardi is an NCI comprehensive cancer centre, and the neuroscience department is strong. Hub page: look under education and training for the summer listings.",
+      "url_verified": true,
+      "url_confidence": "low",
+      "category": "Commutable from home (DC metro and Virginia)",
+      "source_file": "07-dc-metro.json"
+    },
+    {
+      "id": "uva-med",
+      "name": "Summer research programs",
+      "org": "University of Virginia School of Medicine",
+      "city": "Charlottesville, VA",
+      "url": "https://med.virginia.edu/",
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience",
+        "pediatrics"
+      ],
+      "focus": "Biomedical research at Virginia's flagship medical school, including UVA Children's.",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "housing": "varies",
+      "opens": null,
+      "deadline": null,
+      "deadline_status": "unknown",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": ""
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
+      "selectivity": "high",
+      "notes": "About two hours from Leesburg, so a weekend drive home rather than a commute. In-state and a strong paediatrics department.",
+      "url_verified": true,
+      "url_confidence": "low",
+      "category": "Commutable from home (DC metro and Virginia)",
+      "source_file": "07-dc-metro.json"
     },
     {
       "id": "janelia-undergrad",

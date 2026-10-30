@@ -1,13 +1,13 @@
 {
   "zip": "kit/jolene-claude-kit.zip",
-  "zip_bytes": 11613,
+  "zip_bytes": 13080,
   "files": [
     {
       "path": "kit/CLAUDE.md",
       "name": "CLAUDE.md",
       "icon": "📋",
       "blurb": "Who you are, what you are applying to, and how you want Claude to help. Attach this every time.",
-      "bytes": 3510
+      "bytes": 7006
     },
     {
       "path": "kit/jolene-profile.md",

@@ -334,10 +334,11 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 1.",
+      "notes": "Flagged on your list: opens Dec 1. You are a Penn State student, so you apply here as an internal candidate, which is usually an advantage.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "May 24 - Jul 31, 2027"
+      "program_dates": "May 24 - Jul 31, 2027",
+      "home_institution": true
     },
     {
       "id": "mayo-surf",
@@ -449,9 +450,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Flagged on your list as OPEN NOW. This is one to do first.",
+      "notes": "Flagged on your list as OPEN NOW. This is one to do first. Baltimore, about 70 minutes from Leesburg.",
       "priority_hint": "open-now",
-      "url_confidence": "medium"
+      "url_confidence": "medium",
+      "near_home": true
     },
     {
       "id": "cwru-hlb",
@@ -749,9 +751,10 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Same institution as SURIP: one visit, two applications.",
+      "notes": "Same institution as SURIP: one visit, two applications. You are a Penn State student, so you apply here as an internal candidate, which is usually an advantage.",
       "url_confidence": "high",
-      "program_dates": "May 24 - Jul 27, 2027"
+      "program_dates": "May 24 - Jul 27, 2027",
+      "home_institution": true
     },
     {
       "id": "rutgers-rwjms-neuro",
@@ -859,10 +862,11 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on your list. It is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it.",
+      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on your list. It is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it. You are a Penn State student, so you apply here as an internal candidate, which is usually an advantage.",
       "url_verified": true,
       "url_confidence": "high",
-      "program_dates": "May 24 - Jul 31, 2027"
+      "program_dates": "May 24 - Jul 31, 2027",
+      "home_institution": true
     }
   ]
 }

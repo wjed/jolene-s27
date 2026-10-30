@@ -35,9 +35,10 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Third Hopkins/Baltimore option alongside the Pathway SIP and Kennedy Krieger.",
+      "notes": "Third Hopkins/Baltimore option alongside the Pathway SIP and Kennedy Krieger. Baltimore, about 70 minutes from Leesburg.",
       "url_confidence": "low",
-      "url_verified": true
+      "url_verified": true,
+      "near_home": true
     },
     {
       "id": "ucdavis-mind",

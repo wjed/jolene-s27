@@ -41,11 +41,12 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "HIGHEST PRIORITY. One application reaches an enormous number of labs, and you can email individual PIs directly to improve your odds, that outreach is what actually gets people placed. The 2026 cycle closed Feb 18; 2027 is expected to open mid-November 2026 and close mid-February 2027. Verify at training.nih.gov/sip.",
+      "notes": "HIGHEST PRIORITY. One application reaches an enormous number of labs, and you can email individual PIs directly to improve your odds, that outreach is what actually gets people placed. The 2026 cycle closed Feb 18; 2027 is expected to open mid-November 2026 and close mid-February 2027. Verify at training.nih.gov/sip. Bethesda is about 45 minutes from Leesburg. NIH pays a stipend and provides no housing, which makes it a far better deal if you are living at home.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
-      "url_verified": false
+      "url_verified": false,
+      "near_home": true
     },
     {
       "id": "amgen-scholars",
