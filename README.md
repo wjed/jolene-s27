@@ -24,7 +24,7 @@ This repo answers those, and adds 80 programs that were not on the list.
 
 | | |
 |---|---|
-| **[The site](https://wjed.github.io/jolene-s27/)** | Filterable database, prioritised action plan, application tracker, timeline |
+| **[The site](https://wjed.github.io/jolene-s27/)** | Filterable database, prioritized action plan, application tracker, timeline |
 | **[`data/`](data/)** | The dataset: JSON, a CSV export, and an `.ics` calendar with reminders |
 | **[`claude-kit/`](claude-kit/)** | Files she can attach to a Claude chat so it has full context: who she is, every fact a form asks for, and three skills (fill an application in the browser, email a lab, watch deadlines weekly). Published to the site as individual downloads and a zip by `scripts/kit.py`. |
 | **[`materials/`](materials/)** | Source markdown for the nine guides and templates. They are rendered onto the site at build time by `scripts/guides.py`, nobody has to read them on GitHub. |
@@ -103,9 +103,21 @@ Exit codes: `0` nothing notable · `1` broken links · `2` changes · `3` both.
 
 ## Testing
 
-`site/qa.js` is a browser regression suite covering every filter, sort, view,
-page, guide, download and persistence path, 150 assertions in all. It is not
-linked from the page. Open the site and run it from the console:
+Two suites, because they reach different things.
+
+`scripts/qa_all.py` is the repo side: every script compiles, both workflows are
+well formed and reference commands that exist, a build is deterministic, the
+published copies match their sources, the asset hashes in the HTML match the
+files they name, the calendar is RFC 5545 conformant, and no British spellings
+or stranded punctuation have crept in. 115 checks.
+
+```bash
+python scripts/qa_all.py
+```
+
+`site/qa.js` is the browser side: every filter, sort, view, page, guide,
+download and persistence path, 150 assertions in all. It is not linked from the
+page. Open the site and run it from the console:
 
 ```js
 await fetch("qa.js").then(r => r.text()).then(eval);

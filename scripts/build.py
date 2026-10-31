@@ -143,6 +143,37 @@ def sort_key(program):
     return (deadline is None, deadline or "9999-12-31", program["name"])
 
 
+
+VOLATILE = [
+    re.compile(rb'"generated": "[^"]*"'),
+    re.compile(rb"DTSTAMP:[0-9TZ]+"),
+]
+
+
+def write_stable(path, blob):
+    """Write only when the content changed, ignoring generation timestamps.
+
+    Both outputs carry a stamp of when they were produced, so a plain write
+    makes every build dirty the repo even when no data moved. That turns
+    `git status` into noise and makes the weekly watcher commit churn. If the
+    only difference is the stamp, the existing file is kept.
+    """
+    if isinstance(blob, str):
+        blob = blob.encode("utf-8")
+    def without_stamps(b):
+        # git may check these out with CRLF while the build writes LF, so
+        # normalise endings before comparing or every byte looks changed.
+        b = b.replace(b"\r\n", b"\n")
+        for pattern in VOLATILE:
+            b = pattern.sub(b"", b)
+        return b
+
+    if path.is_file() and without_stamps(path.read_bytes()) == without_stamps(blob):
+        return False
+    path.write_bytes(blob)
+    return True
+
+
 def write_json(programs):
     tracks = sorted({t for p in programs for t in p["tracks"]})
     payload = {
@@ -155,11 +186,12 @@ def write_json(programs):
     }
     blob = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
 
-    (ROOT / "data" / "programs.json").write_text(blob, encoding="utf-8")
+    canonical = ROOT / "data" / "programs.json"
+    write_stable(canonical, blob)
 
     site_data = ROOT / "site" / "data"
     site_data.mkdir(parents=True, exist_ok=True)
-    (site_data / "programs.json").write_text(blob, encoding="utf-8")
+    (site_data / "programs.json").write_bytes(canonical.read_bytes())
 
     return payload
 
@@ -326,7 +358,7 @@ def write_ics(programs):
     path = ROOT / "data" / "deadlines.ics"
     body = '\r\n'.join(fold_ics(line) for line in lines) + '\r\n'
     # write_text would translate each \n to \r\n on Windows, giving \r\r\n
-    path.write_bytes(body.encode("utf-8"))
+    write_stable(path, body.encode("utf-8"))
     mirror_to_site(path)
     return path, count
 
