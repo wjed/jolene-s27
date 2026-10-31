@@ -382,7 +382,12 @@ def stamp_assets():
         path = ROOT / "site" / name
         if not path.is_file():
             continue
-        digest = hashlib.sha1(path.read_bytes()).hexdigest()[:8]
+        # Hash the normalised bytes. Git hands this file out with CRLF on
+        # Windows and LF in CI, so hashing it as it sits on disk gave the same
+        # script two different versions depending on who built it: the commit
+        # from a laptop named one, the deploy served the other, and a cache was
+        # busted for a change that had not happened.
+        digest = hashlib.sha1(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()[:8]
         html = re.sub(
             re.escape(name) + r'(\?v=[0-9a-f]+)?"',
             name + "?v=" + digest + '"',

@@ -143,8 +143,17 @@ def qa_build():
         m = re.search(re.escape(rel) + r"\?v=([0-9a-f]+)", html)
         check(f"asset is versioned: {rel}", m is not None)
         if m:
-            actual = hashlib.sha1((ROOT / "site" / rel).read_bytes()).hexdigest()[:8]
+            raw = (ROOT / "site" / rel).read_bytes()
+            # Normalised, because the version has to mean "this content", not
+            # "this content as checked out on this operating system". Hashing
+            # the raw bytes here agreed with a build that did the same and hid
+            # the fact that CI produced a different version entirely.
+            actual = hashlib.sha1(raw.replace(b"\r\n", b"\n")).hexdigest()[:8]
             check(f"asset hash is current: {rel}", m.group(1) == actual, f"html={m.group(1)} file={actual}")
+            if b"\r\n" in raw:
+                onDisk = hashlib.sha1(raw).hexdigest()[:8]
+                check(f"asset hash ignores line endings: {rel}", m.group(1) != onDisk,
+                      "the version is tracking CRLF, so CI will stamp a different one")
 
 
 # ------------------------------------------------------------------ outputs

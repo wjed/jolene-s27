@@ -110,7 +110,7 @@ Two suites, because they reach different things.
 well formed and reference commands that exist, a build is deterministic, the
 published copies match their sources, the asset hashes in the HTML match the
 files they name, the calendar is RFC 5545 conformant, and no British spellings
-or stranded punctuation have crept in. 119 checks.
+or stranded punctuation have crept in. 121 checks.
 
 ```bash
 python scripts/qa_all.py
