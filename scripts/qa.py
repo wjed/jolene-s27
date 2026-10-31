@@ -31,12 +31,16 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "programs.json"
 APP = ROOT / "site" / "assets" / "app.js"
 
-TODAY = dt.date(2026, 10, 30)
+# The point of the date checks is to notice a deadline that has quietly gone
+# past, so they have to run against the real today, not a date frozen on the
+# day they were written.
+TODAY = dt.date.today()
 CYCLE_START = dt.date(2026, 10, 1)
 CYCLE_END = dt.date(2027, 9, 30)
 
 errors: list[str] = []
 warns: list[str] = []
+notes: list[str] = []
 
 
 def err(msg):
@@ -45,6 +49,11 @@ def err(msg):
 
 def warn(msg):
     warns.append(msg)
+
+
+def info(msg):
+    """Something worth stating, deliberate rather than wrong."""
+    notes.append(msg)
 
 
 def js_keys(source: str, var: str) -> set[str]:
@@ -111,13 +120,28 @@ def main() -> int:
             warn(f"{pid}: rolling but also carries a deadline")
 
     # ---- duplicates
-    for field, label in (("url", "URL"), ("name", "name")):
-        counts = collections.Counter(p[field] for p in programs)
-        for value, n in counts.items():
-            if n > 1:
-                ids = [p["id"] for p in programs if p[field] == value]
-                (warn if field == "name" else err)(
-                    f"{n} programs share the same {label}: {value} -> {ids}")
+    #
+    # A repeated name is not a defect. Thirty of these programs are genuinely
+    # called "Summer Undergraduate Research Program" by the institutions that
+    # run them, and renaming them would misquote the source. What matters is
+    # that every row is still tellable apart, so the test is name plus
+    # institution, and every surface that prints a name prints the org with it.
+    counts = collections.Counter(p["url"] for p in programs)
+    for value, n in counts.items():
+        if n > 1:
+            ids = [p["id"] for p in programs if p["url"] == value]
+            err(f"{n} programs share the same URL: {value} -> {ids}")
+
+    pairs = collections.Counter((p["name"], p["org"]) for p in programs)
+    for (name_, org_), n in pairs.items():
+        if n > 1:
+            ids = [p["id"] for p in programs if p["name"] == name_ and p["org"] == org_]
+            err(f"{n} programs are indistinguishable ({name_}, {org_}) -> {ids}")
+
+    repeated = sum(n - 1 for n in collections.Counter(p["name"] for p in programs).values() if n > 1)
+    if repeated:
+        info(f"{repeated} programs reuse a name used by another institution, "
+             f"disambiguated by org everywhere it is shown")
 
     # ---- org + city sanity
     for p in programs:
@@ -156,6 +180,10 @@ def main() -> int:
         print(f"WARNINGS ({len(warns)})")
         for w in warns:
             print(f"  ! {w}")
+        print()
+    if notes:
+        for n in notes:
+            print(f"  . {n}")
         print()
     if not errors and not warns:
         print("clean")

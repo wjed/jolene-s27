@@ -312,7 +312,9 @@ window.QA = (() => {
       ok("export separator", /^\|\s*---/.test(lines[1]));
       ok("export row count", lines.length - 2 === data.count, `${lines.length - 2} vs ${data.count}`);
       ok("export cells are escaped", lines.slice(2).every((l) => l.split("|").length === 9));
-      ok("export has no dashes", !captured.includes("—") && !captured.includes("–"));
+      /* Built from code points so this file is not itself an offender. */
+      const EM = String.fromCharCode(8212), EN = String.fromCharCode(8211);
+      ok("export has no dashes", !captured.includes(EM) && !captured.includes(EN));
     }
 
     // export must honour the current filter
@@ -355,7 +357,8 @@ window.QA = (() => {
     await sleep(180);
 
     // no placeholder junk anywhere
-    const junk = ["undefined", ">null<", "NaN", "[object Object]", "—", "–"];
+    const junk = ["undefined", ">null<", "NaN", "[object Object]",
+                  String.fromCharCode(8212), String.fromCharCode(8211)];
     for (const v of ["plan", "programs", "tracker", "timeline", "profile", "kit"]) {
       await goPage(v);
       const found = junk.filter((j) => $("#content").innerHTML.includes(j));

@@ -34,8 +34,8 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-EM = "—"
-EN = "–"
+EM = chr(8212)  # by code point: this file must not contain one
+EN = chr(8211)
 
 JSON_TARGETS = ["data/sources/*.json"]
 TEXT_TARGETS = [

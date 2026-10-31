@@ -34,6 +34,14 @@ STATE = ROOT / "data" / "watch-state.json"
 REPORT = ROOT / "data" / "watch-report.md"
 
 UA = "Mozilla/5.0 (compatible; jolene-s27-research-finder/1.0; +https://github.com/wjed/jolene-s27)"
+BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
+
+# NIH and a handful of other hosts sit behind a filter that refuses a
+# self-identifying bot while serving the same page to a browser without
+# complaint. Calling those pages broken every week would be wrong, so a
+# refusal is retried once as a browser before it is believed.
+REFUSED = (401, 403, 405, 406, 429)
 TIMEOUT = 25
 WORKERS = 8
 
@@ -77,6 +85,16 @@ def visible_text(raw: str) -> str:
     return WHITESPACE.sub(" ", body).strip()
 
 
+def get(url: str, ua: str) -> tuple[str, str]:
+    """Fetch one page as `ua`. Returns (final url, decoded body) or raises."""
+    request = urllib.request.Request(url, headers={"User-Agent": ua, "Accept": "text/html,*/*"})
+    with urllib.request.urlopen(request, timeout=TIMEOUT,
+                                context=ssl.create_default_context()) as response:
+        payload = response.read(3_000_000)
+        charset = response.headers.get_content_charset() or "utf-8"
+        return response.geturl(), payload.decode(charset, errors="replace")
+
+
 def fetch(program: dict) -> dict:
     url = program["url"]
     result = {
@@ -92,35 +110,40 @@ def fetch(program: dict) -> dict:
         result.update(status="skipped", reason="placeholder search URL")
         return result
 
-    request = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,*/*"})
-    context = ssl.create_default_context()
+    final_url = raw = None
+    failure = None
 
-    try:
-        with urllib.request.urlopen(request, timeout=TIMEOUT, context=context) as response:
-            final_url = response.geturl()
-            payload = response.read(3_000_000)
-            charset = response.headers.get_content_charset() or "utf-8"
-    except urllib.error.HTTPError as exc:
-        # 403/429 mean the site refuses robots, not that the page is gone. Several
-        # of these pages are perfectly fine in a browser, so they are reported
-        # separately instead of being called broken.
-        kind = "blocked" if exc.code in (401, 403, 429) else "http-error"
-        result.update(status=kind, code=exc.code, reason=f"HTTP {exc.code}")
-        return result
-    except urllib.error.URLError as exc:
-        result.update(status="unreachable", reason=str(exc.reason)[:200])
-        return result
-    except Exception as exc: # noqa: BLE001 - a watcher must never die on one bad page
-        # Some hosts refuse a non-browser client at the connection level rather
-        # than with a 403. That is a block, not a dead link, so it should not be
-        # reported as broken every week.
-        name = type(exc).__name__
-        kind = "blocked" if name in ("RemoteDisconnected", "ConnectionResetError",
-                                     "IncompleteRead", "BadStatusLine") else "error"
-        result.update(status=kind, reason=f"{name}: {exc}"[:200])
+    for agent in (UA, BROWSER_UA):
+        try:
+            final_url, raw = get(url, agent)
+            failure = None
+            break
+        except urllib.error.HTTPError as exc:
+            refused = exc.code in REFUSED
+            failure = ("blocked" if refused else "http-error", f"HTTP {exc.code}", exc.code)
+            if not refused:
+                break
+        except urllib.error.URLError as exc:
+            # DNS and connection failures are not about who is asking.
+            failure = ("unreachable", str(exc.reason)[:200], None)
+            break
+        except Exception as exc: # noqa: BLE001 - a watcher must never die on one bad page
+            # Some hosts refuse a non-browser client at the connection level
+            # rather than with a 403. That is a block, not a dead link.
+            name = type(exc).__name__
+            at_connection = name in ("RemoteDisconnected", "ConnectionResetError",
+                                     "IncompleteRead", "BadStatusLine")
+            failure = ("blocked" if at_connection else "error", f"{name}: {exc}"[:200], None)
+            if not at_connection:
+                break
+
+    if failure:
+        kind, reason, code = failure
+        result.update(status=kind, reason=reason)
+        if code is not None:
+            result["code"] = code
         return result
 
-    raw = payload.decode(charset, errors="replace")
     text = visible_text(raw)
 
     result.update(
@@ -162,7 +185,7 @@ def main() -> int:
     with concurrent.futures.ThreadPoolExecutor(max_workers=WORKERS) as pool:
         results = list(pool.map(fetch, programs))
 
-    broken, changed, new_2027, skipped, blocked = [], [], [], [], []
+    broken, new_2027, skipped, blocked = [], [], [], []
 
     for result in results:
         pid = result["id"]
@@ -180,17 +203,40 @@ def main() -> int:
             broken.append(result)
             continue
 
+        # A deliberate short link such as jax.org/ssp redirects on every single
+        # run. Saying so once is useful; saying so every week is noise, so only
+        # a redirect whose destination moved since last time earns a line.
+        if result["redirected"] and (not before or before.get("final_url") != result["final_url"]):
+            result["_new_redirect"] = True
+
         if args.links_only or not before or before.get("status") != "ok":
             continue
 
         if before.get("hash") != result["hash"]:
-            delta = result["length"] - before.get("length", 0)
-            result["_delta"] = delta
+            result["_delta"] = result["length"] - before.get("length", 0)
             result["_was"] = before.get("dates_found", [])
-            changed.append(result)
+            result["_candidate"] = True
 
         if result["mentions_2027"] and not before.get("mentions_2027"):
             new_2027.append(result)
+
+    # A page that differs from last week may have been updated, or may simply
+    # render something different on every load: clinic wait times, a rotating
+    # banner, a shuffled list of featured links. Reading it a second time tells
+    # the two apart. If two reads seconds apart disagree with each other, the
+    # page is volatile, and reporting it every single week would bury the real
+    # signal under pages that have nothing to say.
+    candidates = [r for r in results if r.get("_candidate")]
+    if candidates:
+        by_id = {p["id"]: p for p in programs}
+        with concurrent.futures.ThreadPoolExecutor(max_workers=WORKERS) as pool:
+            again = list(pool.map(fetch, [by_id[r["id"]] for r in candidates]))
+        for first, second in zip(candidates, again):
+            if second.get("status") == "ok" and second.get("hash") != first["hash"]:
+                first["volatile"] = True
+
+    changed = [r for r in candidates if not r.get("volatile")]
+    volatile = [r for r in candidates if r.get("volatile")]
 
     # Persist state for the next run.
     state["runs"] = state.get("runs", 0) + 1
@@ -205,7 +251,7 @@ def main() -> int:
         f"# Watch report, {state['last_run'][:10]}",
         "",
         f"Checked **{len(results)}** program pages: {ok_count} OK, "
-        f"{len(broken)} problems, {len(blocked)} bot-blocked, {len(skipped)} skipped. "
+        f"{len(broken)} broken, {len(blocked)} bot-blocked, {len(skipped)} skipped. "
         f"Run #{state['runs']}.",
         "",
     ]
@@ -232,6 +278,18 @@ def main() -> int:
                 report.append(f"  - status text: {'; '.join(r['status_phrases'])}")
         report.append("")
 
+    if volatile:
+        report += [
+            "## Pages that change on every load",
+            "",
+            "These differ every time they are read (wait times, rotating banners), so a",
+            "difference here does not mean the program page was updated. Not counted above.",
+            "",
+        ]
+        for r in volatile:
+            report.append(f"- **{r['name']}** ({r['org']}), [page]({r['url']})")
+        report.append("")
+
     if broken:
         report += ["## Links that need fixing", ""]
         for r in broken:
@@ -247,7 +305,7 @@ def main() -> int:
             report.append(f"- **{r['name']}** ({r['org']}), {r['reason']}, [page]({r['url']})")
         report.append("")
 
-    redirects = [r for r in results if r.get("redirected")]
+    redirects = [r for r in results if r.get("_new_redirect")]
     if redirects:
         report += ["## Redirects (consider updating the stored URL)", ""]
         for r in redirects:

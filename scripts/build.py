@@ -323,7 +323,10 @@ def write_ics(programs):
                 "BEGIN:VALARM",
                 "ACTION:DISPLAY",
                 f"TRIGGER:-P{days}D",
-                f"DESCRIPTION:{ics_escape(label + ': ' + program['name'])}",
+                # Six programs on this list are called "Summer Undergraduate
+                # Research Program". A phone alarm that says only the name tells
+                # her nothing, so the institution goes in the reminder too.
+                f"DESCRIPTION:{ics_escape(label + ': ' + program['name'] + ', ' + program['org'])}",
                 "END:VALARM",
             ]
         body.append("END:VEVENT")

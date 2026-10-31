@@ -1,6 +1,6 @@
 # Summer 2027 Research Finder
 
-A searchable database of **104 undergraduate summer research programs**, a
+A searchable database of **110 undergraduate summer research programs**, a
 deadline-aware application tracker, a set of application templates, and a watcher
 that notices when program pages change.
 
@@ -18,7 +18,7 @@ instincts, St. Jude, CHOP, Cincinnati Children's, Yale Child Study, but as a
 flat list it could not answer the questions that actually matter: *what is open
 today, what is due first, what am I not eligible for, and what am I missing?*
 
-This repo answers those, and adds 80 programs that were not on the list.
+This repo answers those, and adds 86 programs that were not on the list.
 
 ## What is here
 
@@ -63,13 +63,14 @@ the same moves a Notion database makes.
 
 ## The honest part: which dates are real
 
-Of 104 programs, as of **30 October 2026**:
+Of 110 programs, as of **31 October 2026**:
 
 | | |
 |---|---|
 | **16** | deadline confirmed on the program's own page |
-| **48** | projected from a previous cycle, shown with an `est.` marker |
-| **37** | nothing posted yet |
+| **49** | projected from a previous cycle, shown with an `est.` marker |
+| **42** | nothing posted yet |
+| **3** | rolling, no fixed date |
 
 This is not sloppiness in the data. It is the actual state of the world in late
 October. Most Summer 2027 cycles have not opened. Rather than guess and present
@@ -89,7 +90,7 @@ Penn State AHA-USF **15 Feb** · NYSCF **15 Mar**.
 python scripts/watch.py
 ```
 
-Fetches all 85 program pages, compares each against the previous run, and reports:
+Fetches all 110 program pages, compares each against the previous run, and reports:
 
 - pages whose content changed since last time
 - **pages that have started mentioning 2027**: usually the week the new cycle goes live
@@ -109,7 +110,7 @@ Two suites, because they reach different things.
 well formed and reference commands that exist, a build is deterministic, the
 published copies match their sources, the asset hashes in the HTML match the
 files they name, the calendar is RFC 5545 conformant, and no British spellings
-or stranded punctuation have crept in. 115 checks.
+or stranded punctuation have crept in. 119 checks.
 
 ```bash
 python scripts/qa_all.py

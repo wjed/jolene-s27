@@ -1,7 +1,7 @@
 name: Watch program pages
 
 # Most Summer 2027 cycles were not posted when this dataset was built, so the
-# point of this job is to notice the week a program page changes — which is
+# point of this job is to notice the week a program page changes, which is
 # almost always the week the new dates appear.
 
 on:
@@ -53,7 +53,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          title="Program pages changed — $(date -u +%Y-%m-%d)"
+          title="Program pages changed: $(date -u +%Y-%m-%d)"
           gh issue create \
             --title "$title" \
             --body-file data/watch-report.md \

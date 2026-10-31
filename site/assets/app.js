@@ -33,7 +33,6 @@
     "personal-statement": "Personal statement",
     "1-lor": "1 letter of recommendation",
     "2-lor": "2 letters of recommendation",
-    "3-lor": "3 letters of recommendation",
   };
 
   /* Each select option keeps one color everywhere it appears, the way a
@@ -739,7 +738,7 @@
     const live = touched.filter((p) => !["rejected"].includes(statusOf(p.id)));
     const tally = {};
     live.forEach((p) => (p.requires || []).forEach((r) => { tally[r] = (tally[r] || 0) + 1; }));
-    const order = ["2-lor", "3-lor", "1-lor", "personal-statement", "cv", "transcript"];
+    const order = ["2-lor", "1-lor", "personal-statement", "cv", "transcript"];
     const needed = Object.entries(tally)
       .sort((a, b) => (order.indexOf(a[0]) + 99) % 99 - (order.indexOf(b[0]) + 99) % 99 || b[1] - a[1]);
 

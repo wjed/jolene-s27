@@ -234,10 +234,21 @@ def qa_kit():
 
 def qa_prose():
     section("prose and house style")
-    EM, EN = "—", "–"
+    # Written as escapes so this file is not itself an offender, which would
+    # make the check flag the checker.
+    EM, EN = chr(8212), chr(8211)  # by code point, so this file stays clean
+    # The workflows and scripts were missing from this list, and an em dash
+    # lived in a CI issue title for a week because of it. Anything that can
+    # put words in front of a reader belongs here.
     targets = (list((ROOT / "materials").rglob("*.md")) + list((ROOT / "claude-kit").rglob("*.md"))
-               + list((ROOT / "site").rglob("*.json")) + [ROOT / "README.md", ROOT / "site/index.html",
-                                                          ROOT / "site/assets/app.js"])
+               + list((ROOT / "site").rglob("*.json")) + list((ROOT / "scripts").glob("*.py"))
+               + list((ROOT / ".github/workflows").glob("*.yml"))
+               + [ROOT / "README.md", ROOT / "site/index.html",
+                  ROOT / "site/assets/app.js", ROOT / "site/qa.js"])
+    # The checker necessarily spells out the words and characters it hunts for,
+    # so scanning itself would always fail.
+    targets = [p for p in targets if p.name != "qa_all.py"]
+
     dashes = [p.relative_to(ROOT).as_posix() for p in targets
               if p.is_file() and (EM in p.read_text(encoding="utf-8", errors="replace")
                                   or EN in p.read_text(encoding="utf-8", errors="replace"))]
@@ -267,6 +278,17 @@ def qa_prose():
 # -------------------------------------------------------------------- repo
 
 def qa_repo():
+    # ---- the README quotes counts that silently went stale once already
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    programs = json.loads((ROOT / "data/programs.json").read_text(encoding="utf-8"))["programs"]
+    total = len(programs)
+    confirmed = sum(1 for p in programs if p["deadline_status"] == "confirmed")
+    check("README program count matches the dataset",
+          f"**{total} undergraduate summer research programs**" in readme, f"expected {total}")
+    check("README page count matches the dataset",
+          f"Fetches all {total} program pages" in readme, f"expected {total}")
+    check("README confirmed count matches the dataset",
+          f"| **{confirmed}** | deadline confirmed" in readme, f"expected {confirmed}")
     section("repo hygiene")
     tracked = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True).stdout.split()
     check("git tracks the site", any(f.startswith("site/") for f in tracked))

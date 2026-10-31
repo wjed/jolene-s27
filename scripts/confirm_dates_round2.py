@@ -8,7 +8,7 @@ The Pritzker entry is the reason that hand-check is not optional. The page
 advertises a 30 November 2026 deadline, which would have been the most urgent
 item on the whole list, but the surrounding text ("Eligible students will
 receive the electronic SRP application", "used by Pritzker students") makes
-clear it is the University of Chicago's own MEDICAL STUDENT programme, not an
+clear it is the University of Chicago's own MEDICAL STUDENT program, not an
 undergraduate one. Repointed at the Biological Sciences Division hub instead.
 
 Safe to re-run.
@@ -31,7 +31,7 @@ UPDATES = {
         "program_dates": "Jun 7 - Aug 13, 2027",
         "notes": (
             "CONFIRMED on the page: applications open 16 Nov 2026 and close 13 Jan 2027, "
-            "programme runs 7 Jun - 13 Aug 2027. An informational webinar runs 19 Nov. "
+            "program runs 7 Jun - 13 Aug 2027. An informational webinar runs 19 Nov. "
             "Several tracks sit behind this one page. Read it properly and pick the right one. "
             "Houston also has Baylor SMART and Texas Children's, so one city covers three applications."
         ),
@@ -51,7 +51,7 @@ UPDATES = {
     },
 }
 
-# The Pritzker page turned out to describe a medical-student programme.
+# The Pritzker page turned out to describe a medical-student program.
 REWRITES = {
     "uchicago-pritzker-srp": {
         "id": "uchicago-bsd",
