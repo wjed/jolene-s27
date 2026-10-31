@@ -371,6 +371,102 @@ window.QA = (() => {
     ok("timeline has month headers", $$(".month-rule").length > 0);
   }
 
+
+  async function ownPrograms(data) {
+    localStorage.removeItem("jolene-s27:custom:v1");
+    localStorage.removeItem("jolene-s27:tracker:v1");
+
+    await goPage("add");
+    ok("add page renders", !!$("#ad-name") && !!$("#ad-save"));
+    $("#ad-save").click();
+    await sleep(200);
+    ok("rejects an entry with no name", ($("#ad-msg").textContent || "").includes("name"), $("#ad-msg").textContent);
+
+    const base = data.count;
+    $("#ad-name").value = "QA Test Program";
+    $("#ad-org").value = "QA Institution";
+    $("#ad-city").value = "Leesburg, VA";
+    $("#ad-url").value = "example.org/qa";
+    $("#ad-deadline").value = "2027-02-10";
+    $("#ad-save").click();
+    await sleep(400);
+
+    const saved = JSON.parse(localStorage.getItem("jolene-s27:custom:v1") || "[]");
+    ok("saves to storage", saved.length === 1, saved.length);
+    ok("adds a scheme to a bare url", saved[0] && saved[0].url === "https://example.org/qa", saved[0] && saved[0].url);
+    ok("sidebar count rises", $("#n-programs").textContent === String(base + 1), $("#n-programs").textContent);
+
+    const id = saved[0].id;
+    await goPage("programs");
+    await goDb("table");
+    ok("appears in the table", rows() === base + 1, rows());
+    await goDb("gallery");
+    ok("appears in the gallery", cards() === base + 1, cards());
+    await goDb("table");
+
+    await setSearch("QA Test Program");
+    ok("is searchable", rows() === 1, rows());
+    await setSearch("");
+
+    $(`[data-peek="${id}"]`).click();
+    await sleep(320);
+    ok("opens a peek", $("#peek").dataset.open === "true" && $("#peek-body").innerHTML.includes("QA Test"));
+    $("#peek-close").click();
+    await sleep(240);
+
+    await goPage("timeline");
+    ok("appears in the timeline", $("#content").innerHTML.includes("QA Test Program"));
+
+    await goPage("add");
+    ok("listed under yours", !!$(`[data-remove-custom="${id}"]`));
+    $(`[data-remove-custom="${id}"]`).click();
+    await sleep(380);
+    ok("removes cleanly", $("#n-programs").textContent === String(base), $("#n-programs").textContent);
+    ok("storage emptied", JSON.parse(localStorage.getItem("jolene-s27:custom:v1") || "[]").length === 0);
+  }
+
+  async function preparationRollup(data) {
+    localStorage.removeItem("jolene-s27:tracker:v1");
+    await goPage("programs");
+    await goDb("table");
+
+    // a program with known requirements
+    const sel = $('select[data-status-for="stjude-poe"]');
+    sel.value = "drafting";
+    sel.dispatchEvent(new Event("change", { bubbles: true }));
+    await sleep(280);
+
+    await goPage("tracker");
+    const html = $("#content").innerHTML;
+    ok("rollup appears once something is tracked", html.includes("What you need to prepare"));
+    ok("rollup counts letters", /letters? of recommendation/i.test(html));
+    ok("rollup names the first deadline", html.includes("First one due"));
+
+    // A sent application should leave the plan's "start here" list. Pick a
+    // program that is actually open today rather than hardcoding one, since
+    // which programs are open moves with the calendar.
+    await goPage("plan");
+    ok("plan still has a start-here block", /Start here/.test($("#content").textContent));
+    const openRow = $("#content .row[data-id]");
+    const openId = openRow && openRow.dataset.id;
+    ok("plan lists something open", !!openId);
+    if (openId) {
+      await goPage("programs");
+      await goDb("table");
+      const s2 = $(`select[data-status-for="${openId}"]`);
+      s2.value = "submitted";
+      s2.dispatchEvent(new Event("change", { bubbles: true }));
+      await sleep(280);
+      await goPage("plan");
+      const text = $("#content").textContent;
+      ok("plan reports what was already sent", /already sent/i.test(text), text.slice(0, 120));
+      const stillListed = !!$(`#content .row[data-id="${openId}"]`);
+      ok("sent program drops out of start-here", !stillListed || /already sent/i.test(text));
+    }
+
+    localStorage.removeItem("jolene-s27:tracker:v1");
+  }
+
   // ---------------------------------------------------------------- runner
 
   const PARTS = {
@@ -383,6 +479,8 @@ window.QA = (() => {
     eligibility: eligibility,
     exports: exportsAndDownloads,
     timeline: timeline,
+    own: ownPrograms,
+    prep: preparationRollup,
     resilience: (_data) => resilience(),
   };
 

@@ -15,6 +15,7 @@
   const STORE_KEY = "jolene-s27:tracker:v1";
   const THEME_KEY = "jolene-s27:theme";
   const PROFILE_KEY = "jolene-s27:profile:v1";
+  const CUSTOM_KEY = "jolene-s27:custom:v1";
 
   const STATUSES = [
     ["not-started", "Not started"],
@@ -83,6 +84,7 @@
 
   const PAGES = {
     profile: { icon: "🎓", title: "My eligibility", crumb: "My eligibility" },
+    add: { icon: "➕", title: "Add a program", crumb: "Add a program" },
     kit: { icon: "✨", title: "Your Claude kit", crumb: "Your Claude kit" },
     plan: { icon: "🎯", title: "The Plan", crumb: "The Plan" },
     programs: { icon: "📊", title: "All Programs", crumb: "All Programs" },
@@ -97,6 +99,8 @@
   let guideSlug = null;
   let profile = loadProfile();
   let KIT = { files: [], zip: "", zip_bytes: 0 };
+  let BASE = [];          // programs as published
+  let customs = loadCustoms();  // programs she added herself
   let tracker = loadTracker();
   let page = "plan";
   let dbView = "table";
@@ -185,6 +189,74 @@
   function statusLabel(v) {
     const found = STATUSES.find((s) => s[0] === v);
     return found ? found[1] : v;
+  }
+
+  // -------------------------------------------------------- her own programs
+
+  /* She will find programs this list does not have: an advisor mentions one, a
+   * friend forwards one. Without this the only option is to keep it somewhere
+   * else, which defeats the point of having one place. */
+
+  function loadCustoms() {
+    try {
+      const raw = localStorage.getItem(CUSTOM_KEY);
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (err) {
+      return [];
+    }
+  }
+
+  function saveCustoms() {
+    try { localStorage.setItem(CUSTOM_KEY, JSON.stringify(customs)); }
+    catch (err) { /* private mode */ }
+  }
+
+  /* Give a hand-added program the same shape as a published one, so every
+   * view, filter, sort and export treats it identically. */
+  function normaliseCustom(c) {
+    return {
+      id: c.id,
+      name: c.name,
+      org: c.org || "Added by you",
+      city: c.city || "",
+      url: c.url || "",
+      tracks: c.tracks && c.tracks.length ? c.tracks : ["basic-science"],
+      focus: c.focus || "Added by you.",
+      duration_weeks: null,
+      stipend_usd: null,
+      housing: "varies",
+      opens: null,
+      deadline: c.deadline || null,
+      deadline_status: c.deadline ? "confirmed" : "unknown",
+      eligibility: { class_years: [], citizenship: "unspecified", min_gpa: null, notes: "" },
+      requires: c.requires || [],
+      selectivity: "moderate",
+      category: "Added by you",
+      notes: c.notes || "",
+      custom: true,
+    };
+  }
+
+  function applyCustoms() {
+    DATA.programs = BASE.concat(customs.map(normaliseCustom));
+    DATA.count = DATA.programs.length;
+  }
+
+  function addCustom(fields) {
+    const id = "mine-" + Date.now().toString(36);
+    customs.push({ ...fields, id });
+    saveCustoms();
+    applyCustoms();
+    return id;
+  }
+
+  function removeCustom(id) {
+    customs = customs.filter((c) => c.id !== id);
+    delete tracker.items[id];
+    saveTracker();
+    saveCustoms();
+    applyCustoms();
   }
 
   // ----------------------------------------------------------- eligibility
@@ -477,15 +549,20 @@
   }
 
   function renderPlan() {
-    const open = DATA.programs.filter((p) => urgency(p).phase === "open");
+    const openAll = DATA.programs.filter((p) => urgency(p).phase === "open");
+    // Once something is sent there is nothing to do, so it should not keep
+    // sitting at the top of a list headed "start here".
+    const SENT = ["submitted", "interview", "accepted", "rejected"];
+    const open = openAll.filter((p) => !SENT.includes(statusOf(p.id)));
     const submitted = DATA.programs.filter((p) => ["submitted", "interview", "accepted"].includes(statusOf(p.id)));
     const within30 = open.filter((p) => urgency(p).sort <= 30);
+    const sentCount = openAll.length - open.length;
     const next = open.slice().sort((a, b) => urgency(a).sort - urgency(b).sort)[0];
     const confirmed = DATA.programs.filter((p) => p.deadline_status === "confirmed");
 
     const stats = [
       [DATA.count, "programs"],
-      [open.length, "accepting now"],
+      [open.length, "left to do"],
       [within30.length, "due in 30 days"],
       [confirmed.length, "dates confirmed"],
       [submitted.length, "submitted"],
@@ -522,7 +599,8 @@
       </div>
 
       ${block("Start here, accepting applications now",
-        "Nothing is blocking these: the portal is open today. Every day one sits untouched is a day of free optionality thrown away.",
+        "Nothing is blocking these: the portal is open today. Every day one sits untouched is a day of free optionality thrown away."
+          + (sentCount ? ` You have already sent ${sentCount}, so ${sentCount === 1 ? "it is" : "they are"} not listed here.` : ""),
         acceptingNow, (p) => "Due " + fmtDate(p.deadline))}
 
       ${block("Highest-value applications",
@@ -588,7 +666,35 @@
     const stats = byStatus.map(([l, items]) =>
       `<div class="stat"><div class="stat__n">${items.length}</div><div class="stat__k">${esc(l)}</div></div>`).join("");
 
-    return `<div class="stats">${stats}</div>` + renderBoard(touched, "status");
+    /* What she has to produce, counted across everything she is actually
+     * applying to. Letters are the long pole and the only item that depends on
+     * somebody else, so they come first. */
+    const live = touched.filter((p) => !["rejected"].includes(statusOf(p.id)));
+    const tally = {};
+    live.forEach((p) => (p.requires || []).forEach((r) => { tally[r] = (tally[r] || 0) + 1; }));
+    const order = ["2-lor", "3-lor", "1-lor", "personal-statement", "cv", "transcript"];
+    const needed = Object.entries(tally)
+      .sort((a, b) => (order.indexOf(a[0]) + 99) % 99 - (order.indexOf(b[0]) + 99) % 99 || b[1] - a[1]);
+
+    const soonest = live.filter((p) => p.deadline).sort((a, b) => a.deadline.localeCompare(b.deadline))[0];
+
+    const prep = needed.length ? `
+      <h2 class="h2">What you need to prepare<span class="n">${live.length} applications</span></h2>
+      <p class="note">Counted across everything you have not been turned down for. The same
+      letters and the same statement go to all of them, so this is one pile of work, not
+      ${live.length}.</p>
+      <div class="rows">
+        ${needed.map(([req, n]) => `
+          <div class="row">
+            <div class="row__when">${n} program${n === 1 ? "" : "s"}</div>
+            <div class="row__main"><div class="row__title">${esc(REQUIREMENT_LABELS[req] || req)}</div></div>
+          </div>`).join("")}
+      </div>
+      ${soonest ? `<p class="note" style="margin-top:12px">First one due:
+        <strong>${esc(fmtDate(soonest.deadline, { month: "long", day: "numeric" }))}</strong>,
+        ${esc(soonest.name)}.</p>` : ""}` : "";
+
+    return `<div class="stats">${stats}</div>` + renderBoard(touched, "status") + prep;
   }
 
   // ---------------------------------------------------------------- kit page
@@ -653,6 +759,51 @@
         It drafts and fills, then hands it back. That is deliberate: you should read
         anything with your name on it before it goes anywhere.</p></div>
       </div>`;
+  }
+
+  // -------------------------------------------------------------- add a program
+
+  function renderAdd() {
+    const mine = customs.map((c) => {
+      const p = normaliseCustom(c);
+      return `<div class="kitrow">
+        <span class="kitrow__icon">${iconFor(p)}</span>
+        <div class="kitrow__main">
+          <div class="kitrow__name">${esc(p.name)}</div>
+          <div class="kitrow__blurb">${esc(p.org)}${p.deadline ? " &middot; due " + fmtDate(p.deadline) : ""}</div>
+        </div>
+        <button class="openbtn kitrow__dl" data-remove-custom="${esc(c.id)}" type="button">Remove</button>
+      </div>`;
+    }).join("");
+
+    return `
+      <div class="callout callout--blue">
+        <span class="ci">&#10133;</span>
+        <div><p>Found one that is not on the list? Add it here and it behaves like
+        any other program: it shows up in the table, the board, the timeline, your
+        applications and the Notion export.</p></div>
+      </div>
+
+      <div class="props" style="max-width:560px">
+        <div class="prop"><div class="prop__k"><span>Aa</span>Program name</div>
+          <div class="prop__v"><input class="sel sel--boxed" id="ad-name" style="width:100%" placeholder="Summer Research Program"></div></div>
+        <div class="prop"><div class="prop__k"><span>&#127963;</span>Institution</div>
+          <div class="prop__v"><input class="sel sel--boxed" id="ad-org" style="width:100%" placeholder="Where it is"></div></div>
+        <div class="prop"><div class="prop__k"><span>&#128205;</span>Location</div>
+          <div class="prop__v"><input class="sel sel--boxed" id="ad-city" style="width:100%" placeholder="City, State"></div></div>
+        <div class="prop"><div class="prop__k"><span>&#128279;</span>Link</div>
+          <div class="prop__v"><input class="sel sel--boxed" id="ad-url" style="width:100%" placeholder="https://"></div></div>
+        <div class="prop"><div class="prop__k"><span>&#128197;</span>Deadline</div>
+          <div class="prop__v"><input class="sel sel--boxed" id="ad-deadline" type="date"></div></div>
+        <div class="prop"><div class="prop__k"><span>&#9999;</span>Notes</div>
+          <div class="prop__v"><input class="sel sel--boxed" id="ad-notes" style="width:100%" placeholder="Anything worth remembering"></div></div>
+      </div>
+
+      <button class="btn" id="ad-save" type="button">Add it</button>
+      <span id="ad-msg" class="note" style="margin-left:10px"></span>
+
+      ${customs.length ? `<h2 class="h2">Yours<span class="n">${customs.length}</span></h2>
+        <div class="kitlist">${mine}</div>` : ""}`;
   }
 
   // ------------------------------------------------------------ profile page
@@ -876,6 +1027,7 @@
                          : `<div class="empty"><strong>Guide not found</strong></div>`;
       return;
     }
+    if (page === "add") { host.innerHTML = renderAdd(); return; }
     if (page === "kit") { host.innerHTML = renderKit(); return; }
     if (page === "profile") { host.innerHTML = renderProfile(); return; }
     if (page === "plan") { host.innerHTML = renderPlan(); return; }
@@ -899,6 +1051,8 @@
     renderChrome();
     renderContent();
     document.getElementById("n-programs").textContent = DATA.count;
+    const addEl = document.getElementById("n-mine");
+    if (addEl) addEl.textContent = customs.length || "";
     const fitEl = document.getElementById("n-fit");
     if (fitEl) fitEl.textContent = profileSet() ? String(DATA.programs.filter(fitsMe).length) : "";
     const t = DATA.programs.filter((p) => statusOf(p.id) !== "not-started").length;
@@ -1007,6 +1161,22 @@
         renderContent();
         return;
       }
+      if (ev.target.id === "ad-save") {
+        const val = (id) => (document.getElementById(id).value || "").trim();
+        const name = val("ad-name");
+        const msg = document.getElementById("ad-msg");
+        if (!name) { msg.textContent = "It needs a name at least."; return; }
+        let url = val("ad-url");
+        if (url && !/^https?:\/\//i.test(url)) url = "https://" + url;
+        addCustom({ name, org: val("ad-org"), city: val("ad-city"), url,
+                    deadline: val("ad-deadline") || null, notes: val("ad-notes") });
+        render();
+        const after = document.getElementById("ad-msg");
+        if (after) after.textContent = "Added. It is in your list now.";
+        return;
+      }
+      const rm = ev.target.closest("[data-remove-custom]");
+      if (rm) { removeCustom(rm.dataset.removeCustom); render(); return; }
       if (ev.target.id === "pf-clear") {
         profile = { classYear: "", gpa: "", status: "" };
         saveProfile();
@@ -1172,6 +1342,8 @@
   ])
     .then(([payload, guidePayload, kitPayload]) => {
       DATA = payload;
+      BASE = payload.programs || [];
+      applyCustoms();
       GUIDES = guidePayload.guides || [];
       KIT = kitPayload && kitPayload.files ? kitPayload : KIT;
       document.getElementById("loading").remove();
