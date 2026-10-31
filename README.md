@@ -122,7 +122,8 @@ page. Open the site and run it from the console:
 ```js
 await fetch("qa.js").then(r => r.text()).then(eval);
 QA.reset(); await QA.runParts(["pages", "views", "chips", "sort"]);
-await QA.runParts(["peek", "tracker", "timeline", "eligibility", "exports", "own", "prep", "resilience"]);
+await QA.runParts(["peek", "tracker", "timeline", "eligibility", "exports",
+                   "own", "recs", "watch", "prep", "resilience"]);
 ```
 
 Split into parts because a full run exceeds a single automation call. It checks

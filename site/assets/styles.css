@@ -836,3 +836,9 @@ input.sel--boxed::placeholder { color: var(--ink-4); }
   .kitrow { flex-wrap: wrap; }
   .kitrow__dl { margin-left: 28px; }
 }
+
+/* recommender status reuses the application-status pill colours */
+.status[data-value="not-asked"] { background: var(--t-gray-bg);   color: var(--t-gray-fg); }
+.status[data-value="asked"]     { background: var(--t-yellow-bg); color: var(--t-yellow-fg); }
+.status[data-value="agreed"]    { background: var(--t-green-bg);  color: var(--t-green-fg); }
+.status[data-value="declined"]  { background: var(--t-red-bg);    color: var(--t-red-fg); }

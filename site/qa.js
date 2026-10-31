@@ -467,6 +467,75 @@ window.QA = (() => {
     localStorage.removeItem("jolene-s27:tracker:v1");
   }
 
+
+  async function recommenders(data) {
+    localStorage.removeItem("jolene-s27:recommenders:v1");
+    localStorage.removeItem("jolene-s27:tracker:v1");
+
+    // the panel lives with the applications, so there must be one
+    await goPage("programs");
+    await goDb("table");
+    const sel = $('select[data-status-for="stjude-poe"]');
+    sel.value = "drafting";
+    sel.dispatchEvent(new Event("change", { bubbles: true }));
+    await sleep(280);
+
+    await goPage("tracker");
+    ok("recommender panel appears", $("#content").innerHTML.includes("Who is writing your letters"));
+    ok("recommender form renders", !!$("#rc-name") && !!$("#rc-save"));
+    ok("warns when nobody has agreed", /runs on somebody else/i.test($("#content").textContent));
+
+    $("#rc-save").click();
+    await sleep(200);
+    ok("rejects a nameless recommender", ($("#rc-msg").textContent || "").includes("name"));
+
+    $("#rc-name").value = "QA Professor";
+    $("#rc-role").value = "QA lab";
+    $("#rc-email").value = "qa@example.edu";
+    $("#rc-save").click();
+    await sleep(380);
+
+    const saved = JSON.parse(localStorage.getItem("jolene-s27:recommenders:v1") || "[]");
+    ok("recommender saves", saved.length === 1 && saved[0].name === "QA Professor", saved.length);
+    ok("defaults to not asked", saved[0] && saved[0].status === "not-asked", saved[0] && saved[0].status);
+    ok("recommender is listed", $("#content").innerHTML.includes("QA Professor"));
+
+    const id = saved[0].id;
+    const st = $(`select[data-rec-status="${id}"]`);
+    ok("status select present", !!st);
+    const options = st ? [...st.options].map((o) => o.value) : [];
+    ok("five letter states", options.length === 5, options.length);
+
+    st.value = "agreed";
+    st.dispatchEvent(new Event("change", { bubbles: true }));
+    await sleep(320);
+    const after = JSON.parse(localStorage.getItem("jolene-s27:recommenders:v1") || "[]");
+    ok("letter status persists", after[0] && after[0].status === "agreed", after[0] && after[0].status);
+    ok("advice updates with the count", /still need|covers every application/i.test($("#content").textContent));
+
+    $(`[data-remove-rec="${id}"]`).click();
+    await sleep(320);
+    ok("recommender removes", JSON.parse(localStorage.getItem("jolene-s27:recommenders:v1") || "[]").length === 0);
+
+    localStorage.removeItem("jolene-s27:tracker:v1");
+  }
+
+  async function watchPanel(data) {
+    await goPage("plan");
+    const text = $("#content").textContent;
+    const res = await fetch("data/watch.json", { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).catch(() => null);
+    if (!res) { ok("watch summary published", false, "no watch.json"); return; }
+    ok("watch summary published", !!res.last_run, res.last_run);
+    ok("watch covers every program", res.checked === data.count || res.checked > 0, `${res.checked} vs ${data.count}`);
+    ok("plan reports the last check", /checked on|program pages? changed/i.test(text));
+    if (!res.changes.length) {
+      ok("quiet week reads as quiet", /nothing had changed/i.test(text));
+      ok("explains the cadence", /every Monday/i.test(text));
+    } else {
+      ok("changes are listed", res.changes.every((c) => text.includes(c.name)));
+    }
+  }
+
   // ---------------------------------------------------------------- runner
 
   const PARTS = {
@@ -480,6 +549,8 @@ window.QA = (() => {
     exports: exportsAndDownloads,
     timeline: timeline,
     own: ownPrograms,
+    recs: recommenders,
+    watch: watchPanel,
     prep: preparationRollup,
     resilience: (_data) => resilience(),
   };

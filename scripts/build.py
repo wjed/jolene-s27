@@ -22,6 +22,7 @@ import sys
 
 import guides
 import kit
+import watch_summary
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "data" / "sources"
@@ -418,6 +419,7 @@ def main():
         print(f"  needs input: {needs_input} (missing links from the original list)")
     guides.write()
     kit.write()
+    watch_summary.write()
     stamp_assets()
     print(f"  wrote      : data/programs.json, site/data/programs.json")
     print(f"               {csv_path.relative_to(ROOT).as_posix()}")

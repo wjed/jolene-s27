@@ -16,6 +16,7 @@
   const THEME_KEY = "jolene-s27:theme";
   const PROFILE_KEY = "jolene-s27:profile:v1";
   const CUSTOM_KEY = "jolene-s27:custom:v1";
+  const RECS_KEY = "jolene-s27:recommenders:v1";
 
   const STATUSES = [
     ["not-started", "Not started"],
@@ -101,6 +102,8 @@
   let KIT = { files: [], zip: "", zip_bytes: 0 };
   let BASE = [];          // programs as published
   let customs = loadCustoms();  // programs she added herself
+  let recs = loadRecs();        // who is writing her letters
+  let WATCH = null;             // what the weekly check last found
   let tracker = loadTracker();
   let page = "plan";
   let dbView = "table";
@@ -189,6 +192,39 @@
   function statusLabel(v) {
     const found = STATUSES.find((s) => s[0] === v);
     return found ? found[1] : v;
+  }
+
+  // ------------------------------------------------------------ recommenders
+
+  /* Letters are the only part of this that depends on somebody else, and the
+   * only part that cannot be done the night before. Tracking who has actually
+   * agreed is worth more than tracking anything else here. */
+
+  const REC_STATUS = [
+    ["not-asked", "Not asked", "gray"],
+    ["asked", "Asked", "yellow"],
+    ["agreed", "Agreed", "green"],
+    ["submitted", "Letter sent", "blue"],
+    ["declined", "Declined", "red"],
+  ];
+
+  function loadRecs() {
+    try {
+      const raw = localStorage.getItem(RECS_KEY);
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (err) {
+      return [];
+    }
+  }
+
+  function saveRecs() {
+    try { localStorage.setItem(RECS_KEY, JSON.stringify(recs)); }
+    catch (err) { /* private mode */ }
+  }
+
+  function recStatusMeta(v) {
+    return REC_STATUS.find((r) => r[0] === v) || REC_STATUS[0];
   }
 
   // -------------------------------------------------------- her own programs
@@ -548,6 +584,35 @@
       <div class="rows">${list.map((p) => planRow(p, whenFn(p))).join("")}</div>`;
   }
 
+  /* The weekly check runs whether or not anyone is looking, so its result
+   * belongs here rather than only in a GitHub issue she will never open. */
+  function renderWatch() {
+    if (!WATCH || !WATCH.last_run) return "";
+
+    const when = fmtDate(WATCH.last_run, { month: "long", day: "numeric" });
+    if (!WATCH.changes.length) {
+      return `<p class="note" style="margin:-4px 0 18px">All ${WATCH.checked} program pages were
+        checked on ${esc(when)} and nothing had changed. The check runs every Monday, so if a
+        program posts its 2027 dates it will show up here.</p>`;
+    }
+
+    const items = WATCH.changes.map((c) => `
+      <div class="row">
+        <div class="row__when">${esc(c.what)}</div>
+        <div class="row__main"><div class="row__title">${esc(c.name)}</div>
+        ${c.org ? `<div class="row__sub">${esc(c.org)}</div>` : ""}</div>
+      </div>`).join("");
+
+    return `
+      <div class="callout callout--green">
+        <span class="ci">🔔</span>
+        <div><p><strong>${WATCH.changes.length} program page${WATCH.changes.length === 1 ? "" : "s"}
+        changed</strong> in the check on ${esc(when)}. A page changing is usually a program posting
+        its dates, so these are worth opening.</p></div>
+      </div>
+      <div class="rows" style="margin-bottom:18px">${items}</div>`;
+  }
+
   function renderPlan() {
     const openAll = DATA.programs.filter((p) => urgency(p).phase === "open");
     // Once something is sent there is nothing to do, so it should not keep
@@ -597,6 +662,8 @@
           the page, not as fact. ${confirmed.length} deadlines are confirmed from the real pages.</p>
         </div>
       </div>
+
+      ${renderWatch()}
 
       ${block("Start here, accepting applications now",
         "Nothing is blocking these: the portal is open today. Every day one sits untouched is a day of free optionality thrown away."
@@ -694,7 +761,7 @@
         <strong>${esc(fmtDate(soonest.deadline, { month: "long", day: "numeric" }))}</strong>,
         ${esc(soonest.name)}.</p>` : ""}` : "";
 
-    return `<div class="stats">${stats}</div>` + renderBoard(touched, "status") + prep;
+    return `<div class="stats">${stats}</div>` + renderBoard(touched, "status") + prep + renderRecs(live);
   }
 
   // ---------------------------------------------------------------- kit page
@@ -759,6 +826,64 @@
         It drafts and fills, then hands it back. That is deliberate: you should read
         anything with your name on it before it goes anywhere.</p></div>
       </div>`;
+  }
+
+  // ------------------------------------------------------ recommenders panel
+
+  function renderRecs(live) {
+    const wantLetters = live.filter((p) => (p.requires || []).some((r) => r.endsWith("lor")));
+    const mostWanted = live.reduce((n, p) => Math.max(n, (p.requires || [])
+      .map((r) => parseInt(r, 10)).filter((x) => !Number.isNaN(x)).concat(0)
+      .reduce((a, b) => Math.max(a, b), 0)), 0);
+    const agreed = recs.filter((r) => ["agreed", "submitted"].includes(r.status)).length;
+    const asked = recs.filter((r) => r.status === "asked").length;
+
+    const rows = recs.map((r) => {
+      const meta = recStatusMeta(r.status);
+      const opts = REC_STATUS.map(([v, l]) =>
+        `<option value="${v}"${v === r.status ? " selected" : ""}>${esc(l)}</option>`).join("");
+      return `<div class="kitrow">
+        <span class="kitrow__icon">${meta[0] === "declined" ? "\u{1F6AB}" : "\u{1F4DD}"}</span>
+        <div class="kitrow__main">
+          <div class="kitrow__name">${esc(r.name)}</div>
+          <div class="kitrow__blurb">${esc(r.role || "")}${r.email ? " &middot; " + esc(r.email) : ""}</div>
+        </div>
+        <select class="status" data-rec-status="${esc(r.id)}" data-value="${esc(r.status)}" aria-label="Letter status">${opts}</select>
+        <button class="openbtn kitrow__dl" data-remove-rec="${esc(r.id)}" type="button">Remove</button>
+      </div>`;
+    }).join("");
+
+    let nudge = "";
+    if (wantLetters.length && mostWanted && agreed < mostWanted) {
+      const short = mostWanted - agreed;
+      nudge = `<div class="callout callout--yellow"><span class="ci">\u26A0\uFE0F</span><div><p>
+        ${wantLetters.length} of your applications ${wantLetters.length === 1 ? "wants" : "want"}
+        letters, and the most any one of them asks for is ${mostWanted}. You have ${agreed} confirmed, so you still need
+        ${short} more to say yes.${asked ? ` ${asked} ${asked === 1 ? "is" : "are"} waiting on a reply.` : ""}
+        This is the only item here that runs on somebody else's calendar.</p></div></div>`;
+    } else if (wantLetters.length && agreed >= mostWanted && mostWanted) {
+      nudge = `<div class="callout callout--green"><span class="ci">\u2705</span><div><p>
+        ${agreed} confirmed, which covers every application on your list. Remember most portals
+        only email your recommender after you submit your own part.</p></div></div>`;
+    }
+
+    return `
+      <h2 class="h2">Who is writing your letters<span class="n">${recs.length}</span></h2>
+      <p class="note">The same two letters go to every program, so this is one conversation
+      repeated, not one per application. Ask by mid-November: faculty write these in batches and
+      December is when everybody asks.</p>
+      ${nudge}
+      ${recs.length ? `<div class="kitlist">${rows}</div>` : ""}
+      <div class="props" style="max-width:560px;margin-top:14px">
+        <div class="prop"><div class="prop__k"><span>Aa</span>Name</div>
+          <div class="prop__v"><input class="sel sel--boxed" id="rc-name" style="width:100%" placeholder="Dr. Smith"></div></div>
+        <div class="prop"><div class="prop__k"><span>\u{1F3AF}</span>How you know them</div>
+          <div class="prop__v"><input class="sel sel--boxed" id="rc-role" style="width:100%" placeholder="Lab PI, or BIOL 230 instructor"></div></div>
+        <div class="prop"><div class="prop__k"><span>\u2709\uFE0F</span>Email</div>
+          <div class="prop__v"><input class="sel sel--boxed" id="rc-email" style="width:100%" placeholder="optional"></div></div>
+      </div>
+      <button class="btn" id="rc-save" type="button">Add recommender</button>
+      <span id="rc-msg" class="note" style="margin-left:10px"></span>`;
   }
 
   // -------------------------------------------------------------- add a program
@@ -1161,6 +1286,24 @@
         renderContent();
         return;
       }
+      if (ev.target.id === "rc-save") {
+        const val = (id) => (document.getElementById(id).value || "").trim();
+        const name = val("rc-name");
+        const msg = document.getElementById("rc-msg");
+        if (!name) { msg.textContent = "They need a name."; return; }
+        recs.push({ id: "rec-" + Date.now().toString(36), name,
+                    role: val("rc-role"), email: val("rc-email"), status: "not-asked" });
+        saveRecs();
+        render();
+        return;
+      }
+      const rmRec = ev.target.closest("[data-remove-rec]");
+      if (rmRec) {
+        recs = recs.filter((r) => r.id !== rmRec.dataset.removeRec);
+        saveRecs();
+        render();
+        return;
+      }
       if (ev.target.id === "ad-save") {
         const val = (id) => (document.getElementById(id).value || "").trim();
         const name = val("ad-name");
@@ -1199,6 +1342,12 @@
         saveTracker();
         st.dataset.value = st.value;
         render();
+        return;
+      }
+      const rs = ev.target.closest("select[data-rec-status]");
+      if (rs) {
+        const found = recs.find((r) => r.id === rs.dataset.recStatus);
+        if (found) { found.status = rs.value; saveRecs(); render(); }
         return;
       }
       const rq = ev.target.closest("input[data-req-for]");
@@ -1339,13 +1488,18 @@
     fetch("data/kit.json", { cache: "no-cache" })
       .then((r) => (r.ok ? r.json() : { files: [] }))
       .catch(() => ({ files: [] })),
+    // Optional: absent until the watcher has run at least once.
+    fetch("data/watch.json", { cache: "no-cache" })
+      .then((r) => (r.ok ? r.json() : null))
+      .catch(() => null),
   ])
-    .then(([payload, guidePayload, kitPayload]) => {
+    .then(([payload, guidePayload, kitPayload, watchPayload]) => {
       DATA = payload;
       BASE = payload.programs || [];
       applyCustoms();
       GUIDES = guidePayload.guides || [];
       KIT = kitPayload && kitPayload.files ? kitPayload : KIT;
+      WATCH = watchPayload && watchPayload.last_run ? watchPayload : null;
       document.getElementById("loading").remove();
       document.getElementById("foot-meta").textContent =
         `${payload.count} programs · built ${(payload.generated || "").slice(0, 10)}`;
