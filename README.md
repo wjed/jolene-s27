@@ -117,7 +117,7 @@ python scripts/qa_all.py
 ```
 
 `site/qa.js` is the browser side: every filter, sort, view, page, guide,
-download and persistence path, 150 assertions in all. It is not linked from the
+download and persistence path, 197 assertions in all. It is not linked from the
 page. Open the site and run it from the console:
 
 ```js

@@ -45,6 +45,16 @@ def build() -> dict | None:
         "changes": [],
     }
 
+    # Ten or so of these sites refuse an automated reader. The weekly job will
+    # therefore never notice when they post 2027 dates, and two of them are on
+    # her original list. Saying nothing would quietly leave a hole in the one
+    # promise this page makes, so they are published and named on the site.
+    summary["blocked_pages"] = sorted(
+        ({"name": p.get("name", ""), "org": p.get("org", ""), "url": p.get("url", "")}
+         for p in pages.values() if p.get("status") == "blocked"),
+        key=lambda r: r["name"],
+    )
+
     if REPORT.is_file():
         current = None
         for line in REPORT.read_text(encoding="utf-8").splitlines():

@@ -589,10 +589,37 @@
     if (!WATCH || !WATCH.last_run) return "";
 
     const when = fmtDate(WATCH.last_run, { month: "long", day: "numeric" });
+
+    /* Some of these sites refuse an automated reader, so the weekly check
+     * genuinely cannot see them. Claiming all of them were checked would be
+     * the one lie that matters on this page: she would trust the robot to
+     * catch a posting it is structurally unable to see. */
+    const unseen = WATCH.blocked_pages || [];
+    /* Written as rows rather than a sentence: four of these are called some
+     * variation of "Summer Undergraduate Research Program", and several names
+     * contain a comma, so a comma-separated list is unreadable. */
+    const unseenRows = unseen.map((b) => `
+      <div class="row">
+        <div class="row__main">
+          <div class="row__title"><a href="${esc(b.url)}" target="_blank"
+            rel="noopener noreferrer">${esc(b.name)}</a></div>
+          <div class="row__sub">${esc(b.org)}</div>
+        </div>
+      </div>`).join("");
+    const blind = unseen.length ? `
+      <div class="callout callout--yellow"><span class="ci">👀</span><div><p>
+        <strong>${unseen.length} site${unseen.length === 1 ? "" : "s"} block the weekly check</strong>,
+        so it cannot tell you when ${unseen.length === 1 ? "it posts" : "they post"} 2027 dates.
+        Open ${unseen.length === 1 ? "it" : "these"} yourself every couple of weeks.</p></div></div>
+      <details class="toggle">
+        <summary>The ${unseen.length} ${unseen.length === 1 ? "page" : "pages"} to check by hand</summary>
+        <div class="toggle__body"><div class="rows">${unseenRows}</div></div>
+      </details>` : "";
+
     if (!WATCH.changes.length) {
-      return `<p class="note" style="margin:-4px 0 18px">All ${WATCH.checked} program pages were
-        checked on ${esc(when)} and nothing had changed. The check runs every Monday, so if a
-        program posts its 2027 dates it will show up here.</p>`;
+      return `<p class="note" style="margin:-4px 0 14px">${WATCH.ok} of ${WATCH.checked} program
+        pages were read on ${esc(when)} and nothing had changed. The check runs every Monday, so if
+        a program posts its 2027 dates it will show up here.</p>${blind}`;
     }
 
     const items = WATCH.changes.map((c) => `
@@ -609,7 +636,7 @@
         changed</strong> in the check on ${esc(when)}. A page changing is usually a program posting
         its dates, so these are worth opening.</p></div>
       </div>
-      <div class="rows" style="margin-bottom:18px">${items}</div>`;
+      <div class="rows" style="margin-bottom:18px">${items}</div>${blind}`;
   }
 
   function renderPlan() {

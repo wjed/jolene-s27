@@ -842,3 +842,53 @@ input.sel--boxed::placeholder { color: var(--ink-4); }
 .status[data-value="asked"]     { background: var(--t-yellow-bg); color: var(--t-yellow-fg); }
 .status[data-value="agreed"]    { background: var(--t-green-bg);  color: var(--t-green-fg); }
 .status[data-value="declined"]  { background: var(--t-red-bg);    color: var(--t-red-fg); }
+
+/* Notion's toggle block: a small triangle that turns a quarter turn when the
+   block opens. Used where a page needs to carry reference rows without the
+   rows pushing the thing the page is actually for off the screen. */
+.toggle {
+  margin: 0 0 18px;
+}
+
+.toggle > summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  list-style: none;
+  user-select: none;
+}
+
+.toggle > summary::-webkit-details-marker { display: none; }
+
+.toggle > summary::before {
+  content: "";
+  flex: none;
+  width: 0;
+  height: 0;
+  border-left: 6px solid var(--ink-3);
+  border-top: 4.5px solid transparent;
+  border-bottom: 4.5px solid transparent;
+  transform-origin: center;
+  transition: transform 120ms ease-in;
+}
+
+.toggle[open] > summary::before { transform: rotate(90deg); }
+
+.toggle > summary:hover { background: var(--hover); }
+
+.toggle > summary:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+.toggle__body { padding: 2px 0 0 14px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle > summary::before { transition: none; }
+}

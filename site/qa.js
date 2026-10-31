@@ -530,12 +530,42 @@ window.QA = (() => {
     if (!res) { ok("watch summary published", false, "no watch.json"); return; }
     ok("watch summary published", !!res.last_run, res.last_run);
     ok("watch covers every program", res.checked === data.count || res.checked > 0, `${res.checked} vs ${data.count}`);
-    ok("plan reports the last check", /checked on|program pages? changed/i.test(text));
+    ok("plan reports the last check", /read on|checked on|program pages? changed/i.test(text));
     if (!res.changes.length) {
       ok("quiet week reads as quiet", /nothing had changed/i.test(text));
       ok("explains the cadence", /every Monday/i.test(text));
+      ok("does not overclaim coverage", !/All \d+ program pages were\s+checked/i.test(text));
     } else {
       ok("changes are listed", res.changes.every((c) => text.includes(c.name)));
+    }
+
+    /* A page the checker cannot read is the one case where silence would be
+     * actively misleading, so the plan has to name every one of them. */
+    const unseen = res.blocked_pages || [];
+    ok("blocked pages are published", Array.isArray(res.blocked_pages));
+    if (unseen.length) {
+      ok("plan names the pages it cannot see", /block the weekly check/i.test(text));
+      ok("every blocked page is named", unseen.every((b) => text.includes(b.name)),
+         unseen.filter((b) => !text.includes(b.name)).map((b) => b.name).join("; "));
+      const hrefs = Array.from($("#content").querySelectorAll("a")).map((el) => el.href);
+      ok("each blocked page is a link", unseen.every((b) => hrefs.includes(b.url)));
+
+      /* The rows live in a toggle so they do not bury the plan, which only
+       * works if the toggle actually opens. */
+      const toggle = $("#content").querySelector("details.toggle");
+      ok("blocked rows sit in a toggle", !!toggle);
+      if (toggle) {
+        ok("toggle starts closed", !toggle.open);
+        ok("toggle holds every blocked page",
+           toggle.querySelectorAll(".row").length === unseen.length,
+           `${toggle.querySelectorAll(".row").length} rows vs ${unseen.length}`);
+        toggle.querySelector("summary").click();
+        await sleep(60);
+        ok("toggle opens on click", toggle.open);
+        toggle.querySelector("summary").click();
+        await sleep(60);
+        ok("toggle closes again", !toggle.open);
+      }
     }
   }
 
