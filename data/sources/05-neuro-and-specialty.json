@@ -17,8 +17,9 @@
       "stipend_usd": 4000,
       "housing": "varies",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -57,8 +58,9 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-15",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -79,81 +81,6 @@
       "url_verified": true
     },
     {
-      "id": "allen-institute",
-      "name": "Summer Internship Program",
-      "org": "Allen Institute",
-      "city": "Seattle, WA",
-      "url": "https://alleninstitute.org/careers/internships/",
-      "tracks": [
-        "neuroscience",
-        "computational",
-        "basic-science"
-      ],
-      "focus": "Large-scale brain science and computational neuroscience.",
-      "duration_weeks": 10,
-      "stipend_usd": 7000,
-      "stipend_note": "Paid internship at a competitive hourly rate",
-      "housing": "not-provided",
-      "opens": "2026-11-01",
-      "deadline": "2027-01-31",
-      "deadline_status": "projected",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior",
-          "senior"
-        ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": "Some tracks expect programming experience."
-      },
-      "requires": [
-        "cv",
-        "personal-statement"
-      ],
-      "selectivity": "very-high",
-      "notes": "Excellent pay. Leans computational: a good fit if you have any coding or data analysis background. Pairs with Seattle Children's for one city.",
-      "url_confidence": "medium"
-    },
-    {
-      "id": "salk-surf",
-      "name": "Heithoff-Brody Summer Scholars",
-      "org": "Salk Institute for Biological Studies",
-      "city": "La Jolla, CA",
-      "url": "https://www.salk.edu/about/education-outreach/",
-      "tracks": [
-        "neuroscience",
-        "basic-science",
-        "oncology"
-      ],
-      "focus": "Eight weeks of research at a renowned independent biology institute.",
-      "duration_weeks": 8,
-      "stipend_usd": 5000,
-      "housing": "varies",
-      "opens": "2026-11-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior"
-        ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": ""
-      },
-      "requires": [
-        "transcript",
-        "cv",
-        "personal-statement",
-        "2-lor"
-      ],
-      "selectivity": "very-high",
-      "notes": "Very small cohort, very high prestige.",
-      "url_confidence": "low",
-      "url_verified": true
-    },
-    {
       "id": "wisconsin-adrc",
       "name": "Alzheimer's Disease Research Center summer research",
       "org": "University of Wisconsin-Madison",
@@ -166,10 +93,11 @@
         "aging"
       ],
       "focus": "Alzheimer's disease clinical and imaging research at a major NIA-funded center.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -208,6 +136,7 @@
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "rolling",
       "eligibility": {
@@ -246,8 +175,9 @@
       "stipend_usd": 5000,
       "housing": "varies",
       "opens": "2026-11-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -285,8 +215,9 @@
       "stipend_usd": 5000,
       "housing": "varies",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -324,6 +255,7 @@
       "stipend_note": "Stipend plus housing and travel",
       "housing": "provided",
       "opens": "2026-11-15",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -342,46 +274,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Requires prior lab experience. Check you meet that bar before spending an application on it.",
+      "notes": "Requires prior lab experience. The old page has moved, and SHURP applications go through the Leadership Alliance, so the SR-EIP application on your list may cover this one. Confirm with shurp@hms.harvard.edu.",
       "url_confidence": "medium"
-    },
-    {
-      "id": "columbia-zuckerman",
-      "name": "Summer undergraduate research (Zuckerman Institute)",
-      "org": "Columbia University",
-      "city": "New York, NY",
-      "url": "https://zuckermaninstitute.columbia.edu/education-training",
-      "tracks": [
-        "neuroscience",
-        "basic-science",
-        "computational"
-      ],
-      "focus": "Systems and cellular neuroscience at Columbia's Zuckerman Mind Brain Behavior Institute.",
-      "duration_weeks": 10,
-      "stipend_usd": 5000,
-      "housing": "varies",
-      "opens": "2026-12-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "unknown",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior"
-        ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": ""
-      },
-      "requires": [
-        "cv",
-        "personal-statement",
-        "2-lor"
-      ],
-      "selectivity": "very-high",
-      "notes": "Columbia is also an Amgen Scholars host.",
-      "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
-      "url_verified": false
     },
     {
       "id": "cedars-sinai",
@@ -399,8 +293,9 @@
       "stipend_usd": 5000,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -436,6 +331,7 @@
       "stipend_note": "Stipend plus housing and travel",
       "housing": "provided",
       "opens": "2026-11-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -474,8 +370,9 @@
       "stipend_usd": 5000,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",

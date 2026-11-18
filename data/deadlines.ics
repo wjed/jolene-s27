@@ -4,145 +4,183 @@ PRODID:-//jolene-s27//research-finder//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Research Apps\, Summer 2027
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:e925610738f7547973da@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270102
-DTEND;VALUE=DATE:20270103
-SUMMARY:DUE (est.): Summer Scholars Program\, Seattle Children's Research I
- nstitute
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY:DUE: Summer Scholars Program\, Seattle Children's Research Institut
+ e
 DESCRIPTION:Seattle Children's Research Institute\, Seattle\, WA. Date stat
- us: projected. https://www.seattlechildrens.org/research/centers-programs/
+ us: confirmed. https://www.seattlechildrens.org/research/centers-programs/
  science-education-department/summer-scholars-program/
 URL:https://www.seattlechildrens.org/research/centers-programs/science-educ
  ation-department/summer-scholars-program/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Scholars Program\, Seattle Children's Res
  earch Institute
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Scholars Program\, Seattle Children's Re
  search Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:6d318b0cbad7ae36dcf9@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261118
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
 SUMMARY:Opens: Summer Scholars Program\, Seattle Children's Research Instit
  ute
 DESCRIPTION:Seattle Children's Research Institute\, Seattle\, WA. Date stat
- us: projected. https://www.seattlechildrens.org/research/centers-programs/
+ us: confirmed. https://www.seattlechildrens.org/research/centers-programs/
  science-education-department/summer-scholars-program/
 URL:https://www.seattlechildrens.org/research/centers-programs/science-educ
  ation-department/summer-scholars-program/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Summer Scholars Program\, Seattle Children's Re
  search Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:4b41bfafd509b717d1bf@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270109
-DTEND;VALUE=DATE:20270110
-SUMMARY:DUE (est.): Summer Undergraduate Research Program (SURP)\, Fred Hut
- chinson Cancer Center
-DESCRIPTION:Fred Hutchinson Cancer Center\, Seattle\, WA. Date status: proj
- ected. https://www.fredhutch.org/en/education-training/undergraduate-stude
- nts/pathways-undergraduate-researchers.html
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+SUMMARY:DUE: Summer Undergraduate Research Program (SURP)\, Fred Hutchinson
+  Cancer Center
+DESCRIPTION:Fred Hutchinson Cancer Center\, Seattle\, WA. Date status: conf
+ irmed. https://www.fredhutch.org/en/education-training/undergraduate-stude
+ nts/summer-undergraduate-research-program.html
 URL:https://www.fredhutch.org/en/education-training/undergraduate-students/
- pathways-undergraduate-researchers.html
+ summer-undergraduate-research-program.html
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Undergraduate Research Program (SURP)\, F
  red Hutchinson Cancer Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Undergraduate Research Program (SURP)\, 
  Fred Hutchinson Cancer Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ba75f88de42315cbedf0@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Undergraduate Research Program (SURP)\, Fred Hutchins
- on Cancer Center
-DESCRIPTION:Fred Hutchinson Cancer Center\, Seattle\, WA. Date status: proj
- ected. https://www.fredhutch.org/en/education-training/undergraduate-stude
- nts/pathways-undergraduate-researchers.html
-URL:https://www.fredhutch.org/en/education-training/undergraduate-students/
- pathways-undergraduate-researchers.html
-CATEGORIES:opens
+UID:969b1b8d5dbaa35c1723@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+SUMMARY:DUE: Undergraduate Clinical Scholars Program (UCSP)\, Perelman Scho
+ ol of Medicine\, University of Pennsylvania
+DESCRIPTION:Perelman School of Medicine\, University of Pennsylvania\, Phil
+ adelphia\, PA. Date status: confirmed. https://www.ucspinfo.org/applicatio
+ n.html
+URL:https://www.ucspinfo.org/application.html
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program (SURP)\, 
- Fred Hutchinson Cancer Center
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Undergraduate Clinical Scholars Program (UCSP)\,
+  Perelman School of Medicine\, University of Pennsylvania
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Undergraduate Clinical Scholars Program (UCSP)\
+ , Perelman School of Medicine\, University of Pennsylvania
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fbe55159819636125965@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270111
-DTEND;VALUE=DATE:20270112
-SUMMARY:DUE (est.): Broad Summer Research Program (BSRP)\, Broad Institute 
- of MIT and Harvard
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:DUE: Broad Summer Research Program (BSRP)\, Broad Institute of MIT 
+ and Harvard
 DESCRIPTION:Broad Institute of MIT and Harvard\, Cambridge\, MA. Date statu
- s: projected. https://www.broadinstitute.org/bsrp/broad-summer-research-pr
+ s: confirmed. https://www.broadinstitute.org/bsrp/broad-summer-research-pr
  ogram-bsrp
 URL:https://www.broadinstitute.org/bsrp/broad-summer-research-program-bsrp
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Broad Summer Research Program (BSRP)\, Broad Ins
  titute of MIT and Harvard
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Broad Summer Research Program (BSRP)\, Broad In
  stitute of MIT and Harvard
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:79caa09c5fd9b79f0240@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
 SUMMARY:Opens: Broad Summer Research Program (BSRP)\, Broad Institute of MI
  T and Harvard
 DESCRIPTION:Broad Institute of MIT and Harvard\, Cambridge\, MA. Date statu
- s: projected. https://www.broadinstitute.org/bsrp/broad-summer-research-pr
+ s: confirmed. https://www.broadinstitute.org/bsrp/broad-summer-research-pr
  ogram-bsrp
 URL:https://www.broadinstitute.org/bsrp/broad-summer-research-program-bsrp
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Broad Summer Research Program (BSRP)\, Broad In
  stitute of MIT and Harvard
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:9be787719a9ed59616be@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270111
+DTEND;VALUE=DATE:20270112
+SUMMARY:DUE: Summer Research Training Program\, UPMC Children's Hospital of
+  Pittsburgh
+DESCRIPTION:UPMC Children's Hospital of Pittsburgh\, Pittsburgh\, PA. Date 
+ status: confirmed. https://www.chp.edu/research/about/training-program
+URL:https://www.chp.edu/research/about/training-program
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Summer Research Training Program\, UPMC Children
+ 's Hospital of Pittsburgh
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Summer Research Training Program\, UPMC Childre
+ n's Hospital of Pittsburgh
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:d2148f64b117116ce0f5@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
 SUMMARY:DUE: CATALYST Summer Training Programs\, MD Anderson Cancer Center
@@ -152,22 +190,23 @@ DESCRIPTION:MD Anderson Cancer Center\, Houston\, TX. Date status: confirme
 URL:https://www.mdanderson.org/education-training/research-training/early-c
  areer-pathway-programs/summer-research-programs.html
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: CATALYST Summer Training Programs\, MD Anderson 
  Cancer Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: CATALYST Summer Training Programs\, MD Anderson
   Cancer Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:3c483572f3c80ddf3f5d@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:Opens: CATALYST Summer Training Programs\, MD Anderson Cancer Cente
@@ -178,240 +217,346 @@ DESCRIPTION:MD Anderson Cancer Center\, Houston\, TX. Date status: confirme
 URL:https://www.mdanderson.org/education-training/research-training/early-c
  areer-pathway-programs/summer-research-programs.html
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: CATALYST Summer Training Programs\, MD Anderson
   Cancer Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:6d70ff62c2e229514ffc@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270115
-SUMMARY:DUE: Undergraduate Research Assistant / PGA Internship\, Yale Child
-  Study Center
+SUMMARY:DUE: Undergraduate Developmental Science Summer Internship\, Yale C
+ hild Study Center
 DESCRIPTION:Yale Child Study Center\, New Haven\, CT. Date status: confirme
  d. https://medicine.yale.edu/childstudy/education-and-training/undergradua
  te-pga/interns/
 URL:https://medicine.yale.edu/childstudy/education-and-training/undergradua
  te-pga/interns/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Undergraduate Research Assistant / PGA Internshi
- p\, Yale Child Study Center
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Undergraduate Developmental Science Summer Inter
+ nship\, Yale Child Study Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Undergraduate Research Assistant / PGA Internsh
- ip\, Yale Child Study Center
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Undergraduate Developmental Science Summer Inte
+ rnship\, Yale Child Study Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:da3bb70dfb9504846d1a@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Undergraduate Research Assistant / PGA Internship\, Yale Chi
- ld Study Center
+SUMMARY:Opens: Undergraduate Developmental Science Summer Internship\, Yale
+  Child Study Center
 DESCRIPTION:Yale Child Study Center\, New Haven\, CT. Date status: confirme
  d. https://medicine.yale.edu/childstudy/education-and-training/undergradua
  te-pga/interns/
 URL:https://medicine.yale.edu/childstudy/education-and-training/undergradua
  te-pga/interns/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Undergraduate Research Assistant / PGA Internsh
- ip\, Yale Child Study Center
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow: Undergraduate Developmental Science Summer Inte
+ rnship\, Yale Child Study Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:16e3e838635c623aa89f@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
-SUMMARY:DUE (est.): INSPIRE: Investigating Neurosciences Summer Program\, I
- ndiana University School of Medicine (Stark Neurosciences)
+SUMMARY:DUE: INSPIRE: Investigating Neurosciences Summer Program\, Indiana 
+ University School of Medicine (Stark Neurosciences)
 DESCRIPTION:Indiana University School of Medicine (Stark Neurosciences)\, I
- ndianapolis\, IN. Date status: projected. https://medicine.iu.edu/research
+ ndianapolis\, IN. Date status: confirmed. https://medicine.iu.edu/research
  -centers/neurosciences/education/INSPIRE
 URL:https://medicine.iu.edu/research-centers/neurosciences/education/INSPIR
  E
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: INSPIRE: Investigating Neurosciences Summer Prog
  ram\, Indiana University School of Medicine (Stark Neurosciences)
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: INSPIRE: Investigating Neurosciences Summer Pro
  gram\, Indiana University School of Medicine (Stark Neurosciences)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:a379938a1030b287cdc8@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
 SUMMARY:Opens: INSPIRE: Investigating Neurosciences Summer Program\, Indian
  a University School of Medicine (Stark Neurosciences)
 DESCRIPTION:Indiana University School of Medicine (Stark Neurosciences)\, I
- ndianapolis\, IN. Date status: projected. https://medicine.iu.edu/research
+ ndianapolis\, IN. Date status: confirmed. https://medicine.iu.edu/research
  -centers/neurosciences/education/INSPIRE
 URL:https://medicine.iu.edu/research-centers/neurosciences/education/INSPIR
  E
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: INSPIRE: Investigating Neurosciences Summer Pro
  gram\, Indiana University School of Medicine (Stark Neurosciences)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:531dfd1b8a8c76d8a59d@jolene-s27
-DTSTAMP:20261031T043913Z
+UID:ab32b36b4db7b7ac87d4@jolene-s27
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
-SUMMARY:DUE (est.): MIT Summer Research Program (MSRP)\, Massachusetts Inst
- itute of Technology
-DESCRIPTION:Massachusetts Institute of Technology\, Cambridge\, MA. Date st
- atus: projected. https://oge.mit.edu/msrp/
-URL:https://oge.mit.edu/msrp/
+SUMMARY:DUE: Medical Neuroscience Summer Undergraduate Research Program\, I
+ ndiana University School of Medicine
+DESCRIPTION:Indiana University School of Medicine\, Indianapolis\, IN. Date
+  status: confirmed. https://medicine.iu.edu/research-centers/neurosciences
+ /education/summer-research
+URL:https://medicine.iu.edu/research-centers/neurosciences/education/summer
+ -research
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Medical Neuroscience Summer Undergraduate Resear
+ ch Program\, Indiana University School of Medicine
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Medical Neuroscience Summer Undergraduate Resea
+ rch Program\, Indiana University School of Medicine
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:4f60e179d76bf7d375ed@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Opens: Medical Neuroscience Summer Undergraduate Research Program\,
+  Indiana University School of Medicine
+DESCRIPTION:Indiana University School of Medicine\, Indianapolis\, IN. Date
+  status: confirmed. https://medicine.iu.edu/research-centers/neurosciences
+ /education/summer-research
+URL:https://medicine.iu.edu/research-centers/neurosciences/education/summer
+ -research
+CATEGORIES:opens
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow: Medical Neuroscience Summer Undergraduate Resea
+ rch Program\, Indiana University School of Medicine
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:560c8974befeb5d8885e@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:DUE: Summer Undergraduate Research Program (SURP)\, Icahn School of
+  Medicine at Mount Sinai
+DESCRIPTION:Icahn School of Medicine at Mount Sinai\, New York\, NY. Date s
+ tatus: confirmed. https://icahn.mssm.edu/education/non-degree/surp4us
+URL:https://icahn.mssm.edu/education/non-degree/surp4us
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Summer Undergraduate Research Program (SURP)\, I
+ cahn School of Medicine at Mount Sinai
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Summer Undergraduate Research Program (SURP)\, 
+ Icahn School of Medicine at Mount Sinai
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ad40f35e62f107353798@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Opens: Summer Undergraduate Research Program (SURP)\, Icahn School 
+ of Medicine at Mount Sinai
+DESCRIPTION:Icahn School of Medicine at Mount Sinai\, New York\, NY. Date s
+ tatus: confirmed. https://icahn.mssm.edu/education/non-degree/surp4us
+URL:https://icahn.mssm.edu/education/non-degree/surp4us
+CATEGORIES:opens
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program (SURP)\, 
+ Icahn School of Medicine at Mount Sinai
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:3d68577cab1c9c21598e@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:DUE: Undergraduate Research Program (URP)\, Cold Spring Harbor Labo
+ ratory
+DESCRIPTION:Cold Spring Harbor Laboratory\, Cold Spring Harbor\, NY. Date s
+ tatus: confirmed. https://www.cshl.edu/education/undergraduate-research-pr
+ ogram/
+URL:https://www.cshl.edu/education/undergraduate-research-program/
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Undergraduate Research Program (URP)\, Cold Spri
+ ng Harbor Laboratory
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Undergraduate Research Program (URP)\, Cold Spr
+ ing Harbor Laboratory
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:204c3d4fd302ae50b9f5@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270116
+DTEND;VALUE=DATE:20270117
+SUMMARY:DUE: Vanderbilt Summer Science Academy (VSSA)\, Vanderbilt Universi
+ ty
+DESCRIPTION:Vanderbilt University\, Nashville\, TN. Date status: confirmed.
+  https://medschool.vanderbilt.edu/vssa/
+URL:https://medschool.vanderbilt.edu/vssa/
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Vanderbilt Summer Science Academy (VSSA)\, Vande
+ rbilt University
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Vanderbilt Summer Science Academy (VSSA)\, Vand
+ erbilt University
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:907b49da761982a17a3b@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:Opens: Vanderbilt Summer Science Academy (VSSA)\, Vanderbilt Univer
+ sity
+DESCRIPTION:Vanderbilt University\, Nashville\, TN. Date status: confirmed.
+  https://medschool.vanderbilt.edu/vssa/
+URL:https://medschool.vanderbilt.edu/vssa/
+CATEGORIES:opens
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow: Vanderbilt Summer Science Academy (VSSA)\, Vand
+ erbilt University
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:531dfd1b8a8c76d8a59d@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270119
+DTEND;VALUE=DATE:20270120
+SUMMARY:DUE: MIT Summer Research Program (MSRP)\, Massachusetts Institute o
+ f Technology
+DESCRIPTION:Massachusetts Institute of Technology\, Cambridge\, MA. Date st
+ atus: confirmed. https://oge.mit.edu/msrp/
+URL:https://oge.mit.edu/msrp/
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: MIT Summer Research Program (MSRP)\, Massachuset
  ts Institute of Technology
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: MIT Summer Research Program (MSRP)\, Massachuse
  tts Institute of Technology
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f19027db8041e15fd7e4@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: MIT Summer Research Program (MSRP)\, Massachusetts Institute
-  of Technology
+SUMMARY:Opens (est.): MIT Summer Research Program (MSRP)\, Massachusetts In
+ stitute of Technology
 DESCRIPTION:Massachusetts Institute of Technology\, Cambridge\, MA. Date st
  atus: projected. https://oge.mit.edu/msrp/
 URL:https://oge.mit.edu/msrp/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: MIT Summer Research Program (MSRP)\, Massachuse
- tts Institute of Technology
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): MIT Summer Research Program (MSRP)\, Mas
+ sachusetts Institute of Technology
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ab32b36b4db7b7ac87d4@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270115
-DTEND;VALUE=DATE:20270116
-SUMMARY:DUE (est.): Summer Research Program in Academic Medicine\, Indiana 
- University School of Medicine
-DESCRIPTION:Indiana University School of Medicine\, Indianapolis\, IN. Date
-  status: projected. https://medicine.iu.edu/research-centers/neurosciences
- /education/summer-research
-URL:https://medicine.iu.edu/research-centers/neurosciences/education/summer
- -research
+UID:eea1e095e8a72a508663@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270123
+SUMMARY:DUE: Summer Undergraduate Research Training (SMART) Program\, Baylo
+ r College of Medicine / Texas Children's Hospital
+DESCRIPTION:Baylor College of Medicine / Texas Children's Hospital\, Housto
+ n\, TX. Date status: confirmed. https://www.bcm.edu/education/graduate-sch
+ ool-of-biomedical-sciences/degree-programs-and-certificates/smart-program
+URL:https://www.bcm.edu/education/graduate-school-of-biomedical-sciences/de
+ gree-programs-and-certificates/smart-program
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Research Program in Academic Medicine\, I
- ndiana University School of Medicine
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Summer Undergraduate Research Training (SMART) P
+ rogram\, Baylor College of Medicine / Texas Children's Hospital
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Research Program in Academic Medicine\, 
- Indiana University School of Medicine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:4f60e179d76bf7d375ed@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Research Program in Academic Medicine\, Indiana Unive
- rsity School of Medicine
-DESCRIPTION:Indiana University School of Medicine\, Indianapolis\, IN. Date
-  status: projected. https://medicine.iu.edu/research-centers/neurosciences
- /education/summer-research
-URL:https://medicine.iu.edu/research-centers/neurosciences/education/summer
- -research
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Research Program in Academic Medicine\, 
- Indiana University School of Medicine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:3d68577cab1c9c21598e@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270115
-DTEND;VALUE=DATE:20270116
-SUMMARY:DUE (est.): Undergraduate Research Program (URP)\, Cold Spring Harb
- or Laboratory
-DESCRIPTION:Cold Spring Harbor Laboratory\, Cold Spring Harbor\, NY. Date s
- tatus: projected. https://www.cshl.edu/education/undergraduate-research-pr
- ogram/
-URL:https://www.cshl.edu/education/undergraduate-research-program/
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Undergraduate Research Program (URP)\, Cold Spri
- ng Harbor Laboratory
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Undergraduate Research Program (URP)\, Cold Spr
- ing Harbor Laboratory
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:9c0a4885eb9cc7b3a53c@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Undergraduate Research Program (URP)\, Cold Spring Harbor La
- boratory
-DESCRIPTION:Cold Spring Harbor Laboratory\, Cold Spring Harbor\, NY. Date s
- tatus: projected. https://www.cshl.edu/education/undergraduate-research-pr
- ogram/
-URL:https://www.cshl.edu/education/undergraduate-research-program/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Undergraduate Research Program (URP)\, Cold Spr
- ing Harbor Laboratory
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Summer Undergraduate Research Training (SMART) 
+ Program\, Baylor College of Medicine / Texas Children's Hospital
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d2a2b89312163f4664ad@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
 SUMMARY:DUE (est.): Newborn Medicine Summer Student Research Program\, Bost
@@ -421,41 +566,43 @@ DESCRIPTION:Boston Children's Hospital / Beth Israel Deaconess\, Boston\, M
  orn-medicine
 URL:https://www.childrenshospital.org/services/newborn-medicine
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Newborn Medicine Summer Student Research Program
- \, Boston Children's Hospital / Beth Israel Deaconess
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Newborn Medicine Summer Student Research 
+ Program\, Boston Children's Hospital / Beth Israel Deaconess
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Newborn Medicine Summer Student Research Progra
- m\, Boston Children's Hospital / Beth Israel Deaconess
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Newborn Medicine Summer Student Research
+  Program\, Boston Children's Hospital / Beth Israel Deaconess
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:068dbc6d3f42448e5e65@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Newborn Medicine Summer Student Research Program\, Boston Ch
- ildren's Hospital / Beth Israel Deaconess
+SUMMARY:Opens (est.): Newborn Medicine Summer Student Research Program\, Bo
+ ston Children's Hospital / Beth Israel Deaconess
 DESCRIPTION:Boston Children's Hospital / Beth Israel Deaconess\, Boston\, M
  A. Date status: projected. https://www.childrenshospital.org/services/newb
  orn-medicine
 URL:https://www.childrenshospital.org/services/newborn-medicine
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Newborn Medicine Summer Student Research Progra
- m\, Boston Children's Hospital / Beth Israel Deaconess
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Newborn Medicine Summer Student Research
+  Program\, Boston Children's Hospital / Beth Israel Deaconess
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:560cdf7d96be46384139@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270126
 SUMMARY:DUE: Summer Student Program (SSP)\, The Jackson Laboratory
@@ -463,39 +610,67 @@ DESCRIPTION:The Jackson Laboratory\, Bar Harbor\, ME and Farmington\, CT. D
  ate status: confirmed. https://www.jax.org/ssp
 URL:https://www.jax.org/ssp
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Student Program (SSP)\, The Jackson Labor
  atory
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Student Program (SSP)\, The Jackson Labo
  ratory
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:4539658885f22ff2e767@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
 SUMMARY:Opens: Summer Student Program (SSP)\, The Jackson Laboratory
 DESCRIPTION:The Jackson Laboratory\, Bar Harbor\, ME and Farmington\, CT. D
  ate status: confirmed. https://www.jax.org/ssp
 URL:https://www.jax.org/ssp
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Summer Student Program (SSP)\, The Jackson Labo
  ratory
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:e63afc2a8915331077cf@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270126
+DTEND;VALUE=DATE:20270127
+SUMMARY:DUE: Summer Internship Program in Biomedical Research (SIP)\, Natio
+ nal Institutes of Health
+DESCRIPTION:National Institutes of Health\, Bethesda\, MD (and other NIH ca
+ mpuses). Date status: confirmed. https://www.training.nih.gov/research-tra
+ ining/pb/sip/
+URL:https://www.training.nih.gov/research-training/pb/sip/
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Summer Internship Program in Biomedical Research
+  (SIP)\, National Institutes of Health
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Summer Internship Program in Biomedical Researc
+ h (SIP)\, National Institutes of Health
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:f7b991751cf0034c1019@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:DUE: PROMISE: Research Training in Oncology and Medicine to Inspire
@@ -506,16 +681,17 @@ DESCRIPTION:Penn State College of Medicine / Penn State Cancer Institute\,
  icate-and-undergraduate/promise
 URL:https://med.psu.edu/education/certificate-and-undergraduate/promise
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: PROMISE: Research Training in Oncology and Medic
  ine to Inspire Student Engagement\, Penn State College of Medicine / Penn 
  State Cancer Institute
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: PROMISE: Research Training in Oncology and Medi
  cine to Inspire Student Engagement\, Penn State College of Medicine / Penn
   State Cancer Institute
@@ -523,110 +699,55 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:6c35e2f53efc91cc1416@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: PROMISE: Research Training in Oncology and Medicine to Inspi
- re Student Engagement\, Penn State College of Medicine / Penn State Cancer
-  Institute
+SUMMARY:Opens (est.): PROMISE: Research Training in Oncology and Medicine t
+ o Inspire Student Engagement\, Penn State College of Medicine / Penn State
+  Cancer Institute
 DESCRIPTION:Penn State College of Medicine / Penn State Cancer Institute\, 
- Hershey\, PA. Date status: confirmed. https://med.psu.edu/education/certif
+ Hershey\, PA. Date status: projected. https://med.psu.edu/education/certif
  icate-and-undergraduate/promise
 URL:https://med.psu.edu/education/certificate-and-undergraduate/promise
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: PROMISE: Research Training in Oncology and Medi
- cine to Inspire Student Engagement\, Penn State College of Medicine / Penn
-  State Cancer Institute
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:4f1505d741d3819ee3a4@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270131
-DTEND;VALUE=DATE:20270201
-SUMMARY:DUE (est.): Summer Internship Program\, Allen Institute
-DESCRIPTION:Allen Institute\, Seattle\, WA. Date status: projected. https:/
- /alleninstitute.org/careers/internships/
-URL:https://alleninstitute.org/careers/internships/
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Internship Program\, Allen Institute
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Internship Program\, Allen Institute
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:459b2aa568fb76b14cfd@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Internship Program\, Allen Institute
-DESCRIPTION:Allen Institute\, Seattle\, WA. Date status: projected. https:/
- /alleninstitute.org/careers/internships/
-URL:https://alleninstitute.org/careers/internships/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Internship Program\, Allen Institute
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): PROMISE: Research Training in Oncology a
+ nd Medicine to Inspire Student Engagement\, Penn State College of Medicine
+  / Penn State Cancer Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7b3d5ee598bf03b72fe7@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE: Amgen Scholars Program (US)\, 14 host universities nationally
 DESCRIPTION:14 host universities nationally\, Multiple (Caltech\, Columbia\
- , Duke\, Harvard\, Hopkins\, UCLA\, UCSF\, UNC\, UT Southwestern\, WashU\,
-  Yale and more). Date status: confirmed. https://amgenscholars.com/us-prog
- ram/
+ , Duke\, Harvard\, Howard\, Hopkins\, Stanford\, UC Berkeley\, UCLA\, UCSF
+ \, UNC\, UT Southwestern\, WashU\, Yale). Date status: confirmed. https://
+ amgenscholars.com/us-program/
 URL:https://amgenscholars.com/us-program/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Amgen Scholars Program (US)\, 14 host universiti
  es nationally
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Amgen Scholars Program (US)\, 14 host universit
  ies nationally
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:cfd04fa29d8dcf4e6fdf@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Amgen Scholars Program (US)\, 14 host universities nationall
- y
-DESCRIPTION:14 host universities nationally\, Multiple (Caltech\, Columbia\
- , Duke\, Harvard\, Hopkins\, UCLA\, UCSF\, UNC\, UT Southwestern\, WashU\,
-  Yale and more). Date status: confirmed. https://amgenscholars.com/us-prog
- ram/
-URL:https://amgenscholars.com/us-program/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Amgen Scholars Program (US)\, 14 host universit
- ies nationally
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:52d18e166ca918ab9158@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): BioMedRAP: Biomedical Research Apprenticeship Program\,
@@ -635,40 +756,42 @@ DESCRIPTION:Washington University in St. Louis\, St. Louis\, MO. Date statu
  s: projected. https://dbbs.wustl.edu/programs/
 URL:https://dbbs.wustl.edu/programs/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: BioMedRAP: Biomedical Research Apprenticeship Pr
- ogram\, Washington University in St. Louis
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): BioMedRAP: Biomedical Research Apprentice
+ ship Program\, Washington University in St. Louis
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: BioMedRAP: Biomedical Research Apprenticeship P
- rogram\, Washington University in St. Louis
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): BioMedRAP: Biomedical Research Apprentic
+ eship Program\, Washington University in St. Louis
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ccbdf5df66fca8bfeb29@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: BioMedRAP: Biomedical Research Apprenticeship Program\, Wash
- ington University in St. Louis
+SUMMARY:Opens (est.): BioMedRAP: Biomedical Research Apprenticeship Program
+ \, Washington University in St. Louis
 DESCRIPTION:Washington University in St. Louis\, St. Louis\, MO. Date statu
  s: projected. https://dbbs.wustl.edu/programs/
 URL:https://dbbs.wustl.edu/programs/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: BioMedRAP: Biomedical Research Apprenticeship P
- rogram\, Washington University in St. Louis
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): BioMedRAP: Biomedical Research Apprentic
+ eship Program\, Washington University in St. Louis
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:db17fe46de4fd574359e@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Biomedical Sciences Summer Undergraduate Research Progr
@@ -678,41 +801,43 @@ DESCRIPTION:Marquette University\, Milwaukee\, WI. Date status: projected.
 URL:https://www.marquette.edu/biomedical-sciences/summer-research-program.p
  hp
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Biomedical Sciences Summer Undergraduate Researc
- h Program\, Marquette University
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Biomedical Sciences Summer Undergraduate 
+ Research Program\, Marquette University
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Biomedical Sciences Summer Undergraduate Resear
- ch Program\, Marquette University
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Biomedical Sciences Summer Undergraduate
+  Research Program\, Marquette University
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:21bb96f281a4ca525fff@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Biomedical Sciences Summer Undergraduate Research Program\, 
- Marquette University
+SUMMARY:Opens (est.): Biomedical Sciences Summer Undergraduate Research Pro
+ gram\, Marquette University
 DESCRIPTION:Marquette University\, Milwaukee\, WI. Date status: projected. 
  https://www.marquette.edu/biomedical-sciences/summer-research-program.php
 URL:https://www.marquette.edu/biomedical-sciences/summer-research-program.p
  hp
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Biomedical Sciences Summer Undergraduate Resear
- ch Program\, Marquette University
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Biomedical Sciences Summer Undergraduate
+  Research Program\, Marquette University
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ebefd25119ab054693ba@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): CHOP Research Institute Summer Scholars Program (CRISSP
@@ -721,82 +846,86 @@ DESCRIPTION:Children's Hospital of Philadelphia\, Philadelphia\, PA. Date s
  tatus: projected. https://www.research.chop.edu/crissp
 URL:https://www.research.chop.edu/crissp
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: CHOP Research Institute Summer Scholars Program 
- (CRISSP)\, Children's Hospital of Philadelphia
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): CHOP Research Institute Summer Scholars P
+ rogram (CRISSP)\, Children's Hospital of Philadelphia
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: CHOP Research Institute Summer Scholars Program
-  (CRISSP)\, Children's Hospital of Philadelphia
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): CHOP Research Institute Summer Scholars 
+ Program (CRISSP)\, Children's Hospital of Philadelphia
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5b321c6004ed8bff10ae@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: CHOP Research Institute Summer Scholars Program (CRISSP)\, C
- hildren's Hospital of Philadelphia
+SUMMARY:Opens (est.): CHOP Research Institute Summer Scholars Program (CRIS
+ SP)\, Children's Hospital of Philadelphia
 DESCRIPTION:Children's Hospital of Philadelphia\, Philadelphia\, PA. Date s
  tatus: projected. https://www.research.chop.edu/crissp
 URL:https://www.research.chop.edu/crissp
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: CHOP Research Institute Summer Scholars Program
-  (CRISSP)\, Children's Hospital of Philadelphia
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): CHOP Research Institute Summer Scholars 
+ Program (CRISSP)\, Children's Hospital of Philadelphia
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:a5628ab62bf90a2d3184@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): CURE Summer Program (Continuing Umbrella of Research Ex
  periences)\, Dana-Farber/Harvard Cancer Center
-DESCRIPTION:Dana-Farber/Harvard Cancer Center\, Boston\, MA. Date status: u
- nknown. https://www.dana-farber.org/research
+DESCRIPTION:Dana-Farber/Harvard Cancer Center\, Boston\, MA. Date status: p
+ rojected. https://www.dana-farber.org/research
 URL:https://www.dana-farber.org/research
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: CURE Summer Program (Continuing Umbrella of Rese
- arch Experiences)\, Dana-Farber/Harvard Cancer Center
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): CURE Summer Program (Continuing Umbrella 
+ of Research Experiences)\, Dana-Farber/Harvard Cancer Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: CURE Summer Program (Continuing Umbrella of Res
- earch Experiences)\, Dana-Farber/Harvard Cancer Center
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): CURE Summer Program (Continuing Umbrella
+  of Research Experiences)\, Dana-Farber/Harvard Cancer Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:98661bd80bfc4d23a87c@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: CURE Summer Program (Continuing Umbrella of Research Experie
- nces)\, Dana-Farber/Harvard Cancer Center
-DESCRIPTION:Dana-Farber/Harvard Cancer Center\, Boston\, MA. Date status: u
- nknown. https://www.dana-farber.org/research
+SUMMARY:Opens (est.): CURE Summer Program (Continuing Umbrella of Research 
+ Experiences)\, Dana-Farber/Harvard Cancer Center
+DESCRIPTION:Dana-Farber/Harvard Cancer Center\, Boston\, MA. Date status: p
+ rojected. https://www.dana-farber.org/research
 URL:https://www.dana-farber.org/research
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: CURE Summer Program (Continuing Umbrella of Res
- earch Experiences)\, Dana-Farber/Harvard Cancer Center
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): CURE Summer Program (Continuing Umbrella
+  of Research Experiences)\, Dana-Farber/Harvard Cancer Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:4ce6aab744500e3b05ed@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Cancer-focused Summer Undergraduate Research (CanSUR)\,
@@ -805,40 +934,42 @@ DESCRIPTION:Case Comprehensive Cancer Center\, Cleveland\, OH. Date status:
   projected. https://case.edu/cancer/
 URL:https://case.edu/cancer/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Cancer-focused Summer Undergraduate Research (Ca
- nSUR)\, Case Comprehensive Cancer Center
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Cancer-focused Summer Undergraduate Resea
+ rch (CanSUR)\, Case Comprehensive Cancer Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Cancer-focused Summer Undergraduate Research (C
- anSUR)\, Case Comprehensive Cancer Center
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Cancer-focused Summer Undergraduate Rese
+ arch (CanSUR)\, Case Comprehensive Cancer Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:da9ca8d19c1ed9b9f22b@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Cancer-focused Summer Undergraduate Research (CanSUR)\, Case
-  Comprehensive Cancer Center
+SUMMARY:Opens (est.): Cancer-focused Summer Undergraduate Research (CanSUR)
+ \, Case Comprehensive Cancer Center
 DESCRIPTION:Case Comprehensive Cancer Center\, Cleveland\, OH. Date status:
   projected. https://case.edu/cancer/
 URL:https://case.edu/cancer/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Cancer-focused Summer Undergraduate Research (C
- anSUR)\, Case Comprehensive Cancer Center
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Cancer-focused Summer Undergraduate Rese
+ arch (CanSUR)\, Case Comprehensive Cancer Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:cc4cb9ee83ac31c35db9@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): College COACH Program\, Boston Children's Hospital
@@ -846,39 +977,41 @@ DESCRIPTION:Boston Children's Hospital\, Boston\, MA. Date status: projecte
  d. https://research.childrenshospital.org/
 URL:https://research.childrenshospital.org/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: College COACH Program\, Boston Children's Hospit
- al
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): College COACH Program\, Boston Children's
+  Hospital
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: College COACH Program\, Boston Children's Hospi
- tal
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): College COACH Program\, Boston Children'
+ s Hospital
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b30bafa40ec066bed3a4@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
-SUMMARY:Opens: College COACH Program\, Boston Children's Hospital
+SUMMARY:Opens (est.): College COACH Program\, Boston Children's Hospital
 DESCRIPTION:Boston Children's Hospital\, Boston\, MA. Date status: projecte
  d. https://research.childrenshospital.org/
 URL:https://research.childrenshospital.org/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: College COACH Program\, Boston Children's Hospi
- tal
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): College COACH Program\, Boston Children'
+ s Hospital
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:455cac021f6a4ace2bfb@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Equity Summer Research Program\, Oregon Health & Scienc
@@ -887,82 +1020,86 @@ DESCRIPTION:Oregon Health & Science University\, Portland\, OR. Date status
  : projected. https://www.ohsu.edu/school-of-medicine
 URL:https://www.ohsu.edu/school-of-medicine
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Equity Summer Research Program\, Oregon Health &
-  Science University
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Equity Summer Research Program\, Oregon H
+ ealth & Science University
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Equity Summer Research Program\, Oregon Health 
- & Science University
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Equity Summer Research Program\, Oregon 
+ Health & Science University
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9a5b1122f0301e89e268@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Equity Summer Research Program\, Oregon Health & Science Uni
- versity
+SUMMARY:Opens (est.): Equity Summer Research Program\, Oregon Health & Scie
+ nce University
 DESCRIPTION:Oregon Health & Science University\, Portland\, OR. Date status
  : projected. https://www.ohsu.edu/school-of-medicine
 URL:https://www.ohsu.edu/school-of-medicine
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Equity Summer Research Program\, Oregon Health 
- & Science University
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Equity Summer Research Program\, Oregon 
+ Health & Science University
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9fb231aa39e0cf24e9be@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Graduate Research Internship / summer research\, Cedars
  -Sinai Medical Center
-DESCRIPTION:Cedars-Sinai Medical Center\, Los Angeles\, CA. Date status: un
- known. https://www.cedars-sinai.edu/research.html
+DESCRIPTION:Cedars-Sinai Medical Center\, Los Angeles\, CA. Date status: pr
+ ojected. https://www.cedars-sinai.edu/research.html
 URL:https://www.cedars-sinai.edu/research.html
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Graduate Research Internship / summer research\,
-  Cedars-Sinai Medical Center
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Graduate Research Internship / summer res
+ earch\, Cedars-Sinai Medical Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Graduate Research Internship / summer research\
- , Cedars-Sinai Medical Center
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Graduate Research Internship / summer re
+ search\, Cedars-Sinai Medical Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:94aeb2f75d0763e6b425@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Graduate Research Internship / summer research\, Cedars-Sina
- i Medical Center
-DESCRIPTION:Cedars-Sinai Medical Center\, Los Angeles\, CA. Date status: un
- known. https://www.cedars-sinai.edu/research.html
+SUMMARY:Opens (est.): Graduate Research Internship / summer research\, Ceda
+ rs-Sinai Medical Center
+DESCRIPTION:Cedars-Sinai Medical Center\, Los Angeles\, CA. Date status: pr
+ ojected. https://www.cedars-sinai.edu/research.html
 URL:https://www.cedars-sinai.edu/research.html
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Graduate Research Internship / summer research\
- , Cedars-Sinai Medical Center
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Graduate Research Internship / summer re
+ search\, Cedars-Sinai Medical Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c58c46ec280dec819d86@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Heart\, Lung and Blood (HLB) Summer Research Program\, 
@@ -971,166 +1108,130 @@ DESCRIPTION:Case Western Reserve University School of Medicine\, Cleveland\
  , OH. Date status: projected. https://case.edu/medicine/
 URL:https://case.edu/medicine/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Heart\, Lung and Blood (HLB) Summer Research Pro
- gram\, Case Western Reserve University School of Medicine
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Heart\, Lung and Blood (HLB) Summer Resea
+ rch Program\, Case Western Reserve University School of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Heart\, Lung and Blood (HLB) Summer Research Pr
- ogram\, Case Western Reserve University School of Medicine
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Heart\, Lung and Blood (HLB) Summer Rese
+ arch Program\, Case Western Reserve University School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:e40327f3f2cf68d7e90d@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Heart\, Lung and Blood (HLB) Summer Research Program\, Case 
- Western Reserve University School of Medicine
+SUMMARY:Opens (est.): Heart\, Lung and Blood (HLB) Summer Research Program\
+ , Case Western Reserve University School of Medicine
 DESCRIPTION:Case Western Reserve University School of Medicine\, Cleveland\
  , OH. Date status: projected. https://case.edu/medicine/
 URL:https://case.edu/medicine/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Heart\, Lung and Blood (HLB) Summer Research Pr
- ogram\, Case Western Reserve University School of Medicine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:01a1ae6d9b3d249fcb50@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Heithoff-Brody Summer Scholars\, Salk Institute for Bio
- logical Studies
-DESCRIPTION:Salk Institute for Biological Studies\, La Jolla\, CA. Date sta
- tus: projected. https://www.salk.edu/about/education-outreach/
-URL:https://www.salk.edu/about/education-outreach/
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Heithoff-Brody Summer Scholars\, Salk Institute 
- for Biological Studies
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Heithoff-Brody Summer Scholars\, Salk Institute
-  for Biological Studies
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:711c2ff0647bfdbf5ca1@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Heithoff-Brody Summer Scholars\, Salk Institute for Biologic
- al Studies
-DESCRIPTION:Salk Institute for Biological Studies\, La Jolla\, CA. Date sta
- tus: projected. https://www.salk.edu/about/education-outreach/
-URL:https://www.salk.edu/about/education-outreach/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Heithoff-Brody Summer Scholars\, Salk Institute
-  for Biological Studies
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Heart\, Lung and Blood (HLB) Summer Rese
+ arch Program\, Case Western Reserve University School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c09e58c6a1f6b7513593@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Johns Hopkins Internship in Brain Sciences (JHIBS)\, Jo
  hns Hopkins University
-DESCRIPTION:Johns Hopkins University\, Baltimore\, MD. Date status: unknown
- . https://neuroscience.jhu.edu/
+DESCRIPTION:Johns Hopkins University\, Baltimore\, MD. Date status: project
+ ed. https://neuroscience.jhu.edu/
 URL:https://neuroscience.jhu.edu/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Johns Hopkins Internship in Brain Sciences (JHIB
- S)\, Johns Hopkins University
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Johns Hopkins Internship in Brain Science
+ s (JHIBS)\, Johns Hopkins University
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Johns Hopkins Internship in Brain Sciences (JHI
- BS)\, Johns Hopkins University
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Johns Hopkins Internship in Brain Scienc
+ es (JHIBS)\, Johns Hopkins University
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:a52b1debb63856c47f1f@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Johns Hopkins Internship in Brain Sciences (JHIBS)\, Johns H
- opkins University
-DESCRIPTION:Johns Hopkins University\, Baltimore\, MD. Date status: unknown
- . https://neuroscience.jhu.edu/
+SUMMARY:Opens (est.): Johns Hopkins Internship in Brain Sciences (JHIBS)\, 
+ Johns Hopkins University
+DESCRIPTION:Johns Hopkins University\, Baltimore\, MD. Date status: project
+ ed. https://neuroscience.jhu.edu/
 URL:https://neuroscience.jhu.edu/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Johns Hopkins Internship in Brain Sciences (JHI
- BS)\, Johns Hopkins University
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Johns Hopkins Internship in Brain Scienc
+ es (JHIBS)\, Johns Hopkins University
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:26ac5e1b76f54e7346ad@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Maryland Center for Developmental Disabilities / resear
  ch internships\, Kennedy Krieger Institute
-DESCRIPTION:Kennedy Krieger Institute\, Baltimore\, MD. Date status: unknow
- n. https://www.kennedykrieger.org/training
+DESCRIPTION:Kennedy Krieger Institute\, Baltimore\, MD. Date status: projec
+ ted. https://www.kennedykrieger.org/training
 URL:https://www.kennedykrieger.org/training
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Maryland Center for Developmental Disabilities /
-  research internships\, Kennedy Krieger Institute
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Maryland Center for Developmental Disabil
+ ities / research internships\, Kennedy Krieger Institute
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Maryland Center for Developmental Disabilities 
- / research internships\, Kennedy Krieger Institute
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Maryland Center for Developmental Disabi
+ lities / research internships\, Kennedy Krieger Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:21d343f39815730015cd@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Maryland Center for Developmental Disabilities / research in
- ternships\, Kennedy Krieger Institute
-DESCRIPTION:Kennedy Krieger Institute\, Baltimore\, MD. Date status: unknow
- n. https://www.kennedykrieger.org/training
+SUMMARY:Opens (est.): Maryland Center for Developmental Disabilities / rese
+ arch internships\, Kennedy Krieger Institute
+DESCRIPTION:Kennedy Krieger Institute\, Baltimore\, MD. Date status: projec
+ ted. https://www.kennedykrieger.org/training
 URL:https://www.kennedykrieger.org/training
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Maryland Center for Developmental Disabilities 
- / research internships\, Kennedy Krieger Institute
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Maryland Center for Developmental Disabi
+ lities / research internships\, Kennedy Krieger Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b91ddb4885a3f630e8a8@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE: Mechanistic Biology Summer Program (MBSP)\, Memorial Sloan Ket
@@ -1141,22 +1242,23 @@ DESCRIPTION:Memorial Sloan Kettering Cancer Center\, New York\, NY. Date st
 URL:https://www.mskcc.org/education-training/summer-scientific-undergraduat
  e-programs/mechanistic-biology-summer-program
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Mechanistic Biology Summer Program (MBSP)\, Memo
  rial Sloan Kettering Cancer Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Mechanistic Biology Summer Program (MBSP)\, Mem
  orial Sloan Kettering Cancer Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:16f6c06813651d3aee93@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
 SUMMARY:Opens: Mechanistic Biology Summer Program (MBSP)\, Memorial Sloan K
@@ -1167,16 +1269,72 @@ DESCRIPTION:Memorial Sloan Kettering Cancer Center\, New York\, NY. Date st
 URL:https://www.mskcc.org/education-training/summer-scientific-undergraduat
  e-programs/mechanistic-biology-summer-program
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Mechanistic Biology Summer Program (MBSP)\, Mem
  orial Sloan Kettering Cancer Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:79bdef7e55e63c392555@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:DUE: Nathan Schnaper Intern Program in Translational Cancer Researc
+ h (NSIP)\, University of Maryland Greenebaum Comprehensive Cancer Center /
+  UM School of Medicine
+DESCRIPTION:University of Maryland Greenebaum Comprehensive Cancer Center /
+  UM School of Medicine\, Baltimore\, MD. Date status: confirmed. https://r
+ esearch.umgccc.org/crtec/summer-undergraduate-research-programs/nathan-sch
+ naper-intern-program
+URL:https://research.umgccc.org/crtec/summer-undergraduate-research-program
+ s/nathan-schnaper-intern-program
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Nathan Schnaper Intern Program in Translational 
+ Cancer Research (NSIP)\, University of Maryland Greenebaum Comprehensive C
+ ancer Center / UM School of Medicine
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Nathan Schnaper Intern Program in Translational
+  Cancer Research (NSIP)\, University of Maryland Greenebaum Comprehensive 
+ Cancer Center / UM School of Medicine
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2aba4086b482499b6e02@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:Opens: Nathan Schnaper Intern Program in Translational Cancer Resea
+ rch (NSIP)\, University of Maryland Greenebaum Comprehensive Cancer Center
+  / UM School of Medicine
+DESCRIPTION:University of Maryland Greenebaum Comprehensive Cancer Center /
+  UM School of Medicine\, Baltimore\, MD. Date status: confirmed. https://r
+ esearch.umgccc.org/crtec/summer-undergraduate-research-programs/nathan-sch
+ naper-intern-program
+URL:https://research.umgccc.org/crtec/summer-undergraduate-research-program
+ s/nathan-schnaper-intern-program
+CATEGORIES:opens
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow: Nathan Schnaper Intern Program in Translational
+  Cancer Research (NSIP)\, University of Maryland Greenebaum Comprehensive 
+ Cancer Center / UM School of Medicine
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:6ee3257e4807c6b2a444@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE: Pediatric Oncology Education (POE)\, St. Jude Children's Resea
@@ -1187,130 +1345,115 @@ DESCRIPTION:St. Jude Children's Research Hospital\, Memphis\, TN. Date stat
 URL:https://www.stjude.org/education-training/research-training/undergradua
  te/poe.html
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Pediatric Oncology Education (POE)\, St. Jude Ch
  ildren's Research Hospital
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Pediatric Oncology Education (POE)\, St. Jude C
  hildren's Research Hospital
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:01438e74c1f2624a7057@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Pediatric Oncology Education (POE)\, St. Jude Children's Res
- earch Hospital
-DESCRIPTION:St. Jude Children's Research Hospital\, Memphis\, TN. Date stat
- us: confirmed. https://www.stjude.org/education-training/research-training
- /undergraduate/poe.html
-URL:https://www.stjude.org/education-training/research-training/undergradua
- te/poe.html
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Pediatric Oncology Education (POE)\, St. Jude C
- hildren's Research Hospital
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:b3efacb16b9e1d09dc78@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Pediatric Research Summer Program\, University of Utah 
  / Primary Children's Hospital
 DESCRIPTION:University of Utah / Primary Children's Hospital\, Salt Lake Ci
- ty\, UT. Date status: unknown. https://medicine.utah.edu/pediatrics/educat
- ion
+ ty\, UT. Date status: projected. https://medicine.utah.edu/pediatrics/educ
+ ation
 URL:https://medicine.utah.edu/pediatrics/education
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Pediatric Research Summer Program\, University o
- f Utah / Primary Children's Hospital
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Pediatric Research Summer Program\, Unive
+ rsity of Utah / Primary Children's Hospital
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Pediatric Research Summer Program\, University 
- of Utah / Primary Children's Hospital
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Pediatric Research Summer Program\, Univ
+ ersity of Utah / Primary Children's Hospital
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:dc609b7d54aafdd352b5@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Pediatric Research Summer Program\, University of Utah / Pri
- mary Children's Hospital
+SUMMARY:Opens (est.): Pediatric Research Summer Program\, University of Uta
+ h / Primary Children's Hospital
 DESCRIPTION:University of Utah / Primary Children's Hospital\, Salt Lake Ci
- ty\, UT. Date status: unknown. https://medicine.utah.edu/pediatrics/educat
- ion
+ ty\, UT. Date status: projected. https://medicine.utah.edu/pediatrics/educ
+ ation
 URL:https://medicine.utah.edu/pediatrics/education
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Pediatric Research Summer Program\, University 
- of Utah / Primary Children's Hospital
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Pediatric Research Summer Program\, Univ
+ ersity of Utah / Primary Children's Hospital
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b065894250ec5fb6ca91@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Research Trainees Summer Program\, Children's National 
  Hospital: Center for Precision Medicine & Genomics
 DESCRIPTION:Children's National Hospital: Center for Precision Medicine & G
- enomics\, Washington\, DC. Date status: unknown. https://research.children
- snational.org/
+ enomics\, Washington\, DC. Date status: projected. https://research.childr
+ ensnational.org/
 URL:https://research.childrensnational.org/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Research Trainees Summer Program\, Children's Na
- tional Hospital: Center for Precision Medicine & Genomics
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Research Trainees Summer Program\, Childr
+ en's National Hospital: Center for Precision Medicine & Genomics
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Research Trainees Summer Program\, Children's N
- ational Hospital: Center for Precision Medicine & Genomics
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Research Trainees Summer Program\, Child
+ ren's National Hospital: Center for Precision Medicine & Genomics
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:a93d01105e59788f78ad@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Research Trainees Summer Program\, Children's National Hospi
- tal: Center for Precision Medicine & Genomics
+SUMMARY:Opens (est.): Research Trainees Summer Program\, Children's Nationa
+ l Hospital: Center for Precision Medicine & Genomics
 DESCRIPTION:Children's National Hospital: Center for Precision Medicine & G
- enomics\, Washington\, DC. Date status: unknown. https://research.children
- snational.org/
+ enomics\, Washington\, DC. Date status: projected. https://research.childr
+ ensnational.org/
 URL:https://research.childrensnational.org/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Research Trainees Summer Program\, Children's N
- ational Hospital: Center for Precision Medicine & Genomics
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Research Trainees Summer Program\, Child
+ ren's National Hospital: Center for Precision Medicine & Genomics
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:085b89bab10ab61fe6e4@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE: SSRP-Amgen Scholars Program\, Stanford University: Biosciences
@@ -1319,22 +1462,23 @@ DESCRIPTION:Stanford University: Biosciences\, Stanford\, CA. Date status:
  rogram/
 URL:https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: SSRP-Amgen Scholars Program\, Stanford Universit
  y: Biosciences
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: SSRP-Amgen Scholars Program\, Stanford Universi
  ty: Biosciences
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:1987013430048fd8fba1@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Opens: SSRP-Amgen Scholars Program\, Stanford University: Bioscienc
@@ -1344,58 +1488,17 @@ DESCRIPTION:Stanford University: Biosciences\, Stanford\, CA. Date status:
  rogram/
 URL:https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: SSRP-Amgen Scholars Program\, Stanford Universi
  ty: Biosciences
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:2f1fa521bd0c247d8082@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Health Professions Education Program (SHPEP)\, R
- obert Wood Johnson Foundation (multiple host schools)
-DESCRIPTION:Robert Wood Johnson Foundation (multiple host schools)\, Multip
- le academic health centers. Date status: projected. https://www.shpep.org/
-URL:https://www.shpep.org/
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Health Professions Education Program (SHP
- EP)\, Robert Wood Johnson Foundation (multiple host schools)
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Health Professions Education Program (SH
- PEP)\, Robert Wood Johnson Foundation (multiple host schools)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:da25abbdd64cf76825b5@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Health Professions Education Program (SHPEP)\, Robert
-  Wood Johnson Foundation (multiple host schools)
-DESCRIPTION:Robert Wood Johnson Foundation (multiple host schools)\, Multip
- le academic health centers. Date status: projected. https://www.shpep.org/
-URL:https://www.shpep.org/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Health Professions Education Program (SH
- PEP)\, Robert Wood Johnson Foundation (multiple host schools)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:7524f0e915689d3f2ef8@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Honors Undergraduate Research Program (SHURP)\, 
@@ -1404,124 +1507,131 @@ DESCRIPTION:Harvard Medical School\, Boston\, MA. Date status: projected. h
  ttps://www.hms.harvard.edu/dms/diversity/shurp/
 URL:https://www.hms.harvard.edu/dms/diversity/shurp/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Honors Undergraduate Research Program (SH
- URP)\, Harvard Medical School
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Honors Undergraduate Research Prog
+ ram (SHURP)\, Harvard Medical School
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Honors Undergraduate Research Program (S
- HURP)\, Harvard Medical School
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Honors Undergraduate Research Pro
+ gram (SHURP)\, Harvard Medical School
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0d6f76104edfda252ea7@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
-SUMMARY:Opens: Summer Honors Undergraduate Research Program (SHURP)\, Harva
- rd Medical School
+SUMMARY:Opens (est.): Summer Honors Undergraduate Research Program (SHURP)\
+ , Harvard Medical School
 DESCRIPTION:Harvard Medical School\, Boston\, MA. Date status: projected. h
  ttps://www.hms.harvard.edu/dms/diversity/shurp/
 URL:https://www.hms.harvard.edu/dms/diversity/shurp/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Honors Undergraduate Research Program (S
- HURP)\, Harvard Medical School
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Honors Undergraduate Research Pro
+ gram (SHURP)\, Harvard Medical School
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9bdf927b9142e8bab69a@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Internship Program\, Benaroya Research Institute
-DESCRIPTION:Benaroya Research Institute\, Seattle\, WA. Date status: unknow
- n. https://www.benaroyaresearch.org/
+DESCRIPTION:Benaroya Research Institute\, Seattle\, WA. Date status: projec
+ ted. https://www.benaroyaresearch.org/
 URL:https://www.benaroyaresearch.org/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Internship Program\, Benaroya Research In
- stitute
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Internship Program\, Benaroya Rese
+ arch Institute
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Internship Program\, Benaroya Research I
- nstitute
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Internship Program\, Benaroya Res
+ earch Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:17cd8645831b5e776f73@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Internship Program\, Benaroya Research Institute
-DESCRIPTION:Benaroya Research Institute\, Seattle\, WA. Date status: unknow
- n. https://www.benaroyaresearch.org/
+SUMMARY:Opens (est.): Summer Internship Program\, Benaroya Research Institu
+ te
+DESCRIPTION:Benaroya Research Institute\, Seattle\, WA. Date status: projec
+ ted. https://www.benaroyaresearch.org/
 URL:https://www.benaroyaresearch.org/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Internship Program\, Benaroya Research I
- nstitute
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Internship Program\, Benaroya Res
+ earch Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:de4d059d471f6d1831f1@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Internship Program (Pathway)\, Johns Hopkins Sch
- ool of Medicine
+SUMMARY:DUE: Summer Internship Program (Pathway)\, Johns Hopkins School of 
+ Medicine
 DESCRIPTION:Johns Hopkins School of Medicine\, Baltimore\, MD. Date status:
-  projected. https://www.hopkinsmedicine.org/som/pathway/summer-internship-
+  confirmed. https://www.hopkinsmedicine.org/som/pathway/summer-internship-
  program
 URL:https://www.hopkinsmedicine.org/som/pathway/summer-internship-program
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Internship Program (Pathway)\, Johns Hopk
  ins School of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Internship Program (Pathway)\, Johns Hop
  kins School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:65df0fe0159741e46370@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
 SUMMARY:Opens: Summer Internship Program (Pathway)\, Johns Hopkins School o
  f Medicine
 DESCRIPTION:Johns Hopkins School of Medicine\, Baltimore\, MD. Date status:
-  projected. https://www.hopkinsmedicine.org/som/pathway/summer-internship-
+  confirmed. https://www.hopkinsmedicine.org/som/pathway/summer-internship-
  program
 URL:https://www.hopkinsmedicine.org/som/pathway/summer-internship-program
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Summer Internship Program (Pathway)\, Johns Hop
  kins School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:dca616906cd1cbc7d74c@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Premedical Academic Enrichment / research progra
@@ -1530,130 +1640,132 @@ DESCRIPTION:University of Pittsburgh School of Medicine\, Pittsburgh\, PA.
  Date status: projected. https://www.medschool.pitt.edu/
 URL:https://www.medschool.pitt.edu/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Premedical Academic Enrichment / research
-  programs\, University of Pittsburgh School of Medicine
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Premedical Academic Enrichment / r
+ esearch programs\, University of Pittsburgh School of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Premedical Academic Enrichment / researc
- h programs\, University of Pittsburgh School of Medicine
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Premedical Academic Enrichment / 
+ research programs\, University of Pittsburgh School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:8ff26bbe724b7c73d71f@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Premedical Academic Enrichment / research programs\, 
- University of Pittsburgh School of Medicine
+SUMMARY:Opens (est.): Summer Premedical Academic Enrichment / research prog
+ rams\, University of Pittsburgh School of Medicine
 DESCRIPTION:University of Pittsburgh School of Medicine\, Pittsburgh\, PA. 
  Date status: projected. https://www.medschool.pitt.edu/
 URL:https://www.medschool.pitt.edu/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Premedical Academic Enrichment / researc
- h programs\, University of Pittsburgh School of Medicine
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Premedical Academic Enrichment / 
+ research programs\, University of Pittsburgh School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c527c25b1268b80ebaca@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Research Opportunities\, Wake Forest University 
  School of Medicine / Atrium Health
 DESCRIPTION:Wake Forest University School of Medicine / Atrium Health\, Win
- ston-Salem\, NC. Date status: unknown. https://school.wakehealth.edu/educa
- tion-and-training
+ ston-Salem\, NC. Date status: projected. https://school.wakehealth.edu/edu
+ cation-and-training
 URL:https://school.wakehealth.edu/education-and-training
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Research Opportunities\, Wake Forest Univ
- ersity School of Medicine / Atrium Health
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Research Opportunities\, Wake Fore
+ st University School of Medicine / Atrium Health
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Research Opportunities\, Wake Forest Uni
- versity School of Medicine / Atrium Health
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Research Opportunities\, Wake For
+ est University School of Medicine / Atrium Health
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:187a25e3852f1d653664@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Research Opportunities\, Wake Forest University Schoo
- l of Medicine / Atrium Health
+SUMMARY:Opens (est.): Summer Research Opportunities\, Wake Forest Universit
+ y School of Medicine / Atrium Health
 DESCRIPTION:Wake Forest University School of Medicine / Atrium Health\, Win
- ston-Salem\, NC. Date status: unknown. https://school.wakehealth.edu/educa
- tion-and-training
+ ston-Salem\, NC. Date status: projected. https://school.wakehealth.edu/edu
+ cation-and-training
 URL:https://school.wakehealth.edu/education-and-training
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Research Opportunities\, Wake Forest Uni
- versity School of Medicine / Atrium Health
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Research Opportunities\, Wake For
+ est University School of Medicine / Atrium Health
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f433cf01138b1d6c8e6e@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Research Opportunity Program (SROP)\, University
-  of Michigan
-DESCRIPTION:University of Michigan\, Ann Arbor\, MI. Date status: projected
- . https://rackham.umich.edu/preparing-for-graduate-school/summer-research-
- opportunity-program/
-URL:https://rackham.umich.edu/preparing-for-graduate-school/summer-research
- -opportunity-program/
+SUMMARY:DUE: Summer Research Opportunity Program (SROP)\, University of Mic
+ higan
+DESCRIPTION:University of Michigan\, Ann Arbor\, MI. Date status: confirmed
+ . https://rackham.umich.edu/prospective-students/srop/
+URL:https://rackham.umich.edu/prospective-students/srop/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Research Opportunity Program (SROP)\, Uni
  versity of Michigan
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Research Opportunity Program (SROP)\, Un
  iversity of Michigan
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9ef05ee3b5d6272c4760@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
 SUMMARY:Opens: Summer Research Opportunity Program (SROP)\, University of M
  ichigan
-DESCRIPTION:University of Michigan\, Ann Arbor\, MI. Date status: projected
- . https://rackham.umich.edu/preparing-for-graduate-school/summer-research-
- opportunity-program/
-URL:https://rackham.umich.edu/preparing-for-graduate-school/summer-research
- -opportunity-program/
+DESCRIPTION:University of Michigan\, Ann Arbor\, MI. Date status: confirmed
+ . https://rackham.umich.edu/prospective-students/srop/
+URL:https://rackham.umich.edu/prospective-students/srop/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Summer Research Opportunity Program (SROP)\, Un
  iversity of Michigan
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:61ca28ec8900fba6f891@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE: Summer Research Training Program (SRTP)\, UCSF School of Medic
@@ -1662,22 +1774,23 @@ DESCRIPTION:UCSF School of Medicine\, San Francisco\, CA. Date status: conf
  irmed. https://graduate.ucsf.edu/academics/srtp
 URL:https://graduate.ucsf.edu/academics/srtp
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Research Training Program (SRTP)\, UCSF S
  chool of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Research Training Program (SRTP)\, UCSF 
  School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:61907c8de3dd6d470943@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Opens: Summer Research Training Program (SRTP)\, UCSF School of Med
@@ -1686,16 +1799,17 @@ DESCRIPTION:UCSF School of Medicine\, San Francisco\, CA. Date status: conf
  irmed. https://graduate.ucsf.edu/academics/srtp
 URL:https://graduate.ucsf.edu/academics/srtp
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Summer Research Training Program (SRTP)\, UCSF 
  School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5187c67c3776033562dd@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Scholars Program\, University of Rochester Medic
@@ -1705,41 +1819,23 @@ DESCRIPTION:University of Rochester Medical Center\, Rochester\, NY. Date s
  -scholars
 URL:https://www.urmc.rochester.edu/education/graduate/summer-scholars
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Scholars Program\, University of Rocheste
- r Medical Center
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Scholars Program\, University of R
+ ochester Medical Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Scholars Program\, University of Rochest
- er Medical Center
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:d7114e6222f1d9cb7ac6@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Scholars Program\, University of Rochester Medical Ce
- nter
-DESCRIPTION:University of Rochester Medical Center\, Rochester\, NY. Date s
- tatus: projected. https://www.urmc.rochester.edu/education/graduate/summer
- -scholars
-URL:https://www.urmc.rochester.edu/education/graduate/summer-scholars
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Scholars Program\, University of Rochest
- er Medical Center
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Scholars Program\, University of 
+ Rochester Medical Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:8050c0bbc172e330078e@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Scholars Program\, Stowers Institute for Medical
@@ -1748,40 +1844,42 @@ DESCRIPTION:Stowers Institute for Medical Research\, Kansas City\, MO. Date
   status: projected. https://www.stowers.org/
 URL:https://www.stowers.org/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Scholars Program\, Stowers Institute for 
- Medical Research
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Scholars Program\, Stowers Institu
+ te for Medical Research
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Scholars Program\, Stowers Institute for
-  Medical Research
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Scholars Program\, Stowers Instit
+ ute for Medical Research
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c9708aeb035fd220cd3b@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Scholars Program\, Stowers Institute for Medical Rese
- arch
+SUMMARY:Opens (est.): Summer Scholars Program\, Stowers Institute for Medic
+ al Research
 DESCRIPTION:Stowers Institute for Medical Research\, Kansas City\, MO. Date
   status: projected. https://www.stowers.org/
 URL:https://www.stowers.org/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Scholars Program\, Stowers Institute for
-  Medical Research
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Scholars Program\, Stowers Instit
+ ute for Medical Research
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:389706d59137f57ca836@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Student Internship\, Van Andel Institute
@@ -1789,122 +1887,87 @@ DESCRIPTION:Van Andel Institute\, Grand Rapids\, MI. Date status: projected
  . https://www.vai.org/
 URL:https://www.vai.org/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Student Internship\, Van Andel Institute
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Student Internship\, Van Andel Ins
+ titute
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Student Internship\, Van Andel Institute
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Student Internship\, Van Andel In
+ stitute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d71427aa24716568d6ad@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Student Internship\, Van Andel Institute
+SUMMARY:Opens (est.): Summer Student Internship\, Van Andel Institute
 DESCRIPTION:Van Andel Institute\, Grand Rapids\, MI. Date status: projected
  . https://www.vai.org/
 URL:https://www.vai.org/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Student Internship\, Van Andel Institute
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:c9ff019249d4a878a5a1@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Student Research Program\, Children's Hospital L
- os Angeles (Saban Research Institute)
-DESCRIPTION:Children's Hospital Los Angeles (Saban Research Institute)\, Lo
- s Angeles\, CA. Date status: projected. https://www.chla.org/research/educ
- ation-training
-URL:https://www.chla.org/research/education-training
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Student Research Program\, Children's Hos
- pital Los Angeles (Saban Research Institute)
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Student Research Program\, Children's Ho
- spital Los Angeles (Saban Research Institute)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:0da93c94412a00ac5e82@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Student Research Program\, Children's Hospital Los An
- geles (Saban Research Institute)
-DESCRIPTION:Children's Hospital Los Angeles (Saban Research Institute)\, Lo
- s Angeles\, CA. Date status: projected. https://www.chla.org/research/educ
- ation-training
-URL:https://www.chla.org/research/education-training
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Student Research Program\, Children's Ho
- spital Los Angeles (Saban Research Institute)
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Student Internship\, Van Andel In
+ stitute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:35290ff6a20ed795ddf3@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Undergraduate Internship Program (SUIP)\, Univer
- sity of Pennsylvania: Biomedical Graduate Studies
+SUMMARY:DUE: Summer Undergraduate Internship Program (SUIP)\, University of
+  Pennsylvania: Biomedical Graduate Studies
 DESCRIPTION:University of Pennsylvania: Biomedical Graduate Studies\, Phila
- delphia\, PA. Date status: projected. https://www.med.upenn.edu/suip/
-URL:https://www.med.upenn.edu/suip/
+ delphia\, PA. Date status: confirmed. https://www.med.upenn.edu/research-t
+ rainee-affairs/suip/
+URL:https://www.med.upenn.edu/research-trainee-affairs/suip/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Undergraduate Internship Program (SUIP)\,
   University of Pennsylvania: Biomedical Graduate Studies
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Undergraduate Internship Program (SUIP)\
  , University of Pennsylvania: Biomedical Graduate Studies
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:12563914a23d090f09eb@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
 SUMMARY:Opens: Summer Undergraduate Internship Program (SUIP)\, University 
  of Pennsylvania: Biomedical Graduate Studies
 DESCRIPTION:University of Pennsylvania: Biomedical Graduate Studies\, Phila
- delphia\, PA. Date status: projected. https://www.med.upenn.edu/suip/
-URL:https://www.med.upenn.edu/suip/
+ delphia\, PA. Date status: confirmed. https://www.med.upenn.edu/research-t
+ rainee-affairs/suip/
+URL:https://www.med.upenn.edu/research-trainee-affairs/suip/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Summer Undergraduate Internship Program (SUIP)\
  , University of Pennsylvania: Biomedical Graduate Studies
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2dea43e2c2e61afd888d@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Undergraduate Research Experience (SURE)\, Emory
@@ -1913,40 +1976,42 @@ DESCRIPTION:Emory University\, Atlanta\, GA. Date status: projected. https:
  //scholarblogs.emory.edu/urp/sure/
 URL:https://scholarblogs.emory.edu/urp/sure/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Experience (SURE)\
- , Emory University
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Experience 
+ (SURE)\, Emory University
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Experience (SURE)
- \, Emory University
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Experience
+  (SURE)\, Emory University
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bc3e2abe10ffd407d68e@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Undergraduate Research Experience (SURE)\, Emory Univ
- ersity
+SUMMARY:Opens (est.): Summer Undergraduate Research Experience (SURE)\, Emo
+ ry University
 DESCRIPTION:Emory University\, Atlanta\, GA. Date status: projected. https:
  //scholarblogs.emory.edu/urp/sure/
 URL:https://scholarblogs.emory.edu/urp/sure/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Experience (SURE)
- \, Emory University
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Experience
+  (SURE)\, Emory University
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:97d5583ee5b035d45808@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Undergraduate Research Fellowship (SURF)\, Cinci
@@ -1956,167 +2021,156 @@ DESCRIPTION:Cincinnati Children's Hospital Medical Center\, Cincinnati\, OH
  search
 URL:https://www.cincinnatichildrens.org/education/research
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Fellowship (SURF)\
- , Cincinnati Children's Hospital Medical Center
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Fellowship 
+ (SURF)\, Cincinnati Children's Hospital Medical Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Fellowship (SURF)
- \, Cincinnati Children's Hospital Medical Center
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Fellowship
+  (SURF)\, Cincinnati Children's Hospital Medical Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:3f4e6629b09cc9ed3e41@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
-SUMMARY:Opens: Summer Undergraduate Research Fellowship (SURF)\, Cincinnati
-  Children's Hospital Medical Center
+SUMMARY:Opens (est.): Summer Undergraduate Research Fellowship (SURF)\, Cin
+ cinnati Children's Hospital Medical Center
 DESCRIPTION:Cincinnati Children's Hospital Medical Center\, Cincinnati\, OH
  . Date status: projected. https://www.cincinnatichildrens.org/education/re
  search
 URL:https://www.cincinnatichildrens.org/education/research
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Fellowship (SURF)
- \, Cincinnati Children's Hospital Medical Center
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Fellowship
+  (SURF)\, Cincinnati Children's Hospital Medical Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c3e0b6ecaf50153cb69f@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Undergraduate Research Fellowship (SURF)\, The R
- ockefeller University
-DESCRIPTION:The Rockefeller University\, New York\, NY. Date status: projec
- ted. https://www.rockefeller.edu/education-and-training/surf/
+SUMMARY:DUE: Summer Undergraduate Research Fellowship (SURF)\, The Rockefel
+ ler University
+DESCRIPTION:The Rockefeller University\, New York\, NY. Date status: confir
+ med. https://www.rockefeller.edu/education-and-training/surf/
 URL:https://www.rockefeller.edu/education-and-training/surf/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Undergraduate Research Fellowship (SURF)\
  , The Rockefeller University
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Undergraduate Research Fellowship (SURF)
  \, The Rockefeller University
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:abb4c8f35d49f04b4309@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Undergraduate Research Fellowship (SURF)\, The Rockef
- eller University
+SUMMARY:Opens (est.): Summer Undergraduate Research Fellowship (SURF)\, The
+  Rockefeller University
 DESCRIPTION:The Rockefeller University\, New York\, NY. Date status: projec
  ted. https://www.rockefeller.edu/education-and-training/surf/
 URL:https://www.rockefeller.edu/education-and-training/surf/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Fellowship (SURF)
- \, The Rockefeller University
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Fellowship
+  (SURF)\, The Rockefeller University
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:1bcbf93d222ffea71522@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:DUE: Summer Undergraduate Research Fellowship (SURF)\, Scripps Rese
+ arch
+DESCRIPTION:Scripps Research\, La Jolla\, CA. Date status: confirmed. https
+ ://education.scripps.edu/undergraduate/summer-research/index.html
+URL:https://education.scripps.edu/undergraduate/summer-research/index.html
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Summer Undergraduate Research Fellowship (SURF)\
+ , Scripps Research
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Summer Undergraduate Research Fellowship (SURF)
+ \, Scripps Research
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:87efc27f276a3f66e162@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Undergraduate Research Fellowship (SURF)\, UT So
- uthwestern Medical Center
-DESCRIPTION:UT Southwestern Medical Center\, Dallas\, TX. Date status: proj
- ected. https://gsbs.utsouthwestern.edu/
-URL:https://gsbs.utsouthwestern.edu/
+SUMMARY:DUE: Summer Undergraduate Research Fellowship (SURF)\, UT Southwest
+ ern Medical Center
+DESCRIPTION:UT Southwestern Medical Center\, Dallas\, TX. Date status: conf
+ irmed. https://gsbs.utsouthwestern.edu/research-opportunities/surf/
+URL:https://gsbs.utsouthwestern.edu/research-opportunities/surf/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Undergraduate Research Fellowship (SURF)\
  , UT Southwestern Medical Center
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Undergraduate Research Fellowship (SURF)
  \, UT Southwestern Medical Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:95b3a116fe451aa58657@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Opens: Summer Undergraduate Research Fellowship (SURF)\, UT Southwe
  stern Medical Center
-DESCRIPTION:UT Southwestern Medical Center\, Dallas\, TX. Date status: proj
- ected. https://gsbs.utsouthwestern.edu/
-URL:https://gsbs.utsouthwestern.edu/
+DESCRIPTION:UT Southwestern Medical Center\, Dallas\, TX. Date status: conf
+ irmed. https://gsbs.utsouthwestern.edu/research-opportunities/surf/
+URL:https://gsbs.utsouthwestern.edu/research-opportunities/surf/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Fellowship (SURF)
  \, UT Southwestern Medical Center
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:1bcbf93d222ffea71522@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Undergraduate Research Fellowship (SURF)\, Scrip
- ps Research
-DESCRIPTION:Scripps Research\, La Jolla\, CA. Date status: projected. https
- ://education.scripps.edu/
-URL:https://education.scripps.edu/
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Fellowship (SURF)\
- , Scripps Research
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Fellowship (SURF)
- \, Scripps Research
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:4894137c383a513b4a9c@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Undergraduate Research Fellowship (SURF)\, Scripps Re
- search
-DESCRIPTION:Scripps Research\, La Jolla\, CA. Date status: projected. https
- ://education.scripps.edu/
-URL:https://education.scripps.edu/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Fellowship (SURF)
- \, Scripps Research
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:60838300832b7e1e65dd@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE: Summer Undergraduate Research Internship Program (SURIP)\, Pen
@@ -2127,168 +2181,88 @@ DESCRIPTION:Penn State College of Medicine\, Hershey\, PA. Date status: con
 URL:https://med.psu.edu/education/certificate-and-undergraduate/summer-unde
  rgrad-internship-surip
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Undergraduate Research Internship Program
   (SURIP)\, Penn State College of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Undergraduate Research Internship Progra
  m (SURIP)\, Penn State College of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:572aa7b62a5c29cdb0cf@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Undergraduate Research Internship Program (SURIP)\, P
- enn State College of Medicine
-DESCRIPTION:Penn State College of Medicine\, Hershey\, PA. Date status: con
- firmed. https://med.psu.edu/education/certificate-and-undergraduate/summer
+SUMMARY:Opens (est.): Summer Undergraduate Research Internship Program (SUR
+ IP)\, Penn State College of Medicine
+DESCRIPTION:Penn State College of Medicine\, Hershey\, PA. Date status: pro
+ jected. https://med.psu.edu/education/certificate-and-undergraduate/summer
  -undergrad-internship-surip
 URL:https://med.psu.edu/education/certificate-and-undergraduate/summer-unde
  rgrad-internship-surip
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Internship Progra
- m (SURIP)\, Penn State College of Medicine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:7f041ccda25400e82ecb@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Undergraduate Research Program\, Medical Univers
- ity of South Carolina
-DESCRIPTION:Medical University of South Carolina\, Charleston\, SC. Date st
- atus: projected. https://gradstudies.musc.edu/
-URL:https://gradstudies.musc.edu/
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Program\, Medical 
- University of South Carolina
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Program\, Medical
-  University of South Carolina
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:855df5a27067f5f52065@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Undergraduate Research Program\, Medical University o
- f South Carolina
-DESCRIPTION:Medical University of South Carolina\, Charleston\, SC. Date st
- atus: projected. https://gradstudies.musc.edu/
-URL:https://gradstudies.musc.edu/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program\, Medical
-  University of South Carolina
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:364241613899d99ed540@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Undergraduate Research Program\, Nemours Childre
- n's Health
-DESCRIPTION:Nemours Children's Health\, Wilmington\, DE. Date status: unkno
- wn. https://www.nemours.org/pediatric-research.html
-URL:https://www.nemours.org/pediatric-research.html
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Program\, Nemours 
- Children's Health
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Program\, Nemours
-  Children's Health
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:53232500e88924044264@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Undergraduate Research Program\, Nemours Children's H
- ealth
-DESCRIPTION:Nemours Children's Health\, Wilmington\, DE. Date status: unkno
- wn. https://www.nemours.org/pediatric-research.html
-URL:https://www.nemours.org/pediatric-research.html
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program\, Nemours
-  Children's Health
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Internship
+  Program (SURIP)\, Penn State College of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:58ce1ec8d64858c5c511@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Undergraduate Research Program\, Arkansas Childr
  en's Research Institute
 DESCRIPTION:Arkansas Children's Research Institute\, Little Rock\, AR. Date
-  status: unknown. https://www.archildrens.org/research
+  status: projected. https://www.archildrens.org/research
 URL:https://www.archildrens.org/research
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Program\, Arkansas
-  Children's Research Institute
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Program\, A
+ rkansas Children's Research Institute
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Program\, Arkansa
- s Children's Research Institute
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Program\, 
+ Arkansas Children's Research Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:05b1748ff8b17a093ee6@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Undergraduate Research Program\, Arkansas Children's 
- Research Institute
+SUMMARY:Opens (est.): Summer Undergraduate Research Program\, Arkansas Chil
+ dren's Research Institute
 DESCRIPTION:Arkansas Children's Research Institute\, Little Rock\, AR. Date
-  status: unknown. https://www.archildrens.org/research
+  status: projected. https://www.archildrens.org/research
 URL:https://www.archildrens.org/research
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program\, Arkansa
- s Children's Research Institute
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Program\, 
+ Arkansas Children's Research Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:16c1fcb824c64a00413e@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Undergraduate Research Program\, Cleveland Clini
@@ -2297,40 +2271,130 @@ DESCRIPTION:Cleveland Clinic Lerner Research Institute\, Cleveland\, OH. Da
  te status: projected. https://www.lerner.ccf.org/education/
 URL:https://www.lerner.ccf.org/education/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Program\, Clevelan
- d Clinic Lerner Research Institute
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Program\, C
+ leveland Clinic Lerner Research Institute
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Program\, Clevela
- nd Clinic Lerner Research Institute
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Program\, 
+ Cleveland Clinic Lerner Research Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5db97960a3c1e710f3bd@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Undergraduate Research Program\, Cleveland Clinic Ler
- ner Research Institute
+SUMMARY:Opens (est.): Summer Undergraduate Research Program\, Cleveland Cli
+ nic Lerner Research Institute
 DESCRIPTION:Cleveland Clinic Lerner Research Institute\, Cleveland\, OH. Da
  te status: projected. https://www.lerner.ccf.org/education/
 URL:https://www.lerner.ccf.org/education/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program\, Clevela
- nd Clinic Lerner Research Institute
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Program\, 
+ Cleveland Clinic Lerner Research Institute
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:7f041ccda25400e82ecb@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:DUE (est.): Summer Undergraduate Research Program\, Medical Univers
+ ity of South Carolina
+DESCRIPTION:Medical University of South Carolina\, Charleston\, SC. Date st
+ atus: projected. https://gradstudies.musc.edu/
+URL:https://gradstudies.musc.edu/
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Program\, M
+ edical University of South Carolina
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Program\, 
+ Medical University of South Carolina
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:855df5a27067f5f52065@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Opens (est.): Summer Undergraduate Research Program\, Medical Unive
+ rsity of South Carolina
+DESCRIPTION:Medical University of South Carolina\, Charleston\, SC. Date st
+ atus: projected. https://gradstudies.musc.edu/
+URL:https://gradstudies.musc.edu/
+CATEGORIES:opens
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Program\, 
+ Medical University of South Carolina
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:364241613899d99ed540@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:DUE (est.): Summer Undergraduate Research Program\, Nemours Childre
+ n's Health
+DESCRIPTION:Nemours Children's Health\, Wilmington\, DE. Date status: proje
+ cted. https://www.nemours.org/pediatric-research.html
+URL:https://www.nemours.org/pediatric-research.html
+CATEGORIES:deadline
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Program\, N
+ emours Children's Health
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Program\, 
+ Nemours Children's Health
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:53232500e88924044264@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Opens (est.): Summer Undergraduate Research Program\, Nemours Child
+ ren's Health
+DESCRIPTION:Nemours Children's Health\, Wilmington\, DE. Date status: proje
+ cted. https://www.nemours.org/pediatric-research.html
+URL:https://www.nemours.org/pediatric-research.html
+CATEGORIES:opens
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Program\, 
+ Nemours Children's Health
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b9c5c6876b8cd7c0c316@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Undergraduate Research Program\, UNC Chapel Hill
@@ -2339,128 +2403,42 @@ DESCRIPTION:UNC Chapel Hill School of Medicine\, Chapel Hill\, NC. Date sta
  tus: projected. https://bbsp.unc.edu/
 URL:https://bbsp.unc.edu/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Program\, UNC Chap
- el Hill School of Medicine
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Program\, U
+ NC Chapel Hill School of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Program\, UNC Cha
- pel Hill School of Medicine
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Program\, 
+ UNC Chapel Hill School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d2d2cb98456c98a9fcc8@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Undergraduate Research Program\, UNC Chapel Hill Scho
- ol of Medicine
+SUMMARY:Opens (est.): Summer Undergraduate Research Program\, UNC Chapel Hi
+ ll School of Medicine
 DESCRIPTION:UNC Chapel Hill School of Medicine\, Chapel Hill\, NC. Date sta
  tus: projected. https://bbsp.unc.edu/
 URL:https://bbsp.unc.edu/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program\, UNC Cha
- pel Hill School of Medicine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:38510a16fda95db557bb@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Undergraduate Research Program\, UMass Chan Medi
- cal School
-DESCRIPTION:UMass Chan Medical School\, Worcester\, MA. Date status: projec
- ted. https://www.umassmed.edu/gsbs/outreach-programs/summer-undergraduate-
- research-program/
-URL:https://www.umassmed.edu/gsbs/outreach-programs/summer-undergraduate-re
- search-program/
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Program\, UMass Ch
- an Medical School
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Program\, UMass C
- han Medical School
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:d487f2eee6087cb8aa5f@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Undergraduate Research Program\, UMass Chan Medical S
- chool
-DESCRIPTION:UMass Chan Medical School\, Worcester\, MA. Date status: projec
- ted. https://www.umassmed.edu/gsbs/outreach-programs/summer-undergraduate-
- research-program/
-URL:https://www.umassmed.edu/gsbs/outreach-programs/summer-undergraduate-re
- search-program/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program\, UMass C
- han Medical School
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:560c8974befeb5d8885e@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Undergraduate Research Program (SURP)\, Icahn Sc
- hool of Medicine at Mount Sinai
-DESCRIPTION:Icahn School of Medicine at Mount Sinai\, New York\, NY. Date s
- tatus: projected. https://icahn.mssm.edu/education/non-degree/surp4us
-URL:https://icahn.mssm.edu/education/non-degree/surp4us
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Program (SURP)\, I
- cahn School of Medicine at Mount Sinai
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Program (SURP)\, 
- Icahn School of Medicine at Mount Sinai
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:ad40f35e62f107353798@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Undergraduate Research Program (SURP)\, Icahn School 
- of Medicine at Mount Sinai
-DESCRIPTION:Icahn School of Medicine at Mount Sinai\, New York\, NY. Date s
- tatus: projected. https://icahn.mssm.edu/education/non-degree/surp4us
-URL:https://icahn.mssm.edu/education/non-degree/surp4us
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program (SURP)\, 
- Icahn School of Medicine at Mount Sinai
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Program\, 
+ UNC Chapel Hill School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:848be0b7bc3ebdfa5e9b@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Undergraduate Research Program (SURP)\, Albert E
@@ -2469,132 +2447,90 @@ DESCRIPTION:Albert Einstein College of Medicine\, Bronx\, NY. Date status:
  projected. https://einsteinmed.edu/education/
 URL:https://einsteinmed.edu/education/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Program (SURP)\, A
- lbert Einstein College of Medicine
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Program (SU
+ RP)\, Albert Einstein College of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Program (SURP)\, 
- Albert Einstein College of Medicine
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Program (S
+ URP)\, Albert Einstein College of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:1354ce8cf236995d356c@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Undergraduate Research Program (SURP)\, Albert Einste
- in College of Medicine
+SUMMARY:Opens (est.): Summer Undergraduate Research Program (SURP)\, Albert
+  Einstein College of Medicine
 DESCRIPTION:Albert Einstein College of Medicine\, Bronx\, NY. Date status: 
  projected. https://einsteinmed.edu/education/
 URL:https://einsteinmed.edu/education/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program (SURP)\, 
- Albert Einstein College of Medicine
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Program (S
+ URP)\, Albert Einstein College of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f39fec54c55ea79144d1@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer Undergraduate Research Programs\, American Heart
   Association
 DESCRIPTION:American Heart Association\, Multiple host institutions. Date s
- tatus: unknown. https://professional.heart.org/en/research-programs/aha-fu
- nding-opportunities
+ tatus: projected. https://professional.heart.org/en/research-programs/aha-
+ funding-opportunities
 URL:https://professional.heart.org/en/research-programs/aha-funding-opportu
  nities
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Programs\, America
- n Heart Association
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Programs\, 
+ American Heart Association
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Programs\, Americ
- an Heart Association
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Programs\,
+  American Heart Association
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9d755d5704eb772f8f6b@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Undergraduate Research Programs\, American Heart Asso
- ciation
+SUMMARY:Opens (est.): Summer Undergraduate Research Programs\, American Hea
+ rt Association
 DESCRIPTION:American Heart Association\, Multiple host institutions. Date s
- tatus: unknown. https://professional.heart.org/en/research-programs/aha-fu
- nding-opportunities
+ tatus: projected. https://professional.heart.org/en/research-programs/aha-
+ funding-opportunities
 URL:https://professional.heart.org/en/research-programs/aha-funding-opportu
  nities
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Programs\, Americ
- an Heart Association
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:eea1e095e8a72a508663@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer Undergraduate Research Training (SMART) Program\
- , Baylor College of Medicine / Texas Children's Hospital
-DESCRIPTION:Baylor College of Medicine / Texas Children's Hospital\, Housto
- n\, TX. Date status: projected. https://www.bcm.edu/education/graduate-sch
- ool-of-biomedical-sciences/degree-programs-and-certificates/smart-program
-URL:https://www.bcm.edu/education/graduate-school-of-biomedical-sciences/de
- gree-programs-and-certificates/smart-program
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Training (SMART) P
- rogram\, Baylor College of Medicine / Texas Children's Hospital
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Training (SMART) 
- Program\, Baylor College of Medicine / Texas Children's Hospital
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:387366b4e400be4343ab@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261001
-DTEND;VALUE=DATE:20261002
-SUMMARY:Opens: Summer Undergraduate Research Training (SMART) Program\, Bay
- lor College of Medicine / Texas Children's Hospital
-DESCRIPTION:Baylor College of Medicine / Texas Children's Hospital\, Housto
- n\, TX. Date status: projected. https://www.bcm.edu/education/graduate-sch
- ool-of-biomedical-sciences/degree-programs-and-certificates/smart-program
-URL:https://www.bcm.edu/education/graduate-school-of-biomedical-sciences/de
- gree-programs-and-certificates/smart-program
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Training (SMART) 
- Program\, Baylor College of Medicine / Texas Children's Hospital
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Programs\,
+  American Heart Association
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:831868fe0f260035b04b@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer in Biomedical Science (SIBS)\, University of Ala
@@ -2603,40 +2539,42 @@ DESCRIPTION:University of Alabama at Birmingham\, Birmingham\, AL. Date sta
  tus: projected. https://www.uab.edu/gbs/home/
 URL:https://www.uab.edu/gbs/home/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer in Biomedical Science (SIBS)\, University
-  of Alabama at Birmingham
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer in Biomedical Science (SIBS)\, Uni
+ versity of Alabama at Birmingham
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer in Biomedical Science (SIBS)\, Universit
- y of Alabama at Birmingham
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer in Biomedical Science (SIBS)\, Un
+ iversity of Alabama at Birmingham
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2bf937ab745e4556c64c@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer in Biomedical Science (SIBS)\, University of Alabama 
- at Birmingham
+SUMMARY:Opens (est.): Summer in Biomedical Science (SIBS)\, University of A
+ labama at Birmingham
 DESCRIPTION:University of Alabama at Birmingham\, Birmingham\, AL. Date sta
  tus: projected. https://www.uab.edu/gbs/home/
 URL:https://www.uab.edu/gbs/home/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer in Biomedical Science (SIBS)\, Universit
- y of Alabama at Birmingham
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer in Biomedical Science (SIBS)\, Un
+ iversity of Alabama at Birmingham
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:77596658b4291865d0e3@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Summer research programs\, Howard University College of
@@ -2645,124 +2583,42 @@ DESCRIPTION:Howard University College of Medicine\, Washington\, DC. Date s
  tatus: projected. https://medicine.howard.edu/
 URL:https://medicine.howard.edu/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer research programs\, Howard University Col
- lege of Medicine
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer research programs\, Howard Univers
+ ity College of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer research programs\, Howard University Co
- llege of Medicine
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer research programs\, Howard Univer
+ sity College of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:93d25079cfe6798e4834@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer research programs\, Howard University College of Medi
- cine
+SUMMARY:Opens (est.): Summer research programs\, Howard University College 
+ of Medicine
 DESCRIPTION:Howard University College of Medicine\, Washington\, DC. Date s
  tatus: projected. https://medicine.howard.edu/
 URL:https://medicine.howard.edu/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer research programs\, Howard University Co
- llege of Medicine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:d38c468f1bbe5afc68f8@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer research programs (Graduate School / SROP)\, Duk
- e University
-DESCRIPTION:Duke University\, Durham\, NC. Date status: projected. https://
- gradschool.duke.edu/professional-development/
-URL:https://gradschool.duke.edu/professional-development/
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer research programs (Graduate School / SROP
- )\, Duke University
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer research programs (Graduate School / SRO
- P)\, Duke University
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:d1fd6341380a0b420561@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer research programs (Graduate School / SROP)\, Duke Uni
- versity
-DESCRIPTION:Duke University\, Durham\, NC. Date status: projected. https://
- gradschool.duke.edu/professional-development/
-URL:https://gradschool.duke.edu/professional-development/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer research programs (Graduate School / SRO
- P)\, Duke University
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:6a3799774c4272a9e011@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE (est.): Summer undergraduate research (Zuckerman Institute)\, C
- olumbia University
-DESCRIPTION:Columbia University\, New York\, NY. Date status: unknown. http
- s://zuckermaninstitute.columbia.edu/education-training
-URL:https://zuckermaninstitute.columbia.edu/education-training
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer undergraduate research (Zuckerman Institu
- te)\, Columbia University
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer undergraduate research (Zuckerman Instit
- ute)\, Columbia University
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:d50dc4e200d80b7fddb5@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer undergraduate research (Zuckerman Institute)\, Columb
- ia University
-DESCRIPTION:Columbia University\, New York\, NY. Date status: unknown. http
- s://zuckermaninstitute.columbia.edu/education-training
-URL:https://zuckermaninstitute.columbia.edu/education-training
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer undergraduate research (Zuckerman Instit
- ute)\, Columbia University
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer research programs\, Howard Univer
+ sity College of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:cab7393e48507c36adff@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:DUE (est.): Travelers Summer Research Fellowship (T-SRF)\, Weill Co
@@ -2771,82 +2627,42 @@ DESCRIPTION:Weill Cornell Medicine\, New York\, NY. Date status: projected.
   https://teach.weill.cornell.edu/medical-education/programs
 URL:https://teach.weill.cornell.edu/medical-education/programs
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Travelers Summer Research Fellowship (T-SRF)\, W
- eill Cornell Medicine
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Travelers Summer Research Fellowship (T-S
+ RF)\, Weill Cornell Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Travelers Summer Research Fellowship (T-SRF)\, 
- Weill Cornell Medicine
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Travelers Summer Research Fellowship (T-
+ SRF)\, Weill Cornell Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:19074add63b59c479976@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Travelers Summer Research Fellowship (T-SRF)\, Weill Cornell
-  Medicine
+SUMMARY:Opens (est.): Travelers Summer Research Fellowship (T-SRF)\, Weill 
+ Cornell Medicine
 DESCRIPTION:Weill Cornell Medicine\, New York\, NY. Date status: projected.
   https://teach.weill.cornell.edu/medical-education/programs
 URL:https://teach.weill.cornell.edu/medical-education/programs
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Travelers Summer Research Fellowship (T-SRF)\, 
- Weill Cornell Medicine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:204c3d4fd302ae50b9f5@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270202
-SUMMARY:DUE: Vanderbilt Summer Science Academy (VSSA)\, Vanderbilt Universi
- ty
-DESCRIPTION:Vanderbilt University\, Nashville\, TN. Date status: confirmed.
-  https://medschool.vanderbilt.edu/vssa/
-URL:https://medschool.vanderbilt.edu/vssa/
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Vanderbilt Summer Science Academy (VSSA)\, Vande
- rbilt University
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Vanderbilt Summer Science Academy (VSSA)\, Vand
- erbilt University
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:907b49da761982a17a3b@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Vanderbilt Summer Science Academy (VSSA)\, Vanderbilt Univer
- sity
-DESCRIPTION:Vanderbilt University\, Nashville\, TN. Date status: confirmed.
-  https://medschool.vanderbilt.edu/vssa/
-URL:https://medschool.vanderbilt.edu/vssa/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Vanderbilt Summer Science Academy (VSSA)\, Vand
- erbilt University
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Travelers Summer Research Fellowship (T-
+ SRF)\, Weill Cornell Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:8d09f5aa8818b9a00ec1@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270202
 DTEND;VALUE=DATE:20270203
 SUMMARY:DUE: Summer Undergraduate Research Program (SURP)\, NYU Grossman Sc
@@ -2857,42 +2673,23 @@ DESCRIPTION:NYU Grossman School of Medicine\, New York\, NY. Date status: c
 URL:https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-scien
  ces/summer-undergraduate-research-program
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Undergraduate Research Program (SURP)\, N
  YU Grossman School of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Undergraduate Research Program (SURP)\, 
  NYU Grossman School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:75e821bf0cb4a67137ed@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Undergraduate Research Program (SURP)\, NYU Grossman 
- School of Medicine
-DESCRIPTION:NYU Grossman School of Medicine\, New York\, NY. Date status: c
- onfirmed. https://med.nyu.edu/research/vilcek-institute-graduate-biomedica
- l-sciences/summer-undergraduate-research-program
-URL:https://med.nyu.edu/research/vilcek-institute-graduate-biomedical-scien
- ces/summer-undergraduate-research-program
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program (SURP)\, 
- NYU Grossman School of Medicine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:ad599a646fee1585266d@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
 SUMMARY:DUE: Summer Research Early Identification Program (SR-EIP)\, The Le
@@ -2904,43 +2701,23 @@ DESCRIPTION:The Leadership Alliance\, Multiple member institutions (Brown\,
 URL:https://theleadershipalliance.org/summer-research-early-identification-
  program
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Research Early Identification Program (SR
  -EIP)\, The Leadership Alliance
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Research Early Identification Program (S
  R-EIP)\, The Leadership Alliance
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:afd0f1f13ddf9a2345bb@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Research Early Identification Program (SR-EIP)\, The 
- Leadership Alliance
-DESCRIPTION:The Leadership Alliance\, Multiple member institutions (Brown\,
-  Columbia\, Cornell\, Harvard\, Hopkins\, Yale\, Vanderbilt and more). Dat
- e status: confirmed. https://theleadershipalliance.org/summer-research-ear
- ly-identification-program
-URL:https://theleadershipalliance.org/summer-research-early-identification-
- program
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Research Early Identification Program (S
- R-EIP)\, The Leadership Alliance
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:cce32543c14414c12a49@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270203
 DTEND;VALUE=DATE:20270204
 SUMMARY:DUE: Summer Undergraduate Research Fellowship (SURF)\, Biomedical R
@@ -2951,22 +2728,23 @@ DESCRIPTION:Mayo Clinic\, Rochester\, MN. Date status: confirmed. https://c
 URL:https://college.mayo.edu/academics/biomedical-research-training/summer-
  undergraduate-research-fellowship-surf/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Undergraduate Research Fellowship (SURF)\
  , Biomedical Research\, Mayo Clinic
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Undergraduate Research Fellowship (SURF)
  \, Biomedical Research\, Mayo Clinic
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7c9f7d612e46bede409e@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Opens: Summer Undergraduate Research Fellowship (SURF)\, Biomedical
@@ -2977,16 +2755,17 @@ DESCRIPTION:Mayo Clinic\, Rochester\, MN. Date status: confirmed. https://c
 URL:https://college.mayo.edu/academics/biomedical-research-training/summer-
  undergraduate-research-fellowship-surf/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Fellowship (SURF)
  \, Biomedical Research\, Mayo Clinic
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bf404e13094a57deee59@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270207
 DTEND;VALUE=DATE:20270208
 SUMMARY:DUE (est.): Summer Research Internships (Office of Trainee Affairs)
@@ -2996,86 +2775,71 @@ DESCRIPTION:Nationwide Children's Hospital / Abigail Wexner Research Instit
  ns.org/research/office-of-trainee-affairs
 URL:https://www.nationwidechildrens.org/research/office-of-trainee-affairs
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Research Internships (Office of Trainee A
- ffairs)\, Nationwide Children's Hospital / Abigail Wexner Research Institu
- te
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Research Internships (Office of Tr
+ ainee Affairs)\, Nationwide Children's Hospital / Abigail Wexner Research 
+ Institute
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Research Internships (Office of Trainee 
- Affairs)\, Nationwide Children's Hospital / Abigail Wexner Research Instit
- ute
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Research Internships (Office of T
+ rainee Affairs)\, Nationwide Children's Hospital / Abigail Wexner Research
+  Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:621632d7ed9a4fc5b797@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261016
-SUMMARY:Opens: Summer Research Internships (Office of Trainee Affairs)\, Na
- tionwide Children's Hospital / Abigail Wexner Research Institute
+SUMMARY:Opens (est.): Summer Research Internships (Office of Trainee Affair
+ s)\, Nationwide Children's Hospital / Abigail Wexner Research Institute
 DESCRIPTION:Nationwide Children's Hospital / Abigail Wexner Research Instit
  ute\, Columbus\, OH. Date status: projected. https://www.nationwidechildre
  ns.org/research/office-of-trainee-affairs
 URL:https://www.nationwidechildrens.org/research/office-of-trainee-affairs
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Research Internships (Office of Trainee 
- Affairs)\, Nationwide Children's Hospital / Abigail Wexner Research Instit
- ute
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Research Internships (Office of T
+ rainee Affairs)\, Nationwide Children's Hospital / Abigail Wexner Research
+  Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2743d81cdf2da7513442@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270213
-DTEND;VALUE=DATE:20270214
-SUMMARY:DUE (est.): Summer Biomedical Research Program (SBRP)\, East Caroli
- na University: Brody School of Medicine
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270213
+SUMMARY:DUE: Summer Biomedical Research Program (SBRP)\, East Carolina Univ
+ ersity: Brody School of Medicine
 DESCRIPTION:East Carolina University: Brody School of Medicine\, Greenville
- \, NC. Date status: projected. https://medicine.ecu.edu/sbrp/
+ \, NC. Date status: confirmed. https://medicine.ecu.edu/sbrp/
 URL:https://medicine.ecu.edu/sbrp/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: Summer Biomedical Research Program (SBRP)\, East
   Carolina University: Brody School of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: Summer Biomedical Research Program (SBRP)\, Eas
  t Carolina University: Brody School of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:a9132bf69a047eb059e6@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261102
-DTEND;VALUE=DATE:20261103
-SUMMARY:Opens: Summer Biomedical Research Program (SBRP)\, East Carolina Un
- iversity: Brody School of Medicine
-DESCRIPTION:East Carolina University: Brody School of Medicine\, Greenville
- \, NC. Date status: projected. https://medicine.ecu.edu/sbrp/
-URL:https://medicine.ecu.edu/sbrp/
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Biomedical Research Program (SBRP)\, Eas
- t Carolina University: Brody School of Medicine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:60172b640048b7c1f808@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:DUE: AHA Undergraduate Summer Fellowship (AHA-USF)\, Penn State Col
@@ -3085,22 +2849,23 @@ DESCRIPTION:Penn State College of Medicine\, Hershey\, PA. Date status: con
  f
 URL:https://med.psu.edu/education/certificate-and-undergraduate/aha-usf
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
+TRIGGER:-P13DT15H
 DESCRIPTION:Two weeks out: AHA Undergraduate Summer Fellowship (AHA-USF)\, 
  Penn State College of Medicine
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
+TRIGGER:-P2DT15H
 DESCRIPTION:Three days out: AHA Undergraduate Summer Fellowship (AHA-USF)\,
   Penn State College of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:61bc5d380d5ba6603ecd@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Opens: AHA Undergraduate Summer Fellowship (AHA-USF)\, Penn State C
@@ -3110,16 +2875,17 @@ DESCRIPTION:Penn State College of Medicine\, Hershey\, PA. Date status: con
  f
 URL:https://med.psu.edu/education/certificate-and-undergraduate/aha-usf
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
+TRIGGER:-PT15H
 DESCRIPTION:Opens tomorrow: AHA Undergraduate Summer Fellowship (AHA-USF)\,
   Penn State College of Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0708eea9ee2168b0a647@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:DUE (est.): REU Sites: Biological Sciences (search portal)\, Nation
@@ -3128,205 +2894,172 @@ DESCRIPTION:National Science Foundation\, Hundreds of sites nationally. Dat
  e status: projected. https://www.nsf.gov/funding/initiatives/reu/search
 URL:https://www.nsf.gov/funding/initiatives/reu/search
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: REU Sites: Biological Sciences (search portal)\,
-  National Science Foundation
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): REU Sites: Biological Sciences (search po
+ rtal)\, National Science Foundation
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: REU Sites: Biological Sciences (search portal)\
- , National Science Foundation
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): REU Sites: Biological Sciences (search p
+ ortal)\, National Science Foundation
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:138f784d231d3267470a@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261001
 DTEND;VALUE=DATE:20261002
-SUMMARY:Opens: REU Sites: Biological Sciences (search portal)\, National Sc
- ience Foundation
+SUMMARY:Opens (est.): REU Sites: Biological Sciences (search portal)\, Nati
+ onal Science Foundation
 DESCRIPTION:National Science Foundation\, Hundreds of sites nationally. Dat
  e status: projected. https://www.nsf.gov/funding/initiatives/reu/search
 URL:https://www.nsf.gov/funding/initiatives/reu/search
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: REU Sites: Biological Sciences (search portal)\
- , National Science Foundation
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): REU Sites: Biological Sciences (search p
+ ortal)\, National Science Foundation
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:e63afc2a8915331077cf@jolene-s27
-DTSTAMP:20261031T043913Z
+UID:bcd4f35df49c6707efc8@jolene-s27
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
-SUMMARY:DUE (est.): Summer Internship Program in Biomedical Research (SIP)\
- , National Institutes of Health
-DESCRIPTION:National Institutes of Health\, Bethesda\, MD (and other NIH ca
- mpuses). Date status: projected. https://www.training.nih.gov/programs/sip
-URL:https://www.training.nih.gov/programs/sip
+SUMMARY:DUE (est.): Summer Research Internship\, Phoenix Children's Hospita
+ l
+DESCRIPTION:Phoenix Children's Hospital\, Phoenix\, AZ. Date status: projec
+ ted. https://phoenixchildrens.org/research
+URL:https://phoenixchildrens.org/research
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Internship Program in Biomedical Research
-  (SIP)\, National Institutes of Health
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Research Internship\, Phoenix Chil
+ dren's Hospital
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Internship Program in Biomedical Researc
- h (SIP)\, National Institutes of Health
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Research Internship\, Phoenix Chi
+ ldren's Hospital
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:51454dc38140aadc06d4@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261115
-DTEND;VALUE=DATE:20261116
-SUMMARY:Opens: Summer Internship Program in Biomedical Research (SIP)\, Nat
- ional Institutes of Health
-DESCRIPTION:National Institutes of Health\, Bethesda\, MD (and other NIH ca
- mpuses). Date status: projected. https://www.training.nih.gov/programs/sip
-URL:https://www.training.nih.gov/programs/sip
+UID:a183ad4f91a62f82d8f0@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Opens (est.): Summer Research Internship\, Phoenix Children's Hospi
+ tal
+DESCRIPTION:Phoenix Children's Hospital\, Phoenix\, AZ. Date status: projec
+ ted. https://phoenixchildrens.org/research
+URL:https://phoenixchildrens.org/research
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Internship Program in Biomedical Researc
- h (SIP)\, National Institutes of Health
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Research Internship\, Phoenix Chi
+ ldren's Hospital
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:8254e8aabec3c7aed37b@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:DUE (est.): Summer Research Internship\, Rady Children's Hospital /
   UC San Diego
 DESCRIPTION:Rady Children's Hospital / UC San Diego\, San Diego\, CA. Date 
- status: unknown. https://www.rchsd.org/research-innovation/
+ status: projected. https://www.rchsd.org/research-innovation/
 URL:https://www.rchsd.org/research-innovation/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Research Internship\, Rady Children's Hos
- pital / UC San Diego
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Research Internship\, Rady Childre
+ n's Hospital / UC San Diego
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Research Internship\, Rady Children's Ho
- spital / UC San Diego
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Research Internship\, Rady Childr
+ en's Hospital / UC San Diego
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:500e178fea24424afd4d@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Research Internship\, Rady Children's Hospital / UC S
- an Diego
+SUMMARY:Opens (est.): Summer Research Internship\, Rady Children's Hospital
+  / UC San Diego
 DESCRIPTION:Rady Children's Hospital / UC San Diego\, San Diego\, CA. Date 
- status: unknown. https://www.rchsd.org/research-innovation/
+ status: projected. https://www.rchsd.org/research-innovation/
 URL:https://www.rchsd.org/research-innovation/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Research Internship\, Rady Children's Ho
- spital / UC San Diego
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:bcd4f35df49c6707efc8@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270215
-DTEND;VALUE=DATE:20270216
-SUMMARY:DUE (est.): Summer Research Internship\, Phoenix Children's Hospita
- l
-DESCRIPTION:Phoenix Children's Hospital\, Phoenix\, AZ. Date status: unknow
- n. https://phoenixchildrens.org/research
-URL:https://phoenixchildrens.org/research
-CATEGORIES:deadline
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Research Internship\, Phoenix Children's 
- Hospital
-END:VALARM
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Research Internship\, Phoenix Children's
-  Hospital
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:a183ad4f91a62f82d8f0@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Research Internship\, Phoenix Children's Hospital
-DESCRIPTION:Phoenix Children's Hospital\, Phoenix\, AZ. Date status: unknow
- n. https://phoenixchildrens.org/research
-URL:https://phoenixchildrens.org/research
-CATEGORIES:opens
-BEGIN:VALARM
-ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Research Internship\, Phoenix Children's
-  Hospital
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Research Internship\, Rady Childr
+ en's Hospital / UC San Diego
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:412aca88e604e11707b4@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:DUE (est.): Summer Research Internship\, UC Davis MIND Institute
-DESCRIPTION:UC Davis MIND Institute\, Sacramento\, CA. Date status: unknown
- . https://health.ucdavis.edu/mind-institute/
+DESCRIPTION:UC Davis MIND Institute\, Sacramento\, CA. Date status: project
+ ed. https://health.ucdavis.edu/mind-institute/
 URL:https://health.ucdavis.edu/mind-institute/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Research Internship\, UC Davis MIND Insti
- tute
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Research Internship\, UC Davis MIN
+ D Institute
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Research Internship\, UC Davis MIND Inst
- itute
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Research Internship\, UC Davis MI
+ ND Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:92b9226c002329e2353a@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Research Internship\, UC Davis MIND Institute
-DESCRIPTION:UC Davis MIND Institute\, Sacramento\, CA. Date status: unknown
- . https://health.ucdavis.edu/mind-institute/
+SUMMARY:Opens (est.): Summer Research Internship\, UC Davis MIND Institute
+DESCRIPTION:UC Davis MIND Institute\, Sacramento\, CA. Date status: project
+ ed. https://health.ucdavis.edu/mind-institute/
 URL:https://health.ucdavis.edu/mind-institute/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Research Internship\, UC Davis MIND Inst
- itute
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Research Internship\, UC Davis MI
+ ND Institute
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:073e539d8d775031712e@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:DUE (est.): Summer Research Program\, Stanley Manne Children's Rese
@@ -3336,41 +3069,43 @@ DESCRIPTION:Stanley Manne Children's Research Institute (Lurie Children's)\
  g/
 URL:https://research.luriechildrens.org/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Research Program\, Stanley Manne Children
- 's Research Institute (Lurie Children's)
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Research Program\, Stanley Manne C
+ hildren's Research Institute (Lurie Children's)
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Research Program\, Stanley Manne Childre
- n's Research Institute (Lurie Children's)
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Research Program\, Stanley Manne 
+ Children's Research Institute (Lurie Children's)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:50c88471a81d73a594ee@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Summer Research Program\, Stanley Manne Children's Research 
- Institute (Lurie Children's)
+SUMMARY:Opens (est.): Summer Research Program\, Stanley Manne Children's Re
+ search Institute (Lurie Children's)
 DESCRIPTION:Stanley Manne Children's Research Institute (Lurie Children's)\
  , Chicago\, IL. Date status: projected. https://research.luriechildrens.or
  g/
 URL:https://research.luriechildrens.org/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Research Program\, Stanley Manne Childre
- n's Research Institute (Lurie Children's)
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Research Program\, Stanley Manne 
+ Children's Research Institute (Lurie Children's)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:3be7da1a5ca8b130694d@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270222
 DTEND;VALUE=DATE:20270223
 SUMMARY:DUE (est.): Summer Undergraduate Research Fellowships (SURF)\, Cali
@@ -3379,160 +3114,190 @@ DESCRIPTION:California Institute of Technology\, Pasadena\, CA. Date status
  : projected. https://sfp.caltech.edu/undergraduate-research/programs/surf
 URL:https://sfp.caltech.edu/undergraduate-research/programs/surf
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: Summer Undergraduate Research Fellowships (SURF)
- \, California Institute of Technology
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out (est.): Summer Undergraduate Research Fellowships
+  (SURF)\, California Institute of Technology
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: Summer Undergraduate Research Fellowships (SURF
- )\, California Institute of Technology
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out (est.): Summer Undergraduate Research Fellowship
+ s (SURF)\, California Institute of Technology
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b900f1c1aa7113b5cc70@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
-SUMMARY:Opens: Summer Undergraduate Research Fellowships (SURF)\, Californi
- a Institute of Technology
+SUMMARY:Opens (est.): Summer Undergraduate Research Fellowships (SURF)\, Ca
+ lifornia Institute of Technology
 DESCRIPTION:California Institute of Technology\, Pasadena\, CA. Date status
  : projected. https://sfp.caltech.edu/undergraduate-research/programs/surf
 URL:https://sfp.caltech.edu/undergraduate-research/programs/surf
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Fellowships (SURF
- )\, California Institute of Technology
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Summer Undergraduate Research Fellowship
+ s (SURF)\, California Institute of Technology
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:78b1f46d2314e25a689c@jolene-s27
-DTSTAMP:20261031T043913Z
-DTSTART;VALUE=DATE:20270315
-DTEND;VALUE=DATE:20270316
-SUMMARY:DUE: NYSCF Summer Research Internship\, New York Stem Cell Foundati
- on
-DESCRIPTION:New York Stem Cell Foundation\, New York\, NY. Date status: con
- firmed. https://www.jax.org/education-and-learning/high-school-students-an
- d-undergraduates/nyscf-summer-research-internship
-URL:https://www.jax.org/education-and-learning/high-school-students-and-und
- ergraduates/nyscf-summer-research-internship
+UID:38510a16fda95db557bb@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20270301
+DTEND;VALUE=DATE:20270302
+SUMMARY:DUE: Summer Undergraduate Research Program\, UMass Chan Medical Sch
+ ool
+DESCRIPTION:UMass Chan Medical School\, Worcester\, MA. Date status: confir
+ med. https://www.umassmed.edu/gsbs/outreach-programs/summer-undergraduate-
+ research-program/
+URL:https://www.umassmed.edu/gsbs/outreach-programs/summer-undergraduate-re
+ search-program/
 CATEGORIES:deadline
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P14D
-DESCRIPTION:Two weeks out: NYSCF Summer Research Internship\, New York Stem
-  Cell Foundation
+TRIGGER:-P13DT15H
+DESCRIPTION:Two weeks out: Summer Undergraduate Research Program\, UMass Ch
+ an Medical School
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P3D
-DESCRIPTION:Three days out: NYSCF Summer Research Internship\, New York Ste
- m Cell Foundation
+TRIGGER:-P2DT15H
+DESCRIPTION:Three days out: Summer Undergraduate Research Program\, UMass C
+ han Medical School
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ca0e4e61261242bc2c28@jolene-s27
-DTSTAMP:20261031T043913Z
+UID:d487f2eee6087cb8aa5f@jolene-s27
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: NYSCF Summer Research Internship\, New York Stem Cell Founda
- tion
-DESCRIPTION:New York Stem Cell Foundation\, New York\, NY. Date status: con
- firmed. https://www.jax.org/education-and-learning/high-school-students-an
- d-undergraduates/nyscf-summer-research-internship
-URL:https://www.jax.org/education-and-learning/high-school-students-and-und
- ergraduates/nyscf-summer-research-internship
+SUMMARY:Opens: Summer Undergraduate Research Program\, UMass Chan Medical S
+ chool
+DESCRIPTION:UMass Chan Medical School\, Worcester\, MA. Date status: confir
+ med. https://www.umassmed.edu/gsbs/outreach-programs/summer-undergraduate-
+ research-program/
+URL:https://www.umassmed.edu/gsbs/outreach-programs/summer-undergraduate-re
+ search-program/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: NYSCF Summer Research Internship\, New York Ste
- m Cell Foundation
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow: Summer Undergraduate Research Program\, UMass C
+ han Medical School
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9a7a6ea67b01eb60ae56@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
-SUMMARY:Opens: Department of Pediatrics Summer Internship\, Weill Cornell M
- edicine
-DESCRIPTION:Weill Cornell Medicine\, New York\, NY. Date status: unknown. h
- ttps://pediatrics.weill.cornell.edu/education/department-pediatrics-summer
- -internship
+SUMMARY:Opens (est.): Department of Pediatrics Summer Internship\, Weill Co
+ rnell Medicine
+DESCRIPTION:Weill Cornell Medicine\, New York\, NY. Date status: projected.
+  https://pediatrics.weill.cornell.edu/education/department-pediatrics-summ
+ er-internship
 URL:https://pediatrics.weill.cornell.edu/education/department-pediatrics-su
  mmer-internship
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Department of Pediatrics Summer Internship\, We
- ill Cornell Medicine
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Department of Pediatrics Summer Internsh
+ ip\, Weill Cornell Medicine
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:a99fbca85d8ce5cf35ca@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270102
 DTEND;VALUE=DATE:20270103
-SUMMARY:Opens: Neuroscience & Cell Biology Summer Research\, Rutgers Robert
-  Wood Johnson Medical School
+SUMMARY:Opens (est.): Neuroscience & Cell Biology Summer Research\, Rutgers
+  Robert Wood Johnson Medical School
 DESCRIPTION:Rutgers Robert Wood Johnson Medical School\, Piscataway\, NJ. D
- ate status: unknown. https://rwjms.rutgers.edu/department/neuroscience-cel
- l-biology/about
+ ate status: projected. https://rwjms.rutgers.edu/department/neuroscience-c
+ ell-biology/about
 URL:https://rwjms.rutgers.edu/department/neuroscience-cell-biology/about
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Neuroscience & Cell Biology Summer Research\, R
- utgers Robert Wood Johnson Medical School
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Neuroscience & Cell Biology Summer Resea
+ rch\, Rutgers Robert Wood Johnson Medical School
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:092babd9350b3b65ea31@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
-SUMMARY:Opens: Pediatric Epilepsy Research Internship (Loddenkemper Lab)\, 
- Boston Children's Hospital
-DESCRIPTION:Boston Children's Hospital\, Boston\, MA. Date status: unknown.
-  https://research.childrenshospital.org/research-units/loddenkemper-resear
- ch-laboratory-research/pediatric-epilepsy-research-internship
+SUMMARY:Opens (est.): Pediatric Epilepsy Research Internship (Loddenkemper 
+ Lab)\, Boston Children's Hospital
+DESCRIPTION:Boston Children's Hospital\, Boston\, MA. Date status: projecte
+ d. https://research.childrenshospital.org/research-units/loddenkemper-rese
+ arch-laboratory-research/pediatric-epilepsy-research-internship
 URL:https://research.childrenshospital.org/research-units/loddenkemper-rese
  arch-laboratory-research/pediatric-epilepsy-research-internship
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Pediatric Epilepsy Research Internship (Loddenk
- emper Lab)\, Boston Children's Hospital
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Pediatric Epilepsy Research Internship (
+ Loddenkemper Lab)\, Boston Children's Hospital
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5383acbf31120d9c8194@jolene-s27
-DTSTAMP:20261031T043913Z
+DTSTAMP:20261118T223224Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY:Opens: Research Training & Internships\, Children's Hospital Colora
- do
-DESCRIPTION:Children's Hospital Colorado\, Aurora\, CO. Date status: unknow
- n. https://www.childrenscolorado.org/research-innovation/training-and-inte
- rnships/
+SUMMARY:Opens (est.): Research Training & Internships\, Children's Hospital
+  Colorado
+DESCRIPTION:Children's Hospital Colorado\, Aurora\, CO. Date status: projec
+ ted. https://www.childrenscolorado.org/research-innovation/training-and-in
+ ternships/
 URL:https://www.childrenscolorado.org/research-innovation/training-and-inte
  rnships/
 CATEGORIES:opens
+TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-TRIGGER:-P1D
-DESCRIPTION:Opens tomorrow: Research Training & Internships\, Children's Ho
- spital Colorado
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow (est.): Research Training & Internships\, Childr
+ en's Hospital Colorado
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:45a5814d6a9b0ee6e888@jolene-s27
+DTSTAMP:20261118T223224Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:Opens: Strong Children's Research Center Summer Training Program\, 
+ University of Rochester Medical Center\, Department of Pediatrics
+DESCRIPTION:University of Rochester Medical Center\, Department of Pediatri
+ cs\, Rochester\, NY. Date status: confirmed. https://www.urmc.rochester.ed
+ u/pediatrics/research/summer-training-program
+URL:https://www.urmc.rochester.edu/pediatrics/research/summer-training-prog
+ ram
+CATEGORIES:opens
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT15H
+DESCRIPTION:Opens tomorrow: Strong Children's Research Center Summer Traini
+ ng Program\, University of Rochester Medical Center\, Department of Pediat
+ rics
 END:VALARM
 END:VEVENT
 END:VCALENDAR

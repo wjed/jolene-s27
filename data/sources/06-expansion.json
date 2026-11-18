@@ -15,9 +15,10 @@
       ],
       "focus": "Ten weeks on a project the student proposes themselves, written up as a formal proposal with a mentor and presented at a seminar day.",
       "duration_weeks": 10,
-      "stipend_usd": 7000,
+      "stipend_usd": 8354,
       "housing": "varies",
       "opens": "2026-11-01",
+      "opens_status": "projected",
       "deadline": "2027-02-22",
       "deadline_status": "projected",
       "eligibility": {
@@ -28,7 +29,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Open to students from any institution, not only Caltech."
+        "notes": "Open to students from any school. Full time and in person for all ten weeks."
       },
       "requires": [
         "transcript",
@@ -58,6 +59,7 @@
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "rolling",
       "eligibility": {
@@ -91,10 +93,11 @@
         "bioengineering"
       ],
       "focus": "Neuroscience and imaging research at HHMI's dedicated research campus, with an unusually strong tools-and-methods culture.",
-      "duration_weeks": 10,
+      "duration_weeks": 9,
       "stipend_usd": null,
       "housing": "provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -104,16 +107,17 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": ""
+        "notes": "Open to undergraduates at partner institutions, so check whether Penn State is a partner before you spend time on this one."
       },
       "requires": [
         "cv",
         "personal-statement"
       ],
       "selectivity": "very-high",
-      "notes": "Small and very selective. Best fit if you have any computational or imaging leaning. Housing on campus is typically included.",
+      "notes": "In Ashburn, about 15 minutes from Leesburg. Summer undergraduates now come through HHMI's Cech Fellows Program, nine weeks, so check the Cech Fellows page for the deadline and stipend. The Janelia and Loudoun County internship listed beside it is for high school students. Small and very selective, and best if you lean computational or imaging.",
       "url_verified": true,
-      "url_confidence": "medium"
+      "url_confidence": "medium",
+      "near_home": true
     },
     {
       "id": "connecticut-childrens",
@@ -127,10 +131,11 @@
         "translational"
       ],
       "focus": "Pediatric clinical and translational research, affiliated with UConn Health.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -164,10 +169,11 @@
         "translational"
       ],
       "focus": "Pediatric research across IU's Department of Pediatrics at Riley Children's.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -184,7 +190,7 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "Third Indiana option alongside INSPIRE and the IU summer research program. One application trip, three shots, and INSPIRE was already on the original list.",
+      "notes": "The department page lists training only for physicians, residents and faculty, with no undergraduate program and no application. The only way in is emailing a faculty member whose work you like. INSPIRE and the Medical Neuroscience program above are the real Indiana applications.",
       "url_verified": true,
       "url_confidence": "medium"
     },
@@ -197,13 +203,15 @@
       "tracks": [
         "pediatrics",
         "clinical",
-        "translational"
+        "translational",
+        "neuroscience"
       ],
       "focus": "Pediatric research at Le Bonheur, including a well-regarded neuroscience and epilepsy group.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -236,10 +244,11 @@
         "translational"
       ],
       "focus": "Pediatric research with notable strength in genomic medicine and precision therapeutics.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -271,10 +280,11 @@
         "clinical"
       ],
       "focus": "Pediatric clinical research at a mid-size children's hospital.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -309,10 +319,11 @@
       "focus": "Ten-week structured biomedical research experience through the Morningside Graduate School.",
       "duration_weeks": 10,
       "stipend_usd": 6000,
-      "housing": "varies",
-      "opens": "2026-11-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "housing": "provided",
+      "opens": "2026-12-01",
+      "opens_status": "confirmed",
+      "deadline": "2027-03-01",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -329,9 +340,11 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "The 2027 cycle page is already up, which puts it ahead of most. Cheaper Boston-area alternative: Worcester costs far less to live in than Boston or Cambridge.",
+      "notes": "CONFIRMED on the page: opens Dec 1, 2026 and closes Mar 1, 2027, later than most of your list.",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
-      "url_confidence": "medium"
+      "url_confidence": "medium",
+      "program_dates": "May 30 - Aug 6, 2027",
+      "stipend_note": "$6,000 plus all travel and housing"
     },
     {
       "id": "marquette-biomedical",
@@ -349,12 +362,15 @@
       "stipend_usd": 5000,
       "housing": "varies",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
         "class_years": [
+          "freshman",
           "sophomore",
-          "junior"
+          "junior",
+          "senior"
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
@@ -367,7 +383,7 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Well-funded for its size and much less contested than the coastal programs. Realistic odds with a real stipend.",
+      "notes": "Less contested than the coastal programs, with a real stipend. The page still shows summer 2026; last cycle closed Thursday, Feb 5, so expect early February and check back in December.",
       "url_verified": true,
       "url_confidence": "high"
     },
@@ -383,11 +399,12 @@
         "translational"
       ],
       "focus": "Nine weeks of bioscience research at Stanford; this is Stanford's Amgen Scholars host program.",
-      "duration_weeks": 9,
-      "stipend_usd": 6000,
-      "stipend_note": "Stipend plus housing and travel",
+      "duration_weeks": 8,
+      "stipend_usd": 4800,
+      "stipend_note": "$4,800 and a flex card, plus housing, meals and travel",
       "housing": "provided",
       "opens": "2026-11-01",
+      "opens_status": "confirmed",
       "deadline": "2027-02-01",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -406,7 +423,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "This is the UNDERGRADUATE Stanford program. Not to be confused with SIMR, which is widely recommended online but is for high school students, worth knowing before wasting an application. CONFIRMED on the page: opens 1 Nov 2026, closes 1 Feb 2027, matching the Amgen Scholars date across all US hosts. Note the page labels the cycle \"2026 SSRP\" even though it is the summer 2027 intake.",
+      "notes": "CONFIRMED on the page: opened Nov 1, 2026; everything due Feb 1, 2027 at 11:59 p.m. Pacific. The page says it is intended for students pursuing PhD programs, so it is a weaker fit if you are headed to medical school. Decisions mid-March through April.",
       "url_verified": true,
       "url_confidence": "high",
       "program_dates": "Through Aug 14, 2027"
@@ -427,6 +444,7 @@
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -459,10 +477,11 @@
         "aging"
       ],
       "focus": "Regeneration, aging and comparative biology at a small marine and biomedical research institute.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -499,9 +518,10 @@
       ],
       "focus": "Cancer research at the largest cancer center in the country, across several distinct summer tracks.",
       "duration_weeks": 10,
-      "stipend_usd": null,
-      "housing": "varies",
+      "stipend_usd": 7200,
+      "housing": "stipend-covers",
       "opens": "2026-11-16",
+      "opens_status": "confirmed",
       "deadline": "2027-01-13",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -520,48 +540,11 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "CONFIRMED on the page: applications open 16 Nov 2026 and close 13 Jan 2027, program runs 7 Jun - 13 Aug 2027. An informational webinar runs 19 Nov. Several tracks sit behind this one page. Read it properly and pick the right one. Houston also has Baylor SMART and Texas Children's, so one city covers three applications.",
+      "notes": "CONFIRMED on the page: opened Nov 16, 2026 and closes Jan 13, 2027. CATALYST is an umbrella over 20 tracks, so read the Programs page and pick the right one. Webinars Nov 19 at 11 a.m., Dec 8 at 9 a.m. and Jan 7 at 12 p.m. Central. If you get an offer, answer by Mar 4.",
       "url_verified": true,
       "url_confidence": "high",
-      "program_dates": "Jun 7 - Aug 13, 2027"
-    },
-    {
-      "id": "emory-winship-scholars",
-      "name": "Winship Summer Scholars Research Program",
-      "org": "Winship Cancer Institute, Emory University",
-      "city": "Atlanta, GA",
-      "url": "https://winshipcancer.emory.edu/education-and-training/undergraduate-and-pre-college-programs/summer-scholars.php",
-      "tracks": [
-        "oncology",
-        "basic-science",
-        "translational"
-      ],
-      "focus": "Cancer research at Georgia's only NCI-designated comprehensive cancer center.",
-      "duration_weeks": 10,
-      "stipend_usd": null,
-      "housing": "varies",
-      "opens": null,
-      "deadline": null,
-      "deadline_status": "unknown",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior"
-        ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": ""
-      },
-      "requires": [
-        "transcript",
-        "cv",
-        "personal-statement",
-        "1-lor"
-      ],
-      "selectivity": "high",
-      "notes": "Second Emory route alongside SURE, and more specific. Emory also connects to Children's Healthcare of Atlanta for pediatric work.",
-      "url_verified": true,
-      "url_confidence": "high"
+      "program_dates": "Jun 7 - Aug 13, 2027",
+      "stipend_note": "$7,200 for 10 weeks, paid biweekly; housing comes out of it"
     },
     {
       "id": "utsw-simmons",
@@ -575,10 +558,11 @@
         "translational"
       ],
       "focus": "Cancer-focused summer research training at UT Southwestern.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -611,10 +595,11 @@
         "translational"
       ],
       "focus": "Cancer research at the oldest cancer center in the United States.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -648,10 +633,11 @@
         "translational"
       ],
       "focus": "Neurology and neurosurgery research at one of the largest dedicated neurological institutes in the world.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -690,6 +676,7 @@
       "stipend_note": "Expenses covered and students housed on campus",
       "housing": "provided",
       "opens": "2026-11-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {

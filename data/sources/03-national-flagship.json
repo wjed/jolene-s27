@@ -6,7 +6,7 @@
       "name": "Summer Internship Program in Biomedical Research (SIP)",
       "org": "National Institutes of Health",
       "city": "Bethesda, MD (and other NIH campuses)",
-      "url": "https://www.training.nih.gov/programs/sip",
+      "url": "https://www.training.nih.gov/research-training/pb/sip/",
       "tracks": [
         "basic-science",
         "translational",
@@ -17,12 +17,14 @@
       ],
       "focus": "The largest biomedical summer research program in the country. One application reaches hundreds of NIH intramural labs across every institute, including NICHD (pediatrics), NINDS (neuro) and NCI (cancer).",
       "duration_weeks": 10,
-      "stipend_usd": 5000,
-      "stipend_note": "Stipend scales with education level; housing not provided",
+      "stipend_usd": null,
+      "paid": true,
+      "stipend_note": "Set by NIH each year by education level; the page posts no figure",
       "housing": "not-provided",
-      "opens": "2026-11-15",
-      "deadline": "2027-02-15",
-      "deadline_status": "projected",
+      "opens": null,
+      "opens_status": "open-now",
+      "deadline": "2027-01-26",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "freshman",
@@ -41,18 +43,19 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "HIGHEST PRIORITY. One application reaches an enormous number of labs, and you can email individual PIs directly to improve your odds, that outreach is what actually gets people placed. The 2026 cycle closed Feb 18; 2027 is expected to open mid-November 2026 and close mid-February 2027. Verify at training.nih.gov/sip. Bethesda is about 45 minutes from Leesburg. NIH pays a stipend and provides no housing, which makes it a far better deal if you are living at home.",
+      "notes": "CONFIRMED on the page: the application is open now and closes Tuesday, Jan 26, 2027 at 12 p.m. noon ET. Letters are due Tuesday, Feb 2 at noon ET. There is no central selection: individual NIH investigators pick their own interns and start interviewing in early January, so emailing NIH PIs whose work you like is part of applying, not an extra. Bethesda is a commute from Leesburg, which is why no housing does not matter here.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_verified": false,
-      "near_home": true
+      "near_home": true,
+      "program_dates": "Between May 10 and Aug 31, 2027, dates set with your PI"
     },
     {
       "id": "amgen-scholars",
       "name": "Amgen Scholars Program (US)",
       "org": "14 host universities nationally",
-      "city": "Multiple (Caltech, Columbia, Duke, Harvard, Hopkins, UCLA, UCSF, UNC, UT Southwestern, WashU, Yale and more)",
+      "city": "Multiple (Caltech, Columbia, Duke, Harvard, Howard, Hopkins, Stanford, UC Berkeley, UCLA, UCSF, UNC, UT Southwestern, WashU, Yale)",
       "url": "https://amgenscholars.com/us-program/",
       "tracks": [
         "basic-science",
@@ -63,15 +66,17 @@
       "focus": "Premier national undergraduate research program with a shared symposium; each host institution runs its own application and its own labs.",
       "duration_weeks": 10,
       "stipend_usd": 6000,
-      "stipend_note": "Varies by host; most include housing and travel",
-      "housing": "provided",
-      "opens": "2026-11-01",
+      "stipend_note": "Varies by host. Travel and room and board at the July symposium are covered",
+      "housing": "varies",
+      "opens": null,
+      "opens_status": "unknown",
       "deadline": "2027-02-01",
       "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
-          "junior"
+          "junior",
+          "senior"
         ],
         "citizenship": "us-or-pr",
         "min_gpa": 3.2,
@@ -79,12 +84,11 @@
       },
       "requires": [
         "transcript",
-        "cv",
         "personal-statement",
-        "2-lor"
+        "1-lor"
       ],
       "selectivity": "very-high",
-      "notes": "BEST VALUE PER UNIT OF EFFORT. You can apply to as many US hosts as you like, and much of the essay content is reusable across them. Applications open Nov 1, 2026. CONFIRMED on the page: Feb 1, 2027 for all US hosts.",
+      "notes": "BEST VALUE PER UNIT OF EFFORT. You can apply to as many US hosts as you like, and most of the essay is reusable. Each host runs its own application and opens it on its own schedule. One host is Howard University in Washington, which you could do from home. CONFIRMED on the page: Feb 1, 2027 for every US host. About 140 scholars a year across 14 hosts.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "program_dates": "Varies by host, roughly May 17 - Aug 27, 2027"
@@ -103,9 +107,10 @@
       "focus": "Ten weeks of genetics and genomics research with an independent project and a written report, unusually strong mentorship structure.",
       "duration_weeks": 10,
       "stipend_usd": 7500,
-      "stipend_note": "$7,500 plus room, board and travel",
-      "housing": "provided",
-      "opens": "2026-11-01",
+      "stipend_note": "$7,500 plus room, board and travel at Bar Harbor; Farmington is not residential",
+      "housing": "varies",
+      "opens": "2026-11-02",
+      "opens_status": "confirmed",
       "deadline": "2027-01-25",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -126,9 +131,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "CONFIRMED DATE: Jan 25, 2027 at 5pm ET. Best total compensation package on this whole list, stipend plus room, board and travel. Applications open November 2026.",
+      "notes": "CONFIRMED on the page: opened Nov 2, 2026 and due Jan 25, 2027 at 5 p.m. ET. The best total package on this list. Bar Harbor is residential and Farmington is not, so Bar Harbor is the safer pick. Virtual open houses Dec 8, Dec 14 and Jan 5.",
       "priority_hint": "top-pick",
-      "url_confidence": "high"
+      "url_confidence": "high",
+      "program_dates": "Bar Harbor Jun 5 - Aug 13, 2027; Farmington May 31 - Aug 8, 2027"
     },
     {
       "id": "leadership-alliance-sreip",
@@ -144,21 +150,24 @@
         "public-health"
       ],
       "focus": "One application, many elite host institutions, plus a national research symposium at the end of the summer.",
-      "duration_weeks": 9,
-      "stipend_usd": 4000,
-      "stipend_note": "Varies by host; travel and housing typically covered",
+      "duration_weeks": null,
+      "stipend_usd": null,
+      "paid": true,
+      "stipend_note": "Stipend plus travel and housing from the host institution",
       "housing": "provided",
-      "opens": "2026-11-01",
+      "opens": null,
+      "opens_status": "open-now",
       "deadline": "2027-02-03",
       "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
-          "junior"
+          "junior",
+          "senior"
         ],
         "citizenship": "us-or-pr",
         "min_gpa": 3.0,
-        "notes": "Must have at least one semester remaining after the program."
+        "notes": "For students committed to a PhD or MD-PhD; the program says it is not designed for clinical medicine careers. At least two semesters done and one left when summer starts."
       },
       "requires": [
         "transcript",
@@ -167,7 +176,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Like Amgen, one application maps to many institutions. Opens Nov 1. Recent cycles closed in early February (Feb 3, 2025; Feb 1 listed by several campuses for 2027). CONFIRMED on the page: Feb 3, 2027, and the deadline covers the whole package including two letters and official transcripts.",
+      "notes": "The portal is open now. One application ranks three of the 20 host sites, 8 to 10 weeks depending on the site. Howard University in Washington is the only host you could commute to. Johns Hopkins is not a 2027 host.",
       "priority_hint": "top-pick",
       "url_confidence": "high"
     },
@@ -186,19 +195,20 @@
       "focus": "Nine weeks of genomics, cancer and neuroscience research at one of the strongest genomics institutes in the world.",
       "duration_weeks": 9,
       "stipend_usd": 5400,
-      "stipend_note": "$5,400 plus free housing at partner university facilities and travel to/from Boston",
+      "stipend_note": "$5,400 plus housing, travel to Boston, and a conference trip to present your work",
       "housing": "provided",
-      "opens": "2026-10-01",
-      "deadline": "2027-01-11",
-      "deadline_status": "projected",
+      "opens": "2026-10-26",
+      "opens_status": "confirmed",
+      "deadline": "2027-01-10",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
           "junior"
         ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": "Must be available for the entire nine weeks. The Broad said 2027 eligibility criteria would be updated in October 2026. Check now."
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.2,
+        "notes": "Free for all nine weeks with no other courses or job. You must graduate December 2027 or later and be aiming at a PhD or MD/PhD."
       },
       "requires": [
         "transcript",
@@ -208,15 +218,16 @@
       ],
       "selectivity": "very-high",
       "contact": "bsrp@broadinstitute.org",
-      "notes": "2026 cycle closed Jan 11 with letters due Jan 13. A third-party listing shows an anticipated 1/11/27. Early deadline. Do not let this one slip behind the February cluster.",
-      "url_confidence": "high"
+      "notes": "CONFIRMED on the page: open since Oct 26, 2026, closes Jan 10, 2027 at 11:59 p.m. ET, letters due Jan 11. The statement is five short essays, not one. Decisions by mid-March.",
+      "url_confidence": "high",
+      "program_dates": "Jun 7 - Aug 6, 2027"
     },
     {
       "id": "fred-hutch-surp",
       "name": "Summer Undergraduate Research Program (SURP)",
       "org": "Fred Hutchinson Cancer Center",
       "city": "Seattle, WA",
-      "url": "https://www.fredhutch.org/en/education-training/undergraduate-students/pathways-undergraduate-researchers.html",
+      "url": "https://www.fredhutch.org/en/education-training/undergraduate-students/summer-undergraduate-research-program.html",
       "tracks": [
         "oncology",
         "basic-science",
@@ -225,18 +236,19 @@
       "focus": "Independent research in basic and cancer biology at Fred Hutch.",
       "duration_weeks": 9,
       "stipend_usd": 7304,
-      "stipend_note": "Approximately $7,304 plus up to $450 travel allowance",
-      "housing": "varies",
-      "opens": "2026-11-01",
-      "deadline": "2027-01-09",
-      "deadline_status": "projected",
+      "stipend_note": "$7,304 before taxes, plus up to $450 travel. Housing is yours, about $3,400 at UW",
+      "housing": "not-provided",
+      "opens": null,
+      "opens_status": "open-now",
+      "deadline": "2027-01-08",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "junior"
         ],
         "citizenship": "us-or-pr",
         "min_gpa": null,
-        "notes": "RISING SENIORS ONLY: you must be entering the summer before your final year of undergrad. That is exactly this year."
+        "notes": "For students entering the summer before their final year, which is you."
       },
       "requires": [
         "transcript",
@@ -246,7 +258,7 @@
       ],
       "selectivity": "very-high",
       "contact": "surp@fredhutch.org",
-      "notes": "PERFECT TIMING FIT: restricted to rising seniors, which is precisely your junior summer. The 2026 deadline was Jan 9. Fred Hutch said 2027 info posts in November. Early deadline. Do it in the December block.",
+      "notes": "CONFIRMED on the page: open now, due Friday, Jan 8, 2027 at midnight Pacific, which is 3 a.m. Eastern on Jan 9. Letters are due Jan 15. Decisions by mid-March. Submit early: the page warns the portal can fail under last-minute uploads and late work is not accepted.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "url_verified": true
@@ -264,31 +276,32 @@
         "oncology"
       ],
       "focus": "Ten fully subsidized weeks of research at a legendary molecular biology institute, ending in a formal presentation.",
-      "duration_weeks": 10,
-      "stipend_usd": 6000,
-      "stipend_note": "$6,000 for personal expenses; accommodation and meals largely covered. Travel not reimbursed.",
+      "duration_weeks": 9,
+      "stipend_usd": 7000,
+      "stipend_note": "$7,000 with room and board on campus; travel is yours",
       "housing": "provided",
-      "opens": "2026-11-01",
+      "opens": null,
+      "opens_status": "open-now",
       "deadline": "2027-01-15",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
           "junior"
         ],
-        "citizenship": "unspecified",
+        "citizenship": "us-pr-or-f1",
         "min_gpa": null,
-        "notes": "Sophomores and juniors. First-year students considered only in exceptional cases."
+        "notes": "Sophomores and juniors. No minimum GPA, though successful applicants usually have about 3.5 in science and math. Official transcripts are not required."
       },
       "requires": [
-        "transcript",
         "cv",
         "personal-statement",
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Deadline has been Jan 15 in both 2025 and 2026, so mid-January 2027 is a safe planning assumption. Enormous prestige for a PhD-track application.",
-      "url_confidence": "high"
+      "notes": "CONFIRMED on the page: open now, and completed applications, letters included, are due Jan 15 at 11:59 p.m. Pacific, which is 2:59 a.m. Eastern on Jan 16. About 20 students a summer. Bench science, not clinical.",
+      "url_confidence": "high",
+      "program_dates": "Jun 7 - Aug 7, 2027"
     },
     {
       "id": "mit-msrp",
@@ -307,8 +320,9 @@
       "stipend_note": "Stipend plus housing, travel and meal allowance",
       "housing": "provided",
       "opens": "2026-11-01",
-      "deadline": "2027-01-15",
-      "deadline_status": "projected",
+      "opens_status": "projected",
+      "deadline": "2027-01-19",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -325,7 +339,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "",
+      "notes": "CONFIRMED on the page: apply by Jan 19, 2027. Stipend, housing and eligibility details are on the separate Application page, so confirm them there.",
       "url_confidence": "medium",
       "program_dates": "Jun 7 - Aug 7, 2027"
     },
@@ -342,12 +356,13 @@
       ],
       "focus": "Ten weeks of bench research at a pure-research biomedical institute with an excellent mentoring reputation.",
       "duration_weeks": 10,
-      "stipend_usd": 6000,
-      "stipend_note": "Stipend plus housing",
-      "housing": "provided",
+      "stipend_usd": 6500,
+      "stipend_note": "$6,500, with free housing if you cannot commute",
+      "housing": "provided-nonlocal",
       "opens": "2026-11-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -364,8 +379,9 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "",
-      "url_confidence": "medium"
+      "notes": "CONFIRMED on the page: due Feb 1, 2027. About 25 of more than 700 applicants are accepted. Decisions in mid-March.",
+      "url_confidence": "medium",
+      "program_dates": "Jun 7 - Aug 13, 2027"
     },
     {
       "id": "nsf-reu-bio",
@@ -385,6 +401,7 @@
       "stipend_note": "Typically $6,000-$7,000 plus housing and travel",
       "housing": "provided",
       "opens": "2026-10-01",
+      "opens_status": "projected",
       "deadline": "2027-02-15",
       "deadline_status": "projected",
       "eligibility": {
@@ -424,6 +441,7 @@
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "rolling",
       "eligibility": {
@@ -441,80 +459,6 @@
       "selectivity": "moderate",
       "notes": "Use this as a monthly sweep to catch programs this list does not have. Sort by deadline.",
       "priority_hint": "portal",
-      "url_confidence": "high"
-    },
-    {
-      "id": "shpep",
-      "name": "Summer Health Professions Education Program (SHPEP)",
-      "org": "Robert Wood Johnson Foundation (multiple host schools)",
-      "city": "Multiple academic health centers",
-      "url": "https://www.shpep.org/",
-      "tracks": [
-        "clinical",
-        "public-health",
-        "pre-health"
-      ],
-      "focus": "Free summer enrichment at academic health centers, clinical exposure, MCAT and admissions prep rather than bench research.",
-      "duration_weeks": 6,
-      "stipend_usd": 600,
-      "stipend_note": "Stipend plus housing and meals, no cost to attend",
-      "housing": "provided",
-      "opens": "2026-11-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
-      "eligibility": {
-        "class_years": [
-          "freshman",
-          "sophomore"
-        ],
-        "citizenship": "us-or-pr",
-        "min_gpa": 2.5,
-        "notes": "Primarily freshmen and sophomores: likely TOO EARLY for a rising senior, listed for completeness."
-      },
-      "requires": [
-        "transcript",
-        "personal-statement",
-        "1-lor"
-      ],
-      "selectivity": "moderate",
-      "notes": "Aimed at freshmen and sophomores, so almost certainly too early for a rising senior. Listed so the set is honest about what exists. Skip it unless you want clinical exposure rather than research.",
-      "url_confidence": "high"
-    },
-    {
-      "id": "nyscf-internship",
-      "name": "NYSCF Summer Research Internship",
-      "org": "New York Stem Cell Foundation",
-      "city": "New York, NY",
-      "url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/nyscf-summer-research-internship",
-      "tracks": [
-        "basic-science",
-        "stem-cell",
-        "neuroscience"
-      ],
-      "focus": "Stem cell and neurodegeneration research in NYC.",
-      "duration_weeks": 10,
-      "stipend_usd": null,
-      "housing": "varies",
-      "opens": "2026-12-01",
-      "deadline": "2027-03-15",
-      "deadline_status": "confirmed",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior"
-        ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": "Deadline is 5:00 p.m. ET."
-      },
-      "requires": [
-        "cv",
-        "personal-statement",
-        "1-lor"
-      ],
-      "selectivity": "high",
-      "notes": "CONFIRMED: Mar 15, 2027, program runs Jun 7 - Aug 13, 2027. Valuable as a LATE deadline, a real second chance if February brings rejections.",
-      "priority_hint": "late-backup",
       "url_confidence": "high"
     }
   ]

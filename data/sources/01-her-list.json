@@ -14,11 +14,13 @@
       ],
       "focus": "Alzheimer's disease and neurodegeneration research in the Stark Neurosciences Research Institute.",
       "duration_weeks": 8,
-      "stipend_usd": 4000,
+      "stipend_usd": null,
+      "paid": true,
       "housing": "provided-nonlocal",
       "opens": "2026-10-01",
+      "opens_status": "confirmed",
       "deadline": "2027-01-15",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "freshman",
@@ -26,7 +28,7 @@
           "junior",
           "senior"
         ],
-        "citizenship": "us-pr-or-f1",
+        "citizenship": "us-or-pr",
         "min_gpa": null,
         "notes": "Program page says freshman-senior; a press release emphasizes freshmen/sophomores. High school students are not accepted."
       },
@@ -38,8 +40,10 @@
       ],
       "selectivity": "high",
       "contact": "mneuro@iu.edu",
-      "notes": "2027 applications were slated to open in October 2026, worth checking right now.",
-      "url_confidence": "high"
+      "notes": "CONFIRMED on the page: open since Oct 1, 2026 and due Jan 15, 2027. Housing is provided if you live outside Indianapolis. No summer courses or outside job during the program.",
+      "url_confidence": "high",
+      "program_dates": "Jun 6 - Jul 31, 2027",
+      "stipend_note": "Competitive stipend; the page does not state an amount"
     },
     {
       "id": "chp-pittsburgh",
@@ -53,29 +57,29 @@
         "translational"
       ],
       "focus": "Pediatric clinical and translational research across hospital departments.",
-      "duration_weeks": 10,
+      "duration_weeks": 8,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
-      "deadline": null,
-      "deadline_status": "unknown",
+      "opens_status": "unknown",
+      "deadline": "2027-01-11",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
-          "junior",
-          "senior"
+          "junior"
         ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": "Confirm current-cycle eligibility on the program page."
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.5,
+        "notes": "You need a semester of coursework left after the internship. You pay for your own Act 33, 34 and 73 clearances."
       },
       "requires": [
-        "cv",
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Pairs with Pitt's other summer programs: same city, one trip.",
-      "url_confidence": "high"
+      "notes": "CONFIRMED on the page: officially the Summer Research Internship Program (SRIP), due Jan 11, 2027 at 11:59 p.m. The statement of purpose is the only required material. Decisions in March. Same city as Pitt's other programs.",
+      "url_confidence": "high",
+      "stipend_note": "Grant funded; the page does not state an amount"
     },
     {
       "id": "stjude-poe",
@@ -89,12 +93,13 @@
         "clinical",
         "basic-science"
       ],
-      "focus": "Pediatric cancer and catastrophic disease: basic, translational, or clinical placements.",
+      "focus": "Pediatric cancer and catastrophic disease research. As an undergraduate you get a laboratory or computational placement; clinical research matches are reserved for medical students.",
       "duration_weeks": 11,
       "stipend_usd": 6600,
-      "stipend_note": "$600/week",
+      "stipend_note": "$600 a week before taxes, about $6,600 for the 11 weeks",
       "housing": "provided-nonlocal",
-      "opens": "2026-11-01",
+      "opens": null,
+      "opens_status": "open-now",
       "deadline": "2027-02-01",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -103,9 +108,9 @@
           "junior",
           "senior"
         ],
-        "citizenship": "unspecified",
+        "citizenship": "us-or-pr",
         "min_gpa": 3.4,
-        "notes": "Minimum 3.40 GPA overall and in math/science. Prior research experience expected. Must be able to start May 10, May 17, May 24, or Jun 1, 2027, otherwise ineligible."
+        "notes": "A 3.4 GPA in science and math AND overall. You must already have research experience outside the classroom when you apply, and be able to start on one of the four dates."
       },
       "requires": [
         "transcript",
@@ -114,8 +119,9 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Flagship pediatric program. Submit the application without waiting on letters, St. Jude wants credentials in by mid-to-late December, and the Feb 1 deadline covers the application AND all credentials.",
-      "url_confidence": "high"
+      "notes": "CONFIRMED on the page: open now, due Feb 1, 2027. Housing near campus is free if you come from outside Memphis; travel is yours. Small: 40 students in 2026, 26 of them undergraduates. The 2025 class averaged a 3.88 GPA.",
+      "url_confidence": "high",
+      "program_dates": "Starts May 10, May 17, May 24 or Jun 1, 2027; 11 weeks"
     },
     {
       "id": "chop-crissp",
@@ -131,17 +137,19 @@
       "focus": "Mentored pediatric biomedical research with a cohort seminar series.",
       "duration_weeks": 10,
       "stipend_usd": 5000,
-      "housing": "not-provided",
+      "housing": "provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
-          "junior"
+          "junior",
+          "senior"
         ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.3,
         "notes": "Typically rising juniors/seniors; cannot have graduated before the program starts."
       },
       "requires": [
@@ -151,8 +159,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "One of the most competitive pediatric programs in the country.",
-      "url_confidence": "high"
+      "notes": "The page says applications for summer 2027 open in December; the deadline is not posted yet. Thirty students a summer, with basic, clinical and behavioral tracks and clinical shadowing for everyone. Information sessions: Tuesday, Dec 8 at 11 a.m. and Tuesday, Jan 12 at 3 p.m.",
+      "url_confidence": "high",
+      "program_dates": "Jun 7 - Aug 13, 2027",
+      "stipend_note": "$5,000 plus free housing; need-based travel awards"
     },
     {
       "id": "weill-cornell-peds",
@@ -165,10 +175,12 @@
         "clinical"
       ],
       "focus": "Pediatric clinical research with Weill Cornell pediatrics faculty.",
-      "duration_weeks": 8,
+      "duration_weeks": 10,
       "stipend_usd": null,
+      "paid": true,
       "housing": "not-provided",
       "opens": "2026-12-08",
+      "opens_status": "projected",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -187,8 +199,9 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 8.",
-      "url_confidence": "high"
+      "notes": "The page still shows the 2026 cycle (opened Dec 8, 2025, due Jan 5, 2026), so treat Dec 8 as a guess. Seventeen pediatrics projects including child neurology neuroimaging and epilepsy; you can apply to two. No housing, food or travel.",
+      "url_confidence": "high",
+      "stipend_note": "A modest stipend, amount not posted, paid when you finish"
     },
     {
       "id": "childrens-colorado",
@@ -202,14 +215,16 @@
         "translational"
       ],
       "focus": "Multiple pediatric research internship tracks across the institute.",
-      "duration_weeks": 10,
-      "stipend_usd": null,
+      "duration_weeks": 9,
+      "stipend_usd": 4400,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
         "class_years": [
+          "freshman",
           "sophomore",
           "junior",
           "senior"
@@ -223,12 +238,13 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 1. The landing page lists several distinct tracks. Pick the one that matches.",
-      "url_confidence": "high"
+      "notes": "The page still shows the 2026 cycle (applications Dec 1, 2025 to Feb 1, 2026), so 2027 dates are not posted. You rank three mentors in the application. Email ResearchInternship@childrenscolorado.org to ask when 2027 opens.",
+      "url_confidence": "high",
+      "stipend_note": "$4,400 in 2026, meant to cover travel and housing; no housing is provided"
     },
     {
       "id": "yale-child-study",
-      "name": "Undergraduate Research Assistant / PGA Internship",
+      "name": "Undergraduate Developmental Science Summer Internship",
       "org": "Yale Child Study Center",
       "city": "New Haven, CT",
       "url": "https://medicine.yale.edu/childstudy/education-and-training/undergraduate-pga/interns/",
@@ -236,33 +252,37 @@
         "pediatrics",
         "neuroscience",
         "psychology",
-        "clinical"
+        "clinical",
+        "developmental",
+        "autism"
       ],
-      "focus": "Child psychiatry, developmental and autism research at the Child Study Center.",
-      "duration_weeks": 10,
-      "stipend_usd": null,
+      "focus": "Child health research across neuroscience, developmental and clinical areas, run with the Department of Pediatrics.",
+      "duration_weeks": 8,
+      "stipend_usd": 4000,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "confirmed",
       "deadline": "2027-01-14",
       "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
-          "junior",
-          "senior"
+          "junior"
         ],
-        "citizenship": "unspecified",
+        "citizenship": "us-pr-or-f1",
         "min_gpa": null,
         "notes": ""
       },
       "requires": [
         "cv",
         "personal-statement",
-        "1-lor"
+        "2-lor"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 1. Strong fit for developmental/behavioral work. CONFIRMED on the page: opens Dec 1, 2026, closes Jan 14, 2027 at 5pm ET. That is far earlier than the February cluster. It is one of the first deadlines in the whole cycle.",
-      "url_confidence": "high"
+      "notes": "CONFIRMED on the page: the form opens Dec 1, 2026 and closes Jan 14, 2027 at 5 p.m. ET, with no late applications and no extensions. Eight weeks, 40 hours a week, in person in New Haven, up to 12 places. Two academic letters, a one page letter of interest, a two page resume and proof of summer health insurance. No housing.",
+      "url_confidence": "high",
+      "program_dates": "Jun 7 - Jul 30, 2027",
+      "stipend_note": "Up to $4,000, and only if you cannot get funding from Penn State first"
     },
     {
       "id": "bch-loddenkemper-epilepsy",
@@ -280,11 +300,11 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2027-01-23",
+      "opens_status": "projected",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
         "class_years": [
-          "sophomore",
           "junior",
           "senior"
         ],
@@ -297,8 +317,9 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Jan 23. Single-lab internship, a specific, direct email to the PI matters more here than a generic application.",
-      "url_confidence": "high"
+      "notes": "Unpaid, 30 hours a week, with a remote option. Send questions only to LoddenkemperInternship@childrens.harvard.edu, not to lab members. The page still shows last cycle's dates, so check it from early January.",
+      "url_confidence": "high",
+      "stipend_note": "Unpaid: you need academic credit from your school or outside funding"
     },
     {
       "id": "psu-surip",
@@ -311,11 +332,12 @@
         "translational",
         "neuroscience"
       ],
-      "focus": "Biomedical research across Penn State College of Medicine departments.",
+      "focus": "Bench biomedical research across Penn State College of Medicine departments, aimed at students headed to a PhD, with no clinical component.",
       "duration_weeks": 10,
-      "stipend_usd": 5000,
-      "housing": "provided",
+      "stipend_usd": 5500,
+      "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -323,22 +345,23 @@
           "sophomore",
           "junior"
         ],
-        "citizenship": "us-or-pr",
-        "min_gpa": null,
+        "citizenship": "us-pr-or-f1",
+        "min_gpa": 3.0,
         "notes": ""
       },
       "requires": [
         "transcript",
         "cv",
         "personal-statement",
-        "2-lor"
+        "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Flagged on your list: opens Dec 1. You are a Penn State student, so you apply here as an internal candidate, which is usually an advantage.",
+      "notes": "CONFIRMED date: Feb 1, 2027. The page says SURIP is for students considering a PhD and is not intended for students planning on medical school, and there is no clinical shadowing. Up to 8 interns. Last cycle's cutoff was noon Eastern, so finish the morning before.",
       "url_confidence": "medium",
       "url_verified": true,
       "program_dates": "May 24 - Jul 31, 2027",
-      "home_institution": true
+      "home_institution": true,
+      "stipend_note": "At least $5,500 before taxes; if you live on campus, July rent is paid and June and August are yours"
     },
     {
       "id": "mayo-surf",
@@ -356,6 +379,7 @@
       "stipend_usd": 7000,
       "housing": "stipend-covers",
       "opens": "2026-11-01",
+      "opens_status": "confirmed",
       "deadline": "2027-02-03",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -374,7 +398,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Excellent stipend and name recognition. Mayo also runs SURF tracks in Arizona and Florida on separate pages. CONFIRMED on the page: application window Nov 1, 2026 - Feb 3, 2027.",
+      "notes": "CONFIRMED on the page: the window runs Nov 1, 2026 to Feb 3, 2027. You pick a research area when you apply, and neuroscience is one. About 180 undergraduates a year across three campuses; the Arizona and Florida tracks have their own pages.",
       "url_confidence": "medium",
       "url_verified": true,
       "program_dates": "Jun 1 - Aug 6, 2027"
@@ -384,7 +408,7 @@
       "name": "Summer Undergraduate Internship Program (SUIP)",
       "org": "University of Pennsylvania: Biomedical Graduate Studies",
       "city": "Philadelphia, PA",
-      "url": "https://www.med.upenn.edu/suip/",
+      "url": "https://www.med.upenn.edu/research-trainee-affairs/suip/",
       "tracks": [
         "basic-science",
         "translational",
@@ -394,9 +418,10 @@
       "duration_weeks": 10,
       "stipend_usd": 5500,
       "housing": "provided",
-      "opens": "2026-12-01",
+      "opens": "2026-10-01",
+      "opens_status": "confirmed",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -413,8 +438,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Can be combined geographically with CHOP: same campus block.",
-      "url_confidence": "medium"
+      "notes": "CONFIRMED on the page: open since Oct 1, 2026 and due Feb 1, 2027 at 11:59 p.m. ET. Your letters must arrive by that same deadline, which is unusual, so ask early. Built for students heading to a PhD. You can also apply through the Leadership Alliance portal.",
+      "url_confidence": "medium",
+      "program_dates": "Jun 7 - Aug 13, 2027",
+      "stipend_note": "$5,500 plus on-campus housing"
     },
     {
       "id": "hopkins-pathway-sip",
@@ -429,11 +456,13 @@
       ],
       "focus": "Mentored biomedical research at Johns Hopkins School of Medicine.",
       "duration_weeks": 9,
-      "stipend_usd": 4500,
-      "housing": "varies",
-      "opens": "2026-10-01",
+      "stipend_usd": null,
+      "paid": true,
+      "housing": "provided",
+      "opens": "2026-11-01",
+      "opens_status": "confirmed",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -450,10 +479,12 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Flagged on your list as OPEN NOW. This is one to do first. Baltimore, about 70 minutes from Leesburg.",
+      "notes": "CONFIRMED on the page: opened Nov 1, 2026 and closes Feb 1, 2027 at 11:59 p.m. EST. Housing is free and the stipend varies by division. There is a NeuroSIP division, and you may apply to several divisions. Unofficial transcripts are fine. Applying is free.",
       "priority_hint": "open-now",
       "url_confidence": "medium",
-      "near_home": true
+      "near_home": true,
+      "program_dates": "May 30 - Aug 6, 2027 for most divisions",
+      "stipend_note": "Varies by division; housing is free"
     },
     {
       "id": "cwru-hlb",
@@ -471,6 +502,7 @@
       "stipend_usd": 4500,
       "housing": "varies",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -509,6 +541,7 @@
       "stipend_usd": 4500,
       "housing": "varies",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -547,6 +580,7 @@
       "stipend_usd": 4500,
       "housing": "provided",
       "opens": "2026-10-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -580,10 +614,11 @@
         "basic-science"
       ],
       "focus": "Campus-level undergraduate research program listings.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -614,9 +649,10 @@
       ],
       "focus": "Mechanistic cancer biology in Sloan Kettering Institute labs.",
       "duration_weeks": 10,
-      "stipend_usd": 6000,
-      "housing": "varies",
+      "stipend_usd": 6500,
+      "housing": "provided",
       "opens": "2026-11-02",
+      "opens_status": "confirmed",
       "deadline": "2027-02-01",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -624,18 +660,17 @@
           "sophomore",
           "junior"
         ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": "Undergraduate program: distinct from MSK's HOPP Summer Student Program, which is high-school only."
+        "citizenship": "us-pr-or-f1",
+        "min_gpa": 3.0,
+        "notes": "Undergraduate program, separate from MSK's high school HOPP. Research experience is expected, plus college biology and introductory chemistry. Must be vaccinated and boosted against COVID-19."
       },
       "requires": [
         "transcript",
-        "cv",
         "personal-statement",
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Worth knowing: MSK's better-known HOPP Summer Student Program is high-school only (2027 deadline Feb 5). MBSP is the undergraduate one, so your list had the right one. CONFIRMED on the page: portal opens Nov 2, 2026 and closes Feb 1, 2027 at 8:00 a.m., a morning cutoff, not end of day.",
+      "notes": "CONFIRMED on the page: the portal opened Nov 2, 2026 and closes Feb 1, 2027 at 8:00 a.m., a morning cutoff. Official transcripts from every school you attended. Offers by Mar 15.",
       "url_confidence": "medium",
       "url_verified": true,
       "program_dates": "Jun 1 - Aug 6, 2027"
@@ -656,6 +691,7 @@
       "stipend_usd": 5000,
       "housing": "provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -690,10 +726,11 @@
         "neuroscience"
       ],
       "focus": "Biomedical research at NYU Langone with PhD-pipeline mentoring.",
-      "duration_weeks": 10,
+      "duration_weeks": 9,
       "stipend_usd": 5000,
       "housing": "provided",
-      "opens": "2026-12-01",
+      "opens": null,
+      "opens_status": "open-now",
       "deadline": "2027-02-02",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -703,7 +740,7 @@
         ],
         "citizenship": "us-or-pr",
         "min_gpa": null,
-        "notes": ""
+        "notes": "You need at least one full semester of bench lab research."
       },
       "requires": [
         "transcript",
@@ -712,10 +749,11 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "CONFIRMED on the page: Feb 2, 2027 at 5 p.m.",
+      "notes": "CONFIRMED on the page: open now, due Feb 2, 2027 at 5 p.m. ET. About 30 students a summer.",
       "url_confidence": "high",
       "url_verified": true,
-      "program_dates": "Jun 1 - Jul 30, 2027"
+      "program_dates": "Jun 1 - Jul 30, 2027",
+      "stipend_note": "$5,000 plus free housing and round-trip travel; you pay for food"
     },
     {
       "id": "psu-aha-usf",
@@ -728,11 +766,12 @@
         "basic-science",
         "translational"
       ],
-      "focus": "American Heart Association-funded cardiovascular and stroke research.",
+      "focus": "American Heart Association-funded cardiovascular and stroke research in a basic science lab, with no clinical shadowing.",
       "duration_weeks": 10,
-      "stipend_usd": 5000,
-      "housing": "varies",
+      "stipend_usd": 6000,
+      "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "confirmed",
       "deadline": "2027-02-15",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -740,21 +779,22 @@
           "sophomore",
           "junior"
         ],
-        "citizenship": "us-or-pr",
-        "min_gpa": null,
+        "citizenship": "us-pr-or-f1",
+        "min_gpa": 3.0,
         "notes": ""
       },
       "requires": [
         "transcript",
         "cv",
         "personal-statement",
-        "2-lor"
+        "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Same institution as SURIP: one visit, two applications. You are a Penn State student, so you apply here as an internal candidate, which is usually an advantage.",
+      "notes": "Opens Dec 1, 2026. Everything, your letter and transcript included, must arrive by NOON Eastern on Feb 15, 2027, not end of day. Up to 6 students. You are a Penn State student, so you apply as an internal candidate. Same campus as SURIP and PROMISE.",
       "url_confidence": "high",
-      "program_dates": "May 24 - Jul 27, 2027",
-      "home_institution": true
+      "program_dates": "May 24 - Jul 31, 2027",
+      "home_institution": true,
+      "stipend_note": "$6,000 before taxes; housing in Hershey is yours to pay"
     },
     {
       "id": "rutgers-rwjms-neuro",
@@ -771,6 +811,7 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2027-01-02",
+      "opens_status": "projected",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -806,9 +847,10 @@
       "duration_weeks": 9,
       "stipend_usd": null,
       "housing": "varies",
-      "opens": "2026-11-02",
-      "deadline": "2027-02-13",
-      "deadline_status": "projected",
+      "opens": null,
+      "opens_status": "open-now",
+      "deadline": "2027-02-12",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -824,7 +866,7 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
-      "notes": "IDENTIFIED: this was the bare 'Summer Biomedical Research Program' entry on your list. The 2026 cycle closed 13 February and the 2025 cohort ran 27 May - 25 July. Smaller applicant pool than the national programs, and regionally adjacent to the Old Dominion entry. The 2027 cycle opens Nov 2, 2026 and runs May 24 - Jul 23, 2027. The 2027 deadline is not posted yet; the 2026 cycle closed Feb 13.",
+      "notes": "CONFIRMED on the page: the 2027 cycle is open now and closes Feb 12, 2027. The program runs May 24 - Jul 23, 2027. The page posts no stipend or housing, so ask before you count on either.",
       "url_verified": true,
       "url_confidence": "high",
       "program_dates": "May 24 - Jul 23, 2027"
@@ -841,10 +883,11 @@
         "translational"
       ],
       "focus": "NCI-funded, team-based cancer research with weekly career-development sessions, ending in a poster symposium.",
-      "duration_weeks": null,
-      "stipend_usd": null,
+      "duration_weeks": 10,
+      "stipend_usd": 6000,
       "housing": "varies",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-01-31",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -853,20 +896,23 @@
           "junior",
           "senior"
         ],
-        "citizenship": "unspecified",
+        "citizenship": "us-or-pr",
         "min_gpa": null,
         "notes": "STEM majors who have completed at least two years of college, rising juniors and seniors. Engineering, computer science, statistics and biological sciences all count. Students underrepresented in the biomedical workforce are encouraged to apply."
       },
       "requires": [
+        "transcript",
         "cv",
-        "personal-statement"
+        "personal-statement",
+        "2-lor"
       ],
       "selectivity": "high",
-      "notes": "IDENTIFIED: this was the bare 'PROMISE' entry on your list. It is Penn State. That makes three Penn State programs on the list (SURIP, AHA-USF, PROMISE), all at Hershey. Worth asking the coordinators whether one application can be considered for more than one. Listed deadline is 'late January' on a third-party listing, so confirm it. You are a Penn State student, so you apply here as an internal candidate, which is usually an advantage.",
+      "notes": "CONFIRMED on the page: closes Jan 31, 2027. A 3.0 GPA is recommended, not required. Up to 22 students, undergraduates and medical students together. Optional clinical shadowing. Of the three Hershey programs this is the cheapest to attend. Ask whether one application can be considered for more than one.",
       "url_verified": true,
       "url_confidence": "high",
       "program_dates": "May 24 - Jul 31, 2027",
-      "home_institution": true
+      "home_institution": true,
+      "stipend_note": "$6,000 for 10 weeks, travel to Hershey covered, partial need-based housing support"
     }
   ]
 }

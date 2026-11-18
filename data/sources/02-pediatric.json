@@ -15,11 +15,12 @@
       "focus": "Nine-week paid pediatric research internship; first-time research interns are prioritized.",
       "duration_weeks": 9,
       "stipend_usd": 7100,
-      "stipend_note": "$7,100 stipend plus $400 food stipend and an ORCA transit card",
+      "stipend_note": "$7,100 plus a $400 food stipend and transportation help",
       "housing": "not-provided",
-      "opens": "2026-11-17",
-      "deadline": "2027-01-02",
-      "deadline_status": "projected",
+      "opens": "2026-11-16",
+      "opens_status": "confirmed",
+      "deadline": "2027-01-04",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "freshman",
@@ -28,7 +29,7 @@
         ],
         "citizenship": "unspecified",
         "min_gpa": null,
-        "notes": "Must be enrolled and in good standing. Students graduating before or during the program are NOT eligible. No graduate or medical students. Prior research experience not required."
+        "notes": "You must be 18 by the start, enrolled, and not graduating before or during the program. Prior research experience is not required."
       },
       "requires": [
         "transcript",
@@ -37,7 +38,7 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Strong stipend and explicitly friendly to students without much research experience. 2026 cycle: opened Nov 17, apps due Jan 2, letters due Jan 16.",
+      "notes": "CONFIRMED on the page: opened Nov 16 at 8 a.m. Pacific and closes MONDAY, JAN 4 at 5 p.m. Pacific, which is 8 p.m. Eastern. The earliest deadline on your list. Letters are due Jan 19. Friendly to students without much research experience.",
       "url_confidence": "high"
     },
     {
@@ -57,6 +58,7 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-01-23",
       "deadline_status": "projected",
       "eligibility": {
@@ -94,8 +96,10 @@
       "focus": "Paid ten-week undergraduate research internship placed across hospital departments.",
       "duration_weeks": 10,
       "stipend_usd": null,
+      "paid": true,
       "housing": "not-provided",
       "opens": "2026-12-15",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -115,7 +119,8 @@
       "selectivity": "high",
       "notes": "Runs on a short, unusual timeline: an interest form around mid-December, then individual department postings in early January, decisions in March. Watch it weekly rather than waiting for one deadline.",
       "url_confidence": "low",
-      "url_verified": true
+      "url_verified": true,
+      "stipend_note": "Paid; the rate is not published"
     },
     {
       "id": "nationwide-childrens",
@@ -134,6 +139,7 @@
       "stipend_usd": null,
       "housing": "varies",
       "opens": "2026-10-15",
+      "opens_status": "projected",
       "deadline": "2027-02-07",
       "deadline_status": "projected",
       "eligibility": {
@@ -157,46 +163,6 @@
       "url_verified": true
     },
     {
-      "id": "chla-summer",
-      "name": "Summer Student Research Program",
-      "org": "Children's Hospital Los Angeles (Saban Research Institute)",
-      "city": "Los Angeles, CA",
-      "url": "https://www.chla.org/research/education-training",
-      "tracks": [
-        "pediatrics",
-        "basic-science",
-        "translational",
-        "oncology"
-      ],
-      "focus": "Pediatric research at the Saban Research Institute.",
-      "duration_weeks": 10,
-      "stipend_usd": 4000,
-      "housing": "not-provided",
-      "opens": "2026-12-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
-      "eligibility": {
-        "class_years": [
-          "sophomore",
-          "junior"
-        ],
-        "citizenship": "unspecified",
-        "min_gpa": null,
-        "notes": ""
-      },
-      "requires": [
-        "transcript",
-        "cv",
-        "personal-statement",
-        "2-lor"
-      ],
-      "selectivity": "high",
-      "notes": "",
-      "url_confidence": "low",
-      "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
-      "url_verified": false
-    },
-    {
       "id": "lurie-childrens",
       "name": "Summer Research Program",
       "org": "Stanley Manne Children's Research Institute (Lurie Children's)",
@@ -212,6 +178,7 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-15",
       "deadline_status": "projected",
       "eligibility": {
@@ -246,12 +213,13 @@
       ],
       "focus": "Nine paid weeks of biomedical research across a very broad range of areas, plus seminars and career development.",
       "duration_weeks": 9,
-      "stipend_usd": 4500,
-      "housing": "provided",
-      "stipend_note": "Designated housing near Baylor College of Medicine",
-      "opens": "2026-10-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "stipend_usd": 5400,
+      "housing": "varies",
+      "stipend_note": "About $5,400 for nine weeks, paid as salary or salary plus a housing or travel allowance",
+      "opens": null,
+      "opens_status": "open-now",
+      "deadline": "2027-01-22",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -269,7 +237,7 @@
       ],
       "selectivity": "very-high",
       "contact": "smart-program@bcm.edu",
-      "notes": "Official name is Summer Undergraduate Research Training, not \"Summer Medical and Research Training.\" 2027 application was slated to open in October 2026. Check now. Faculty mentor forms are due Jan 15, 2027, which hints the student deadline sits near it.",
+      "notes": "CONFIRMED on the page: the summer 2027 application is open now and closes Jan 22. Designated housing is near Baylor College of Medicine. Houston also has MD Anderson, so one city covers two applications.",
       "url_confidence": "high",
       "url_verified": true,
       "program_dates": "Jun 7 - Aug 6, 2027"
@@ -291,8 +259,9 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -329,8 +298,9 @@
       "stipend_usd": 4000,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -366,8 +336,9 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-15",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -402,8 +373,9 @@
       "stipend_usd": 4000,
       "housing": "varies",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -440,8 +412,9 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-15",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -477,8 +450,9 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -524,13 +498,16 @@
       },
       "requires": [
         "cv",
-        "personal-statement"
+        "personal-statement",
+        "2-lor"
       ],
       "selectivity": "moderate",
-      "notes": "CORRECTION: the posted cycle is a FALL-SPRING internship (Sept 13, 2026 - May 15, 2027) whose deadline was Aug 10, 2026 and has passed, not a summer program. 15 hours/week onsite, ten interns taken. Real pediatric emergency-medicine patient contact, which is rare and valuable, so it is worth emailing to ask whether a summer 2027 session runs and when it opens. Do not plan the summer around this one. Downtown DC, about an hour from Leesburg.",
+      "notes": "The posted cycle is a FALL-SPRING internship (Sept 2026 to May 2027), not a summer program, and the page says nothing about summer. It is real pediatric emergency patient contact, which is rare, so email the program manager, Desiree Edemba, to ask whether a summer 2027 session runs. Do not plan your summer around it. About an hour from Leesburg.",
       "url_confidence": "medium",
       "url_verified": true,
-      "near_home": true
+      "near_home": true,
+      "stipend_note": "Unpaid; the page says a stipend may be available",
+      "opens_status": "unknown"
     },
     {
       "id": "childrens-national-trainees",
@@ -548,8 +525,9 @@
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -577,13 +555,15 @@
       "url": "https://www.cookchildrens.org/",
       "tracks": [
         "pediatrics",
-        "clinical"
+        "clinical",
+        "neuroscience"
       ],
       "focus": "Pediatric clinical research, including a notable pediatric epilepsy and neurosciences group.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -616,10 +596,11 @@
         "translational"
       ],
       "focus": "Pediatric research across UCSF's Department of Pediatrics.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
@@ -636,8 +617,50 @@
         "personal-statement"
       ],
       "selectivity": "high",
-      "notes": "Often filled by direct faculty contact rather than a central application, see the cold-email template in materials/.",
+      "notes": "The department page offers student programs for medical students only, with no undergraduate application. Placements like this come from emailing a faculty member directly; the Emailing a lab guide on this site walks you through it.",
       "url_confidence": "low",
+      "url_verified": true
+    },
+    {
+      "id": "rochester-scrc-peds",
+      "name": "Strong Children's Research Center Summer Training Program",
+      "org": "University of Rochester Medical Center, Department of Pediatrics",
+      "city": "Rochester, NY",
+      "url": "https://www.urmc.rochester.edu/pediatrics/research/summer-training-program",
+      "tracks": [
+        "pediatrics",
+        "clinical",
+        "translational",
+        "basic-science"
+      ],
+      "focus": "Ten weeks on a project with a pediatrics faculty mentor in the specialty you choose, ending in a poster session for the whole Department of Pediatrics. Running for the 37th year.",
+      "duration_weeks": 10,
+      "stipend_usd": 3000,
+      "stipend_note": "$3,000 plus free on-campus housing; travel is yours",
+      "housing": "provided",
+      "opens": "2026-11-16",
+      "opens_status": "confirmed",
+      "deadline": null,
+      "deadline_status": "rolling",
+      "program_dates": "Jun 1 - Aug 5, 2027",
+      "eligibility": {
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Entering junior or senior year when the program starts. US citizens, permanent residents, or international students able to work in the US."
+      },
+      "requires": [
+        "transcript",
+        "cv",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "contact": "scrc@urmc.rochester.edu",
+      "notes": "CONFIRMED on the page: the 2027 application opened Monday, Nov 16, 2026, and applications are reviewed on a rolling basis, so earlier is better. It wants official transcripts that include your fall 2026 semester, so you can submit once fall grades post. Two faculty letters, a CV and short answers. You are placed with a mentor in the pediatric specialty you pick.",
+      "url_confidence": "high",
       "url_verified": true
     }
   ]

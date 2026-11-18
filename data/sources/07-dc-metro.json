@@ -7,21 +7,33 @@
       "org": "Inova Health System",
       "city": "Fairfax, VA",
       "url": "https://www.inova.org/",
-      "tracks": ["clinical", "translational", "pediatrics"],
+      "tracks": [
+        "clinical",
+        "translational",
+        "pediatrics"
+      ],
       "focus": "Northern Virginia's largest health system, with clinical and translational research including Inova Children's Hospital.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
-        "class_years": ["sophomore", "junior", "senior"],
+        "class_years": [
+          "sophomore",
+          "junior",
+          "senior"
+        ],
         "citizenship": "unspecified",
         "min_gpa": null,
         "notes": ""
       },
-      "requires": ["cv", "personal-statement"],
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
       "selectivity": "moderate",
       "near_home": true,
       "notes": "About 35 minutes from Leesburg, so no housing cost. You already worked in Fairfax at Privia, so you know the area and may have a contact who can point you at the right person. This is a hub page: the summer research listings sit under research and education, and a direct email is likely to work better than a portal.",
@@ -34,21 +46,34 @@
       "org": "Georgetown University Medical Center",
       "city": "Washington, DC",
       "url": "https://som.georgetown.edu/",
-      "tracks": ["clinical", "basic-science", "neuroscience", "oncology"],
+      "tracks": [
+        "clinical",
+        "basic-science",
+        "neuroscience",
+        "oncology"
+      ],
       "focus": "Medical school research across neuroscience and the Lombardi Comprehensive Cancer Center.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
-        "class_years": ["sophomore", "junior"],
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
         "citizenship": "unspecified",
         "min_gpa": null,
         "notes": ""
       },
-      "requires": ["cv", "personal-statement", "1-lor"],
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
       "selectivity": "high",
       "near_home": true,
       "notes": "Roughly an hour from Leesburg. Lombardi is an NCI comprehensive cancer center, and the neuroscience department is strong. Hub page: look under education and training for the summer listings.",
@@ -61,21 +86,33 @@
       "org": "George Washington University School of Medicine",
       "city": "Washington, DC",
       "url": "https://smhs.gwu.edu/research",
-      "tracks": ["clinical", "translational", "public-health"],
+      "tracks": [
+        "clinical",
+        "translational",
+        "public-health",
+        "pediatrics"
+      ],
       "focus": "Clinical and translational research in downtown DC, with ties to Children's National.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "not-provided",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
-        "class_years": ["sophomore", "junior"],
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
         "citizenship": "unspecified",
         "min_gpa": null,
         "notes": ""
       },
-      "requires": ["cv", "personal-statement"],
+      "requires": [
+        "cv",
+        "personal-statement"
+      ],
       "selectivity": "moderate",
       "near_home": true,
       "notes": "GW's pediatrics department is based at Children's National, so an email here can lead to the same place by another route.",
@@ -88,21 +125,34 @@
       "org": "Howard University College of Medicine",
       "city": "Washington, DC",
       "url": "https://medicine.howard.edu/",
-      "tracks": ["basic-science", "clinical", "translational"],
+      "tracks": [
+        "basic-science",
+        "clinical",
+        "translational"
+      ],
       "focus": "Biomedical research at a historically Black medical school, and one of the fourteen Amgen Scholars host sites.",
       "duration_weeks": 10,
       "stipend_usd": null,
       "housing": "varies",
       "opens": "2026-11-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
-        "class_years": ["sophomore", "junior"],
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
         "citizenship": "unspecified",
         "min_gpa": null,
         "notes": ""
       },
-      "requires": ["transcript", "cv", "personal-statement", "2-lor"],
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "2-lor"
+      ],
       "selectivity": "high",
       "near_home": true,
       "notes": "Worth knowing: Howard is an Amgen Scholars host, so the Amgen application you are already writing can be pointed here, at a campus an hour from home. Amgen covers housing anyway, but the option to commute is there.",
@@ -115,21 +165,33 @@
       "org": "Fralin Biomedical Research Institute at Virginia Tech Carilion",
       "city": "Roanoke, VA",
       "url": "https://fbri.vtc.vt.edu/",
-      "tracks": ["neuroscience", "translational", "basic-science"],
+      "tracks": [
+        "neuroscience",
+        "translational",
+        "basic-science"
+      ],
       "focus": "Neuroscience-heavy institute with work on addiction, developmental neuroscience and human neuroimaging.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
-        "class_years": ["sophomore", "junior"],
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
         "citizenship": "unspecified",
         "min_gpa": null,
         "notes": ""
       },
-      "requires": ["cv", "personal-statement", "1-lor"],
+      "requires": [
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
       "selectivity": "moderate",
       "notes": "Not commutable from Leesburg, but a genuinely strong neuroscience institute in Virginia that very few people outside the state apply to. The human neuroimaging work is close to what you already do in the lab.",
       "url_verified": true,
@@ -141,25 +203,83 @@
       "org": "University of Virginia School of Medicine",
       "city": "Charlottesville, VA",
       "url": "https://med.virginia.edu/",
-      "tracks": ["basic-science", "translational", "neuroscience", "pediatrics"],
+      "tracks": [
+        "basic-science",
+        "translational",
+        "neuroscience",
+        "pediatrics"
+      ],
       "focus": "Biomedical research at Virginia's flagship medical school, including UVA Children's.",
-      "duration_weeks": 10,
+      "duration_weeks": null,
       "stipend_usd": null,
       "housing": "varies",
       "opens": null,
+      "opens_status": "unknown",
       "deadline": null,
       "deadline_status": "unknown",
       "eligibility": {
-        "class_years": ["sophomore", "junior"],
+        "class_years": [
+          "sophomore",
+          "junior"
+        ],
         "citizenship": "unspecified",
         "min_gpa": null,
         "notes": ""
       },
-      "requires": ["transcript", "cv", "personal-statement", "1-lor"],
+      "requires": [
+        "transcript",
+        "cv",
+        "personal-statement",
+        "1-lor"
+      ],
       "selectivity": "high",
       "notes": "About two hours from Leesburg, so a weekend drive home rather than a commute. In-state and a strong pediatrics department.",
       "url_verified": true,
       "url_confidence": "low"
+    },
+    {
+      "id": "umgccc-nsip",
+      "name": "Nathan Schnaper Intern Program in Translational Cancer Research (NSIP)",
+      "org": "University of Maryland Greenebaum Comprehensive Cancer Center / UM School of Medicine",
+      "city": "Baltimore, MD",
+      "url": "https://research.umgccc.org/crtec/summer-undergraduate-research-programs/nathan-schnaper-intern-program",
+      "tracks": [
+        "oncology",
+        "translational",
+        "clinical"
+      ],
+      "focus": "Ten weeks of translational cancer research with a cancer center faculty mentor, plus clinical shadowing, a lab techniques course and a closing oral and poster presentation.",
+      "duration_weeks": 10,
+      "stipend_usd": 6000,
+      "stipend_note": "$6,000 for the 10 weeks plus up to $500 travel; housing is available on the UMB campus",
+      "housing": "varies",
+      "opens": "2026-11-15",
+      "opens_status": "confirmed",
+      "deadline": "2027-02-01",
+      "deadline_status": "confirmed",
+      "program_dates": "May 24 - Jul 30, 2027",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior",
+          "senior"
+        ],
+        "citizenship": "us-or-pr",
+        "min_gpa": 3.2,
+        "notes": "Cumulative GPA above 3.2. Graduating seniors may apply. Full time for all ten weeks, with no other job or classes."
+      },
+      "requires": [
+        "transcript",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "near_home": true,
+      "contact": "NSIP@som.umaryland.edu",
+      "notes": "CONFIRMED on the page: the 2027 portal opened Nov 15, 2026, and everything, letters included, must arrive by Feb 1, 2027. Decisions by Mar 1. 21 internships a summer, with real clinical shadowing alongside the lab work, which is rare. Baltimore is the same drive from Leesburg as Hopkins, and campus housing is available if the commute is too long. Virtual open house Jan 6, 12 to 1:30 p.m.",
+      "url_confidence": "high",
+      "url_verified": true
     }
   ]
 }

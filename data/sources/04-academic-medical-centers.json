@@ -14,10 +14,12 @@
         "neuroscience"
       ],
       "focus": "Biomedical research at UCSF with structured mentoring and a final symposium.",
-      "duration_weeks": 9,
-      "stipend_usd": 5000,
-      "housing": "varies",
+      "duration_weeks": 10,
+      "stipend_usd": null,
+      "paid": true,
+      "housing": "provided",
       "opens": "2026-11-01",
+      "opens_status": "confirmed",
       "deadline": "2027-02-01",
       "deadline_status": "confirmed",
       "eligibility": {
@@ -27,19 +29,19 @@
         ],
         "citizenship": "us-or-pr",
         "min_gpa": null,
-        "notes": ""
+        "notes": "At least four semesters done before the program, no bachelor's degree by spring 2027, and a real interest in a UCSF PhD."
       },
       "requires": [
         "transcript",
-        "cv",
         "personal-statement",
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "UCSF is also an Amgen Scholars host. Check whether one application can serve both. CONFIRMED on the page: opens Nov 1, 2026, closes Feb 1, 2027 at 11:59 p.m.",
+      "notes": "CONFIRMED on the page: opened Nov 1, 2026 and closes Feb 1, 2027 at 11:59 p.m. Pacific, which is 2:59 a.m. Eastern on Feb 2. Decisions the first week of March.",
       "url_confidence": "medium",
       "url_verified": true,
-      "program_dates": "May 30 - Aug 7, 2027"
+      "program_dates": "May 30 - Aug 7, 2027",
+      "stipend_note": "Total package over $15,000 including stipend, housing, travel and health insurance"
     },
     {
       "id": "vanderbilt-vssa",
@@ -59,7 +61,8 @@
       "stipend_note": "Stipend plus housing and travel for most tracks",
       "housing": "provided",
       "opens": "2026-11-01",
-      "deadline": "2027-02-01",
+      "opens_status": "confirmed",
+      "deadline": "2027-01-16",
       "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
@@ -77,17 +80,17 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "One portal, many tracks: high value per application. Well-run program with a strong record of placing students into PhD programs. CONFIRMED on the page: applications open Nov 1, 2026 and close between Jan 16 and Feb 15, 2027 depending on the track, with most on Feb 1. Check the specific track's date; the earliest is Jan 16.",
+      "notes": "CONFIRMED on the page: opened Nov 1, 2026. Track deadlines run Jan 16 to Feb 15, 2027 and most are Feb 1, so the date shown is the earliest. Check your track's own date. One portal, many tracks.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
-      "program_dates": "Through Aug 6, 2027"
+      "program_dates": "Jun 1 - Jul 30, 2027 for most tracks, some to Aug 6, 2027"
     },
     {
       "id": "utsw-surf",
       "name": "Summer Undergraduate Research Fellowship (SURF)",
       "org": "UT Southwestern Medical Center",
       "city": "Dallas, TX",
-      "url": "https://gsbs.utsouthwestern.edu/",
+      "url": "https://gsbs.utsouthwestern.edu/research-opportunities/surf/",
       "tracks": [
         "basic-science",
         "translational",
@@ -96,29 +99,31 @@
       "focus": "Ten weeks of biomedical research at a top-funded medical center.",
       "duration_weeks": 10,
       "stipend_usd": 5000,
-      "housing": "provided",
+      "housing": "provided-nonlocal",
       "opens": "2026-11-01",
+      "opens_status": "confirmed",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
           "junior"
         ],
-        "citizenship": "us-or-pr",
+        "citizenship": "us-pr-or-f1",
         "min_gpa": 3.0,
-        "notes": ""
+        "notes": "US citizens or F-1 students in a science degree who have finished freshman year. No courses, job or vacation during the ten weeks."
       },
       "requires": [
         "transcript",
-        "cv",
         "personal-statement",
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Also an Amgen Scholars host site.",
-      "url_confidence": "medium",
-      "url_verified": true
+      "notes": "CONFIRMED on the page: opened Nov 1, 2026 and due Feb 1, 2027. About 50 fellows; neuroscience is one of the research areas. Built for students aiming at a PhD or MD-PhD. Unofficial transcripts are fine.",
+      "url_confidence": "high",
+      "url_verified": true,
+      "program_dates": "Jun 1 - Aug 6, 2027",
+      "stipend_note": "$5,000, with housing covered if you need it; travel is yours"
     },
     {
       "id": "washu-biomedrap",
@@ -137,6 +142,7 @@
       "stipend_note": "Stipend plus housing and travel",
       "housing": "provided",
       "opens": "2026-11-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -164,7 +170,7 @@
       "name": "Summer Research Opportunity Program (SROP)",
       "org": "University of Michigan",
       "city": "Ann Arbor, MI",
-      "url": "https://rackham.umich.edu/preparing-for-graduate-school/summer-research-opportunity-program/",
+      "url": "https://rackham.umich.edu/prospective-students/srop/",
       "tracks": [
         "basic-science",
         "translational",
@@ -174,11 +180,12 @@
       "focus": "Research across Michigan's schools with graduate-school preparation.",
       "duration_weeks": 10,
       "stipend_usd": 5000,
-      "stipend_note": "Stipend plus housing and travel",
+      "stipend_note": "$5,000 including domestic travel, plus room and board",
       "housing": "provided",
-      "opens": "2026-11-01",
+      "opens": "2026-11-16",
+      "opens_status": "confirmed",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -186,7 +193,7 @@
         ],
         "citizenship": "us-or-pr",
         "min_gpa": 3.0,
-        "notes": ""
+        "notes": "Entering junior or senior year at a school other than Michigan. The page also lists broadening-participation criteria, such as mentoring, tutoring or outreach work, or being first generation; read them before you apply."
       },
       "requires": [
         "transcript",
@@ -195,10 +202,11 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "",
+      "notes": "CONFIRMED on the page: opened Nov 16, 2026 and closes Feb 1, 2027 at 11:59 p.m. EST. Decisions by Apr 5. Information workshops Wednesday, Dec 2 and Tuesday, Jan 12 at 7 p.m. EST.",
       "url_confidence": "medium",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
-      "url_verified": false
+      "url_verified": false,
+      "program_dates": "May 22 - Jul 29, 2027"
     },
     {
       "id": "emory-sure",
@@ -210,7 +218,8 @@
         "basic-science",
         "translational",
         "neuroscience",
-        "public-health"
+        "public-health",
+        "pediatrics"
       ],
       "focus": "Ten weeks of mentored research at Emory, with strong pediatric ties through Children's Healthcare of Atlanta.",
       "duration_weeks": 10,
@@ -218,6 +227,7 @@
       "stipend_note": "Stipend plus housing",
       "housing": "provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -255,13 +265,14 @@
       "duration_weeks": 10,
       "stipend_usd": 5000,
       "housing": "varies",
-      "opens": "2026-12-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "opens": "2026-10-01",
+      "opens_status": "confirmed",
+      "deadline": "2027-01-15",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
-          "sophomore",
-          "junior"
+          "junior",
+          "senior"
         ],
         "citizenship": "us-or-pr",
         "min_gpa": null,
@@ -274,10 +285,11 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "",
+      "notes": "CONFIRMED on the page: open since Oct 1, 2026 and closes Jan 15, 2027. This is SURP4US, for students who are socioeconomically disadvantaged or have limited access to research, and it is for future PhD and MD-PhD applicants only. Read that before you spend time on it.",
       "url_confidence": "medium",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
-      "url_verified": true
+      "url_verified": true,
+      "program_dates": "Jun to Aug 2027"
     },
     {
       "id": "einstein-surp",
@@ -295,6 +307,7 @@
       "stipend_usd": 4000,
       "housing": "provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -335,6 +348,7 @@
       "stipend_usd": 4500,
       "housing": "not-provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -373,6 +387,7 @@
       "stipend_usd": 4000,
       "housing": "provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -407,11 +422,12 @@
         "translational"
       ],
       "focus": "Ten weeks of biomedical research with a notably strong neuroscience department.",
-      "duration_weeks": 10,
+      "duration_weeks": 9,
       "stipend_usd": 5000,
       "stipend_note": "Stipend plus housing",
       "housing": "provided",
-      "opens": "2026-12-01",
+      "opens": null,
+      "opens_status": "open-now",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -430,7 +446,7 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "",
+      "notes": "The 2027 application is open now. Nine weeks. The neuroscience track, NEUROCITY, is aimed at CUNY students and schools with little research infrastructure, so the general Summer Scholars track is your route in.",
       "url_confidence": "medium",
       "url_verified": true
     },
@@ -450,6 +466,7 @@
       "stipend_usd": 5000,
       "housing": "provided",
       "opens": "2026-11-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -474,23 +491,25 @@
     },
     {
       "id": "duke-summer-research",
-      "name": "Summer research programs (Graduate School / SROP)",
+      "name": "Duke Summer Research Opportunity Program (SROP)",
       "org": "Duke University",
       "city": "Durham, NC",
-      "url": "https://gradschool.duke.edu/professional-development/",
+      "url": "https://gradschool.duke.edu/events/duke-summer-research-opportunity-program/",
       "tracks": [
         "basic-science",
         "neuroscience",
         "translational"
       ],
       "focus": "Research placements across Duke including a well-regarded neuroscience track.",
-      "duration_weeks": 8,
-      "stipend_usd": 5000,
-      "stipend_note": "Stipend plus housing",
+      "duration_weeks": 9,
+      "stipend_usd": null,
+      "paid": true,
+      "stipend_note": "Competitive stipend plus shared on-campus housing and travel help; no figure posted",
       "housing": "provided",
-      "opens": "2026-11-01",
-      "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "opens": null,
+      "opens_status": "unknown",
+      "deadline": null,
+      "deadline_status": "unknown",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -507,7 +526,7 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Also an Amgen Scholars host site.",
+      "notes": "The program was not held in 2026, and the page still says to check back in fall 2026 for summer 2027. Nothing is posted yet. Nine weeks of biomedical research, shared on-campus housing, travel help and a stipend, aimed at students considering a PhD.",
       "url_confidence": "medium",
       "url_verified": true
     },
@@ -527,6 +546,7 @@
       "stipend_usd": 5000,
       "housing": "varies",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -551,30 +571,35 @@
     },
     {
       "id": "indiana-summer-research",
-      "name": "Summer Research Program in Academic Medicine",
+      "name": "Medical Neuroscience Summer Undergraduate Research Program",
       "org": "Indiana University School of Medicine",
       "city": "Indianapolis, IN",
       "url": "https://medicine.iu.edu/research-centers/neurosciences/education/summer-research",
       "tracks": [
         "basic-science",
         "translational",
-        "clinical"
+        "clinical",
+        "neuroscience"
       ],
-      "focus": "Research and clinical exposure across IU School of Medicine.",
+      "focus": "Neuroscience lab research at the Stark Neurosciences Research Institute, built to prepare you for graduate school.",
       "duration_weeks": 8,
-      "stipend_usd": 4000,
-      "housing": "varies",
-      "opens": "2026-11-01",
+      "stipend_usd": null,
+      "paid": true,
+      "housing": "provided-nonlocal",
+      "opens": "2026-10-01",
+      "opens_status": "confirmed",
       "deadline": "2027-01-15",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
+          "freshman",
           "sophomore",
-          "junior"
+          "junior",
+          "senior"
         ],
         "citizenship": "us-pr-or-f1",
-        "min_gpa": null,
-        "notes": ""
+        "min_gpa": 3.25,
+        "notes": "You must still be an enrolled undergraduate that summer."
       },
       "requires": [
         "transcript",
@@ -583,9 +608,11 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Same institution as INSPIRE on your list: you may be able to be considered for several IU tracks at once. Worth asking the program coordinator.",
+      "notes": "CONFIRMED on the page: open since Oct 1, 2026 and due Jan 15, 2027 with all materials. INSPIRE runs alongside it at the same institute, so ask mneuro@iu.edu about being considered for both.",
       "url_confidence": "low",
-      "url_verified": true
+      "url_verified": true,
+      "program_dates": "Jun 6 - Jul 31, 2027",
+      "stipend_note": "Competitive stipend; the page does not state an amount"
     },
     {
       "id": "wake-forest-summer",
@@ -604,8 +631,9 @@
       "stipend_usd": 4000,
       "housing": "varies",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
-      "deadline_status": "unknown",
+      "deadline_status": "projected",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -642,6 +670,7 @@
       "stipend_note": "Stipend plus housing",
       "housing": "provided",
       "opens": "2026-12-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -669,7 +698,7 @@
       "name": "Summer Undergraduate Research Fellowship (SURF)",
       "org": "Scripps Research",
       "city": "La Jolla, CA",
-      "url": "https://education.scripps.edu/",
+      "url": "https://education.scripps.edu/undergraduate/summer-research/index.html",
       "tracks": [
         "basic-science",
         "chemistry",
@@ -677,11 +706,13 @@
       ],
       "focus": "Ten weeks of chemistry and molecular biology research at a pure-research institute.",
       "duration_weeks": 10,
-      "stipend_usd": 6000,
-      "housing": "varies",
-      "opens": "2026-11-01",
+      "stipend_usd": null,
+      "paid": true,
+      "housing": "provided",
+      "opens": null,
+      "opens_status": "open-now",
       "deadline": "2027-02-01",
-      "deadline_status": "projected",
+      "deadline_status": "confirmed",
       "eligibility": {
         "class_years": [
           "sophomore",
@@ -698,9 +729,10 @@
         "2-lor"
       ],
       "selectivity": "very-high",
-      "notes": "Heavily chemistry-leaning, a fit only if you want molecular work rather than clinical.",
-      "url_confidence": "medium",
-      "url_verified": true
+      "notes": "CONFIRMED on the page: open now, and everything is due Feb 1 at 11:59 p.m. Pacific, which is 2:59 a.m. Eastern on Feb 2. Prior research is not required, and the program encourages students with limited research access at home. Two letters, an unofficial transcript, a CV and a two page statement. The Florida campus runs a separate application.",
+      "url_confidence": "high",
+      "url_verified": true,
+      "stipend_note": "Stipend and housing for every participant; amount not posted on the overview"
     },
     {
       "id": "van-andel",
@@ -719,6 +751,7 @@
       "stipend_usd": 4500,
       "housing": "varies",
       "opens": "2026-11-01",
+      "opens_status": "projected",
       "deadline": "2027-02-01",
       "deadline_status": "projected",
       "eligibility": {
@@ -739,6 +772,48 @@
       "selectivity": "high",
       "notes": "Strong neurodegeneration focus and much less well known than the coastal institutes, so better odds.",
       "url_confidence": "medium",
+      "url_verified": true
+    },
+    {
+      "id": "penn-ucsp",
+      "name": "Undergraduate Clinical Scholars Program (UCSP)",
+      "org": "Perelman School of Medicine, University of Pennsylvania",
+      "city": "Philadelphia, PA",
+      "url": "https://www.ucspinfo.org/application.html",
+      "tracks": [
+        "clinical",
+        "public-health",
+        "pre-health"
+      ],
+      "focus": "Nine weeks on a clinical research project with an expert clinical investigator, plus weekly lectures and statistics workshops in epidemiology and biostatistics. Built for students aiming at an MD, PhD or MD-PhD.",
+      "duration_weeks": 9,
+      "stipend_usd": null,
+      "paid": true,
+      "stipend_note": "Competitive stipend, amount not posted; housing is yours to find",
+      "housing": "not-provided",
+      "opens": null,
+      "opens_status": "open-now",
+      "deadline": "2027-01-08",
+      "deadline_status": "confirmed",
+      "program_dates": "Early June to end of July 2027, exact dates not set",
+      "eligibility": {
+        "class_years": [
+          "freshman",
+          "sophomore",
+          "junior"
+        ],
+        "citizenship": "unspecified",
+        "min_gpa": null,
+        "notes": "Open to students from any accredited US school, with preference for students who are not graduating. You must be eligible to work in the US."
+      },
+      "requires": [
+        "transcript",
+        "personal-statement",
+        "2-lor"
+      ],
+      "selectivity": "high",
+      "notes": "CONFIRMED on the page: the 2027 application is open now and must be submitted online by Friday, Jan 8, 2027 at 5 p.m. EST. Transcripts and letters must be sent or postmarked by Friday, Jan 15 at 5 p.m. EST. One letter from a professor, and if you have done research, one from your research mentor. Selected applicants interview. Clinical research, which is rare among these programs.",
+      "url_confidence": "high",
       "url_verified": true
     }
   ]
