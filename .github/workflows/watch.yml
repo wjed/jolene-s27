@@ -13,10 +13,20 @@ on:
 permissions:
   contents: write
   issues: write
+  # To start the site deploy once the results are pushed, see below.
+  actions: write
+
+# Two runs at once would race to commit the same files.
+concurrency:
+  group: watch
+  cancel-in-progress: false
 
 jobs:
   watch:
     runs-on: ubuntu-latest
+    # Every page read is bounded, so a normal run takes a few minutes. This
+    # stops a hang from holding the runner for the default six hours.
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -24,32 +34,84 @@ jobs:
         with:
           python-version: "3.12"
 
+      # The watcher reads data/programs.json, so it is built from the sources
+      # first. One bad record makes build.py exit 1 even though it still
+      # writes every other program, and losing a week of checks to one typo
+      # is the wrong trade. pages.yml stays strict, so a bad record still never
+      # reaches the site.
       - name: Build dataset
+        continue-on-error: true
         run: python scripts/build.py
 
       - name: Check every program page
         id: watch
-        # Exit codes are informational (1 broken, 2 changed, 3 both), so never
-        # fail the job on them.
         run: |
           set +e
           python scripts/watch.py --quiet
-          echo "code=$?" >> "$GITHUB_OUTPUT"
+          code=$?
+          set -e
+          # 1 broken, 2 changed and 3 both are findings, so they must not fail
+          # the job. Python also exits 1 on a crash and 2 on a bad argument,
+          # though, and a crash leaves last week's report in place. A run that
+          # finished always rewrites both files, since the run number goes up,
+          # so an untouched one means the watcher died, whatever the code says.
+          for f in data/watch-state.json data/watch-report.md; do
+            if [ -z "$(git status --porcelain -- "$f")" ]; then
+              echo "::error::the watcher stopped before writing $f (exit $code)"
+              exit 1
+            fi
+          done
+          if [ "$code" -gt 3 ]; then
+            echo "::error::the watcher exited $code"
+            exit 1
+          fi
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+
+      # The build above wrote the site's summary from last week's state, so it
+      # is written again from this run's.
+      - name: Update the summary the site shows
+        run: python scripts/watch_summary.py
 
       - name: Commit updated watch state
+        id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/watch-state.json data/watch-report.md
+          git add data/watch-state.json data/watch-report.md site/data/watch.json
           if git diff --staged --quiet; then
             echo "nothing changed"
-          else
-            git commit -m "chore: weekly watch run $(date -u +%Y-%m-%d)"
-            git push
+            exit 0
           fi
+          git commit -m "chore: weekly watch run $(date -u +%Y-%m-%d)"
+          # Someone may have pushed while the pages were being read. All three
+          # files come from this run, so on a conflict this run's copy wins.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            if ! git pull --rebase --autostash -X theirs origin "$GITHUB_REF_NAME"; then
+              git rebase --abort || true
+              break
+            fi
+          done
+          echo "::error::could not push the watch results"
+          exit 1
 
+      # A push made with the workflow's own token starts no other workflow, so
+      # without this the site would keep showing the previous check until some
+      # unrelated push happened to deploy it.
+      - name: Deploy the site with the new results
+        if: steps.commit.outputs.pushed == 'true' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
+
+      # Posted even if the push failed, so a rejected push cannot swallow the
+      # week's findings, but never after the watcher itself failed, when the
+      # report on disk would still be last week's.
       - name: Open an issue when something changed
-        if: steps.watch.outputs.code != '0'
+        if: ${{ !cancelled() && steps.watch.outcome == 'success' && steps.watch.outputs.code != '0' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

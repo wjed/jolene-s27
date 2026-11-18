@@ -6,7 +6,12 @@ on:
     paths:
       - "site/**"
       - "data/**"
-      - "scripts/build.py"
+      # build.py imports the guide, kit and watcher summary scripts, which
+      # render materials/ and claude-kit/ into site/, so an edit to any of
+      # these changes what the site serves.
+      - "scripts/**"
+      - "materials/**"
+      - "claude-kit/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -23,6 +28,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
@@ -34,6 +40,13 @@ jobs:
       # can never drift from data/sources/.
       - name: Build dataset
         run: python scripts/build.py
+
+      # The build checks that each record is well formed. This catches what it
+      # cannot, such as a deadline that has already passed or a value the site
+      # has no label for. Any error fails the step, so nothing is uploaded and
+      # the live site keeps its last good copy.
+      - name: Check the data
+        run: python scripts/qa.py
 
       - uses: actions/configure-pages@v5
 

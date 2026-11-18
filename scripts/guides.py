@@ -61,7 +61,10 @@ def inline(text: str) -> str:
                     return f'<a href="#guide/{slug}" data-guide="{slug}">{label}</a>'
                 return label  # a file we do not publish: drop the link, keep the words
             rel = ' target="_blank" rel="noopener noreferrer"' if href.startswith("http") else ""
-            return f'<a href="{html.escape(href, quote=True)}"{rel}>{label}</a>'
+            # Escaped already, with the rest of the line above, quotes
+            # included. A second pass turned & into &amp;amp;, and a query
+            # string lost every parameter after its first.
+            return f'<a href="{href}"{rel}>{label}</a>'
 
         esc = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link, esc)
         out.append(esc)
@@ -108,11 +111,21 @@ def render(md: str) -> str:
     out: list[str] = []
     i = 0
 
+    # Each open level is (tag, indent) and keeps its last <li> open, so a
+    # nested list lands inside the item it belongs to, where HTML wants it,
+    # rather than loose inside the parent list.
+    def end_item():
+        out[-1] += "</li>"
+
+    def close_level(stack):
+        end_item()
+        out.append(f"</{stack.pop()[0]}>")
+
     def close_lists(stack):
         while stack:
-            out.append(f"</{stack.pop()}>")
+            close_level(stack)
 
-    list_stack: list[str] = []
+    list_stack: list[tuple[str, int]] = []
 
     while i < len(lines):
         line = lines[i]
@@ -184,26 +197,28 @@ def render(md: str) -> str:
         if m:
             indent, marker, body = len(m.group(1)), m.group(2), m.group(3)
             want = "ol" if marker.endswith(".") else "ul"
-            depth = indent // 2 + 1
 
-            while len(list_stack) > depth:
-                out.append(f"</{list_stack.pop()}>")
-            while len(list_stack) < depth:
+            # Levels follow the indent itself. indent // 2 read the four-space
+            # indent most editors produce as two levels deep.
+            while list_stack and list_stack[-1][1] > indent:
+                close_level(list_stack)
+            if list_stack and list_stack[-1][1] == indent:
+                if list_stack[-1][0] == want:
+                    end_item()
+                else:
+                    close_level(list_stack)
+            if not list_stack or list_stack[-1][1] < indent:
                 out.append(f"<{want}>")
-                list_stack.append(want)
-            if list_stack and list_stack[-1] != want:
-                out.append(f"</{list_stack.pop()}>")
-                out.append(f"<{want}>")
-                list_stack.append(want)
+                list_stack.append((want, indent))
 
             task = re.match(r"^\[([ xX])\]\s+(.*)$", body)
             if task:
                 checked = task.group(1).lower() == "x"
                 out.append(
                     f'<li class="task"><span class="box{" on" if checked else ""}"></span>'
-                    f"<span>{inline(task.group(2))}</span></li>")
+                    f"<span>{inline(task.group(2))}</span>")
             else:
-                out.append(f"<li>{inline(body)}</li>")
+                out.append(f"<li>{inline(body)}")
             i += 1
             continue
 
@@ -213,7 +228,9 @@ def render(md: str) -> str:
         i += 1
         while i < len(lines):
             nxt = lines[i].strip()
-            if (not nxt or nxt.startswith(("#", ">", "|", "- ", "* "))
+            # A fence missing from this list was swallowed into the paragraph,
+            # and its backticks were then read as inline code.
+            if (not nxt or nxt.startswith(("#", ">", "|", "- ", "* ", "```"))
                     or re.match(r"^\d+\.\s", nxt) or re.fullmatch(r"-{3,}", nxt)):
                 break
             buf.append(nxt)
@@ -249,7 +266,8 @@ def write() -> int:
     payload = build()
     out = ROOT / "site" / "data" / "guides.json"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    # Bytes, so the file is LF on every machine: write_text gives CRLF on Windows
+    out.write_bytes((json.dumps(payload, indent=2, ensure_ascii=False) + "\n").encode("utf-8"))
     total = sum(len(g["html"]) for g in payload["guides"])
     print(f"  guides     : {len(payload['guides'])} pages, {total:,} chars -> site/data/guides.json")
     return len(payload["guides"])

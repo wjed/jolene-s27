@@ -1,0 +1,5 @@
+# The calendar must keep CRLF line endings (RFC 5545), on every checkout.
+*.ics text eol=crlf
+
+# The kit download is a zip of text files; git must never rewrite its bytes.
+*.zip binary

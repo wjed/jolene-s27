@@ -169,7 +169,6 @@ def qa_outputs():
 
     confirmed = [p for p in programs if p["deadline_status"] == "confirmed"]
     check("every confirmed date has a deadline", all(p.get("deadline") for p in confirmed))
-    check("confirmed count is 16", len(confirmed) == 16, len(confirmed))
 
     # csv
     raw = (ROOT / "data/programs.csv").read_bytes()
@@ -291,13 +290,12 @@ def qa_repo():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     programs = json.loads((ROOT / "data/programs.json").read_text(encoding="utf-8"))["programs"]
     total = len(programs)
-    confirmed = sum(1 for p in programs if p["deadline_status"] == "confirmed")
     check("README program count matches the dataset",
           f"**{total} undergraduate summer research programs**" in readme, f"expected {total}")
     check("README page count matches the dataset",
           f"Fetches all {total} program pages" in readme, f"expected {total}")
-    check("README confirmed count matches the dataset",
-          f"| **{confirmed}** | deadline confirmed" in readme, f"expected {confirmed}")
+    # The README no longer quotes a confirmed-deadline count: it changes every
+    # week of the cycle, and the site counts it live instead.
     section("repo hygiene")
     tracked = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True).stdout.split()
     check("git tracks the site", any(f.startswith("site/") for f in tracked))

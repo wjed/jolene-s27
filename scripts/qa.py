@@ -106,12 +106,17 @@ def main() -> int:
         o = dt.date.fromisoformat(p["opens"]) if p.get("opens") else None
         d = dt.date.fromisoformat(p["deadline"]) if p.get("deadline") else None
 
-        if d and d < TODAY:
-            err(f"{pid}: deadline {d} is already in the past")
+        # A deadline in the past is how every program's cycle ends; the site
+        # shows it as Closed. It must not be an error: pages.yml now refuses to
+        # deploy on any error, so from the first deadline in January the site
+        # would have stopped updating every week. A date from the wrong cycle
+        # is the real mistake, and that is the window check below.
+        if d and d < TODAY and p.get("deadline_status") != "confirmed":
+            info(f"{pid}: projected deadline {d} has passed; check the page for the real date")
         if o and d and o > d:
             err(f"{pid}: opens {o} after deadline {d}")
         if d and not (CYCLE_START <= d <= CYCLE_END):
-            warn(f"{pid}: deadline {d} sits outside the Summer 2027 cycle window")
+            err(f"{pid}: deadline {d} sits outside the Summer 2027 cycle window")
         if o and o < CYCLE_START:
             warn(f"{pid}: opens {o} is before the cycle window")
         if p.get("deadline_status") == "confirmed" and not d:

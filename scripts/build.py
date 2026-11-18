@@ -15,6 +15,7 @@ from __future__ import annotations
 import csv
 import datetime as dt
 import hashlib
+import io
 import json
 import re
 import pathlib
@@ -29,6 +30,15 @@ SOURCES = ROOT / "data" / "sources"
 CYCLE = "Summer 2027"
 
 VALID_DEADLINE_STATUS = {"confirmed", "projected", "unknown", "rolling"}
+
+# Whether the opening date is known, guessed, or replaced by the page simply
+# saying the portal is open. Without this the site had to treat a guessed
+# opening date in the past as proof the portal was open, and said so as fact.
+#   confirmed  `opens` was read off the program's own page
+#   projected  `opens` is an estimate, usually last cycle carried forward
+#   open-now   the page says applications are open but gives no date (opens null)
+#   unknown    nothing is known (opens null)
+VALID_OPENS_STATUS = {"confirmed", "projected", "open-now", "unknown"}
 VALID_HOUSING = {
     "provided",
     "provided-nonlocal",
@@ -42,6 +52,15 @@ VALID_URL_CONFIDENCE = {"high", "medium", "low", "none"}
 
 REQUIRED = ["id", "name", "org", "city", "url", "tracks", "focus"]
 
+# date.fromisoformat also takes 20270115 and 2027-W03-1 on Python 3.11+. The
+# sort, the CSV and the site's own date parser all read the raw string, and
+# this is the only shape that means the same day to every one of them.
+DATE_SHAPE = re.compile(r"[0-9]{4}-[0-9]{2}-[0-9]{2}")
+
+# The calendar carries the link raw, as a URI value must be, so a line break
+# in one would start a calendar line of its own.
+URL_BREAKS = re.compile(r"[\s\x00-\x1f\x7f]")
+
 
 class ValidationError(Exception):
     pass
@@ -50,10 +69,27 @@ class ValidationError(Exception):
 def parse_date(value, where):
     if value is None:
         return None
+    if not isinstance(value, str) or not DATE_SHAPE.fullmatch(value):
+        raise ValidationError(f"{where}: bad date {value!r} (want YYYY-MM-DD)")
     try:
         return dt.date.fromisoformat(value)
-    except (TypeError, ValueError) as exc:
+    except ValueError as exc:
         raise ValidationError(f"{where}: bad date {value!r} (want YYYY-MM-DD)") from exc
+
+
+def is_text_list(value):
+    return isinstance(value, list) and all(isinstance(v, str) and v for v in value)
+
+
+def is_number(value):
+    # bool is a subclass of int, so true would otherwise pass as a $1 stipend
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def is_one_of(value, choices):
+    # `in` hashes its operand, so a list here raised TypeError instead of
+    # reaching the error message that names the record
+    return isinstance(value, str) and value in choices
 
 
 def validate(program, category):
@@ -64,31 +100,62 @@ def validate(program, category):
         if not program.get(field):
             raise ValidationError(f"{where}: missing required field {field!r}")
 
-    if not isinstance(program["tracks"], list) or not program["tracks"]:
-        raise ValidationError(f"{where}: tracks must be a non-empty list")
+    # Only truthiness was checked above, so a number or a list in one of these
+    # got through and crashed the build later, far from the record at fault.
+    for field in ("id", "name", "org", "city", "url", "focus"):
+        if not isinstance(program[field], str):
+            raise ValidationError(f"{where}: {field} must be text")
+
+    if not is_text_list(program["tracks"]):
+        raise ValidationError(f"{where}: tracks must be a non-empty list of text")
+
+    # One requirement written as "transcript" rather than ["transcript"] is an
+    # easy slip, and ", ".join() spelled it out letter by letter in the CSV.
+    if not is_text_list(program.get("requires", [])):
+        raise ValidationError(f"{where}: requires must be a list of text")
+
+    for field in ("stipend_usd", "duration_weeks"):
+        if program.get(field) is not None and not is_number(program[field]):
+            raise ValidationError(f"{where}: {field} must be a number or null")
+
+    # The site filters on these with !!value, so the text "false" would put a
+    # program in the can-live-at-home list.
+    for field in ("near_home", "home_institution", "paid"):
+        if field in program and not isinstance(program[field], bool):
+            raise ValidationError(f"{where}: {field} must be true or false")
 
     status = program.get("deadline_status", "unknown")
-    if status not in VALID_DEADLINE_STATUS:
+    if not is_one_of(status, VALID_DEADLINE_STATUS):
         raise ValidationError(
             f"{where}: deadline_status {status!r} not in {sorted(VALID_DEADLINE_STATUS)}"
         )
 
     housing = program.get("housing", "varies")
-    if housing not in VALID_HOUSING:
+    if not is_one_of(housing, VALID_HOUSING):
         raise ValidationError(f"{where}: housing {housing!r} not in {sorted(VALID_HOUSING)}")
 
     sel = program.get("selectivity", "moderate")
-    if sel not in VALID_SELECTIVITY:
+    if not is_one_of(sel, VALID_SELECTIVITY):
         raise ValidationError(f"{where}: selectivity {sel!r} not in {sorted(VALID_SELECTIVITY)}")
 
     conf = program.get("url_confidence", "medium")
-    if conf not in VALID_URL_CONFIDENCE:
+    if not is_one_of(conf, VALID_URL_CONFIDENCE):
         raise ValidationError(f"{where}: url_confidence {conf!r} invalid")
 
-    elig = program.get("eligibility") or {}
-    for year in elig.get("class_years", []):
+    # `or {}` let a non-empty string through to .get() below
+    elig = program.get("eligibility")
+    if elig is None:
+        elig = {}
+    if not isinstance(elig, dict):
+        raise ValidationError(f"{where}: eligibility must be an object")
+    years = elig.get("class_years", [])
+    if not is_text_list(years):
+        raise ValidationError(f"{where}: eligibility.class_years must be a list of text")
+    for year in years:
         if year not in VALID_CLASS_YEARS:
             raise ValidationError(f"{where}: class year {year!r} invalid")
+    if elig.get("min_gpa") is not None and not is_number(elig["min_gpa"]):
+        raise ValidationError(f"{where}: eligibility.min_gpa must be a number or null")
 
     opens = parse_date(program.get("opens"), where + " (opens)")
     deadline = parse_date(program.get("deadline"), where + " (deadline)")
@@ -98,8 +165,20 @@ def validate(program, category):
     if status == "confirmed" and deadline is None:
         raise ValidationError(f"{where}: deadline_status is 'confirmed' but no deadline is set")
 
+    opens_status = program.get("opens_status", "projected" if opens else "unknown")
+    if not is_one_of(opens_status, VALID_OPENS_STATUS):
+        raise ValidationError(
+            f"{where}: opens_status {opens_status!r} not in {sorted(VALID_OPENS_STATUS)}"
+        )
+    if opens_status in ("confirmed", "projected") and opens is None:
+        raise ValidationError(f"{where}: opens_status is {opens_status!r} but no opens date is set")
+    if opens_status in ("open-now", "unknown") and opens is not None:
+        raise ValidationError(f"{where}: opens_status is {opens_status!r} but an opens date is set")
+
     if not program["url"].startswith(("http://", "https://")):
         raise ValidationError(f"{where}: url must be absolute")
+    if URL_BREAKS.search(program["url"]):
+        raise ValidationError(f"{where}: url must not contain spaces or line breaks")
 
 
 def load_sources():
@@ -110,15 +189,35 @@ def load_sources():
     seen = {}
     errors = []
 
-    for path in sorted(SOURCES.glob("*.json")):
+    # Ordered by name as a plain string. Sorting Paths compares them
+    # case-folded on Windows and as-is elsewhere, and glob matches .JSON on
+    # Windows only, so either one let the machine decide the record order.
+    sources = sorted(
+        (p for p in SOURCES.iterdir() if p.name.endswith(".json") and p.is_file()),
+        key=lambda p: p.name,
+    )
+    for path in sources:
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as exc:
+        except ValueError as exc:  # invalid JSON, or bytes that are not UTF-8
             errors.append(f"{path.name}: invalid JSON, {exc}")
             continue
 
+        # Anything that parses but is not {"category": ..., "programs": [...]}
+        # crashed here with a traceback instead of an error line. A bare
+        # top-level list of records is the likeliest way to get there.
+        if not isinstance(payload, dict) or not isinstance(payload.get("programs", []), list):
+            errors.append(f'{path.name}: want {{"category": ..., "programs": [...]}}')
+            continue
         category = payload.get("category", path.stem)
-        for program in payload.get("programs", []):
+        if not isinstance(category, str) or not category:
+            errors.append(f"{path.name}: category must be text")
+            continue
+
+        for index, program in enumerate(payload.get("programs", [])):
+            if not isinstance(program, dict):
+                errors.append(f"{path.name}: programs[{index}] is not an object")
+                continue
             try:
                 validate(program, category)
             except ValidationError as exc:
@@ -139,9 +238,13 @@ def load_sources():
 
 
 def sort_key(program):
-    """Undated programs sort last; otherwise soonest deadline first."""
+    """Undated programs sort last; otherwise soonest deadline first.
+
+    Several programs share a name and dozens have no deadline, so the id
+    breaks the ties. Without it the order of tied records came from file order.
+    """
     deadline = program.get("deadline")
-    return (deadline is None, deadline or "9999-12-31", program["name"])
+    return (deadline is None, deadline or "9999-12-31", program["name"], program["id"])
 
 
 
@@ -154,17 +257,18 @@ VOLATILE = [
 def write_stable(path, blob):
     """Write only when the content changed, ignoring generation timestamps.
 
-    Both outputs carry a stamp of when they were produced, so a plain write
+    Two outputs carry a stamp of when they were produced, so a plain write
     makes every build dirty the repo even when no data moved. That turns
     `git status` into noise and makes the weekly watcher commit churn. If the
     only difference is the stamp, the existing file is kept.
+
+    Line endings count like any other byte. Folding CRLF into LF here let an
+    LF checkout of the calendar pass for the CRLF file RFC 5545 requires, so
+    CI kept the LF copy and published it.
     """
     if isinstance(blob, str):
         blob = blob.encode("utf-8")
     def without_stamps(b):
-        # git may check these out with CRLF while the build writes LF, so
-        # normalise endings before comparing or every byte looks changed.
-        b = b.replace(b"\r\n", b"\n")
         for pattern in VOLATILE:
             b = pattern.sub(b"", b)
         return b
@@ -202,15 +306,20 @@ CSV_COLUMNS = [
     "name",
     "org",
     "city",
+    "near_home",
+    "home_institution",
     "category",
     "tracks",
     "focus",
     "opens",
+    "opens_status",
     "deadline",
     "deadline_status",
     "program_dates",
     "duration_weeks",
     "stipend_usd",
+    "paid",
+    "stipend_note",
     "housing",
     "selectivity",
     "min_gpa",
@@ -219,8 +328,31 @@ CSV_COLUMNS = [
     "requires",
     "url",
     "url_confidence",
+    "contact",
     "notes",
 ]
+
+# Excel and Sheets run a cell that starts with one of these as a formula, so a
+# note pasted as "- confirm with the department" opens as #NAME?, and a hostile
+# value could do worse. A leading apostrophe is the spreadsheet's own marker
+# for "this is text".
+FORMULA_START = ("=", "+", "-", "@", "\t", "\r")
+
+
+def opens_status_of(program):
+    """The record's opens_status, or what an older record without one means."""
+    return program.get("opens_status") or ("projected" if program.get("opens") else "unknown")
+
+
+def csv_cell(value):
+    if isinstance(value, bool):
+        return "yes" if value else ""
+    if not isinstance(value, str):
+        return "" if value is None else value
+    if value.startswith(FORMULA_START):
+        value = "'" + value
+    # The file is LF throughout, so a pasted CRLF inside a note goes too
+    return value.replace("\r\n", "\n").replace("\r", "\n")
 
 
 def mirror_to_site(path):
@@ -233,22 +365,27 @@ def mirror_to_site(path):
 
 
 def write_csv(programs):
+    buffer = io.StringIO()
+    # LF like the other text files the site serves. The csv module's CRLF
+    # default rewrote the committed LF file on every build.
+    writer = csv.DictWriter(buffer, fieldnames=CSV_COLUMNS, lineterminator="\n")
+    writer.writeheader()
+    for program in programs:
+        elig = program.get("eligibility") or {}
+        row = {
+            **program,
+            "tracks": ", ".join(program.get("tracks", [])),
+            "requires": ", ".join(program.get("requires", [])),
+            "class_years": ", ".join(elig.get("class_years", [])),
+            "min_gpa": elig.get("min_gpa") or "",
+            "citizenship": elig.get("citizenship") or "",
+            "opens_status": opens_status_of(program),
+        }
+        writer.writerow({column: csv_cell(row.get(column)) for column in CSV_COLUMNS})
+
     path = ROOT / "data" / "programs.csv"
-    with path.open("w", newline="", encoding="utf-8-sig") as handle:
-        writer = csv.DictWriter(handle, fieldnames=CSV_COLUMNS, extrasaction="ignore")
-        writer.writeheader()
-        for program in programs:
-            elig = program.get("eligibility") or {}
-            writer.writerow(
-                {
-                    **program,
-                    "tracks": ", ".join(program.get("tracks", [])),
-                    "requires": ", ".join(program.get("requires", [])),
-                    "class_years": ", ".join(elig.get("class_years", [])),
-                    "min_gpa": elig.get("min_gpa") or "",
-                    "citizenship": elig.get("citizenship") or "",
-                }
-            )
+    # utf-8-sig adds the BOM, which is what tells Excel the file is UTF-8
+    write_stable(path, buffer.getvalue().encode("utf-8-sig"))
     mirror_to_site(path)
     return path
 
@@ -279,14 +416,31 @@ def fold_ics(line):
     return '\r\n '.join(pieces)
 
 
+# RFC 5545 allows no control characters in TEXT but the tab
+ICS_CONTROL = re.compile(r"[\x00-\x08\x0b-\x1f\x7f]")
+
+
 def ics_escape(text):
+    # Every line break becomes \n first. A bare CR used to go through raw,
+    # and a parser that splits on CR then saw a line with no property name.
+    text = str(text).replace("\r\n", "\n").replace("\r", "\n")
     return (
-        str(text)
+        ICS_CONTROL.sub("", text)
         .replace("\\", "\\\\")
         .replace(";", "\\;")
         .replace(",", "\\,")
         .replace("\n", "\\n")
     )
+
+
+def morning_before(days):
+    """TRIGGER for 9 a.m., `days` days before an all-day event.
+
+    An all-day event starts at midnight, so a plain -P3D fired at midnight
+    too, while she was asleep, and on a silenced phone it was buried by
+    morning. Fifteen hours short of the whole days lands on 9 a.m. local.
+    """
+    return f"-P{days - 1}DT15H" if days > 1 else "-PT15H"
 
 
 def write_ics(programs):
@@ -299,14 +453,19 @@ def write_ics(programs):
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
         f"X-WR-CALNAME:{ics_escape('Research Apps, ' + CYCLE)}",
+        # Left to itself a subscribed calendar polls when it likes, often a
+        # day or more apart, so a date that moved reached her phone late.
+        # REFRESH-INTERVAL is the standard hint; many clients read only the
+        # older X-PUBLISHED-TTL.
+        "REFRESH-INTERVAL;VALUE=DURATION:PT12H",
+        "X-PUBLISHED-TTL:PT12H",
     ]
 
-    def event(program, when, kind, summary, alarms):
+    def event(program, when, kind, summary, status, alarms):
         uid_seed = f"{program['id']}-{kind}".encode()
         uid = hashlib.sha1(uid_seed).hexdigest()[:20]
         start = when.strftime("%Y%m%d")
         end = (when + dt.timedelta(days=1)).strftime("%Y%m%d")
-        status_note = program.get("deadline_status", "unknown")
         body = [
             "BEGIN:VEVENT",
             f"UID:{uid}@jolene-s27",
@@ -314,15 +473,21 @@ def write_ics(programs):
             f"DTSTART;VALUE=DATE:{start}",
             f"DTEND;VALUE=DATE:{end}",
             f"SUMMARY:{ics_escape(summary)}",
-            f"DESCRIPTION:{ics_escape(program['org'] + ', ' + program['city'] + '. Date status: ' + status_note + '. ' + program['url'])}",
-            f"URL:{ics_escape(program['url'])}",
+            f"DESCRIPTION:{ics_escape(program['org'] + ', ' + program['city'] + '. Date status: ' + status + '. ' + program['url'])}",
+            # A URI value takes no backslash escaping, so TEXT escaping put a
+            # literal backslash into any link with a ; or a , in it.
+            # validate() has already refused a link with a line break.
+            f"URL:{program['url']}",
             f"CATEGORIES:{ics_escape(kind)}",
+            # A deadline is a reminder, not an appointment. Left at the
+            # default, OPAQUE, every one marked her busy for the whole day.
+            "TRANSP:TRANSPARENT",
         ]
         for days, label in alarms:
             body += [
                 "BEGIN:VALARM",
                 "ACTION:DISPLAY",
-                f"TRIGGER:-P{days}D",
+                f"TRIGGER:{morning_before(days)}",
                 # Six programs on this list are called "Summer Undergraduate
                 # Research Program". A phone alarm that says only the name tells
                 # her nothing, so the institution goes in the reminder too.
@@ -338,23 +503,31 @@ def write_ics(programs):
         opens = parse_date(program.get("opens"), program["id"])
 
         if deadline:
-            marker = "" if program.get("deadline_status") == "confirmed" else " (est.)"
+            status = program.get("deadline_status", "unknown")
+            marker = "" if status == "confirmed" else " (est.)"
             lines += event(
                 program,
                 deadline,
                 "deadline",
                 f"DUE{marker}: {program['name']}, {program['org']}",
-                [(14, "Two weeks out"), (3, "Three days out")],
+                status,
+                [(14, "Two weeks out" + marker), (3, "Three days out" + marker)],
             )
             count += 1
 
+        # Most opening dates are last cycle's carried forward, so only one
+        # read off the program's own page goes in as fact. An alarm saying
+        # "Opens tomorrow" for a guess reads as a promise the portal is up.
         if opens:
+            status = opens_status_of(program)
+            marker = "" if status == "confirmed" else " (est.)"
             lines += event(
                 program,
                 opens,
                 "opens",
-                f"Opens: {program['name']}, {program['org']}",
-                [(1, "Opens tomorrow")],
+                f"Opens{marker}: {program['name']}, {program['org']}",
+                status,
+                [(1, "Opens tomorrow" + marker)],
             )
             count += 1
 
@@ -382,7 +555,7 @@ def stamp_assets():
         path = ROOT / "site" / name
         if not path.is_file():
             continue
-        # Hash the normalised bytes. Git hands this file out with CRLF on
+        # Hash the normalized bytes. Git hands this file out with CRLF on
         # Windows and LF in CI, so hashing it as it sits on disk gave the same
         # script two different versions depending on who built it: the commit
         # from a laptop named one, the deploy served the other, and a cache was
@@ -395,7 +568,8 @@ def stamp_assets():
         )
 
     if html != original:
-        index.write_text(html, encoding="utf-8")
+        # Bytes, so the page stays LF: write_text gives CRLF on Windows
+        index.write_bytes(html.encode("utf-8"))
     return html != original
 
 
@@ -406,8 +580,11 @@ def main():
         print("Validation problems:", file=sys.stderr)
         for err in errors:
             print(f"  - {err}", file=sys.stderr)
-        if not programs:
-            return 1
+        # Writing the records that did pass published a dataset with whole
+        # categories missing (one stray comma drops a file) and left it on
+        # disk ready to commit, so nothing is written until the sources are clean.
+        print("Nothing was written.", file=sys.stderr)
+        return 1
 
     programs.sort(key=sort_key)
     payload = write_json(programs)
@@ -427,13 +604,13 @@ def main():
         print(f"  needs input: {needs_input} (missing links from the original list)")
     guides.write()
     kit.write()
-    watch_summary.write()
+    watch_summary.write(programs)
     stamp_assets()
     print(f"  wrote      : data/programs.json, site/data/programs.json")
     print(f"               {csv_path.relative_to(ROOT).as_posix()}")
     print(f"               {ics_path.relative_to(ROOT).as_posix()} ({event_count} events)")
 
-    return 1 if errors else 0
+    return 0
 
 
 if __name__ == "__main__":
