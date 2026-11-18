@@ -4,7 +4,7 @@
  * Notion's own stylesheets rather than eyeballed: the ink rgb(55,53,47),
  * the hover rgba(25,23,17,.075), the hairline rgba(55,53,47,.09), the blue
  * rgb(35,131,226), the inset-plus-halo focus ring, and Inter with lining
- * numerals. The select-pill colours are Notion's standard database palette.
+ * numerals. The select-pill colors are Notion's standard database palette.
  */
 
 /* ------------------------------------------------------------------ tokens */
@@ -17,15 +17,19 @@
   --hover: rgba(25, 23, 17, 0.075);
   --hover-soft: rgba(25, 23, 17, 0.045);
 
+  /* Notion's lighter inks are lifted until each clears WCAG AA (4.5:1) on
+     the darkest surface it sits on: a hovered row, the sidebar, a board card
+     on its column. Measured, not eyeballed; the steps stay in order. */
   --ink: rgb(55, 53, 47);
-  --ink-2: rgba(55, 53, 47, 0.72);
-  --ink-3: rgba(55, 53, 47, 0.6);
-  --ink-4: rgba(55, 53, 47, 0.45);
+  --ink-2: rgba(55, 53, 47, 0.76);
+  --ink-3: rgba(55, 53, 47, 0.72);
+  --ink-4: rgba(55, 53, 47, 0.7);
 
   --rule: rgba(55, 53, 47, 0.09);
   --rule-strong: rgba(55, 53, 47, 0.16);
 
   --blue: rgb(35, 131, 226);
+  /* also the hover color of a link, so it has to pass as text */
   --blue-hover: rgb(0, 117, 211);
   /* filled buttons only: white text needs a deeper blue to clear AA */
   --blue-solid: rgb(0, 106, 194);
@@ -47,6 +51,9 @@
   --c-yellow: rgb(251, 243, 219);
   --c-red: rgb(253, 235, 236);
   --c-green: rgb(237, 243, 236);
+
+  /* Notion's inline-code red, deepened to clear AA on its gray tint */
+  --code: rgb(179, 66, 66);
 
   --radius-sm: 3px;
   --radius: 4px;
@@ -79,11 +86,14 @@
 
     --ink: rgba(255, 255, 255, 0.81);
     --ink-2: rgba(255, 255, 255, 0.56);
-    --ink-3: rgba(255, 255, 255, 0.46);
-    --ink-4: rgba(255, 255, 255, 0.34);
+    --ink-3: rgba(255, 255, 255, 0.5);
+    --ink-4: rgba(255, 255, 255, 0.47);
 
     --rule: rgba(255, 255, 255, 0.094);
     --rule-strong: rgba(255, 255, 255, 0.16);
+
+    --blue-hover: rgb(70, 150, 235);
+    --code: rgb(240, 112, 106);
 
     --t-gray-bg: rgba(255, 255, 255, 0.094); --t-gray-fg: rgba(255, 255, 255, 0.62);
     --t-brown-bg: rgb(74, 50, 40);           --t-brown-fg: rgb(197, 152, 132);
@@ -119,11 +129,14 @@
 
   --ink: rgba(255, 255, 255, 0.81);
   --ink-2: rgba(255, 255, 255, 0.56);
-  --ink-3: rgba(255, 255, 255, 0.46);
-  --ink-4: rgba(255, 255, 255, 0.34);
+  --ink-3: rgba(255, 255, 255, 0.5);
+  --ink-4: rgba(255, 255, 255, 0.47);
 
   --rule: rgba(255, 255, 255, 0.094);
   --rule-strong: rgba(255, 255, 255, 0.16);
+
+  --blue-hover: rgb(70, 150, 235);
+  --code: rgb(240, 112, 106);
 
   --t-gray-bg: rgba(255, 255, 255, 0.094); --t-gray-fg: rgba(255, 255, 255, 0.62);
   --t-brown-bg: rgb(74, 50, 40);           --t-brown-fg: rgb(197, 152, 132);
@@ -267,10 +280,13 @@ button, input, select, textarea { font: inherit; color: inherit; font-feature-se
   text-align: left;
 }
 .nav a:hover, .nav button:hover { background: var(--hover); color: var(--ink); }
-.nav [aria-selected="true"] { background: var(--hover); color: var(--ink); font-weight: 500; }
+.nav [aria-current="page"] { background: var(--hover); color: var(--ink); font-weight: 500; }
 .nav .emoji { font-size: 15px; width: 18px; text-align: center; flex: none; }
 .nav .label { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .nav .n { font-size: 12px; color: var(--ink-4); font-variant-numeric: tabular-nums; }
+/* The hover tint is the darkest surface in the sidebar; the count darkens
+   with its row the way the label does, or it would drop under AA there. */
+.nav a:hover .n, .nav button:hover .n, .nav [aria-current="page"] .n { color: var(--ink-2); }
 
 .sidebar__foot {
   margin-top: auto;
@@ -321,14 +337,21 @@ button, input, select, textarea { font: inherit; color: inherit; font-feature-se
 
 .page__icon { font-size: 64px; line-height: 1.1; margin: 22px 0 4px; }
 .page__title { font-size: 40px; font-weight: 700; letter-spacing: -0.028em; line-height: 1.2; margin: 0 0 6px; }
+/* Focus is put here after a page change so a screen reader starts on the new
+   page. It is not a control, so it draws no ring. */
+.page__title:focus { outline: none; box-shadow: none; }
 .page__sub { font-size: 14px; color: var(--ink-3); margin: 0 0 16px; max-width: 76ch; }
 .page__sub a { color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--ink-4); }
-.page__sub a:hover { color: var(--blue); }
+.page__sub a:hover { color: var(--blue-hover); }
 
 /* ------------------------------------------------------------- view tabs */
 
+/* A scroller clips what it holds, the focus halo included, so the tabs sit
+   a few pixels in from its edges; the negative margin keeps them in line
+   with the page. */
 .views {
   display: flex; align-items: center; gap: 2px;
+  padding: 3px 3px 0; margin: 0 -3px;
   border-bottom: 1px solid var(--rule);
   overflow-x: auto; scrollbar-width: none;
 }
@@ -340,7 +363,7 @@ button, input, select, textarea { font: inherit; color: inherit; font-feature-se
   font-size: 14px; color: var(--ink-3); cursor: pointer; white-space: nowrap;
 }
 .views button:hover { color: var(--ink); }
-.views button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); font-weight: 500; }
+.views button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); font-weight: 500; }
 .views .vicon { font-size: 13px; opacity: 0.8; }
 
 .toolbar { display: flex; align-items: center; gap: 6px; padding: 7px 0; flex-wrap: wrap; }
@@ -352,7 +375,8 @@ button, input, select, textarea { font: inherit; color: inherit; font-feature-se
   background: var(--hover-soft); border: 1px solid transparent;
   border-radius: var(--radius-sm); font-size: 14px; color: var(--ink);
 }
-.search input::placeholder { color: var(--ink-4); }
+/* opacity: Firefox fades placeholders on its own, under the ratio above */
+.search input::placeholder { color: var(--ink-4); opacity: 1; }
 .search input:focus { background: var(--page); border-color: var(--rule-strong); }
 .search__icon { position: absolute; left: 7px; display: flex; color: var(--ink-4); pointer-events: none; }
 
@@ -383,7 +407,8 @@ select.sel:hover { background: var(--hover); color: var(--ink); }
 .tag--pink   { background: var(--t-pink-bg);   color: var(--t-pink-fg); }
 .tag--red    { background: var(--t-red-bg);    color: var(--t-red-fg); }
 
-.est { opacity: 0.6; }
+/* "est." is not dimmed. Faded enough to read as an aside, it fell under AA
+   on every pill color, and it is the part that says a date is a guess. */
 
 /* ------------------------------------------------------------- table view */
 
@@ -400,18 +425,29 @@ table.db {
 table.db td { overflow: hidden; }
 .trunc { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
+/* top: 0, not the topbar's 45px. .tablewrap scrolls sideways, so the header
+   can only stick inside it, never to the window, and 45px only pushed it
+   down over the first row, hiding that row and anything focused in it. */
 table.db th {
-  position: sticky; top: 45px; z-index: 5;
+  position: sticky; top: 0; z-index: 5;
   background: var(--page);
   text-align: left; font-weight: 400; font-size: 12px; color: var(--ink-3);
   padding: 6px 8px;
   border-bottom: 1px solid var(--rule);
   border-right: 1px solid var(--rule);
-  white-space: nowrap; cursor: pointer; user-select: none;
+  white-space: nowrap; user-select: none;
 }
+table.db th[data-sort] { cursor: pointer; }
 table.db th:hover { background: var(--hover-soft); color: var(--ink-2); }
 table.db th .pico { opacity: 0.65; margin-right: 5px; }
 table.db th[aria-sort] { color: var(--ink); }
+/* The sort is a real button so the keyboard can reach it; it wears the
+   header's own look. Block, not flex, so the space before the arrow stays. */
+.th-sort {
+  display: block; width: 100%;
+  margin: 0; padding: 0; border: 0; background: none;
+  font: inherit; color: inherit; text-align: left; white-space: nowrap; cursor: pointer;
+}
 
 table.db td {
   padding: 7px 8px;
@@ -420,6 +456,8 @@ table.db td {
   vertical-align: middle;
 }
 table.db tr:hover td { background: var(--hover-soft); }
+/* a row opens its program, like a Notion row */
+table.db tbody tr { cursor: pointer; }
 table.db th:last-child, table.db td:last-child { border-right: 0; }
 
 .cell-name { display: flex; align-items: center; gap: 7px; font-weight: 500; min-width: 0; }
@@ -468,6 +506,9 @@ tr:hover .openbtn,
   cursor: pointer; display: flex; flex-direction: column; gap: 6px;
 }
 .bcard:hover { background: var(--hover-soft); }
+/* Cards are keyboard stops. The ring joins the card's shadow rather than
+   replacing it, so a focused card keeps its edge. */
+.bcard:focus-visible, .gcard:focus-visible { box-shadow: var(--focus), var(--shadow-card); }
 .bcard__title { font-size: 14px; font-weight: 500; line-height: 1.35; }
 .bcard__meta { font-size: 12px; color: var(--ink-3); }
 .bcard__tags { display: flex; flex-wrap: wrap; gap: 4px; }
@@ -523,7 +564,8 @@ tr:hover .openbtn,
   padding: 7px 6px; border-bottom: 1px solid var(--rule);
 }
 .row:hover { background: var(--hover-soft); }
-.row__when { flex: none; width: 104px; font-size: 13px; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+/* Wide enough for "Opens Dec 12 est." on one line. */
+.row__when { flex: none; width: 120px; font-size: 13px; font-variant-numeric: tabular-nums; color: var(--ink-2); }
 .row__main { flex: 1 1 220px; min-width: 0; }
 .row__title { font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 7px; }
 .row__title a { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -542,6 +584,8 @@ tr:hover .openbtn,
 .stat:last-child { border-right: 0; margin-right: 0; }
 .stat__n { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
 .stat__k { font-size: 12px; color: var(--ink-3); margin-top: -2px; }
+/* At stat size the marker would outweigh the date it qualifies. */
+.stat__n .est { font-size: 13px; font-weight: 500; letter-spacing: 0; }
 
 .status {
   height: 20px; padding: 0 6px;
@@ -570,7 +614,9 @@ tr:hover .openbtn,
   background: var(--t-blue-bg); color: var(--t-blue-fg);
   border-color: transparent; font-weight: 500;
 }
-.chip .n { opacity: 0.55; font-variant-numeric: tabular-nums; }
+/* A color rather than opacity: half-faded, the count fell to about 2:1. */
+.chip .n { color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] .n { color: inherit; }
 
 /* ------------------------------------------------------------ peek panel */
 
@@ -639,7 +685,7 @@ tr:hover .openbtn,
   resize: vertical; font-family: inherit;
 }
 .inputblock:focus { background: var(--page); border-color: var(--rule-strong); }
-.inputblock::placeholder { color: var(--ink-4); }
+.inputblock::placeholder { color: var(--ink-4); opacity: 1; }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 6px;
@@ -661,13 +707,21 @@ tr:hover .openbtn,
 .menu-btn { display: none; }
 
 @media (max-width: 860px) {
+  /* Off screen is not gone: a closed drawer is hidden too, so its links are
+     neither tab stops nor read out. visibility waits out the slide when
+     closing and flips at once when opening, so focus can move straight in. */
   .sidebar {
     position: fixed; z-index: 70;
     transform: translateX(-100%);
-    transition: transform 0.2s cubic-bezier(0.32, 0.72, 0, 1);
+    visibility: hidden;
+    transition: transform 0.2s cubic-bezier(0.32, 0.72, 0, 1), visibility 0s linear 0.2s;
     box-shadow: var(--shadow-menu);
   }
-  .sidebar[data-open="true"] { transform: none; }
+  .sidebar[data-open="true"] {
+    transform: none;
+    visibility: visible;
+    transition: transform 0.2s cubic-bezier(0.32, 0.72, 0, 1);
+  }
   .menu-btn { display: inline-flex; }
   .page { padding: 0 20px 90px; }
   .page__icon { font-size: 50px; margin-top: 14px; }
@@ -728,7 +782,7 @@ tr:hover .openbtn,
 
 .doc code {
   background: rgba(135, 131, 120, 0.15);
-  color: #eb5757;
+  color: var(--code);
   font-family: var(--mono, "SFMono-Regular", Menlo, Consolas, monospace);
   font-size: 85%;
   padding: 0.2em 0.4em;
@@ -801,7 +855,7 @@ input.sel--boxed {
 }
 select.sel--boxed:hover,
 input.sel--boxed:hover { background: var(--hover-soft); }
-input.sel--boxed::placeholder { color: var(--ink-4); }
+input.sel--boxed::placeholder { color: var(--ink-4); opacity: 1; }
 
 /* ------------------------------------------------------------- Claude kit */
 
@@ -837,7 +891,7 @@ input.sel--boxed::placeholder { color: var(--ink-4); }
   .kitrow__dl { margin-left: 28px; }
 }
 
-/* recommender status reuses the application-status pill colours */
+/* recommender status reuses the application-status pill colors */
 .status[data-value="not-asked"] { background: var(--t-gray-bg);   color: var(--t-gray-fg); }
 .status[data-value="asked"]     { background: var(--t-yellow-bg); color: var(--t-yellow-fg); }
 .status[data-value="agreed"]    { background: var(--t-green-bg);  color: var(--t-green-fg); }
@@ -889,6 +943,24 @@ input.sel--boxed::placeholder { color: var(--ink-4); }
 
 .toggle__body { padding: 2px 0 0 14px; }
 
+/* ------------------------------------------------------- user settings */
+
+/* Every slide and fade, not one triangle: the peek panel, the phone drawer,
+   the scrim and the skip link all move. Near zero rather than none, so
+   anything waiting on a transitionend still gets one. */
 @media (prefers-reduced-motion: reduce) {
-  .toggle > summary::before { transition: none; }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Windows high contrast drops every box-shadow, and the focus ring is
+   nothing but box-shadow. Outlines survive, recolored to the theme's own. */
+@media (forced-colors: active) {
+  :focus-visible,
+  .toggle > summary:focus-visible { outline: 2px solid Highlight; outline-offset: 2px; }
 }

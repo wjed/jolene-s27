@@ -26,6 +26,9 @@
     ["accepted", "Accepted"],
     ["rejected", "Not this time"],
   ];
+  const STATUS_KEYS = STATUSES.map((s) => s[0]);
+  // Once an application is sent there is nothing left to do on it.
+  const SENT = ["submitted", "interview", "accepted", "rejected"];
 
   const REQUIREMENT_LABELS = {
     transcript: "Transcript (unofficial is usually fine)",
@@ -57,7 +60,6 @@
     bioengineering: ["Bioengineering", "orange", "⚙️"],
     "public-health": ["Public health", "green", "🌍"],
     "emergency-medicine":["Emergency med", "red", "🚑"],
-    "stem-cell": ["Stem cell", "pink", "🌿"],
     chemistry: ["Chemistry", "yellow", "⚗️"],
     "pre-health": ["Pre-health", "gray", "📚"],
   };
@@ -111,7 +113,7 @@
   let sortDir = 1;
   const chips = new Set();
 
-  const TODAY = startOfDay(new Date());
+  let TODAY = startOfDay(new Date());   // moved on by refreshToday()
 
   // -------------------------------------------------------------- helpers
 
@@ -162,20 +164,56 @@
     return `<span class="tag tag--${color || "gray"}">${esc(label)}${extra || ""}</span>`;
   }
 
+  // A screen reader hears the word: "est." alone is four letters to it.
+  const EST = ' <span class="est"><span aria-hidden="true">est.</span><span class="sr-only">estimated</span></span>';
+
+  /* Program names repeat from one institution to the next, so a control that
+   * acts on one program is named with its institution as well. Plain text:
+   * escape it where it lands. */
+  function fullName(p) { return `${p.name}, ${p.org}`; }
+
   // -------------------------------------------------------------- tracker
+
+  /* A backup is a file anyone can edit or hand her, so nothing in it is
+   * trusted: each entry is rebuilt in the shape this page writes, a status it
+   * does not know reads as not started, and entries with nothing in them
+   * (left by older versions that saved a row for every program opened) are
+   * dropped so they cannot inflate a count. */
+  function cleanTracker(raw) {
+    const items = {};
+    const src = raw && raw.items && typeof raw.items === "object" ? raw.items : {};
+    for (const [id, it] of Object.entries(src)) {
+      if (!it || typeof it !== "object") continue;
+      const done = {};
+      if (it.done && typeof it.done === "object")
+        for (const [k, v] of Object.entries(it.done)) if (v === true) done[k] = true;
+      const status = STATUS_KEYS.includes(it.status) ? it.status : "not-started";
+      const notes = typeof it.notes === "string" ? it.notes : "";
+      if (status === "not-started" && !notes && !Object.keys(done).length) continue;
+      items[id] = { status, notes, done };
+      if (typeof it.updated === "string") items[id].updated = it.updated;
+    }
+    return { version: 1, items };
+  }
 
   function loadTracker() {
     try {
       const raw = localStorage.getItem(STORE_KEY);
-      if (!raw) return { version: 1, items: {} };
-      const p = JSON.parse(raw);
-      return p && p.items ? p : { version: 1, items: {} };
+      return cleanTracker(raw ? JSON.parse(raw) : null);
     } catch (err) { return { version: 1, items: {} }; }
+  }
+
+  /* Private windows and blocked site data make every write throw. The page
+   * keeps working from memory, which looks exactly like saving, so it has to
+   * say so rather than let her find out tomorrow. */
+  function noSave() {
+    const banner = document.getElementById("nosave");
+    if (banner) banner.hidden = false;
   }
 
   function saveTracker() {
     try { localStorage.setItem(STORE_KEY, JSON.stringify(tracker)); }
-    catch (err) { /* private mode: page still works, just forgets */ }
+    catch (err) { noSave(); }
   }
 
   function entry(id) {
@@ -219,7 +257,7 @@
 
   function saveRecs() {
     try { localStorage.setItem(RECS_KEY, JSON.stringify(recs)); }
-    catch (err) { /* private mode */ }
+    catch (err) { noSave(); }
   }
 
   function recStatusMeta(v) {
@@ -244,12 +282,12 @@
 
   function saveCustoms() {
     try { localStorage.setItem(CUSTOM_KEY, JSON.stringify(customs)); }
-    catch (err) { /* private mode */ }
+    catch (err) { noSave(); }
   }
 
   /* Give a hand-added program the same shape as a published one, so every
    * view, filter, sort and export treats it identically. */
-  function normaliseCustom(c) {
+  function normalizeCustom(c) {
     return {
       id: c.id,
       name: c.name,
@@ -262,6 +300,7 @@
       stipend_usd: null,
       housing: "varies",
       opens: null,
+      opens_status: "unknown",
       deadline: c.deadline || null,
       deadline_status: c.deadline ? "confirmed" : "unknown",
       eligibility: { class_years: [], citizenship: "unspecified", min_gpa: null, notes: "" },
@@ -274,7 +313,7 @@
   }
 
   function applyCustoms() {
-    DATA.programs = BASE.concat(customs.map(normaliseCustom));
+    DATA.programs = BASE.concat(customs.map(normalizeCustom));
     DATA.count = DATA.programs.length;
   }
 
@@ -312,7 +351,7 @@
 
   function saveProfile() {
     try { localStorage.setItem(PROFILE_KEY, JSON.stringify(profile)); }
-    catch (err) { /* private mode */ }
+    catch (err) { noSave(); }
   }
 
   function profileSet() {
@@ -350,40 +389,60 @@
 
   // -------------------------------------------------------------- urgency
 
-  /* A program is either not open yet, open with a deadline ahead, past, or
-   * undated. Collapsed into one label plus a Notion color. */
+  /* Her own programs predate the field, so a bare date counts as a guess,
+   * the same way the build reads one. */
+  function opensStatus(p) {
+    return p.opens_status || (p.opens ? "projected" : "unknown");
+  }
+
+  /* A program is open, probably open, not open yet, past, or undated.
+   * Collapsed into one label plus a Notion color.
+   *
+   * "open" is the only phase the site will call accepting applications, and
+   * it needs proof: the page says so, an opening date read off the page has
+   * passed, or the program is rolling. A projected opening date going by
+   * proves nothing (it is usually last year's carried forward), so those,
+   * and programs with only a deadline to go on, are "likely". */
   function urgency(p) {
     const opens = parseDate(p.opens);
     const dl = parseDate(p.deadline);
     const est = p.deadline_status !== "confirmed";
+    const os = opensStatus(p);
+
+    if (dl && dl < TODAY) return { color: "gray", label: "Closed", sort: 9000, phase: "closed", est };
 
     if (p.deadline_status === "rolling")
-      return { color: "gray", label: "Rolling", sort: 8000, phase: "rolling" };
+      return { color: "gray", label: "Rolling", sort: 8000, phase: "open" };
 
     if (opens && opens > TODAY) {
       const n = days(TODAY, opens);
+      const guess = os !== "confirmed";
       return {
         color: n <= 21 ? "yellow" : "blue",
-        label: n === 0 ? "Opens today" : `Opens in ${n}d`,
-        sort: 1000 + n, phase: "upcoming", est,
+        label: `Opens in ${guess ? "about " : ""}${n}d`,
+        sort: 1000 + n, phase: "upcoming", est: guess,
       };
     }
 
+    // Any opening date left by this point is today or earlier.
+    const open = os === "open-now" || (os === "confirmed" && !!opens);
+
     if (dl) {
       const n = days(TODAY, dl);
-      if (n < 0) return { color: "gray", label: `Closed`, sort: 9000, phase: "closed", est };
       let color = "green";
       if (n <= 14) color = "red";
       else if (n <= 35) color = "orange";
-      return { color, label: n === 0 ? "Due today" : `Due in ${n}d`, sort: n, phase: "open", est };
+      return { color, label: n === 0 ? "Due today" : `Due in ${n}d`, sort: n, phase: open ? "open" : "likely", est };
     }
 
+    if (open) return { color: "green", label: "Open now", sort: 6000, phase: "open" };
+    if (opens) return { color: "yellow", label: "Probably open", sort: 6500, phase: "likely", est: true };
     return { color: "gray", label: "No date yet", sort: 7000, phase: "unknown" };
   }
 
   function urgencyPill(p) {
     const u = urgency(p);
-    return tag(u.label, u.color, u.est ? ' <span class="est">est.</span>' : "");
+    return tag(u.label, u.color, u.est ? EST : "");
   }
 
   // ------------------------------------------------------------ filtering
@@ -395,47 +454,70 @@
     ["pediatrics", "Pediatrics", (p) => (p.tracks || []).includes("pediatrics")],
     ["neuro", "Neuroscience", (p) => (p.tracks || []).some((t) => t === "neuroscience" || t === "alzheimers")],
     ["oncology", "Oncology", (p) => (p.tracks || []).includes("oncology")],
-    ["stipend", "Paid", (p) => !!p.stipend_usd],
+    // `paid` marks a program whose page says it pays but posts no figure, so
+    // it is not hidden for lacking a number nobody published.
+    ["stipend", "Paid", (p) => !!p.stipend_usd || p.paid === true],
     ["housing", "Housing included", (p) => ["provided", "provided-nonlocal", "stipend-covers"].includes(p.housing)],
     ["near-home", "🏠 Can live at home", (p) => !!p.near_home],
   ];
 
   const FIT_CHIP = ["fits-me", "Fits my profile", fitsMe];
 
-  function matches(p) {
+  function chipDef(key) {
+    return key === FIT_CHIP[0] ? FIT_CHIP : CHIP_DEFS.find((c) => c[0] === key);
+  }
+
+  function matches(p, skip) {
     if (query) {
       const hay = [p.name, p.org, p.city, p.focus, p.notes, (p.tracks || []).join(" ")].join(" ").toLowerCase();
       if (!query.split(/\s+/).every((w) => hay.includes(w))) return false;
     }
     for (const key of chips) {
-      const def = key === FIT_CHIP[0] ? FIT_CHIP : CHIP_DEFS.find((c) => c[0] === key);
+      if (key === skip) continue;
+      const def = chipDef(key);
       if (def && !def[2](p)) return false;
     }
     return true;
   }
 
+  /* How many rows there would be with this chip on, given the search and
+   * every other chip, so a badge never promises rows the table cannot show. */
+  function chipCount(key) {
+    const def = chipDef(key);
+    return def ? DATA.programs.filter((p) => matches(p, key) && def[2](p)).length : 0;
+  }
+
+  /* Every sorter runs low to high, so the header arrow can describe the rows
+   * rather than the click count. */
   const SORTERS = {
     deadline: (a, b) => urgency(a).sort - urgency(b).sort,
     name: (a, b) => a.name.localeCompare(b.name),
     org: (a, b) => a.org.localeCompare(b.org),
     city: (a, b) => a.city.localeCompare(b.city),
-    stipend: (a, b) => (b.stipend_usd || 0) - (a.stipend_usd || 0),
+    stipend: (a, b) => (a.stipend_usd || 0) - (b.stipend_usd || 0),
     status: (a, b) => statusOf(a.id).localeCompare(statusOf(b.id)),
   };
 
+  // Picking stipend from the dropdown means "best paid first"; nobody wants it
+  // to open on the lowest.
+  const SORT_START = { stipend: -1 };
+
   function visible() {
-    const list = DATA.programs.filter(matches);
+    const list = DATA.programs.filter((p) => matches(p));
     const cmp = SORTERS[sortBy] || SORTERS.deadline;
-    return list.sort((a, b) => cmp(a, b) * sortDir || a.name.localeCompare(b.name));
+    // A blank stipend stays at the bottom both ways, the way a spreadsheet
+    // keeps blanks last; dozens of them first would look like a broken sort.
+    const blank = (p) => sortBy === "stipend" && !p.stipend_usd;
+    return list.sort((a, b) => blank(a) - blank(b) || cmp(a, b) * sortDir || a.name.localeCompare(b.name));
   }
 
   // ------------------------------------------------------------ fragments
 
-  function statusSelect(id, cls) {
-    const cur = statusOf(id);
+  function statusSelect(p, cls) {
+    const cur = statusOf(p.id);
     const opts = STATUSES.map(([v, l]) =>
       `<option value="${v}"${v === cur ? " selected" : ""}>${esc(l)}</option>`).join("");
-    return `<select class="${cls || "status"}" data-status-for="${esc(id)}" data-value="${cur}" aria-label="Status">${opts}</select>`;
+    return `<select class="${cls || "status"}" data-status-for="${esc(p.id)}" data-value="${esc(cur)}" aria-label="Status for ${esc(fullName(p))}">${opts}</select>`;
   }
 
   function trackTags(p, limit) {
@@ -448,7 +530,7 @@
   // --------------------------------------------------------- table view
 
   const COLUMNS = [
-    ["name", "Aa", "Program", null],
+    ["name", "Aa", "Program", "name"],
     ["org", "Aa", "Institution", "org"],
     ["deadline", "📅", "Deadline", "deadline"],
     ["status", "◉", "Status", "status"],
@@ -457,28 +539,40 @@
     ["city", "Aa", "Location", "city"],
   ];
 
-  const COL_W = { name: 300, org: 232, deadline: 120, status: 118, tracks: 150, stipend: 82, city: 128 };
+  // Deadline is wide enough for "Opens in about 288d est." without the
+  // ellipsis eating the est. marker, which is the part that matters.
+  const COL_W = { name: 276, org: 192, deadline: 184, status: 118, tracks: 150, stipend: 82, city: 128 };
+
+  // The red "!" is for the eye; a screen reader gets the reasons as words.
+  function conflictFlag(p) {
+    if (!profileSet() || fitsMe(p)) return "";
+    const why = esc(blockers(p).join(". "));
+    return `<span class="flag" aria-hidden="true" title="${why}">!</span><span class="sr-only">Conflicts with your profile: ${why}.</span>`;
+  }
 
   function renderTable(list) {
+    // A sortable header holds a real button, so the keyboard can sort too.
     const head = COLUMNS.map(([key, ico, label, sortKey]) => {
       const active = sortKey && sortBy === sortKey;
+      const text = `<span class="pico" aria-hidden="true">${ico}</span>${esc(label)}${active ? `<span aria-hidden="true">${sortDir === 1 ? " ↑" : " ↓"}</span>` : ""}`;
       return `<th scope="col"${sortKey ? ` data-sort="${sortKey}"` : ""}${active ? ` aria-sort="${sortDir === 1 ? "ascending" : "descending"}"` : ""}>
-        <span class="pico">${ico}</span>${esc(label)}${active ? (sortDir === 1 ? " ↑" : " ↓") : ""}</th>`;
+        ${sortKey ? `<button class="th-sort" type="button">${text}</button>` : text}</th>`;
     }).join("");
 
     const rows = list.map((p) => `
       <tr data-id="${esc(p.id)}">
         <td>
           <div class="cell-name">
-            <span class="emoji">${iconFor(p)}</span>
-            <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" title="${esc(p.name)}">${esc(p.name)}</a>
-            ${profileSet() && !fitsMe(p) ? `<span class="flag" title="${esc(blockers(p).join(". "))}">!</span>` : ""}
-            <button class="openbtn" data-peek="${esc(p.id)}" type="button">OPEN</button>
+            <span class="emoji" aria-hidden="true">${iconFor(p)}</span>
+            ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" title="${esc(p.name)}">${esc(p.name)}</a>`
+                    : `<span class="trunc" title="${esc(p.name)}">${esc(p.name)}</span>`}
+            ${conflictFlag(p)}
+            <button class="openbtn" data-peek="${esc(p.id)}" type="button" aria-label="Open ${esc(fullName(p))}">OPEN</button>
           </div>
         </td>
         <td><span class="cell-sub trunc" title="${esc(p.org)}">${esc(p.org)}</span></td>
         <td class="cell-num">${p.deadline ? urgencyPill(p) : urgencyPill(p)}</td>
-        <td>${statusSelect(p.id)}</td>
+        <td>${statusSelect(p)}</td>
         <td><span class="taglist">${trackTags(p, 2)}</span></td>
         <td class="cell-num">${fmtMoney(p.stipend_usd) || '<span style="color:var(--ink-4)">not stated</span>'}</td>
         <td><span class="cell-sub trunc" title="${esc(p.city)}">${esc(p.city)}</span></td>
@@ -491,12 +585,17 @@
 
   // --------------------------------------------------------- board view
 
+  /* A card opens its program like a row does, so to the keyboard and to a
+   * screen reader it is a button (wire() gives it Enter and Space). It stays
+   * a div because a <button> cannot hold the block layout inside. The label
+   * names the program; the pills are read after it as the description. */
   function boardCard(p) {
     return `
-      <div class="bcard" data-peek="${esc(p.id)}">
+      <div class="bcard" data-peek="${esc(p.id)}" role="button" tabindex="0"
+        aria-label="Open ${esc(fullName(p))}" aria-describedby="bt-${esc(p.id)}">
         <div class="bcard__title">${iconFor(p)} ${esc(p.name)}</div>
         <div class="bcard__meta">${esc(p.org)}</div>
-        <div class="bcard__tags">${urgencyPill(p)}${trackTags(p, 1)}</div>
+        <div class="bcard__tags" id="bt-${esc(p.id)}">${urgencyPill(p)}${trackTags(p, 1)}</div>
       </div>`;
   }
 
@@ -508,17 +607,17 @@
       groups = STATUSES.filter(([v]) => v !== "not-started")
         .map(([v, label]) => [label, list.filter((p) => statusOf(p.id) === v)]);
     } else {
+      // Keyed on "2027-01" and labeled last: a printed month name only parses
+      // back into a date in English, so sorting on it scrambled other locales.
       const map = new Map();
       list.forEach((p) => {
-        const key = p.deadline ? monthLabel(monthKey(p.deadline)) : "No date yet";
+        const key = monthKey(p.deadline) || "";
         if (!map.has(key)) map.set(key, []);
         map.get(key).push(p);
       });
-      groups = [...map.entries()].sort((a, b) => {
-        if (a[0] === "No date yet") return 1;
-        if (b[0] === "No date yet") return -1;
-        return new Date(a[0]) - new Date(b[0]);
-      });
+      groups = [...map.entries()]
+        .sort((a, b) => (a[0] === "") - (b[0] === "") || a[0].localeCompare(b[0]))
+        .map(([k, items]) => [k ? monthLabel(k) : "No date yet", items]);
     }
 
     return `<div class="board">${groups.map(([label, items]) => `
@@ -545,56 +644,101 @@
     return `<div class="gallery">${list.map((p) => {
       const t = (p.tracks || [])[0];
       const color = TRACKS[t] ? TRACKS[t][1] : "gray";
+      // A div like the board card: an <article> may not take the button role.
       return `
-        <article class="gcard" data-peek="${esc(p.id)}">
+        <div class="gcard" data-peek="${esc(p.id)}" role="button" tabindex="0"
+          aria-label="Open ${esc(fullName(p))}" aria-describedby="gt-${esc(p.id)}">
           <div class="gcard__cover" style="background:${COVER_TINT[color]}">${iconFor(p)}</div>
           <div class="gcard__body">
             <div class="gcard__title">${esc(p.name)}</div>
             <div class="gcard__meta">${esc(p.org)} · ${esc(p.city)}</div>
-            <div class="gcard__tags">${urgencyPill(p)}${trackTags(p, 1)}</div>
+            <div class="gcard__tags" id="gt-${esc(p.id)}">${urgencyPill(p)}${trackTags(p, 1)}</div>
           </div>
-        </article>`;
+        </div>`;
     }).join("")}</div>`;
   }
 
   // ----------------------------------------------------------- the plan
 
-  function planRow(p, whenText) {
+  function planRow(p, whenText, whenEst) {
     return `
       <div class="row" data-id="${esc(p.id)}">
-        <div class="row__when">${esc(whenText)}</div>
+        <div class="row__when">${esc(whenText)}${whenEst ? EST : ""}</div>
         <div class="row__main">
-          <div class="row__title"><span>${iconFor(p)}</span><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.name)}</a></div>
+          <div class="row__title"><span aria-hidden="true">${iconFor(p)}</span>${p.url
+            ? `<a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.name)}</a>`
+            : `<span class="trunc">${esc(p.name)}</span>`}</div>
           <div class="row__sub">${esc(p.org)} · ${esc(p.city)}</div>
         </div>
         <div class="row__right">
           ${urgencyPill(p)}
-          <button class="openbtn" data-peek="${esc(p.id)}" type="button">OPEN</button>
-          ${statusSelect(p.id)}
+          <button class="openbtn" data-peek="${esc(p.id)}" type="button" aria-label="Open ${esc(fullName(p))}">OPEN</button>
+          ${statusSelect(p)}
         </div>
       </div>`;
   }
 
-  function block(title, note, list, whenFn) {
+  function block(title, note, list, whenFn, estFn) {
     if (!list.length) return "";
     return `
       <h2 class="h2">${esc(title)}<span class="n">${list.length}</span></h2>
       ${note ? `<p class="note">${note}</p>` : ""}
-      <div class="rows">${list.map((p) => planRow(p, whenFn(p))).join("")}</div>`;
+      <div class="rows">${list.map((p) => planRow(p, whenFn(p), estFn && estFn(p))).join("")}</div>`;
+  }
+
+  // Rolling and undated programs have no "Due" date; their label says why.
+  function dueText(p) {
+    return p.deadline ? "Due " + fmtDate(p.deadline) : urgency(p).label;
+  }
+
+  /* Optional, and written by a separate job whose output has grown keys over
+   * time (older files have no broken_pages or changes_total), so the shape is
+   * settled once here. A thin file should cost a sentence, not the whole plan. */
+  function cleanWatch(w) {
+    if (!w || !w.last_run) return null;
+    const list = (v) => (Array.isArray(v) ? v.filter((r) => r && typeof r === "object") : []);
+    const changes = list(w.changes);
+    return {
+      last_run: String(w.last_run),
+      ok: Number(w.ok) || 0,
+      checked: Number(w.checked) || 0,
+      changes,
+      // The list is capped; the total is how many there really were.
+      changes_total: Math.max(Number(w.changes_total) || 0, changes.length),
+      blocked_pages: list(w.blocked_pages),
+      broken_pages: list(w.broken_pages),
+    };
   }
 
   /* The weekly check runs whether or not anyone is looking, so its result
    * belongs here rather than only in a GitHub issue she will never open. */
   function renderWatch() {
-    if (!WATCH || !WATCH.last_run) return "";
+    if (!WATCH) return "";
 
     const when = fmtDate(WATCH.last_run, { month: "long", day: "numeric" });
+
+    /* A dead link is the one thing the weekly check knows for certain rather
+     * than suspects, so these rows are shown in full, not folded away. */
+    const dead = WATCH.broken_pages;
+    const broken = dead.length ? `
+      <div class="callout callout--red"><span class="ci">🔗</span><div><p>
+        <strong>${dead.length} program link${dead.length === 1 ? " is" : "s are"} broken</strong>:
+        the check on ${esc(when)} could not open ${dead.length === 1 ? "it" : "them"} at all.
+        The program may have moved, so search for it by name before you cross it off.</p></div></div>
+      <div class="rows" style="margin-bottom:18px">${dead.map((b) => `
+        <div class="row">
+          <div class="row__main">
+            <div class="row__title"><a href="${esc(b.url)}" target="_blank"
+              rel="noopener noreferrer">${esc(b.name)}</a></div>
+            <div class="row__sub">${esc(b.org)}${b.reason ? " · " + esc(b.reason) : ""}</div>
+          </div>
+        </div>`).join("")}</div>` : "";
 
     /* Some of these sites refuse an automated reader, so the weekly check
      * genuinely cannot see them. Claiming all of them were checked would be
      * the one lie that matters on this page: she would trust the robot to
      * catch a posting it is structurally unable to see. */
-    const unseen = WATCH.blocked_pages || [];
+    const unseen = WATCH.blocked_pages;
     /* Written as rows rather than a sentence: four of these are called some
      * variation of "Summer Undergraduate Research Program", and several names
      * contain a comma, so a comma-separated list is unreadable. */
@@ -616,12 +760,14 @@
         <div class="toggle__body"><div class="rows">${unseenRows}</div></div>
       </details>` : "";
 
-    if (!WATCH.changes.length) {
-      return `<p class="note" style="margin:-4px 0 14px">${WATCH.ok} of ${WATCH.checked} program
+    const total = WATCH.changes_total;
+    if (!total) {
+      return `<p class="note" style="margin:-4px 0 14px">${esc(WATCH.ok)} of ${esc(WATCH.checked)} program
         pages were read on ${esc(when)} and nothing had changed. The check runs every Monday, so if
-        a program posts its 2027 dates it will show up here.</p>${blind}`;
+        a program posts its 2027 dates it will show up here.</p>${broken}${blind}`;
     }
 
+    const shown = WATCH.changes.length;
     const items = WATCH.changes.map((c) => `
       <div class="row">
         <div class="row__when">${esc(c.what)}</div>
@@ -632,36 +778,45 @@
     return `
       <div class="callout callout--green">
         <span class="ci">🔔</span>
-        <div><p><strong>${WATCH.changes.length} program page${WATCH.changes.length === 1 ? "" : "s"}
-        changed</strong> in the check on ${esc(when)}. A page changing is usually a program posting
-        its dates, so these are worth opening.</p></div>
+        <div><p><strong>${total} program page${total === 1 ? "" : "s"} changed</strong>
+        in the check on ${esc(when)}${shown && shown < total ? `, and these are ${shown} of them` : ""}.
+        A page changing is usually a program posting its dates, so these are worth opening.</p></div>
       </div>
-      <div class="rows" style="margin-bottom:18px">${items}</div>${blind}`;
+      <div class="rows" style="margin-bottom:18px">${items}</div>${broken}${blind}`;
   }
 
   function renderPlan() {
-    const openAll = DATA.programs.filter((p) => urgency(p).phase === "open");
     // Once something is sent there is nothing to do, so it should not keep
     // sitting at the top of a list headed "start here".
-    const SENT = ["submitted", "interview", "accepted", "rejected"];
-    const open = openAll.filter((p) => !SENT.includes(statusOf(p.id)));
+    const unsent = (p) => !SENT.includes(statusOf(p.id));
+    const openAll = DATA.programs.filter((p) => urgency(p).phase === "open");
+    const likelyAll = DATA.programs.filter((p) => urgency(p).phase === "likely");
+    const open = openAll.filter(unsent);
+    const likely = likelyAll.filter(unsent);
     const submitted = DATA.programs.filter((p) => ["submitted", "interview", "accepted"].includes(statusOf(p.id)));
-    const within30 = open.filter((p) => urgency(p).sort <= 30);
-    const sentCount = openAll.length - open.length;
-    const next = open.slice().sort((a, b) => urgency(a).sort - urgency(b).sort)[0];
+    // A deadline counts whatever its portal is doing: a program that has not
+    // opened yet can still hold the next date she has to meet.
+    const ahead = DATA.programs.filter((p) => parseDate(p.deadline) && unsent(p) && urgency(p).phase !== "closed")
+      .sort((a, b) => a.deadline.localeCompare(b.deadline));
+    const within30 = ahead.filter((p) => days(TODAY, parseDate(p.deadline)) <= 30);
+    const next = ahead[0];
     const confirmed = DATA.programs.filter((p) => p.deadline_status === "confirmed");
 
     const stats = [
       [DATA.count, "programs"],
-      [open.length, "left to do"],
+      [open.length + likely.length, "left to do"],
       [within30.length, "due in 30 days"],
       [confirmed.length, "dates confirmed"],
       [submitted.length, "submitted"],
-      [next ? fmtDate(next.deadline) : ", ", "next deadline"],
-    ].map(([n, k]) => `<div class="stat"><div class="stat__n">${esc(n)}</div><div class="stat__k">${esc(k)}</div></div>`).join("");
+      [next ? fmtDate(next.deadline) : "None", "next deadline", next && next.deadline_status !== "confirmed"],
+    ].map(([n, k, est]) => `<div class="stat"><div class="stat__n">${esc(n)}${est ? EST : ""}</div><div class="stat__k">${esc(k)}</div></div>`).join("");
 
-    const acceptingNow = open.slice().sort((a, b) =>
-      (b.priority_hint === "open-now") - (a.priority_hint === "open-now") || urgency(a).sort - urgency(b).sort);
+    const byHint = (a, b) =>
+      (b.priority_hint === "open-now") - (a.priority_hint === "open-now") || urgency(a).sort - urgency(b).sort;
+    const sentNote = (all, left) => {
+      const n = all.length - left.length;
+      return n ? ` You have already sent ${n}, so ${n === 1 ? "it is" : "they are"} not listed here.` : "";
+    };
     const topPicks = DATA.programs.filter((p) => p.priority_hint === "top-pick");
     const opening = DATA.programs.filter((p) => urgency(p).phase === "upcoming")
       .sort((a, b) => (a.opens || "").localeCompare(b.opens || ""));
@@ -674,9 +829,9 @@
       <div class="callout callout--yellow">
         <span class="ci">⚠️</span>
         <div>
-          <p><strong>Ask for letters of recommendation by mid-November.</strong> It is the only
-          thing on this whole list that depends on somebody else's calendar, and every pre-med
-          in the country asks in December.</p>
+          <p><strong>Ask for your letters of recommendation now.</strong> The first ones on your
+          list are due in mid-January, faculty write them in batches before winter break, and it
+          is the only thing here that runs on somebody else's calendar.</p>
         </div>
       </div>
 
@@ -693,19 +848,27 @@
 
       ${block("Start here, accepting applications now",
         "Nothing is blocking these: the portal is open today. Every day one sits untouched is a day of free optionality thrown away."
-          + (sentCount ? ` You have already sent ${sentCount}, so ${sentCount === 1 ? "it is" : "they are"} not listed here.` : ""),
-        acceptingNow, (p) => "Due " + fmtDate(p.deadline))}
+          + sentNote(openAll, open),
+        open.slice().sort(byHint), dueText)}
+
+      ${block("Probably open, check the page",
+        "Going by their dates these should be taking applications by now, but nothing on their 2027 pages says the portal is open yet. Open the page before you start on one."
+          + sentNote(likelyAll, likely),
+        likely.slice().sort(byHint), dueText)}
 
       ${block("Highest-value applications",
         "Ranked for a rising senior aiming at pediatric and neuro research. Four of these are <strong>one application, many labs or institutions</strong>, the best return on a single essay you will find: NIH SIP, Amgen Scholars, the Leadership Alliance and Vanderbilt's umbrella program. Fred Hutch is here because it is restricted to rising seniors, which is exactly your year.",
-        topPicks, (p) => "Due " + fmtDate(p.deadline))}
+        topPicks, dueText)}
 
       ${block("Due in the next 30 days", "Sorted by how little time is left.",
-        within30.sort((a, b) => urgency(a).sort - urgency(b).sort), (p) => urgency(p).label)}
+        within30, (p) => {
+          const n = days(TODAY, parseDate(p.deadline));
+          return n === 0 ? "Due today" : `Due in ${n}d`;
+        })}
 
       ${block("Opens soon, put a reminder down",
-        "Nothing to do yet except be ready. The repo's watcher checks these pages weekly and flags the moment the Summer 2027 details appear.",
-        opening.slice(0, 14), (p) => "Opens " + fmtDate(p.opens))}
+        "Nothing to do yet except be ready. These pages are checked every Monday, and when one posts its 2027 details it shows up at the top of this page.",
+        opening, (p) => "Opens " + fmtDate(p.opens), (p) => opensStatus(p) !== "confirmed")}
 
       ${block("Sweep these monthly",
         "Not single programs but directories, each covering dozens or hundreds of openings. Half an hour here beats an hour on any one application.",
@@ -713,7 +876,7 @@
 
       ${block("Late deadlines. Keep as insurance",
         "If February brings bad news, these are still open.",
-        late, (p) => "Due " + fmtDate(p.deadline))}`;
+        late, dueText)}`;
   }
 
   // ----------------------------------------------------------- timeline
@@ -721,19 +884,33 @@
   function renderTimeline() {
     const events = [];
     DATA.programs.forEach((p) => {
-      if (p.opens) events.push({ p, date: p.opens, kind: "Opens" });
-      if (p.deadline) events.push({ p, date: p.deadline, kind: "Due" });
+      if (p.opens) events.push({ p, date: p.opens, kind: "Opens", est: opensStatus(p) !== "confirmed" });
+      if (p.deadline) events.push({ p, date: p.deadline, kind: "Due", est: p.deadline_status !== "confirmed" });
     });
     events.sort((a, b) => a.date.localeCompare(b.date) || a.p.name.localeCompare(b.p.name));
 
-    let out = '<div class="rows">';
-    let last = null;
-    events.forEach(({ p, date, kind }) => {
-      const k = monthKey(date);
-      if (k !== last) { last = k; out += `<div class="month-rule">${esc(monthLabel(k))}</div>`; }
-      out += planRow(p, `${kind} ${fmtDate(date)}`);
-    });
-    return out + "</div>";
+    const rowsFor = (list) => {
+      let out = "";
+      let last = null;
+      list.forEach(({ p, date, kind, est }) => {
+        const k = monthKey(date);
+        if (k !== last) { last = k; out += `<div class="month-rule">${esc(monthLabel(k))}</div>`; }
+        out += planRow(p, `${kind} ${fmtDate(date)}`, est);
+      });
+      return out;
+    };
+
+    /* Past dates fold away so the page opens on what is still ahead. They are
+     * kept rather than dropped, because an opening that has gone by can belong
+     * to a program that is open right now. */
+    const past = events.filter((e) => parseDate(e.date) < TODAY);
+    const ahead = events.filter((e) => parseDate(e.date) >= TODAY);
+    const fold = past.length ? `
+      <details class="toggle">
+        <summary>${past.length} date${past.length === 1 ? "" : "s"} already past</summary>
+        <div class="toggle__body"><div class="rows">${rowsFor(past)}</div></div>
+      </details>` : "";
+    return `${fold}<div class="rows">${rowsFor(ahead)}</div>`;
   }
 
   // ------------------------------------------------------------ tracker
@@ -769,7 +946,10 @@
     const needed = Object.entries(tally)
       .sort((a, b) => (order.indexOf(a[0]) + 99) % 99 - (order.indexOf(b[0]) + 99) % 99 || b[1] - a[1]);
 
-    const soonest = live.filter((p) => p.deadline).sort((a, b) => a.deadline.localeCompare(b.deadline))[0];
+    // The next date still to meet: not one already sent, and not one gone by.
+    const soonest = live.filter((p) => !SENT.includes(statusOf(p.id)) && parseDate(p.deadline)
+        && urgency(p).phase !== "closed")
+      .sort((a, b) => a.deadline.localeCompare(b.deadline))[0];
 
     const prep = needed.length ? `
       <h2 class="h2">What you need to prepare<span class="n">${live.length} applications</span></h2>
@@ -784,7 +964,7 @@
           </div>`).join("")}
       </div>
       ${soonest ? `<p class="note" style="margin-top:12px">First one due:
-        <strong>${esc(fmtDate(soonest.deadline, { month: "long", day: "numeric" }))}</strong>,
+        <strong>${esc(fmtDate(soonest.deadline, { month: "long", day: "numeric" }))}</strong>${soonest.deadline_status === "confirmed" ? "" : EST},
         ${esc(soonest.name)}.</p>` : ""}` : "";
 
     return `<div class="stats">${stats}</div>` + renderBoard(touched, "status") + prep + renderRecs(live);
@@ -797,12 +977,12 @@
   function renderKit() {
     const rows = KIT.files.map((f) => `
       <div class="kitrow">
-        <span class="kitrow__icon">${f.icon}</span>
+        <span class="kitrow__icon" aria-hidden="true">${esc(f.icon)}</span>
         <div class="kitrow__main">
           <div class="kitrow__name">${esc(f.name)}</div>
           <div class="kitrow__blurb">${esc(f.blurb)}</div>
         </div>
-        <a class="openbtn kitrow__dl" href="${esc(f.path)}" download>Download</a>
+        <a class="openbtn kitrow__dl" href="${esc(f.path)}" download aria-label="Download ${esc(f.name)}">Download</a>
       </div>`).join("");
 
     return `
@@ -874,8 +1054,8 @@
           <div class="kitrow__name">${esc(r.name)}</div>
           <div class="kitrow__blurb">${esc(r.role || "")}${r.email ? " &middot; " + esc(r.email) : ""}</div>
         </div>
-        <select class="status" data-rec-status="${esc(r.id)}" data-value="${esc(r.status)}" aria-label="Letter status">${opts}</select>
-        <button class="openbtn kitrow__dl" data-remove-rec="${esc(r.id)}" type="button">Remove</button>
+        <select class="status" data-rec-status="${esc(r.id)}" data-value="${esc(r.status)}" aria-label="Letter status for ${esc(r.name)}">${opts}</select>
+        <button class="openbtn kitrow__dl" data-remove-rec="${esc(r.id)}" type="button" aria-label="Remove ${esc(r.name)}">Remove</button>
       </div>`;
     }).join("");
 
@@ -896,16 +1076,16 @@
     return `
       <h2 class="h2">Who is writing your letters<span class="n">${recs.length}</span></h2>
       <p class="note">The same two letters go to every program, so this is one conversation
-      repeated, not one per application. Ask by mid-November: faculty write these in batches and
-      December is when everybody asks.</p>
+      repeated, not one per application. Ask now: the first letters are due in mid-January, and
+      faculty write them in batches before winter break.</p>
       ${nudge}
       ${recs.length ? `<div class="kitlist">${rows}</div>` : ""}
       <div class="props" style="max-width:560px;margin-top:14px">
-        <div class="prop"><div class="prop__k"><span>Aa</span>Name</div>
+        <div class="prop"><label class="prop__k" for="rc-name"><span aria-hidden="true">Aa</span>Name</label>
           <div class="prop__v"><input class="sel sel--boxed" id="rc-name" style="width:100%" placeholder="Dr. Smith"></div></div>
-        <div class="prop"><div class="prop__k"><span>\u{1F3AF}</span>How you know them</div>
+        <div class="prop"><label class="prop__k" for="rc-role"><span aria-hidden="true">\u{1F3AF}</span>How you know them</label>
           <div class="prop__v"><input class="sel sel--boxed" id="rc-role" style="width:100%" placeholder="Lab PI, or BIOL 230 instructor"></div></div>
-        <div class="prop"><div class="prop__k"><span>\u2709\uFE0F</span>Email</div>
+        <div class="prop"><label class="prop__k" for="rc-email"><span aria-hidden="true">\u2709\uFE0F</span>Email</label>
           <div class="prop__v"><input class="sel sel--boxed" id="rc-email" style="width:100%" placeholder="optional"></div></div>
       </div>
       <button class="btn" id="rc-save" type="button">Add recommender</button>
@@ -916,14 +1096,14 @@
 
   function renderAdd() {
     const mine = customs.map((c) => {
-      const p = normaliseCustom(c);
+      const p = normalizeCustom(c);
       return `<div class="kitrow">
         <span class="kitrow__icon">${iconFor(p)}</span>
         <div class="kitrow__main">
           <div class="kitrow__name">${esc(p.name)}</div>
           <div class="kitrow__blurb">${esc(p.org)}${p.deadline ? " &middot; due " + fmtDate(p.deadline) : ""}</div>
         </div>
-        <button class="openbtn kitrow__dl" data-remove-custom="${esc(c.id)}" type="button">Remove</button>
+        <button class="openbtn kitrow__dl" data-remove-custom="${esc(c.id)}" type="button" aria-label="Remove ${esc(p.name)}">Remove</button>
       </div>`;
     }).join("");
 
@@ -936,17 +1116,17 @@
       </div>
 
       <div class="props" style="max-width:560px">
-        <div class="prop"><div class="prop__k"><span>Aa</span>Program name</div>
+        <div class="prop"><label class="prop__k" for="ad-name"><span aria-hidden="true">Aa</span>Program name</label>
           <div class="prop__v"><input class="sel sel--boxed" id="ad-name" style="width:100%" placeholder="Summer Research Program"></div></div>
-        <div class="prop"><div class="prop__k"><span>&#127963;</span>Institution</div>
+        <div class="prop"><label class="prop__k" for="ad-org"><span aria-hidden="true">&#127963;</span>Institution</label>
           <div class="prop__v"><input class="sel sel--boxed" id="ad-org" style="width:100%" placeholder="Where it is"></div></div>
-        <div class="prop"><div class="prop__k"><span>&#128205;</span>Location</div>
+        <div class="prop"><label class="prop__k" for="ad-city"><span aria-hidden="true">&#128205;</span>Location</label>
           <div class="prop__v"><input class="sel sel--boxed" id="ad-city" style="width:100%" placeholder="City, State"></div></div>
-        <div class="prop"><div class="prop__k"><span>&#128279;</span>Link</div>
+        <div class="prop"><label class="prop__k" for="ad-url"><span aria-hidden="true">&#128279;</span>Link</label>
           <div class="prop__v"><input class="sel sel--boxed" id="ad-url" style="width:100%" placeholder="https://"></div></div>
-        <div class="prop"><div class="prop__k"><span>&#128197;</span>Deadline</div>
+        <div class="prop"><label class="prop__k" for="ad-deadline"><span aria-hidden="true">&#128197;</span>Deadline</label>
           <div class="prop__v"><input class="sel sel--boxed" id="ad-deadline" type="date"></div></div>
-        <div class="prop"><div class="prop__k"><span>&#9999;</span>Notes</div>
+        <div class="prop"><label class="prop__k" for="ad-notes"><span aria-hidden="true">&#9999;</span>Notes</label>
           <div class="prop__v"><input class="sel sel--boxed" id="ad-notes" style="width:100%" placeholder="Anything worth remembering"></div></div>
       </div>
 
@@ -993,16 +1173,16 @@
 
       <div class="props" style="max-width:520px">
         <div class="prop">
-          <div class="prop__k"><span>&#127891;</span>Year when you apply</div>
+          <label class="prop__k" for="pf-year"><span aria-hidden="true">&#127891;</span>Year when you apply</label>
           <div class="prop__v"><select class="sel sel--boxed" id="pf-year">${opts(CLASS_YEARS, profile.classYear)}</select></div>
         </div>
         <div class="prop">
-          <div class="prop__k"><span>&#128200;</span>GPA</div>
+          <label class="prop__k" for="pf-gpa"><span aria-hidden="true">&#128200;</span>GPA</label>
           <div class="prop__v"><input class="sel sel--boxed" id="pf-gpa" type="number" step="0.01" min="0" max="4.3"
             placeholder="e.g. 3.6" value="${esc(profile.gpa || "")}" style="width:120px"></div>
         </div>
         <div class="prop">
-          <div class="prop__k"><span>&#128737;</span>Citizenship</div>
+          <label class="prop__k" for="pf-status"><span aria-hidden="true">&#128737;</span>Citizenship</label>
           <div class="prop__v"><select class="sel sel--boxed" id="pf-status">${opts(STATUSES_CITIZEN, profile.status)}</select></div>
         </div>
       </div>
@@ -1021,20 +1201,57 @@
 
   // --------------------------------------------------------------- peek
 
-  let lastFocus = null;
+  /* Where focus goes back to when the panel closes. The program and its
+   * place on the page are kept as well as the element, because changing a
+   * status in the panel re-renders the page and the element goes with it. */
+  let opener = null;
 
   function prop(icon, key, value, cls) {
-    return `<div class="prop"><div class="prop__k"><span>${icon}</span>${esc(key)}</div>
+    return `<div class="prop"><div class="prop__k"><span aria-hidden="true">${icon}</span>${esc(key)}</div>
       <div class="prop__v ${cls || ""}">${value}</div></div>`;
+  }
+
+  /* The opening date, marked est. unless it was read off the program's page,
+   * and what it does and does not prove about the portal today. */
+  function opensValue(p) {
+    const u = urgency(p);
+    const date = p.opens
+      ? esc(fmtDate(p.opens, { month: "long", day: "numeric", year: "numeric" })) +
+        (opensStatus(p) === "confirmed" ? "" : EST)
+      // Rolling, or the page says it is open: there is no opening date to miss.
+      : u.phase === "open" ? "" : '<span class="empty">Unknown</span>';
+    const state = u.phase === "open" ? tag("Accepting applications now", "green")
+      : u.phase === "likely" ? tag("Probably open, check the page", "yellow", EST)
+      : "";
+    return [date, state].filter(Boolean).join(" ");
+  }
+
+  /* Everything behind the open panel is inert, so Tab cannot walk off
+   * behind the scrim and a screen reader cannot read past the dialog. The
+   * scrim itself stays live: a click on it is one way to close the panel. */
+  function setBackdrop(on) {
+    for (const n of document.body.children) {
+      if (n.id !== "peek" && n.id !== "scrim" && n.tagName !== "SCRIPT") n.inert = on;
+    }
   }
 
   function openPeek(id) {
     const p = DATA.programs.find((x) => x.id === id);
     if (!p) return;
 
-    lastFocus = document.activeElement;
-    const e = entry(p.id);
+    const pk = document.getElementById("peek");
+    if (pk.dataset.open !== "true") {
+      const from = document.activeElement;
+      const same = [...document.querySelectorAll(`#content [data-peek="${CSS.escape(id)}"]`)];
+      // A row clicked with the mouse leaves focus on the page itself rather
+      // than on a control, so the row's OPEN button stands in for it.
+      opener = { el: same.includes(from) ? from : null, id, nth: Math.max(0, same.indexOf(from)) };
+    }
+    // Read without creating: looking at a program is not tracking it, and an
+    // empty entry made here would be saved by the next real change.
+    const e = tracker.items[p.id] || { notes: "", done: {} };
     const el_ = p.eligibility || {};
+    const dead = WATCH && WATCH.broken_pages.find((b) => b.url && b.url === p.url);
     const sel = SELECTIVITY[p.selectivity] || ["", "gray"];
 
     const todos = (p.requires || []).map((r) => {
@@ -1044,25 +1261,31 @@
         <label for="rq-${esc(p.id)}-${esc(r)}">${esc(REQUIREMENT_LABELS[r] || r)}</label></li>`;
     }).join("");
 
-    document.getElementById("peek-open").href = p.url;
+    // href="" would open a second copy of this site, so a program she added
+    // without a link gets no link at all.
+    const pageLink = document.getElementById("peek-open");
+    pageLink.hidden = !p.url;
+    if (p.url) pageLink.href = p.url; else pageLink.removeAttribute("href");
     document.getElementById("peek-body").innerHTML = `
-      <div class="peek__icon">${iconFor(p)}</div>
+      <div class="peek__icon" aria-hidden="true">${iconFor(p)}</div>
       <h1 class="peek__title" id="peek-title">${esc(p.name)}</h1>
 
       <div class="props">
-        ${prop("◉", "Status", statusSelect(p.id))}
+        ${prop("◉", "Status", statusSelect(p))}
         ${prop("📅", "Deadline", p.deadline
             ? urgencyPill(p) + ` <span style="color:var(--ink-3);font-size:13px">${fmtDate(p.deadline, { month: "long", day: "numeric", year: "numeric" })}${p.deadline_status === "confirmed" ? "" : " (projected)"}</span>`
             : '<span class="prop__v empty">Not posted</span>')}
         ${prop("🏛️", "Institution", esc(p.org))}
         ${prop("📍", "Location", esc(p.city))}
-        ${prop("🚪", "Opens", p.opens ? fmtDate(p.opens, { month: "long", day: "numeric", year: "numeric" }) : '<span class="empty">Unknown</span>')}
+        ${prop("🚪", "Opens", opensValue(p))}
         ${prop("⏱️", "Runs", p.program_dates ? esc(p.program_dates) : '<span class="empty">Not posted</span>')}
         ${prop("#", "Length", p.duration_weeks ? p.duration_weeks + " weeks" : '<span class="empty">Not stated</span>')}
         ${prop("💵", "Stipend", p.stipend_note ? esc(p.stipend_note) : (fmtMoney(p.stipend_usd) || '<span class="empty">Not stated</span>'))}
         ${prop("🏠", "Housing", esc(HOUSING_LABELS[p.housing] || p.housing) + (p.near_home ? " " + tag("commutable from Leesburg", "green") : ""))}
         ${prop("🎲", "Odds", tag(sel[0], sel[1]))}
-        ${prop("🛂", "Citizenship", esc(CITIZENSHIP_LABELS[el_.citizenship] || el_.citizenship || ", "))}
+        ${prop("🛂", "Citizenship", el_.citizenship
+            ? esc(CITIZENSHIP_LABELS[el_.citizenship] || el_.citizenship)
+            : '<span class="empty">Not stated</span>')}
         ${prop("📈", "Min GPA", el_.min_gpa ? String(el_.min_gpa) : '<span class="empty">None stated</span>')}
         ${prop("🎓", "Class years", (el_.class_years || []).map((y) => tag(y, "gray")).join(" ") || '<span class="empty">Not stated</span>')}
         ${prop("≡", "Area", (p.tracks || []).map((t) => tag(TRACKS[t] ? TRACKS[t][0] : t, TRACKS[t] ? TRACKS[t][1] : "gray")).join(" "))}
@@ -1072,24 +1295,27 @@
 
       ${p.notes ? `<div class="callout callout--blue"><span class="ci">💡</span><div><p>${esc(p.notes)}</p></div></div>` : ""}
       ${profileSet() && blockers(p).length ? `<div class="callout callout--red"><span class="ci">&#9888;</span><div><p><strong>Against your profile:</strong> ${esc(blockers(p).join(". "))}. Worth reading the page before you spend time on it.</p></div></div>` : ""}
-      ${el_.notes ? `<div class="callout callout--yellow"><span class="ci">⚠️</span><div><p><strong>Eligibility, </strong> ${esc(el_.notes)}</p></div></div>` : ""}
+      ${el_.notes ? `<div class="callout callout--yellow"><span class="ci">⚠️</span><div><p><strong>Eligibility:</strong> ${esc(el_.notes)}</p></div></div>` : ""}
       ${p.deadline_status === "projected" ? `<div class="callout callout--gray"><span class="ci">📌</span><div><p>This date is projected from an earlier cycle. Confirm it on the program page before relying on it.</p></div></div>` : ""}
       ${p.link_note ? `<div class="callout callout--gray"><span class="ci">🔗</span><div><p>${esc(p.link_note)}</p></div></div>` : ""}
+      ${dead ? `<div class="callout callout--red"><span class="ci">🔗</span><div><p>The weekly check on ${esc(fmtDate(WATCH.last_run, { month: "long", day: "numeric" }))} could not open this page${dead.reason ? ` (${esc(dead.reason)})` : ""}, so the link may be dead. If it will not load for you either, search for the program by name.</p></div></div>` : ""}
 
-      <a class="btn btn--full" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" style="margin:6px 0 22px">Open the program page ↗</a>
+      ${p.url ? `<a class="btn btn--full" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" style="margin:6px 0 22px">Open the program page ↗</a>` : ""}
 
       ${todos ? `<h2 class="h2" style="font-size:18px;margin-top:4px">What they ask for</h2><ul class="todo">${todos}</ul>` : ""}
 
-      <h2 class="h2" style="font-size:18px">Notes</h2>
-      <textarea class="inputblock" data-note-for="${esc(p.id)}"
+      <h2 class="h2" id="peek-notes" style="font-size:18px">Notes</h2>
+      <textarea class="inputblock" data-note-for="${esc(p.id)}" aria-labelledby="peek-notes"
         placeholder="Who you emailed, which lab you want, portal login, anything to remember…">${esc(e.notes || "")}</textarea>
 
       ${p.contact ? `<p class="note" style="margin-top:14px">Contact: <a href="mailto:${esc(p.contact)}" style="border-bottom:1px solid var(--rule-strong)">${esc(p.contact)}</a></p>` : ""}`;
 
-    document.getElementById("peek").dataset.open = "true";
+    pk.inert = false;
+    pk.dataset.open = "true";
     document.getElementById("scrim").dataset.open = "true";
     document.body.style.overflow = "hidden";
-    document.getElementById("peek").focus();
+    setBackdrop(true);
+    pk.focus();
   }
 
   function closePeek() {
@@ -1098,14 +1324,28 @@
     pk.dataset.open = "false";
     document.getElementById("scrim").dataset.open = "false";
     document.body.style.overflow = "";
-    if (lastFocus && lastFocus.focus) lastFocus.focus();
+    setBackdrop(false);
+    returnFocus();
+    // Only once focus is out: going inert with focus inside drops it on the body.
+    pk.inert = true;
+  }
+
+  function returnFocus() {
+    if (!opener) return;
+    const { el: was, id, nth } = opener;
+    opener = null;
+    const again = was && was.isConnected ? was
+      : document.querySelectorAll(`#content [data-peek="${CSS.escape(id)}"]`)[nth];
+    // Gone altogether (a status change can take a card off the tracker
+    // board): the page title, which a screen reader announces.
+    (again || document.getElementById("page-title")).focus();
   }
 
   // --------------------------------------------------------------- chrome
 
   const SUBS = {
     plan: "Everything in deadline order, with the reusable applications first. Updated from the programs' own pages.",
-    programs: "Every program found so far. Click a row to open it like a Notion page.",
+    programs: "Every program found so far. Click a row or a card to open it like a Notion page.",
     tracker: "Grouped by status. Set a status anywhere and it lands here.",
     timeline: 'Opening dates and deadlines in order. <a href="data/deadlines.ics" download>Download the calendar file</a> to get all of this with reminders.',
   };
@@ -1114,21 +1354,23 @@
 
   function renderChrome() {
     const guide = page === "guide" ? GUIDES.find((g) => g.slug === guideSlug) : null;
+    // A stale #guide/ link has to reach the "Guide not found" state that
+    // renderContent draws, not throw here first.
     const meta = guide
       ? { icon: guide.icon, title: guide.title, crumb: guide.title }
-      : PAGES[page];
+      : PAGES[page] || { icon: "📄", title: "Guide not found", crumb: "Guide not found" };
     document.getElementById("page-head").hidden = false;
     document.getElementById("page-icon").textContent = meta.icon;
     document.getElementById("page-title").textContent = meta.title;
     document.getElementById("page-sub").innerHTML = guide ? "" : (SUBS[page] || "");
     document.getElementById("crumb-page").textContent = meta.crumb;
 
-    document.querySelectorAll("#pagenav button").forEach((b) =>
-      b.setAttribute("aria-selected", String(page !== "guide" && b.dataset.view === page)));
-    document.querySelectorAll("#menav button").forEach((b) =>
-      b.setAttribute("aria-selected", String(page === b.dataset.view)));
+    // Absent rather than "false" on the others: only the current one is news.
+    const current = (b, on) => (on ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current"));
+    document.querySelectorAll("#pagenav button, #menav button").forEach((b) =>
+      current(b, page !== "guide" && b.dataset.view === page));
     document.querySelectorAll("#guidenav button").forEach((b) =>
-      b.setAttribute("aria-selected", String(page === "guide" && b.dataset.guide === guideSlug)));
+      current(b, page === "guide" && b.dataset.guide === guideSlug));
 
     const views = document.getElementById("views");
     const toolbar = document.getElementById("toolbar");
@@ -1136,14 +1378,15 @@
 
     if (page === "programs") {
       views.hidden = false;
+      // Toggle buttons, not tabs: there are no arrow keys and no tab panel.
       views.innerHTML = DB_VIEWS.map(([v, ico, label]) =>
-        `<button role="tab" data-dbview="${v}" aria-selected="${v === dbView}"><span class="vicon">${ico}</span>${label}</button>`).join("");
+        `<button type="button" data-dbview="${v}" aria-pressed="${v === dbView}"><span class="vicon" aria-hidden="true">${ico}</span>${label}</button>`).join("");
 
       toolbar.hidden = false;
       toolbar.innerHTML = `
         <span class="toolbar__count" id="count"></span>
         <div class="search">
-          <span class="search__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+          <span class="search__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
           <label class="sr-only" for="q">Search</label>
           <input id="q" type="search" placeholder="Search…" autocomplete="off" value="${esc(query)}">
         </div>
@@ -1155,18 +1398,42 @@
           <option value="org">Sort: institution</option>
           <option value="stipend">Sort: stipend</option>
           <option value="city">Sort: location</option>
+          <option value="status">Sort: status</option>
         </select>`;
-      toolbar.querySelector("#sort").value = sortBy;
 
       filterbar.hidden = false;
       const chipDefs = profileSet() ? [FIT_CHIP].concat(CHIP_DEFS) : CHIP_DEFS;
-      filterbar.innerHTML = chipDefs.map(([key, label, fn]) =>
-        `<button class="chip" data-chip="${key}" aria-pressed="${chips.has(key)}">${esc(label)}<span class="n">${DATA.programs.filter(fn).length}</span></button>`).join("");
+      filterbar.innerHTML = chipDefs.map(([key, label]) =>
+        `<button class="chip" data-chip="${key}" aria-pressed="${chips.has(key)}">${esc(label)}<span class="n">${chipCount(key)}</span></button>`).join("");
     } else {
       views.hidden = true;
       toolbar.hidden = true;
       filterbar.hidden = true;
+      // A count left over from All Programs would be read on some other page.
+      announce("");
     }
+  }
+
+  /* One polite region in the page shell (index.html says why it lives
+   * there). Emptied first so the same sentence twice in a row is still read,
+   * and filled late so a burst of typing ends in a single announcement. */
+  let announceTimer;
+  function announce(msg) {
+    const live = document.getElementById("announce");
+    if (!live) return;
+    clearTimeout(announceTimer);
+    live.textContent = "";
+    if (msg) announceTimer = setTimeout(() => { live.textContent = msg; }, 400);
+  }
+
+  function announceList(lead) {
+    const n = visible().length;
+    announce(`${lead ? lead + ". " : ""}${n ? `Showing ${n} of ${DATA.count} programs` : "No programs match"}.`);
+  }
+
+  function sortLabel() {
+    const col = COLUMNS.find((c) => c[3] === sortBy);
+    return `Sorted by ${col ? col[2].toLowerCase() : sortBy}, ${sortDir === 1 ? "ascending" : "descending"}`;
   }
 
   function renderContent() {
@@ -1188,6 +1455,14 @@
     const list = visible();
     const count = document.getElementById("count");
     if (count) count.textContent = `${list.length} of ${DATA.count}`;
+    // The dropdown and the column headers are two views of one sort, and the
+    // chip badges are row counts, so all of them follow whichever control
+    // moved. Updated in place so the control just used is not rebuilt.
+    const sortSel = document.getElementById("sort");
+    if (sortSel) sortSel.value = sortBy;
+    document.querySelectorAll("#filterbar [data-chip] .n").forEach((n) => {
+      n.textContent = chipCount(n.parentElement.dataset.chip);
+    });
 
     if (!list.length) {
       host.innerHTML = `<div class="empty"><strong>No results</strong>Try clearing a filter or shortening the search.</div>`;
@@ -1198,7 +1473,47 @@
                    : renderGallery(list);
   }
 
+  /* render() rebuilds the page, and whatever had focus goes with it: a status
+   * picked from the keyboard, a view button, the GPA being typed. A control
+   * is found again in the new page by its id, or by the attribute that ties
+   * it to its program, and by its place among those that share one (the Plan
+   * and the Timeline can list a program twice). */
+  const FOCUS_KEYS = ["data-dbview", "data-chip", "data-status-for", "data-rec-status", "data-peek"];
+
+  function focusMark() {
+    const held = document.activeElement;
+    if (!held || !document.getElementById("page").contains(held)) return null;
+    const key = held.id ? "id" : FOCUS_KEYS.find((k) => held.hasAttribute(k));
+    if (!key) return null;
+    const sel = `[${key}="${CSS.escape(held.getAttribute(key))}"]`;
+    return { el: held, sel, nth: [...document.querySelectorAll(sel)].indexOf(held) };
+  }
+
+  function focusReturn(mark) {
+    if (!mark || document.activeElement !== document.body) return;
+    const all = document.querySelectorAll(mark.sel);
+    const again = all[mark.nth] || all[0];
+    if (!again) return;
+    // A field being typed in goes back itself: focusing its fresh copy would
+    // put the caret at the start, and the next digit in front of the rest.
+    // Only while the two agree, or a value cleared elsewhere would come back.
+    if (mark.el.matches("input, textarea") && again.matches("input, textarea")
+        && again.value === mark.el.value) {
+      again.replaceWith(mark.el);
+      mark.el.focus();
+    } else {
+      again.focus();
+    }
+  }
+
+  // For when the control that had focus is not in the rebuilt page at all.
+  function focusIfLost(id) {
+    const target = document.getElementById(id);
+    if (target && document.activeElement === document.body) target.focus();
+  }
+
   function render() {
+    const mark = focusMark();
     renderChrome();
     renderContent();
     document.getElementById("n-programs").textContent = DATA.count;
@@ -1208,48 +1523,76 @@
     if (fitEl) fitEl.textContent = profileSet() ? String(DATA.programs.filter(fitsMe).length) : "";
     const t = DATA.programs.filter((p) => statusOf(p.id) !== "not-started").length;
     document.getElementById("n-tracker").textContent = t || "";
+    focusReturn(mark);
+  }
+
+  /* Every countdown, phase and count is relative to TODAY, and this is a page
+   * people leave open: past midnight it would go on showing yesterday's. */
+  function refreshToday() {
+    const now = startOfDay(new Date());
+    if (now.getTime() === TODAY.getTime()) return;
+    TODAY = now;
+    render();
+  }
+
+  /* Both sidebar menus lead to ordinary pages, so both drop a guide's hash:
+   * left in place, it beats the page on screen at the next reload. */
+  function goTo(view) {
+    page = view;
+    guideSlug = null;
+    if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+    setDrawer(false);
+    render();
+    landOnPage();
   }
 
   function openGuide(slug) {
     if (!GUIDES.some((g) => g.slug === slug)) return;
     page = "guide";
     guideSlug = slug;
-    document.getElementById("sidebar").dataset.open = "false";
+    setDrawer(false);
     if (location.hash !== "#guide/" + slug) history.replaceState(null, "", "#guide/" + slug);
     render();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    landOnPage();
+  }
+
+  /* A page change would leave focus on the sidebar button that made it, and
+   * on a phone that button is sliding away with the drawer. The new page's
+   * title is where a screen reader should pick up. Smooth scrolling is motion
+   * too, and a scrollTo() call is out of the stylesheet's reach. */
+  function landOnPage() {
+    document.getElementById("page-title").focus({ preventScroll: true });
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: still ? "auto" : "smooth" });
+  }
+
+  // The drawer only exists below 860px; above that the menu button is hidden.
+  function setDrawer(open) {
+    document.getElementById("sidebar").dataset.open = String(open);
+    document.getElementById("menu-btn").setAttribute("aria-expanded", String(open));
   }
 
   function buildGuideNav() {
     document.getElementById("guidenav").innerHTML = GUIDES.map((g) =>
-      `<button role="tab" data-guide="${esc(g.slug)}" aria-selected="false">
-         <span class="emoji">${g.icon}</span><span class="label">${esc(g.title)}</span>
+      `<button type="button" data-guide="${esc(g.slug)}">
+         <span class="emoji" aria-hidden="true">${esc(g.icon)}</span><span class="label">${esc(g.title)}</span>
        </button>`).join("");
   }
 
   // --------------------------------------------------------------- events
 
   function wire() {
-    document.getElementById("pagenav").addEventListener("click", (ev) => {
+    ["pagenav", "menav"].forEach((id) => document.getElementById(id).addEventListener("click", (ev) => {
       const b = ev.target.closest("button[data-view]");
-      if (!b) return;
-      page = b.dataset.view;
-      guideSlug = null;
-      if (location.hash) history.replaceState(null, "", location.pathname + location.search);
-      document.getElementById("sidebar").dataset.open = "false";
-      render();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+      if (b) goTo(b.dataset.view);
+    }));
 
-    document.getElementById("menav").addEventListener("click", (ev) => {
-      const b = ev.target.closest("button[data-view]");
-      if (!b) return;
-      page = b.dataset.view;
-      guideSlug = null;
-      document.getElementById("sidebar").dataset.open = "false";
-      render();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    // A sleeping laptop skips timers, so waking the tab checks the date too.
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshToday(); });
+    (function atMidnight() {
+      const next = new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate() + 1);
+      setTimeout(() => { refreshToday(); atMidnight(); }, next - Date.now() + 1000);
+    })();
 
     document.addEventListener("change", (ev) => {
       const el2 = ev.target;
@@ -1273,11 +1616,13 @@
       openGuide(b.dataset.guide);
     });
 
+    // Each of these changes the rows silently, so each says what it did.
     document.getElementById("views").addEventListener("click", (ev) => {
       const b = ev.target.closest("button[data-dbview]");
       if (!b) return;
       dbView = b.dataset.dbview;
       render();
+      announceList(DB_VIEWS.find((v) => v[0] === dbView)[2] + " view");
     });
 
     document.getElementById("filterbar").addEventListener("click", (ev) => {
@@ -1287,6 +1632,7 @@
       chips.has(k) ? chips.delete(k) : chips.add(k);
       b.setAttribute("aria-pressed", String(chips.has(k)));
       renderContent();
+      announceList();
     });
 
     // Typing must not rebuild the toolbar, or the input loses focus.
@@ -1294,15 +1640,24 @@
     document.getElementById("toolbar").addEventListener("input", (ev) => {
       if (ev.target.id !== "q") return;
       clearTimeout(deb);
-      deb = setTimeout(() => { query = ev.target.value.trim().toLowerCase(); renderContent(); }, 130);
+      deb = setTimeout(() => { query = ev.target.value.trim().toLowerCase(); renderContent(); announceList(); }, 130);
     });
 
     document.getElementById("toolbar").addEventListener("change", (ev) => {
       if (ev.target.id !== "sort") return;
       sortBy = ev.target.value;
-      sortDir = 1;
+      sortDir = SORT_START[sortBy] || 1;
       renderContent();
+      announceList(sortLabel());
     });
+
+    // A message written beside a button is easy to miss even with eyes, so
+    // focus goes to the empty field and the message is read out.
+    const needName = (msg, text, field) => {
+      msg.textContent = text;
+      announce(text);
+      document.getElementById(field).focus();
+    };
 
     document.addEventListener("click", (ev) => {
       const th = ev.target.closest("th[data-sort]");
@@ -1310,13 +1665,17 @@
         const k = th.dataset.sort;
         if (sortBy === k) sortDir *= -1; else { sortBy = k; sortDir = 1; }
         renderContent();
+        // The header row is rebuilt with the table, its button included.
+        const again = document.querySelector(`#content th[data-sort="${k}"] .th-sort`);
+        if (again && document.activeElement === document.body) again.focus();
+        announceList(sortLabel());
         return;
       }
       if (ev.target.id === "rc-save") {
         const val = (id) => (document.getElementById(id).value || "").trim();
         const name = val("rc-name");
         const msg = document.getElementById("rc-msg");
-        if (!name) { msg.textContent = "They need a name."; return; }
+        if (!name) { needName(msg, "They need a name.", "rc-name"); return; }
         recs.push({ id: "rec-" + Date.now().toString(36), name,
                     role: val("rc-role"), email: val("rc-email"), status: "not-asked" });
         saveRecs();
@@ -1328,34 +1687,43 @@
         recs = recs.filter((r) => r.id !== rmRec.dataset.removeRec);
         saveRecs();
         render();
+        focusIfLost("rc-name");
         return;
       }
       if (ev.target.id === "ad-save") {
         const val = (id) => (document.getElementById(id).value || "").trim();
         const name = val("ad-name");
         const msg = document.getElementById("ad-msg");
-        if (!name) { msg.textContent = "It needs a name at least."; return; }
+        if (!name) { needName(msg, "It needs a name at least.", "ad-name"); return; }
         let url = val("ad-url");
         if (url && !/^https?:\/\//i.test(url)) url = "https://" + url;
         addCustom({ name, org: val("ad-org"), city: val("ad-city"), url,
                     deadline: val("ad-deadline") || null, notes: val("ad-notes") });
         render();
         const after = document.getElementById("ad-msg");
-        if (after) after.textContent = "Added. It is in your list now.";
+        if (after) { after.textContent = "Added. It is in your list now."; announce(after.textContent); }
         return;
       }
       const rm = ev.target.closest("[data-remove-custom]");
-      if (rm) { removeCustom(rm.dataset.removeCustom); render(); return; }
+      if (rm) { removeCustom(rm.dataset.removeCustom); render(); focusIfLost("ad-name"); return; }
       if (ev.target.id === "pf-clear") {
         profile = { classYear: "", gpa: "", status: "" };
         saveProfile();
         render();
+        focusIfLost("pf-year");
         return;
       }
       const gl = ev.target.closest("a[data-guide]");
       if (gl) { ev.preventDefault(); openGuide(gl.dataset.guide); return; }
       const peek = ev.target.closest("[data-peek]");
       if (peek) { openPeek(peek.dataset.peek); return; }
+      // The whole row opens its program, as the page promises, except where
+      // the click was for the link or the status, or ended a text selection.
+      const row = ev.target.closest("table.db tbody tr[data-id]");
+      if (row && !ev.target.closest("a, button, select, input, label") && !String(window.getSelection())) {
+        openPeek(row.dataset.id);
+        return;
+      }
       if (ev.target.closest("#peek-close") || ev.target.id === "scrim") closePeek();
     });
 
@@ -1393,10 +1761,27 @@
       ta._t = setTimeout(saveTracker, 350);
     });
 
+    const sidebar = document.getElementById("sidebar");
+    const menuBtn = document.getElementById("menu-btn");
+
     document.addEventListener("keydown", (ev) => {
       if (ev.key === "Escape") {
-        closePeek();
-        document.getElementById("sidebar").dataset.open = "false";
+        if (document.getElementById("peek").dataset.open === "true") closePeek();
+        else if (sidebar.dataset.open === "true") {
+          // Back to the button that opened it, not left on a link that is
+          // sliding off screen.
+          const inside = sidebar.contains(document.activeElement);
+          setDrawer(false);
+          if (inside) menuBtn.focus();
+        }
+        return;
+      }
+      // Cards stand in for buttons, so they answer the keys a button does.
+      const card = ev.target.closest('[role="button"][data-peek]');
+      if (card && (ev.key === "Enter" || ev.key === " ")) {
+        ev.preventDefault();
+        openPeek(card.dataset.peek);
+        return;
       }
       if (ev.key === "/" && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
         const q = document.getElementById("q");
@@ -1404,11 +1789,13 @@
       }
     });
 
-    const sidebar = document.getElementById("sidebar");
-
-    document.getElementById("menu-btn").addEventListener("click", (ev) => {
+    menuBtn.addEventListener("click", (ev) => {
       ev.stopPropagation();
-      sidebar.dataset.open = sidebar.dataset.open === "true" ? "false" : "true";
+      const open = sidebar.dataset.open !== "true";
+      setDrawer(open);
+      // The drawer comes before this button in the page, so from here Tab
+      // would walk away from it: focus goes in, to the page you are on.
+      if (open) (sidebar.querySelector('[aria-current="page"]') || sidebar.querySelector("button")).focus();
     });
 
     // Tapping the page behind the open drawer should dismiss it, the way any
@@ -1416,7 +1803,7 @@
     document.addEventListener("click", (ev) => {
       if (sidebar.dataset.open !== "true") return;
       if (ev.target.closest("#sidebar") || ev.target.closest("#menu-btn")) return;
-      sidebar.dataset.open = "false";
+      setDrawer(false);
     });
 
     // theme
@@ -1425,12 +1812,24 @@
       if (saved) document.documentElement.dataset.theme = saved;
     } catch (err) { /* ignore */ }
 
-    document.getElementById("theme-btn").addEventListener("click", () => {
+    /* The button is a "Dark theme" toggle, and pressed means the page is dark
+     * now. With no choice saved that is the system's call, so the state is
+     * set on load and again whenever the system flips. */
+    const themeBtn = document.getElementById("theme-btn");
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+    const isDark = () => {
+      const t = document.documentElement.dataset.theme;
+      return t === "dark" || (!t && systemDark.matches);
+    };
+    const syncTheme = () => themeBtn.setAttribute("aria-pressed", String(isDark()));
+    syncTheme();
+    systemDark.addEventListener("change", syncTheme);
+
+    themeBtn.addEventListener("click", () => {
       const root = document.documentElement;
-      const dark = root.dataset.theme === "dark" ||
-        (!root.dataset.theme && window.matchMedia("(prefers-color-scheme: dark)").matches);
-      root.dataset.theme = dark ? "light" : "dark";
+      root.dataset.theme = isDark() ? "light" : "dark";
       try { localStorage.setItem(THEME_KEY, root.dataset.theme); } catch (err) { /* ignore */ }
+      syncTheme();
     });
 
     // backup / restore
@@ -1469,7 +1868,7 @@
     });
 
     document.getElementById("export-btn").addEventListener("click", () => {
-      const blob = new Blob([JSON.stringify(tracker, null, 2)], { type: "application/json" });
+      const blob = new Blob([JSON.stringify(cleanTracker(tracker), null, 2)], { type: "application/json" });
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
       a.download = `research-tracker-${new Date().toISOString().slice(0, 10)}.json`;
@@ -1487,9 +1886,11 @@
         try {
           const parsed = JSON.parse(String(reader.result));
           if (!parsed || !parsed.items) throw new Error("not a tracker backup");
-          const n = Object.keys(parsed.items).length;
-          if (confirm(`Restore ${n} tracked programs? This replaces what is in this browser now.`)) {
-            tracker = parsed;
+          const clean = cleanTracker(parsed);
+          // Counted the way the sidebar counts, so it is a number she recognizes.
+          const n = Object.values(clean.items).filter((it) => it.status !== "not-started").length;
+          if (confirm(`Restore ${n} tracked program${n === 1 ? "" : "s"}? This replaces what is in this browser now.`)) {
+            tracker = clean;
             saveTracker();
             render();
           }
@@ -1501,6 +1902,13 @@
   }
 
   // ----------------------------------------------------------------- boot
+
+  // The save helpers would only find out at her first change; this finds out
+  // before she makes one.
+  try {
+    localStorage.setItem("jolene-s27:probe", "1");
+    localStorage.removeItem("jolene-s27:probe");
+  } catch (err) { noSave(); }
 
   Promise.all([
     fetch("data/programs.json", { cache: "no-cache" }).then((r) => {
@@ -1525,7 +1933,7 @@
       applyCustoms();
       GUIDES = guidePayload.guides || [];
       KIT = kitPayload && kitPayload.files ? kitPayload : KIT;
-      WATCH = watchPayload && watchPayload.last_run ? watchPayload : null;
+      WATCH = cleanWatch(watchPayload);
       document.getElementById("loading").remove();
       document.getElementById("foot-meta").textContent =
         `${payload.count} programs · built ${(payload.generated || "").slice(0, 10)}`;
