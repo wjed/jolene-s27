@@ -8,10 +8,14 @@ description: Research a lab and draft a short, specific email to the principal i
 This is the highest-return thing in the whole application process and almost
 nobody does it. Many summer programs let applicants name a preferred mentor,
 and plenty of placements come down to a faculty member saying "I would take
-this student". Some positions, like the Boston Children's epilepsy lab or the
-NIA Alzheimer's centres, are only reachable this way.
+this student". Some positions, like the Boston Children's epilepsy lab, the UC
+Davis MIND Institute, the NIA Alzheimer's centers and UCSF pediatrics, are only
+reachable this way. For NIH SIP it is part of applying, not an extra: NIH
+investigators pick their own interns, starting in early January.
 
-Fifteen minutes per email. Three or four per program she seriously wants.
+Fifteen minutes per email. Three or four per program she seriously wants. The
+longer version, written for her, is the site's guide at
+https://wjed.github.io/jolene-s27/#guide/cold-email-pi.
 
 ## Finding the right person
 
@@ -31,7 +35,9 @@ arranged centrally, and the email matters less.
 
 ## The draft
 
-Under 200 words. They are reading it on a phone between meetings.
+Under 200 words. They are reading it on a phone between meetings. Take her email
+and phone from the profile, and when its *What she runs herself* note is filled
+in, use her own lab detail in place of the stock sentence below.
 
 > **Subject:** Summer 2027 research, undergraduate interested in [THEIR TOPIC]
 >
@@ -57,9 +63,12 @@ Under 200 words. They are reading it on a phone between meetings.
 >
 > Jolene VanderHeyden
 > Penn State, Class of 2028
+> [EMAIL] · [PHONE]
 
 ## Rules
 
+- **A subject line that survives a crowded inbox**: their topic and summer
+  2027, as above, never a bare "Research opportunity".
 - **One specific sentence about their actual work.** Generic praise is worse
   than none. If you cannot write that sentence, you have not read the paper.
 - **Ask for one thing**: whether they are taking a summer student. Not "please
@@ -72,7 +81,8 @@ Under 200 words. They are reading it on a phone between meetings.
 ## What replies mean
 
 - *"Yes, name me"*: excellent. Put it in the application immediately and say so
-  explicitly, "Dr. X has agreed to host me". That line carries real weight.
+  explicitly, "Dr. X has agreed to host me". That line carries real weight. Add
+  it to that program's notes in her profile too, so a later chat knows.
 - *"I am not taking students, but talk to Dr. Y"*: a warm introduction. Use it.
 - *"Apply through the central program"*: neutral, but she is now a name they
   have seen rather than one of four hundred files.

@@ -1,6 +1,6 @@
 # Summer 2027 Research Finder
 
-A searchable database of **110 undergraduate summer research programs**, a
+A searchable database of **106 undergraduate summer research programs**, a
 deadline-aware application tracker, a set of application templates, and a watcher
 that notices when program pages change.
 
@@ -18,7 +18,8 @@ instincts, St. Jude, CHOP, Cincinnati Children's, Yale Child Study, but as a
 flat list it could not answer the questions that actually matter: *what is open
 today, what is due first, what am I not eligible for, and what am I missing?*
 
-This repo answers those, and adds 86 programs that were not on the list.
+This repo answers those, and adds more than eighty programs that were not on the
+list.
 
 ## What is here
 
@@ -27,15 +28,15 @@ This repo answers those, and adds 86 programs that were not on the list.
 | **[The site](https://wjed.github.io/jolene-s27/)** | Filterable database, prioritized action plan, application tracker, timeline |
 | **[`data/`](data/)** | The dataset: JSON, a CSV export, and an `.ics` calendar with reminders |
 | **[`claude-kit/`](claude-kit/)** | Files she can attach to a Claude chat so it has full context: who she is, every fact a form asks for, and three skills (fill an application in the browser, email a lab, watch deadlines weekly). Published to the site as individual downloads and a zip by `scripts/kit.py`. |
-| **[`materials/`](materials/)** | Source markdown for the nine guides and templates. They are rendered onto the site at build time by `scripts/guides.py`, nobody has to read them on GitHub. |
+| **[`materials/`](materials/)** | Source markdown for the nine guides and templates. They are rendered onto the site at build time by `scripts/guides.py`, so nobody has to read them on GitHub. |
 | **[`scripts/`](scripts/)** | Build, validate, link-check and watch |
 
 ### Design
 
 The interface follows Notion's workspace conventions, because that is what this
 is actually used in alongside. The tokens were read off Notion's own stylesheets
-rather than approximated, the ink `rgb(55,53,47)`, the hover
-`rgba(25,23,17.075)`, the hairline `rgba(55,53,47.09)`, the blue
+rather than approximated: the ink `rgb(55,53,47)`, the hover
+`rgba(25,23,17,.075)`, the hairline `rgba(55,53,47,.09)`, the blue
 `rgb(35,131,226)`, the inset-plus-halo focus ring, Inter with lining numerals,
 and the standard database select palette for the pills.
 
@@ -50,39 +51,38 @@ the same moves a Notion database makes.
   days, what to do monthly.
 - **All programs**: filter by research area, deadline month, housing, stipend,
   citizenship requirement and how competitive it is.
-- **My eligibility** - your year, GPA and citizenship, kept in the browser. The
+- **My eligibility**: your year, GPA and citizenship, kept in the browser. The
   three things that rule applications out before anyone reads them are in the
   data, so every program that conflicts gets flagged with the reason, and a
   "Fits my profile" filter appears.
-- **Copy for Notion** - copies whatever is on screen as a Markdown table, which
+- **Copy for Notion**: copies whatever is on screen as a Markdown table, which
   Notion pastes as a real database.
 - **My applications**: per-program status, a requirements checklist and notes.
   Stored in the browser only; nothing is uploaded anywhere. Use **Backup** before
   clearing cookies.
-- **Timeline**. Every opening date and deadline in order.
+- **Timeline**: every opening date and deadline in order.
 
 ## The honest part: which dates are real
 
-Of 110 programs, as of **31 October 2026**:
+Every date carries one of four statuses, and the site shows it next to the date:
 
 | | |
 |---|---|
-| **16** | deadline confirmed on the program's own page |
-| **49** | projected from a previous cycle, shown with an `est.` marker |
-| **42** | nothing posted yet |
-| **3** | rolling, no fixed date |
+| **confirmed** | read off the program's own page |
+| **projected** | carried forward from a previous cycle, shown with an `est.` marker |
+| **unknown** | nothing posted yet |
+| **rolling** | no fixed date |
 
-This is not sloppiness in the data. It is the actual state of the world in late
-October. Most Summer 2027 cycles have not opened. Rather than guess and present
-guesses as fact, every date carries its status, and the watcher checks the real
-pages weekly.
+The Plan counts them live, so there is no tally here to go stale. When this was
+built in late October most Summer 2027 cycles had not posted their dates, and
+some still have not. Rather than guess and present guesses as fact, every date
+carries its status, and the watcher checks the real pages weekly.
 
-**Confirmed so far**, earliest first: MD Anderson CATALYST **13 Jan** ·
-Yale Child Study **14 Jan** (5pm ET) · Jackson Laboratory **25 Jan** (5pm ET) ·
-Penn State PROMISE **31 Jan** · Amgen Scholars, St. Jude POE, Penn State SURIP,
-MSK MBSP (8am), UCSF SRTP, Stanford SSRP, Vanderbilt VSSA **1 Feb** ·
-NYU SURP **2 Feb** · Leadership Alliance, Mayo SURF **3 Feb** ·
-Penn State AHA-USF **15 Feb** · NYSCF **15 Mar**.
+**January is the first wall.** Seattle Children's closes **4 Jan** (5pm PT),
+the Broad **10 Jan**, MD Anderson CATALYST **13 Jan**, Yale Child Study
+**14 Jan** (5pm ET), the Jackson Laboratory **25 Jan** (5pm ET) and NIH SIP
+**26 Jan** (noon ET), with the big cluster on **1 Feb** behind them. The site's
+Timeline has every date.
 
 ## The watcher
 
@@ -90,12 +90,14 @@ Penn State AHA-USF **15 Feb** · NYSCF **15 Mar**.
 python scripts/watch.py
 ```
 
-Fetches all 110 program pages, compares each against the previous run, and reports:
+Fetches all 106 program pages, compares each against the previous run, and reports:
 
 - pages whose content changed since last time
 - **pages that have started mentioning 2027**: usually the week the new cycle goes live
 - links that broke
 - redirects worth folding back into the data
+- pages that refuse an automated reader, so the site can list them for her to
+  check by hand
 
 It runs every Monday in GitHub Actions and opens an issue when anything changes.
 Running it during the build caught 43 dead or redirected URLs in the first pass.
@@ -110,15 +112,15 @@ Two suites, because they reach different things.
 well formed and reference commands that exist, a build is deterministic, the
 published copies match their sources, the asset hashes in the HTML match the
 files they name, the calendar is RFC 5545 conformant, and no British spellings
-or stranded punctuation have crept in. 121 checks.
+or stranded punctuation have crept in. It prints its own pass count.
 
 ```bash
 python scripts/qa_all.py
 ```
 
 `site/qa.js` is the browser side: every filter, sort, view, page, guide,
-download and persistence path, 197 assertions in all. It is not linked from the
-page. Open the site and run it from the console:
+download and persistence path, and it reports its own totals. It is not linked
+from the page. Open the site and run it from the console:
 
 ```js
 await fetch("qa.js").then(r => r.text()).then(eval);
@@ -130,7 +132,7 @@ await QA.runParts(["peek", "tracker", "timeline", "eligibility", "exports",
 Split into parts because a full run exceeds a single automation call. It checks
 things a spot check misses: that every chip's badge count matches the rows it
 actually shows, that two chips intersect rather than union, that each sortable
-column reverses, that all 110 programs open a peek without throwing, that the
+column reverses, that every program opens a peek without throwing, that the
 export honors the active filter, and that corrupt localStorage does not break
 the page.
 
@@ -220,10 +222,13 @@ python scripts/extract_dates.py --all    # every page
 ## Where to start
 
 1. Read **[the timeline](materials/guides/timeline.md)**: what to do between now
-   and February.
-2. Ask for **letters of recommendation** by mid-November. It is the only item
-   that depends on someone else.
-3. Apply to the **three already open**: Johns Hopkins Pathway, Cincinnati
-   Children's SURF, INSPIRE.
+   and February. The first deadline is 4 January, not February.
+2. Ask for **letters of recommendation** now. It is the only item that depends
+   on someone else, and the first letters are due in January.
+3. Start the applications that are **already open**, earliest deadline first:
+   Seattle Children's (4 January), the Broad (10 January) and NIH SIP
+   (26 January), which is the best fit for living at home in Leesburg. The
+   timeline has the rest in date order.
 4. **[Cold-email PIs](materials/templates/cold-email-pi.md)**: fifteen minutes
-   each, and the thing most likely to change an outcome.
+   each, and the thing most likely to change an outcome. At NIH it is part of
+   applying, because investigators choose their own interns.

@@ -39,9 +39,9 @@ protocol, you dealt with a result that did not work.
 
 If you have little or no formal research experience: say so without apology and
 lean on transferable evidence, a hard course with a project component, a data
-analysis you did, a job that required precision and follow-through. Several
-programs on this list (Seattle Children's especially) explicitly prioritize
-students *without* prior research experience.
+analysis you did, a job that required precision and follow-through. Seattle
+Children's says outright that prior formal research experience is not required,
+and it prioritizes applicants seeking their *first* formal research internship.
 
 **Paragraph 3, what you want to work on (120-180 words)**
 
@@ -54,9 +54,10 @@ imaging, single-cell work.
 
 **Paragraph 4, why this program, specifically (100-150 words)**
 
-The one paragraph that changes every time.
-See [why-this-program.md](why-this-program.md). Never send an application where
-this paragraph could have been addressed to any other institution.
+The one paragraph that changes every time. See
+[the why-this-program guide](../templates/why-this-program.md). Never send an
+application where this paragraph could have been addressed to any other
+institution.
 
 **Paragraph 5, where this goes (80-120 words)**
 
@@ -64,9 +65,11 @@ MD, PhD, MD-PhD, or honestly undecided between them, all fine. What is not fine
 is vagueness that reads as not having thought about it. If undecided, say what
 the summer would help you decide.
 
-Note: Amgen Scholars, SUIP, MSRP and BioMedRAP are explicitly PhD-pipeline
-programs. If you are aiming MD-only, those are a weaker fit than the
-hospital-based programs, and the statement should not pretend otherwise.
+Note: Amgen Scholars, the Broad, Penn SUIP, the Leadership Alliance, MIT MSRP
+and WashU's BioMedRAP are PhD-pipeline programs, and Penn State SURIP says it is
+not meant for students who plan to apply to medical school. If you are aiming
+MD-only, those are a weaker fit than the hospital-based programs, and the
+statement should not pretend otherwise.
 
 ---
 

@@ -1,48 +1,48 @@
 {
   "zip": "kit/jolene-claude-kit.zip",
-  "zip_bytes": 14101,
+  "zip_bytes": 59121,
   "files": [
     {
       "path": "kit/CLAUDE.md",
       "name": "CLAUDE.md",
       "icon": "📋",
       "blurb": "Who you are, what you are applying to, and how you want Claude to help. Attach this every time.",
-      "bytes": 7925
+      "bytes": 19951
     },
     {
       "path": "kit/jolene-profile.md",
       "name": "jolene-profile.md",
       "icon": "🧾",
-      "blurb": "Every fact a form might ask for. Fill in the blanks once, then never retype your address again.",
-      "bytes": 4650
+      "blurb": "Every fact a form might ask for. Claude fills it in with you once; after that, attach your latest copy to every chat.",
+      "bytes": 8846
     },
     {
       "path": "kit/skills/fill-application/SKILL.md",
       "name": "fill-application skill",
       "icon": "🖥",
       "blurb": "Fills an application form in the browser from your profile, and stops at anything it should not answer alone.",
-      "bytes": 4005
+      "bytes": 9823
     },
     {
       "path": "kit/skills/email-a-lab/SKILL.md",
       "name": "email-a-lab skill",
       "icon": "📧",
       "blurb": "Researches a lab, then drafts a short specific email to the professor. The highest-return thing almost nobody does.",
-      "bytes": 3803
+      "bytes": 4392
     },
     {
       "path": "kit/skills/watch-deadlines/SKILL.md",
       "name": "watch-deadlines skill",
       "icon": "⏰",
-      "blurb": "A weekly scheduled check of which programs have posted their 2027 dates.",
-      "bytes": 2756
+      "blurb": "What opened, what changed and what is due soon, read from this site's weekly check.",
+      "bytes": 5337
     },
     {
       "path": "kit/README.md",
       "name": "README.md",
       "icon": "📖",
       "blurb": "How to put the kit together, in five minutes.",
-      "bytes": 4253
+      "bytes": 9828
     }
   ]
 }

@@ -52,16 +52,17 @@ Pulled from the dataset. Use these as the starting point:
 
 | Program | The thing to name |
 |---|---|
-| **NIH SIP** | Name the institute (NICHD for pediatrics, NINDS for neuro, NIA for Alzheimer's) and a specific intramural lab. The application routes by institute. |
-| **Amgen Scholars** | Each host is a separate application, the paragraph must be about *that campus*, not about Amgen. |
+| **NIH SIP** | There is no central committee: NIH investigators read the applicant pool and choose their own interns, so your cover letter is the paragraph that matters. Name the institute (NICHD for child health, NIMH for mood and anxiety, NINDS for neurology), two or three specific intramural labs, and the PIs you have emailed. |
+| **Amgen Scholars** | Each host is a separate application, so the paragraph must be about *that campus*, not about Amgen. |
 | **Jackson Laboratory** | The independent-project structure and the written report. They care that applicants want to own a project. |
 | **Fred Hutch SURP** | Rising-seniors-only. Say explicitly that this is your last summer before applying onward, and what you want to settle. |
-| **Leadership Alliance** | Name preferred host institutions and why. The end-of-summer national symposium is a real draw, mention presenting. |
-| **St. Jude POE** | Pediatric oncology specifically. They want people who want *this*, not generic biomedical research. |
+| **Leadership Alliance** | One application ranks three of its 20 sites, so name all three and say why each. The end-of-summer national symposium is a real draw, so mention presenting. It is built for students heading to a PhD. |
+| **St. Jude POE** | Pediatric oncology specifically. They want people who want *this*, not generic biomedical research. Pitch the laboratory side: St. Jude reserves clinical research placements for students already in medical school, so a paragraph asking for clinical work asks for the one thing they cannot offer you. Check the 3.40 GPA floor and the four fixed start dates before you spend the twenty minutes. |
 | **Vanderbilt VSSA** | Name the sub-track (neuroscience, cancer biology, immunology) rather than the umbrella. |
 | **Boston Children's epilepsy lab** | A single lab: the paragraph is effectively a cold email. Name Dr. Loddenkemper's work directly. |
 | **CHOP CRISSP** | Enormous institution; naming a division and a faculty member is what separates applications. |
-| **Seattle Children's** | They prioritize first-time research interns. If your experience is thin, that is an argument *for* you here. Make it. |
+| **Seattle Children's** | Their page says applicants seeking their first formal research internship are prioritized. If this would be your first, that is an argument *for* you here. Make it. |
+| **Yale Child Study Center** | Child development and child mental health. Name the lab and the age group or condition it studies, and connect it to the mood and anxiety work you already do. |
 
 ## Check before sending
 
