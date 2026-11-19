@@ -50,6 +50,12 @@ VALID_SELECTIVITY = {"very-high", "high", "moderate"}
 VALID_CLASS_YEARS = {"freshman", "sophomore", "junior", "senior"}
 VALID_URL_CONFIDENCE = {"high", "medium", "low", "none"}
 
+# How well a program suits her in particular (her human subjects research,
+# her clinical hours, what she wants to study), with a note saying why. Set by
+# hand per program; the site sorts, filters and explains with it. Odds is the
+# separate selectivity field.
+VALID_FIT = {"strong", "good", "possible", "weak"}
+
 REQUIRED = ["id", "name", "org", "city", "url", "tracks", "focus"]
 
 # date.fromisoformat also takes 20270115 and 2027-W03-1 on Python 3.11+. The
@@ -141,6 +147,18 @@ def validate(program, category):
     conf = program.get("url_confidence", "medium")
     if not is_one_of(conf, VALID_URL_CONFIDENCE):
         raise ValidationError(f"{where}: url_confidence {conf!r} invalid")
+
+    # Optional, so a new program can go up before it is rated (qa.py flags it),
+    # but never half set: a level with no reason, or a reason with no level,
+    # is a slip the site would show as a pill with nothing behind it.
+    fit = program.get("fit")
+    fit_note = program.get("fit_note")
+    if fit is not None and not is_one_of(fit, VALID_FIT):
+        raise ValidationError(f"{where}: fit {fit!r} not in {sorted(VALID_FIT)}")
+    if fit_note is not None and not (isinstance(fit_note, str) and fit_note.strip()):
+        raise ValidationError(f"{where}: fit_note must be text")
+    if (fit is None) != (fit_note is None):
+        raise ValidationError(f"{where}: fit and fit_note must be set together")
 
     # `or {}` let a non-empty string through to .get() below
     elig = program.get("eligibility")
@@ -322,6 +340,8 @@ CSV_COLUMNS = [
     "stipend_note",
     "housing",
     "selectivity",
+    "fit",
+    "fit_note",
     "min_gpa",
     "citizenship",
     "class_years",

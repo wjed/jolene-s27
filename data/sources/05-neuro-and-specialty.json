@@ -36,7 +36,9 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "Third Hopkins/Baltimore option alongside the Pathway SIP and Kennedy Krieger. Baltimore, about 70 minutes from Leesburg.",
+      "fit": "good",
+      "fit_note": "Neurology and neurosurgery sit beside basic neuroscience here, so push for the clinical side, where your participant sessions and CITI training carry real weight. Lead with the lab, and keep in mind Baltimore is a long commute from home.",
+      "notes": "Third Hopkins/Baltimore option alongside the Pathway SIP and Kennedy Krieger. Baltimore, about 70 minutes from home.",
       "url_confidence": "low",
       "url_verified": true,
       "near_home": true
@@ -76,6 +78,8 @@
         "personal-statement"
       ],
       "selectivity": "high",
+      "fit": "good",
+      "fit_note": "Autism, fragile X, ADHD and mental health in developmental disabilities sit right on your developmental and behavioral pediatrics interest, and the catch is Sacramento with no housing. Email a lab directly and lead with your participant sessions.",
       "notes": "One of the best neurodevelopmental research centers in the country. A direct lab email works better than a central application here.",
       "url_confidence": "medium",
       "url_verified": true
@@ -115,6 +119,8 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
+      "fit": "possible",
+      "fit_note": "Smartphone memory testing and volunteer participant studies here sit close to your tech-based emotion tracking and session work. But aging is far from pediatrics, Madison means rent, and the page offers a guide to joining a lab, not a summer program.",
       "notes": "If the INSPIRE Alzheimer's angle is the real interest, the national network of NIA-funded ADRCs is the thing to mine. There are more than 30, and most take undergrads by direct arrangement rather than a posted program.",
       "url_confidence": "medium",
       "url_verified": true
@@ -154,6 +160,8 @@
         "cv"
       ],
       "selectivity": "moderate",
+      "fit": "possible",
+      "fit_note": "Use the state search for the three centers nearest home, then email each one's education coordinator, since most do not post undergraduate slots. Their clinical studies run on volunteers, so your sessions and CITI training count, though the topic is aging.",
       "notes": "Not a program: a hunting ground. Pick the three centers nearest you and email the education coordinator at each. Most do not advertise undergraduate slots but will take a strong student who asks. The single highest-leverage move for an Alzheimer's interest.",
       "priority_hint": "portal",
       "url_confidence": "high",
@@ -193,6 +201,8 @@
         "1-lor"
       ],
       "selectivity": "high",
+      "fit": "weak",
+      "fit_note": "Searching for other hosts only pays off if you find a stroke project near home. The Penn State version already on your list is basic science lab work on heart disease and stroke, with no clinical shadowing, far from your pediatrics and mood interests.",
       "notes": "The Penn State AHA-USF on your list is one instance of this. Other institutions host their own AHA-funded versions, worth finding the one nearest you.",
       "priority_hint": "portal",
       "url_confidence": "low",
@@ -234,6 +244,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "possible",
+      "fit_note": "Expect mostly basic and translational cancer science, far from the mood research you do and the pediatrics you want. The center treats children too, so ask about pediatric cancer labs, and know the link opens only a general research page.",
       "notes": "Pairs with Boston Children's, which is adjacent, one Boston trip, several applications.",
       "url_confidence": "low",
       "url_verified": true
@@ -274,6 +286,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "possible",
+      "fit_note": "You would apply through the Leadership Alliance, which is built for students committed to a PhD or MD-PhD, and the bench work would be new to you. Your lab clears the prior research rule on paper, but this makes sense only if MD-PhD is still a real option.",
       "notes": "Requires prior lab experience. The old page has moved, and SHURP applications go through the Leadership Alliance, so the SR-EIP application on your list may cover this one. Confirm with shurp@hms.harvard.edu.",
       "url_confidence": "medium"
     },
@@ -311,6 +325,8 @@
         "1-lor"
       ],
       "selectivity": "high",
+      "fit": "possible",
+      "fit_note": "Of your interests, only neuroscience shows up in this listing, and translational bench work would be new to you. The link lands on a general research page and no housing is provided, so confirm an undergraduate summer slot exists first.",
       "notes": "Pairs with CHLA for a Los Angeles trip.",
       "url_confidence": "low",
       "url_verified": true
@@ -350,6 +366,8 @@
         "2-lor"
       ],
       "selectivity": "high",
+      "fit": "weak",
+      "fit_note": "Developmental here means developmental biology, tissue growth and regeneration in planarians, fruit flies and other organisms, not child development. Housing and travel are covered, but none of your participant or patient work carries over.",
       "notes": "Underrated: strong funding, full package, and a much smaller applicant pool than the coastal institutes.",
       "url_confidence": "medium",
       "url_verified": true
@@ -388,6 +406,8 @@
         "1-lor"
       ],
       "selectivity": "moderate",
+      "fit": "weak",
+      "fit_note": "Immunology and autoimmune disease sit far from your mood research and your pediatrics goals, and the basic science side would be new to you. No housing comes with it, so you would be paying Seattle rent on top of that.",
       "notes": "Fourth Seattle option alongside Seattle Children's, Fred Hutch and the Allen Institute. Seattle is unusually dense with good programs.",
       "url_confidence": "low"
     }

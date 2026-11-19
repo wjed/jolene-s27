@@ -238,50 +238,49 @@ window.QA = (() => {
 
   async function eligibility(data) {
     localStorage.removeItem("jolene-s27:profile:v1");
-    await goPage("programs");
-    ok("no fit chip before profile", !$('[data-chip="fits-me"]'));
-
-    await goPage("profile");
     const set = async (id, val, evt) => { $(id).value = val; $(id).dispatchEvent(new Event(evt, { bubbles: true })); await sleep(evt === "input" ? 650 : 250); };
 
+    // A first visit starts with what is already known about her, a junior and
+    // a US citizen. Neither rules anything out, so the chip stays away: a
+    // filter that matches every row is noise.
+    await goPage("profile");
+    ok("year starts as junior", $("#pf-year").value === "junior", $("#pf-year").value);
+    ok("citizenship starts as US", $("#pf-status").value === "us", $("#pf-status").value);
+    ok("GPA starts blank", $("#pf-gpa").value === "", $("#pf-gpa").value);
+    await goPage("programs");
+    ok("no eligibility chip while nothing is ruled out", !$('[data-chip="fits-me"]'));
+
     // citizenship gate
+    await goPage("profile");
     await set("#pf-status", "f1", "change");
     await goPage("programs");
     await goDb("table");
-    const f1 = $('[data-chip="fits-me"]');
-    ok("fit chip appears once set", !!f1);
+    ok("eligibility chip appears once something is ruled out", !!$('[data-chip="fits-me"]'));
     await toggleChip("fits-me");
     const f1Count = rows();
     await toggleChip("fits-me");
+    ok("citizenship changes the result", f1Count < data.count, `f1=${f1Count} of ${data.count}`);
     await goPage("profile");
     await set("#pf-status", "us", "change");
-    await goPage("programs");
-    await goDb("table");
-    await toggleChip("fits-me");
-    const usCount = rows();
-    await toggleChip("fits-me");
-    ok("citizenship changes the result", usCount > f1Count, `us=${usCount} f1=${f1Count}`);
 
     // GPA gate, using a real minimum from the data
     const mins = data.programs.map((p) => (p.eligibility || {}).min_gpa).filter(Boolean).sort((a, b) => b - a);
     const highest = mins[0];
-    await goPage("profile");
     await set("#pf-gpa", String(highest), "input");
     await goPage("programs");
     await goDb("table");
-    await toggleChip("fits-me");
-    const atMin = rows();
-    await toggleChip("fits-me");
+    ok("a GPA at the highest minimum rules nothing out", !$('[data-chip="fits-me"]'));
     await goPage("profile");
     await set("#pf-gpa", String(Math.max(0, highest - 1)), "input");
     await goPage("programs");
     await goDb("table");
+    ok("a lower GPA brings the chip back", !!$('[data-chip="fits-me"]'));
     await toggleChip("fits-me");
     const belowMin = rows();
-    await toggleChip("fits-me");
-    ok("GPA at the minimum qualifies", atMin > belowMin, `at=${atMin} below=${belowMin}`);
+    ok("a lower GPA rules programs out", belowMin < data.count, `below=${belowMin} of ${data.count}`);
 
     // flags must carry a reason
+    await toggleChip("fits-me");
     const flags = $$("table.db .flag");
     ok("conflicts are flagged", flags.length > 0, flags.length);
     ok("every flag explains itself", flags.every((f) => (f.getAttribute("title") || "").length > 10));
@@ -289,9 +288,61 @@ window.QA = (() => {
     // clearing resets
     await goPage("profile");
     if ($("#pf-clear")) { $("#pf-clear").click(); await sleep(250); }
+    ok("clearing empties the year", $("#pf-year").value === "", $("#pf-year").value);
     await goPage("programs");
-    ok("clearing removes the fit chip", !$('[data-chip="fits-me"]'));
+    ok("clearing removes the eligibility chip", !$('[data-chip="fits-me"]'));
     localStorage.removeItem("jolene-s27:profile:v1");
+  }
+
+  /* The fit rating is the site's judgment about her in particular, so every
+   * published program needs one, every surface has to show the same one, and
+   * the reason has to be one click away. */
+  async function fitRatings(data) {
+    const LEVELS = { strong: "Strong fit", good: "Good fit", possible: "Possible", weak: "Weak fit" };
+    const rated = data.programs.filter((p) => LEVELS[p.fit]);
+    ok("every program is rated", rated.length === data.count, `${rated.length} of ${data.count}`);
+    ok("every rating has a reason", rated.every((p) => (p.fit_note || "").length >= 40),
+       rated.filter((p) => (p.fit_note || "").length < 40).map((p) => p.id).join(","));
+
+    await goPage("programs");
+    await goDb("table");
+    const shown = $$("table.db tbody tr").filter((tr) => {
+      const p = data.programs.find((x) => x.id === tr.dataset.id);
+      return p && tr.textContent.includes(LEVELS[p.fit]);
+    }).length;
+    ok("each row shows its own rating", shown === data.count, `${shown} vs ${data.count}`);
+
+    const strongN = data.programs.filter((p) => p.fit === "strong").length;
+    const badge = $('[data-chip="strong-fit"] .n');
+    ok("strong fit chip counts the data", badge && badge.textContent === String(strongN), badge && badge.textContent);
+
+    $("#sort").value = "fit";
+    $("#sort").dispatchEvent(new Event("change", { bubbles: true }));
+    await sleep(220);
+    const firstRow = $("table.db tbody tr");
+    ok("fit sort starts with a strong fit", !strongN || (firstRow && firstRow.textContent.includes("Strong fit")));
+    $("#sort").value = "deadline";
+    $("#sort").dispatchEvent(new Event("change", { bubbles: true }));
+    await sleep(220);
+
+    const p = data.programs.find((x) => x.fit === "strong") || data.programs[0];
+    $(`[data-peek="${p.id}"]`).click();
+    await sleep(260);
+    const body = $("#peek-body").textContent;
+    ok("peek shows the rating", body.includes("Fit for you") && body.includes(LEVELS[p.fit]));
+    ok("peek gives the reason", body.includes("For you:") && body.includes((p.fit_note || "").slice(0, 30)));
+    $("#peek-close").click();
+    await sleep(220);
+
+    await goDb("gallery");
+    ok("gallery cards show ratings", $$(".gcard").filter((c) => /Strong fit|Good fit|Possible|Weak fit/.test(c.textContent)).length === data.count);
+    await goDb("table");
+
+    await goPage("plan");
+    const plan = $("#content").textContent;
+    ok("plan lists the strongest fits", !strongN || plan.includes("Your strongest fits"));
+    await goPage("profile");
+    ok("profile explains how fit is judged", $("#content").textContent.includes("How fit is judged"));
   }
 
   async function exportsAndDownloads(data) {
@@ -311,7 +362,9 @@ window.QA = (() => {
       ok("export header", lines[0].startsWith("| Program |"), lines[0].slice(0, 30));
       ok("export separator", /^\|\s*---/.test(lines[1]));
       ok("export row count", lines.length - 2 === data.count, `${lines.length - 2} vs ${data.count}`);
-      ok("export cells are escaped", lines.slice(2).every((l) => l.split("|").length === 9));
+      // Eight columns, so nine pipes and ten pieces per row.
+      ok("export cells are escaped", lines.slice(2).every((l) => l.split("|").length === 10));
+      ok("export carries the fit", lines[0].includes("| Fit |"));
       /* Built from code points so this file is not itself an offender. */
       const EM = String.fromCharCode(8212), EN = String.fromCharCode(8211);
       ok("export has no dashes", !captured.includes(EM) && !captured.includes(EN));
@@ -388,7 +441,7 @@ window.QA = (() => {
     const base = data.count;
     $("#ad-name").value = "QA Test Program";
     $("#ad-org").value = "QA Institution";
-    $("#ad-city").value = "Leesburg, VA";
+    $("#ad-city").value = "Ashburn, VA";
     $("#ad-url").value = "example.org/qa";
     $("#ad-deadline").value = "2027-02-10";
     $("#ad-save").click();
@@ -579,6 +632,7 @@ window.QA = (() => {
     peek: peekEveryProgram,
     tracker: statusesAndTracker,
     eligibility: eligibility,
+    fit: fitRatings,
     exports: exportsAndDownloads,
     timeline: timeline,
     own: ownPrograms,

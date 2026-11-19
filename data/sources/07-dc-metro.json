@@ -35,8 +35,10 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
+      "fit": "possible",
+      "fit_note": "This page is the health system's front door, not a summer program, so plan a cold email to a place you can drive to from home. Search its clinical trials and children's hospital pages for pediatric or behavioral health studies. Lead with your CITI training.",
       "near_home": true,
-      "notes": "About 35 minutes from Leesburg, so no housing cost. You already worked in Fairfax at Privia, so you know the area and may have a contact who can point you at the right person. This is a hub page: the summer research listings sit under research and education, and a direct email is likely to work better than a portal.",
+      "notes": "About 35 minutes from home, so no housing cost. You spent last summer as a medical assistant in Fairfax, so you know the area and may have a contact who can point you at the right person. This is a hub page: the summer research listings sit under research and education, and a direct email is likely to work better than a portal.",
       "url_verified": true,
       "url_confidence": "low"
     },
@@ -75,8 +77,10 @@
         "1-lor"
       ],
       "selectivity": "high",
+      "fit": "possible",
+      "fit_note": "ARCHES, the undergraduate summer option here, is six weeks of pre-health enrichment: lab time, clinical rounds and service. Your EMT and medical assistant hours already cover the clinical side, so a cold email to a neuroscience lab may get you more research.",
       "near_home": true,
-      "notes": "Roughly an hour from Leesburg. Lombardi is an NCI comprehensive cancer center, and the neuroscience department is strong. Hub page: look under education and training for the summer listings.",
+      "notes": "Roughly an hour from home. Lombardi is an NCI comprehensive cancer center, and the neuroscience department is strong. Hub page: look under education and training for the summer listings.",
       "url_verified": true,
       "url_confidence": "low"
     },
@@ -114,6 +118,8 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
+      "fit": "possible",
+      "fit_note": "You can commute downtown, and GW pediatrics is based at Children's National, but this page lists no undergraduate summer program. Search the faculty directory for pediatric researchers who study development or mood, and email them about your lab work.",
       "near_home": true,
       "notes": "GW's pediatrics department is based at Children's National, so an email here can lead to the same place by another route.",
       "url_verified": true,
@@ -154,6 +160,8 @@
         "2-lor"
       ],
       "selectivity": "high",
+      "fit": "possible",
+      "fit_note": "Your way in is the university's Amgen Scholars site, since the medical school page lists no undergraduate summer program. It puts students in biotech and biomedical labs and requires interest in a PhD or MD-PhD, so apply only if MD-PhD is still open for you.",
       "near_home": true,
       "notes": "Worth knowing: Howard is an Amgen Scholars host, so the Amgen application you are already writing can be pointed here, at a campus an hour from home. Amgen covers housing anyway, but the option to commute is there.",
       "url_verified": true,
@@ -193,7 +201,9 @@
         "1-lor"
       ],
       "selectivity": "moderate",
-      "notes": "Not commutable from Leesburg, but a genuinely strong neuroscience institute in Virginia that very few people outside the state apply to. The human neuroimaging work is close to what you already do in the lab.",
+      "fit": "strong",
+      "fit_note": "NeuroSURF has you name three potential mentors, and the choices include a neuromotor clinic that treats children and a lab studying depression and anxiety. Pick those over the cell labs, since your participant sessions and patient hours count there.",
+      "notes": "Not commutable from home, but a genuinely strong neuroscience institute in Virginia that very few people outside the state apply to. The human neuroimaging work is close to what you already do in the lab.",
       "url_verified": true,
       "url_confidence": "low"
     },
@@ -233,7 +243,9 @@
         "1-lor"
       ],
       "selectivity": "high",
-      "notes": "About two hours from Leesburg, so a weekend drive home rather than a commute. In-state and a strong pediatrics department.",
+      "fit": "possible",
+      "fit_note": "Charlottesville is too far for you to commute, and the home page lists no summer program. Its Summer Research Internship Program exposes students to lab research and provides housing: a fair way to try bench work while you weigh MD against MD-PhD.",
+      "notes": "About two hours away, so a weekend drive home rather than a commute. In-state and a strong pediatrics department.",
       "url_verified": true,
       "url_confidence": "low"
     },
@@ -275,9 +287,11 @@
         "2-lor"
       ],
       "selectivity": "high",
+      "fit": "possible",
+      "fit_note": "All projects are cancer research, with a lab techniques course and oncology shadowing built in. Matching weighs the areas you list, and a few mentors run clinical trials or work with kids and teens with cancer. Ask for those: your patient work counts there.",
       "near_home": true,
       "contact": "NSIP@som.umaryland.edu",
-      "notes": "CONFIRMED on the page: the 2027 portal opened Nov 15, 2026, and everything, letters included, must arrive by Feb 1, 2027. Decisions by Mar 1. 21 internships a summer, with real clinical shadowing alongside the lab work, which is rare. Baltimore is the same drive from Leesburg as Hopkins, and campus housing is available if the commute is too long. Virtual open house Jan 6, 12 to 1:30 p.m.",
+      "notes": "CONFIRMED on the page: the 2027 portal opened Nov 15, 2026, and everything, letters included, must arrive by Feb 1, 2027. Decisions by Mar 1. 21 internships a summer, with real clinical shadowing alongside the lab work, which is rare. Baltimore is the same drive from home as Hopkins, and campus housing is available if the commute is too long. Virtual open house Jan 6, 12 to 1:30 p.m.",
       "url_confidence": "high",
       "url_verified": true
     }

@@ -1,8 +1,10 @@
 # The "why this program" paragraph
 
 The only part of the application that cannot be reused, which is exactly why it
-carries so much weight. A committee can tell in one sentence whether an applicant
-looked at their page for ninety seconds or for twenty minutes.
+carries so much weight. A committee can tell in one sentence whether you looked
+at their page for ninety seconds or for twenty minutes. It is paragraph 4 of
+your [master personal statement](../templates/personal-statement.md), the one
+that changes every time.
 
 Budget 20-30 minutes per program. That is the whole cost.
 
@@ -15,17 +17,35 @@ Three things, in roughly 100-150 words:
 1. **Something only true of this program.** A named faculty member, a center, a
    specific resource, the structure of the summer.
 2. **Why that matches what you want to do.** The connection stated explicitly:
-   do not make the reader infer it.
-3. **What you would bring.** One line, concrete.
+   do not make the reader infer it. Keep your question at the center, how mood
+   and anxiety disorders show up in children, and tilt it toward the brain for a
+   neurology lab or toward patients for a clinical program. Summer 2027 is your
+   last summer of college, so if a program would help you decide between an MD
+   and an MD-PhD, say so.
+3. **What you would bring.** One line, concrete, picked for the program:
+   - **A lab that studies people:** you run participant sessions, code data and
+     troubleshoot study protocols, and you hold three CITI certificates most
+     undergraduates do not have.
+   - **A clinical or hospital program:** more than 100 emergency calls as a
+     volunteer EMT, or a summer as a medical assistant seeing up to 26 patients
+     a day.
+   - **A pediatric program:** more than five years of shadowing a pediatrician.
+   - **A bench lab:** none of this is bench work, so say so, name the chemistry
+     and biochemistry courses behind you, and add
+     [WHAT CARRIES OVER TO THE BENCH]. Never imply bench skills you do not have.
 
 ## The research, in four steps
 
-1. Open the program page. Find the **faculty or mentor list**. This is the part
-   worth the time.
-2. Pick **two or three names** whose work genuinely interests you.
+1. Open the program on the site and read its **For you** line, a fair place to
+   start. Then open the program's own page and find the **faculty or mentor
+   list**. This is the part worth the time.
+2. Pick **two or three names** whose work genuinely interests you. Labs that
+   study people, children especially, are where your experience counts most.
 3. Look up **one recent paper** from each on PubMed. Read the abstract properly
    and skim the figures.
-4. Write the paragraph naming one or two of them and what specifically draws you.
+4. Write the paragraph naming one or two of them and what specifically draws
+   you. The same reading feeds a [cold email](../templates/cold-email-pi.md) to
+   that PI, wherever the program welcomes one.
 
 ## A worked example
 
@@ -35,39 +55,57 @@ Vague, could be sent anywhere:
 > pediatric research and the excellent mentorship it provides. I believe this
 > program would help me grow as a researcher and prepare me for medical school.
 
-Specific, could only be sent to this program:
+Specific, could only be sent to the Yale Child Study Center:
 
-> I am applying to CRISSP because of the breadth of pediatric neurology work at
-> CHOP, and Dr. [NAME]'s group in particular. Their 2025 paper on [TOPIC] found
-> [SPECIFIC FINDING], which surprised me because [HONEST REACTION]. I have been
-> trying to understand [RELATED QUESTION] since [YOUR OWN EXPERIENCE], and CHOP
-> has the patient volume to ask it properly. I would come in able to [CONCRETE
-> SKILL], and I am most interested in the [SPECIFIC METHOD] side of the work.
+> I am applying to the Undergraduate Developmental Science Summer Internship
+> because the Child Study Center runs it with the Department of Pediatrics, and
+> I want to work where developmental psychology meets pediatrics.
+> [FACULTY MEMBER]'s [YEAR] paper on [AGE GROUP OR CONDITION] found
+> [SPECIFIC FINDING], which surprised me because [HONEST REACTION]. In the
+> Depression and Anxiety Lab at Penn State I run participant sessions and code
+> data for research on how mood disorders show up in movement and affect, and
+> since [THE MOMENT IT STARTED] I have wanted to know
+> [YOUR QUESTION ABOUT CHILDREN]. I would come in able to run participant
+> sessions under a human-subjects protocol, with CITI training in human
+> subjects research and Good Clinical Practice, and I am most interested in
+> [THE METHOD OR AGE GROUP THAT LAB STUDIES].
 
-The second version is not better writing. It is better *research*.
+The second version is not better writing. It is better *research*. Everything
+outside the brackets is already true of you. The brackets are the reading and
+your own question.
 
-## Per-program angles for the top picks
+## Per-program angles
 
-Pulled from the dataset. Use these as the starting point:
+Pulled from the program data, for programs whose work is close to yours. Use
+them as the starting point. Seattle Children's closes first, on January 4, so
+write that one first.
 
-| Program | The thing to name |
-|---|---|
-| **NIH SIP** | There is no central committee: NIH investigators read the applicant pool and choose their own interns, so your cover letter is the paragraph that matters. Name the institute (NICHD for child health, NIMH for mood and anxiety, NINDS for neurology), two or three specific intramural labs, and the PIs you have emailed. |
-| **Amgen Scholars** | Each host is a separate application, so the paragraph must be about *that campus*, not about Amgen. |
-| **Jackson Laboratory** | The independent-project structure and the written report. They care that applicants want to own a project. |
-| **Fred Hutch SURP** | Rising-seniors-only. Say explicitly that this is your last summer before applying onward, and what you want to settle. |
-| **Leadership Alliance** | One application ranks three of its 20 sites, so name all three and say why each. The end-of-summer national symposium is a real draw, so mention presenting. It is built for students heading to a PhD. |
-| **St. Jude POE** | Pediatric oncology specifically. They want people who want *this*, not generic biomedical research. Pitch the laboratory side: St. Jude reserves clinical research placements for students already in medical school, so a paragraph asking for clinical work asks for the one thing they cannot offer you. Check the 3.40 GPA floor and the four fixed start dates before you spend the twenty minutes. |
-| **Vanderbilt VSSA** | Name the sub-track (neuroscience, cancer biology, immunology) rather than the umbrella. |
-| **Boston Children's epilepsy lab** | A single lab: the paragraph is effectively a cold email. Name Dr. Loddenkemper's work directly. |
-| **CHOP CRISSP** | Enormous institution; naming a division and a faculty member is what separates applications. |
-| **Seattle Children's** | Their page says applicants seeking their first formal research internship are prioritized. If this would be your first, that is an argument *for* you here. Make it. |
-| **Yale Child Study Center** | Child development and child mental health. Name the lab and the age group or condition it studies, and connect it to the mood and anxiety work you already do. |
+| Program | The thing to name | Where you connect |
+|---|---|---|
+| **Seattle Children's** | A lab or research area from their page. The page says first-time research interns are prioritized. | This would be your first research internship, which counts for you here. Say so plainly, then spend the rest on the lab. |
+| **Penn UCSP** | The clinical question you want to work on. It is nine weeks on a clinical research project with an expert clinical investigator, plus statistics workshops in epidemiology and biostatistics. | It is built for students aiming at an MD, PhD or MD-PhD, so your undecided answer fits: say what the summer would help you decide. You already code data, and the statistics are the next step. |
+| **Yale Child Study Center** | The lab, and the age group or condition it studies. The application is a one-page letter of interest for up to 12 places, so this paragraph is its center. | The worked example above. Tie the lab to the mood and anxiety work you already do. |
+| **NIH SIP** | The institute and two or three intramural labs: NICHD for child health, NIMH for mood and anxiety, NINDS for neurology. Investigators choose their own interns, so your cover letter is the paragraph that matters. Name the PIs you have emailed. | Your lab's mood and anxiety work points to NIMH, your pediatric interest to NICHD and pediatric neurology to NINDS. Lead with one. |
+| **Strong Children's, Rochester** | The pediatric specialty. You are placed with a faculty mentor in the specialty you pick, and the ten weeks end in a poster session for the whole Department of Pediatrics. Short answers stand in for a personal statement, and review is rolling, so earlier is better. | Pick the specialty nearest your question and tie it to your shadowing and your lab. The poster would be your first, and wanting to present is worth saying. |
+| **CHOP CRISSP** | The track, and a faculty member in it. Thirty students a summer, split across basic, clinical and behavioral tracks. An information session (December 8 at 11 a.m. or January 12 at 3 p.m.) is worth attending before you write. | Participant sessions, data coding and emotion tracking are behavioral research. Everyone also gets clinical shadowing, which you have done for more than five years, so spend the words on the research. |
+| **St. Jude POE** | Pediatric cancer and catastrophic disease, and the laboratory or computational work you want. Clinical research matches are reserved for medical students, so asking for clinical work asks for the one thing they cannot offer you. | Your lab job should meet their rule that you already have research experience outside the classroom. It is human-subjects work, not bench work, so say so in one sentence, with what carries over. Check the four start dates (May 10, 17 or 24, or June 1) before you spend the twenty minutes. |
+| **Kennedy Krieger** | The condition or age group, and the lab or center. Its research covers pediatric developmental disabilities, neurodevelopment and rehabilitation. | This is developmental and behavioral pediatrics, which you want to study, so say which part and why. Your human-subjects work is what you bring. |
+| **UC Davis MIND Institute** | One condition and one lab. It studies neurodevelopmental disorders, including autism, fragile X and ADHD, and a direct lab email works better there than the central application, so this paragraph becomes the middle of that email. | Your lab studies how mood disorders show up in movement and affect. Say what you want to learn about how [THE CONDITION] shows up in a child's behavior. |
+| **Boston Children's epilepsy lab** | Dr. Loddenkemper's pediatric epilepsy and EEG work. It is a single lab, so name one recent paper. Questions go only to the internship address on its page, never to lab members. | Pediatric neurology is the interest to lead with. Say which of the lab's methods would be new to you, and offer what you have: participant sessions, data coding, protocol troubleshooting. |
+
+**Umbrella programs** need a paragraph about the piece, not the umbrella. Each
+Amgen Scholars host runs its own application, so write about that campus. Johns
+Hopkins Pathway lets you apply to several divisions, NeuroSIP among them, so
+give each its own reason. The Leadership Alliance ranks three of its 20 sites in
+one application, so name all three and say why each. Amgen and the Leadership
+Alliance are built for students heading to a PhD or MD-PhD, so write them only
+if the MD-PhD is a real question for you.
 
 ## Check before sending
 
 - [ ] Program name spelled correctly, and it is the right program
-- [ ] At least one faculty member or center named
+- [ ] At least one faculty member, lab or center named
 - [ ] At least one specific paper, finding, or resource referenced
 - [ ] No sentence that would survive a find-and-replace of the institution name
 - [ ] The "what I bring" line is concrete, not a feeling
+- [ ] Nothing suggests bench skills, a poster or a publication you do not have

@@ -1,61 +1,77 @@
 # What to do between now and February
 
-Dated **Wednesday 18 November 2026**, for the **Summer 2027** cycle. Every
-deadline here was read off the program's own page. A program that has not
-posted its 2027 date is listed as not posted, never as a guess.
+Dated **Thursday 19 November 2026**, for your **Summer 2027** applications, the
+summer before your senior year. Every deadline here was read off the program's
+own page. A program that has not posted its 2027 date is listed as not posted,
+never as a guess.
 
 **What changed since October.** The first deadline is **4 January**, not
 February. A run of deadlines lands between **4 and 26 January**, over winter
 break and into the first weeks of the spring semester, and the big
 **1 February** cluster sits right behind it. So the order of work is now:
 
-1. **Letters and transcripts this week.** Both run on somebody else's calendar.
-2. **The early-January applications before you leave campus in December**,
-   while your recommenders are still easy to reach.
+1. **Letters, transcripts and NIH lab emails this week.** All three run on
+   somebody else's calendar.
+2. **The early-January applications before you leave State College in
+   December**, while your recommenders are still easy to reach.
 3. **The rest of January and the February cluster over winter break.**
 
 **NIH SIP closes 26 January at noon Eastern**, three weeks earlier than this
-site used to say. It is the best fit on the whole list for living at home in
-Leesburg, and NIH investigators choose their own interns, so emailing them is
+site used to say. Bethesda is a commute from home, so its lack of housing costs
+you nothing, and NIH investigators choose their own interns, so emailing them is
 part of applying, not an extra.
 
 ---
 
 ## This week: by Sunday 22 November
 
-Already open and worth starting now: NIH SIP, Seattle Children's, MD Anderson,
-the Broad, Jackson Lab, Johns Hopkins Pathway, Penn SUIP, Mount Sinai, Cold
-Spring Harbor and both Indiana programs, among others.
+Open now, and close to what you want to study: NIH SIP, Seattle Children's,
+Penn's Undergraduate Clinical Scholars Program, Rochester's pediatric Summer
+Training Program, Johns Hopkins Pathway, both Indiana neuroscience programs and
+St. Jude, among others.
 
-- [ ] **Ask for your letters.** Two recommenders, ideally your lab supervisor
-      and one professor who knows your work. The first letters on this list are
-      due **11 January** (the Broad) and **19 January** (Seattle Children's), and
-      December is when every pre-med in the country asks. Send your CV with the
-      request and let the rest of the packet follow.
+- [ ] **Finish the research version of your resume first.** It goes out with
+      every letter request and lab email. Lead your experience with the
+      Depression and Anxiety Lab and what you do there: participant sessions,
+      data coding, technology-based emotion tracking, protocol troubleshooting.
+      List your three CITI certificates near the top, since most undergraduates
+      have none. Two hours. [Skeleton](../templates/cv-skeleton.md).
+- [ ] **Ask for your letters, in this order.** The PI of your Depression and
+      Anxiety Lab first: nothing persuades like a research mentor. Then the
+      professor whose 300-student intro psychology course you TA, who knows you
+      as the TA who started review sessions on your own. Then the instructor of
+      the Biology course you are a Learning Assistant for, as your backup. The
+      pediatrician you have shadowed writes only for clinically oriented
+      programs, as an extra letter. The first letters are due **11 January**,
+      and December is when every pre-med in the country asks. Attach the
+      research resume and let the rest of the packet follow.
       [How to ask](../templates/recommendation-request.md).
 - [ ] **Order your official transcript.** Most programs take an unofficial copy,
-      so download that PDF as well, but some insist on an official one: every
-      Amgen host, the Leadership Alliance (it has to arrive by 3 February, with
-      your letters) and MSK (a signed official copy, uploaded as a PDF).
-      Registrar offices slow down in December and close for part of winter
-      break, so order now. If a program wants your fall grades on it, order
-      another once those are posted.
+      so download that PDF as well, but some insist on an official one, MSK
+      among them. Registrar offices slow down in December and close for part of
+      winter break, so order now. Rochester's pediatric program wants one that
+      shows your fall 2026 grades, so order a second once those post.
 - [ ] **Start NIH SIP.** It is open now and closes **26 January at noon
       Eastern**, with letters due **2 February at noon Eastern**. It is one
       application that investigators all over NIH can read, and they start
       choosing their own interns in early January. Make the account and draft
       the cover letter this month.
+- [ ] **Email three to five NIH labs**, the first this week and the rest before
+      Thanksgiving. Search NIMH (mood and anxiety), NICHD (child health) and
+      NINDS (neurology) for labs whose recent papers you actually like,
+      starting with any that study mood or anxiety in children. Say that you
+      are applying through the Summer Internship Program, that you can commute
+      from home, and when you are free, then name the same PIs in your cover
+      letter. [Template](../templates/cold-email-pi.md).
 - [ ] **Start Seattle Children's Summer Scholars.** It opened 16 November and has
       the earliest deadline in the cycle: **4 January at 5 p.m. Pacific, which is
-      8 p.m. Eastern**. Letters are due 19 January. Their page says applicants
-      looking for their first formal research internship are prioritized, so if
-      that is you, say so.
-- [ ] **Bring your CV up to date.** Two hours.
-      [Skeleton](../templates/cv-skeleton.md). Put your CITI certificates near
-      the top: most undergraduate applicants have none.
-- [ ] **Pick your list.** Twelve to twenty programs is a realistic target. Set
-      each one to Drafting in All Programs, and it moves onto My Applications,
-      where the site tracks it for you.
+      8 p.m. Eastern**. It needs one letter, your PI's, by 19 January. It
+      prioritizes applicants looking for their first formal research
+      internship, which is you, so say so.
+- [ ] **Pick your list.** Twelve to twenty programs is a realistic target. Sort
+      All Programs by **fit for you** and read each program's **For you** note
+      before you add it. Set each one to Drafting, and it moves onto My
+      Applications, where the site tracks it for you.
 
 ## Before Thanksgiving: by Wednesday 25 November
 
@@ -64,59 +80,63 @@ Spring Harbor and both Indiana programs, among others.
       [letters guide](../templates/recommendation-request.md) has a table to
       copy. Tell them how many requests to expect. Amgen alone sends a separate
       one for every host you choose.
-- [ ] **Email NIH investigators.** Pick an institute or two (NICHD for child
-      health, NIMH for mood and anxiety, NINDS for neurology), find three to
-      five labs whose recent papers you actually like, and email those PIs. Say
-      that you are applying through the NIH Summer Internship Program, that you
-      can commute from Leesburg, and when you are free. Then name them in your
-      cover letter. [Template](../templates/cold-email-pi.md).
 - [ ] **Email the places you could commute to.** Children's National,
-      Georgetown and Inova have not posted a 2027 summer application with a
-      deadline, so a short email to the research training or education office
-      is the way in, and nobody else is asking yet. Janelia, in Ashburn, takes
-      summer undergraduates through HHMI's Cech Fellows Program, which recruits
-      from partner schools: check whether Penn State is one before you spend
-      time on it. Why these are worth the effort is the
-      [Leesburg rule](../guides/reading-a-program-page.md).
-- [ ] **Decide the honest answer to "MD, PhD, or MD-PhD?"** It changes which
+      Georgetown, George Washington and Inova have not posted a 2027 summer
+      application with a deadline, so a short email to the research training or
+      education office is the way in, and nobody else is asking yet. Start with
+      Children's National, the children's hospital. Its Emergency Department
+      Clinical Research Internship runs fall to spring, but with your EMT work
+      it is worth asking whether a summer session runs. Janelia, in Ashburn,
+      takes summer undergraduates through HHMI's Cech Fellows Program, which
+      recruits from partner schools: check whether Penn State is one first. Why
+      these are worth the effort is the
+      [living-at-home rule](../guides/reading-a-program-page.md).
+- [ ] **Decide whether the MD-PhD is a real possibility.** It decides which
       programs are worth the hours. Amgen and the Broad ask for an interest in a
       PhD or MD-PhD, Penn SUIP and the Leadership Alliance are built for
-      students heading to a PhD, and Penn State SURIP says it is not meant for
-      students who plan to apply to medical school. If you are aiming at
-      medicine, spend those hours on the hospital programs instead.
+      students heading to a PhD, and Mount Sinai's SURP4US takes only future PhD
+      and MD-PhD applicants. If the MD-PhD is real, undecided is an honest place
+      to apply from. If not, spend those hours on the hospital programs. Penn
+      State SURIP is out either way: it says it is not meant for students who
+      plan to apply to medical school.
 
 ## Before winter break: get the early-January applications done
 
-The first deadlines fall while you are at home and your professors are away. So
-the plan for December is to finish everything due by mid-January before you
-leave campus, or at the very least to have every letter for it requested.
+The first deadlines fall while you are at home in Loudoun County and your
+professors are away. So the plan for December is to finish everything due by
+mid-January before you leave State College, or at the very least to have every
+letter for it requested.
 
 - [ ] **Over Thanksgiving break, write the master personal statement.** Four to
       six hours across a few sittings. Every application after this reuses it.
+      The template already has your spine, how mood and anxiety show up in
+      children, so the hours go into the part only you can write:
+      [THE VISIT, CALL OR LAB SESSION THAT RAISED YOUR QUESTION].
       [Template](../templates/personal-statement.md).
-- [ ] **If you want clinical research, add the biomedical CITI course.** Your
-      three CITI certificates are a real edge, since most undergraduate
-      applicants have none, but they are the social and behavioral versions.
-      Hospital studies mostly run under the biomedical track. The Biomedical
-      Human Subjects Research course is a few hours online, usually free through
-      your university, and it is what a hospital group will typically ask for
-      before you work with patient data.
-- [ ] **1 December: Yale Child Study and UMass Chan open.** Yale closes
-      14 January and needs two letters. UMass Chan closes 1 March.
-- [ ] **CHOP CRISSP opens in December.** No deadline is posted yet. Information
-      sessions are Tuesday 8 December at 11 a.m. and Tuesday 12 January at
-      3 p.m. The 2027 program runs 7 June to 13 August and pays $5,000 plus free
-      housing, with a 3.3 GPA minimum. The weekly check cannot read CHOP's page,
+- [ ] **Add the biomedical CITI course.** Your human subjects and Good Clinical
+      Practice certificates are the social and behavioral versions, and
+      hospital studies mostly run under the biomedical track. The Biomedical
+      Human Subjects Research course is a few hours online, usually free
+      through your university, and it is what a children's hospital will
+      typically ask for before you work with patient data.
+- [ ] **1 December: Yale Child Study and UMass Chan open.** Yale's is child
+      health research run with the Department of Pediatrics, squarely your
+      area. It closes 14 January and wants two academic letters (your PI and
+      your psychology professor) and a one-page letter of interest. It gives no
+      housing and pays up to $4,000, only if Penn State cannot fund you first.
+      UMass Chan closes 1 March.
+- [ ] **CHOP CRISSP opens in December.** No deadline is posted yet. It has a
+      behavioral track, where your human subjects work fits, and clinical
+      shadowing for everyone. It runs 7 June to 13 August and pays $5,000 plus
+      free housing. Information sessions are on Tuesday 8 December, 11 a.m.,
+      and Tuesday 12 January, 3 p.m. The weekly check cannot read CHOP's page,
       so open it yourself every week in December.
-- [ ] **Submit Seattle Children's before you leave.** The deadline is 4 January,
-      but most portals only email your recommenders once you submit your part,
-      and Seattle's letters are due 19 January.
-- [ ] **Submit St. Jude POE in December.** The deadline is 1 February, but their
-      page asks for every credential by mid-to-late December and warns that
-      applications sent after 1 January run a high risk of not being complete
-      in time. You need research experience outside the classroom, which your
-      lab job should count as, and you must be able to start on 10, 17 or
-      24 May or 1 June.
+- [ ] **Submit Seattle Children's and St. Jude POE before you leave.** Most
+      portals only email your recommenders once you submit your part, and
+      Seattle's letter is due 19 January. St. Jude closes 1 February, but
+      submitting in December keeps its letters clear of the January rush. It
+      requires research experience outside the classroom, which your lab work
+      is, and a start on 10, 17 or 24 May or 1 June.
 - [ ] **Finish the 8 to 14 January applications** on your list: Fred Hutch,
       Penn's Undergraduate Clinical Scholars Program, the Broad, UPMC Children's
       Pittsburgh, MD Anderson and Yale Child Study. Their dates are in the next
@@ -136,12 +156,17 @@ NIH investigators start getting in touch in early January.
       SURP.** Only for students entering the summer before their final year,
       which is you.
 - [ ] **8 January, 5 p.m. Eastern: Penn's Undergraduate Clinical Scholars
-      Program.** Clinical research, which is rare on this list. Transcripts and
-      letters are due 15 January.
+      Program.** Clinical research, which is rare on this list. It wants a
+      letter from a professor and one from your research mentor: your
+      psychology professor and your PI.
 - [ ] **10 January, 11:59 p.m. Eastern: Broad Institute BSRP.** Letters by
-      11 January. 3.2 GPA minimum.
+      11 January. It is for students aiming at a PhD or MD-PhD.
 - [ ] **11 January, 11:59 p.m.: UPMC Children's Hospital of Pittsburgh SRIP.**
-      3.5 GPA minimum, sophomores and juniors.
+      The statement of purpose is all it asks for, so no letters.
+- [ ] **Once your fall grades post: Rochester's pediatric Summer Training
+      Program.** It reads applications as they arrive, but it wants an official
+      transcript with your fall 2026 grades, so have the rest ready before
+      break. You pick the pediatric specialty and work with a mentor in it.
 - [ ] **Answer NIH within a day.** Investigators start choosing interns in early
       January, and a quick reply is part of the impression you make.
 - [ ] **Draft the February applications now**, because January is full of its
@@ -156,21 +181,23 @@ NIH investigators start getting in touch in early January.
 
 - [ ] **13 January: MD Anderson CATALYST.** $7,200 for the summer. CATALYST is an
       umbrella over many tracks, so read its programs page and pick yours first.
-- [ ] **14 January, 5 p.m. Eastern: Yale Child Study Center.** Two letters. The
-      internship runs 7 June to 30 July.
-- [ ] **15 January:** Mount Sinai SURP4US (juniors and seniors), Cold Spring
-      Harbor URP (11:59 p.m. Pacific, $7,000), and both Indiana programs,
-      INSPIRE and the Medical Neuroscience SURP. Letters and transcripts for
-      Penn's Clinical Scholars Program are due the same day.
+- [ ] **14 January, 5 p.m. Eastern: Yale Child Study Center.** No late
+      applications and no extensions. The internship runs 7 June to 30 July.
+- [ ] **15 January:** Mount Sinai SURP4US, Cold Spring Harbor URP (11:59 p.m.
+      Pacific, $7,000), and both Indiana programs, INSPIRE and the Medical
+      Neuroscience SURP. Letters for Fred Hutch, and letters and transcripts
+      for Penn's Clinical Scholars Program, are due the same day.
 - [ ] **16 January: the earliest Vanderbilt VSSA track.** Tracks close between
       16 January and 15 February, most of them on 1 February, so check the date
       for yours.
-- [ ] **19 January: MIT MSRP.** Seattle Children's letters are due the same day.
+- [ ] **19 January: MIT MSRP.** Your Seattle Children's letter is due the same
+      day.
 - [ ] **22 January: Baylor and Texas Children's SMART.** $5,400 for nine weeks.
 - [ ] **25 January, 5 p.m. Eastern: Jackson Laboratory SSP.**
 - [ ] **26 January, noon Eastern: NIH SIP.** The letters close a week later, on
       2 February at noon.
-- [ ] **31 January: Penn State PROMISE** (Hershey).
+- [ ] **31 January: Penn State PROMISE** (Hershey), with optional clinical
+      shadowing.
 
 **Do not leave 1 February to the last week.** More of this list closes that day
 than on any other, and it lands straight after the January burst. Have every
@@ -179,21 +206,23 @@ than on any other, and it lands straight after the January burst. Have every
 ## 1 February to 1 March: the second wave
 
 - [ ] **1 February: the big cluster.** Amgen Scholars (every host is its own
-      application), St. Jude POE, Johns Hopkins Pathway SIP (11:59 p.m. Eastern,
-      free housing, and a NeuroSIP division), Penn SUIP (11:59 p.m. Eastern, and
-      your letters must arrive by the same deadline), Michigan SROP (11:59 p.m.
-      Eastern), Stanford SSRP (11:59 p.m. Pacific), UCSF SRTP, Rockefeller SURF,
-      Penn State SURIP, and **MSK MBSP at 8 a.m., not end of day**.
-- [ ] **2 February, 5 p.m. Eastern: NYU Langone SURP.** It wants at least one
-      full semester of bench lab research. NIH SIP letters are due at noon the
-      same day.
+      application, and Howard, an hour from home, is one), St. Jude POE, Johns
+      Hopkins Pathway SIP (11:59 p.m. Eastern, free housing, and a NeuroSIP
+      division), Penn SUIP (11:59 p.m. Eastern, and your letters must arrive by
+      the same deadline), Michigan SROP (11:59 p.m. Eastern), Stanford SSRP
+      (11:59 p.m. Pacific), UCSF SRTP, Rockefeller SURF, Penn State SURIP, and
+      **MSK MBSP at 8 a.m., not end of day**.
+- [ ] **2 February, noon Eastern: your NIH SIP letters.** NYU Langone SURP
+      closes the same day, but it requires a full semester of bench research,
+      and yours has been with people, not at a bench, so leave it off.
 - [ ] **3 February: Leadership Alliance and Mayo Clinic SURF.** The Leadership
-      Alliance takes one application that ranks three of its 20 sites, and the
-      whole package, letters and official transcripts included, has to arrive
-      by the 3rd.
+      Alliance ranks three of its 20 sites on one application, and Howard is the
+      only one you could commute to. At Mayo you pick a research area, and
+      neuroscience is one.
 - [ ] **12 February: ECU Brody SBRP.**
-- [ ] **15 February: Penn State AHA-USF** (Hershey, $6,000, housing at your own
-      cost) and the last Vanderbilt tracks.
+- [ ] **15 February, noon Eastern: Penn State AHA-USF** (Hershey, $6,000,
+      housing at your own cost), with your letter and transcript in by the same
+      noon. The last Vanderbilt tracks close that day too.
 - [ ] **1 March: UMass Chan SURP.** $6,000 plus travel and housing.
 
 ## Not posted yet: check these by hand
@@ -202,8 +231,11 @@ These have no 2027 deadline on their page yet. If the site shows a date for one,
 it is an estimate, marked est.
 
 - [ ] **CHOP CRISSP**, opening in December (above).
-- [ ] **Children's National, Kennedy Krieger and Johns Hopkins JHIBS**, all
-      within reach of home.
+- [ ] **Children's National**, about an hour from home, and **Kennedy Krieger**
+      and **Johns Hopkins JHIBS** in Baltimore, a long commute at about
+      70 minutes each way. Kennedy Krieger studies developmental disabilities
+      and neurodevelopment, the research side of developmental and behavioral
+      pediatrics.
 - [ ] **Cincinnati Children's SURF**, from your original list.
 - [ ] **Caltech SURF.** The application is a research proposal written with a
       prospective mentor, so that contact has to happen weeks before the
@@ -227,15 +259,14 @@ it is an estimate, marked est.
 
 ## March to April: decisions
 
-Decisions arrive from early March to mid-April. The Broad notifies in mid-March
-and Amgen by the end of March. MD Anderson wants an answer to its offers by
-4 March, before many programs have decided, so know your order of preference
+Decisions arrive from early March to mid-April. The Broad and Fred Hutch decide
+by mid-March, and Michigan by 5 April. MD Anderson wants an answer to its offers
+by 4 March, before many programs have decided, so know your order of preference
 before then.
 
-If nothing lands: direct emails to PIs, the NIA Alzheimer's centers, and your
-own university's summer research funding are all still live in April. A summer
-in a home-campus lab with a real project is worth more than a prestigious program
-you did not get.
+If nothing lands: direct emails to PIs and Penn State's own summer research
+funding are both still live in April. A summer with a real project, in your own
+lab or one near home, is worth more than a prestigious program you did not get.
 
 ---
 
@@ -243,11 +274,12 @@ you did not get.
 
 Four things decide this cycle, in order:
 
-1. **Letters asked for this week.** The only item gated on someone else.
+1. **Letters asked for this week**, your PI first, with the research resume
+   attached. The only item gated on someone else.
 2. **The early-January applications finished before winter break.** Seattle
    Children's closes 4 January, while you are at home.
-3. **Emails to PIs, NIH first.** NIH investigators choose their own interns, and
-   NIH is a commute from home.
+3. **Emails to PIs, NIH first, starting this week.** NIH investigators choose
+   their own interns, and NIH is a commute from home.
 4. **Not cramming 1 February.** Draft that cluster over winter break.
 
 Everything else is execution.

@@ -51,10 +51,18 @@ the same moves a Notion database makes.
   days, what to do monthly.
 - **All programs**: filter by research area, deadline month, housing, stipend,
   citizenship requirement and how competitive it is.
-- **My eligibility**: your year, GPA and citizenship, kept in the browser. The
-  three things that rule applications out before anyone reads them are in the
-  data, so every program that conflicts gets flagged with the reason, and a
-  "Fits my profile" filter appears.
+- **Fit for you**: every program carries a rating written for Jolene in
+  particular (Strong fit, Good fit, Possible or Weak fit) and a one-line reason
+  under "For you". It weighs what students actually do there against what she
+  brings: human subjects research, CITI training, EMT and medical assistant
+  hours, years of shadowing a pediatrician. Filter to strong fits, sort by fit,
+  and The Plan lists the strongest. Odds, how competitive a program is, stays a
+  separate field.
+- **My eligibility**: your year, GPA and citizenship, kept in the browser. Year
+  and citizenship start filled in; GPA is yours to type. The three things that
+  rule applications out before anyone reads them are in the data, so every
+  program that conflicts gets flagged with the reason, and a "Nothing rules me
+  out" filter appears whenever something is ruled out.
 - **Copy for Notion**: copies whatever is on screen as a Markdown table, which
   Notion pastes as a real database.
 - **My applications**: per-program status, a requirements checklist and notes.
@@ -125,7 +133,7 @@ from the page. Open the site and run it from the console:
 ```js
 await fetch("qa.js").then(r => r.text()).then(eval);
 QA.reset(); await QA.runParts(["pages", "views", "chips", "sort"]);
-await QA.runParts(["peek", "tracker", "timeline", "eligibility", "exports",
+await QA.runParts(["peek", "tracker", "timeline", "eligibility", "fit", "exports",
                    "own", "recs", "watch", "prep", "resilience"]);
 ```
 
@@ -186,12 +194,19 @@ unknown enum values, duplicate ids and relative URLs.
   },
   "requires": ["transcript", "cv", "personal-statement", "2-lor"],
   "selectivity": "high",
-  "notes": "Anything worth knowing before applying."
+  "notes": "Anything worth knowing before applying.",
+  "fit": "good",
+  "fit_note": "Why it suits her or does not, in one or two sentences to her."
 }
 ```
 
 `deadline_status` must be `confirmed`, `projected`, `unknown` or `rolling`, and
 only use `confirmed` for a date read off the program's own page.
+
+`fit` is `strong`, `good`, `possible` or `weak`, and always comes with a
+`fit_note` that says why in second person, tying something specific about the
+program to something specific she has done. The build refuses one without the
+other, and `scripts/qa.py` warns about any program still unrated.
 
 ## Keeping dates honest
 
@@ -227,7 +242,7 @@ python scripts/extract_dates.py --all    # every page
    on someone else, and the first letters are due in January.
 3. Start the applications that are **already open**, earliest deadline first:
    Seattle Children's (4 January), the Broad (10 January) and NIH SIP
-   (26 January), which is the best fit for living at home in Leesburg. The
+   (26 January), which is the best fit for living at home. The
    timeline has the rest in date order.
 4. **[Cold-email PIs](materials/templates/cold-email-pi.md)**: fifteen minutes
    each, and the thing most likely to change an outcome. At NIH it is part of

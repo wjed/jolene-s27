@@ -84,6 +84,18 @@
     moderate: ["More attainable", "green"],
   };
 
+  /* How well a program suits her in particular: what she has done (human
+   * subjects research, clinical hours, years of pediatric shadowing) against
+   * what students actually do there. Written per program in the data, with a
+   * note saying why. Odds is a separate question, how hard it is to get in.
+   * Not to be confused with fitsMe(), which is only about eligibility. */
+  const FIT_LEVELS = {
+    strong: ["Strong fit", "green", 0],
+    good: ["Good fit", "blue", 1],
+    possible: ["Possible", "yellow", 2],
+    weak: ["Weak fit", "gray", 3],
+  };
+
   const PAGES = {
     profile: { icon: "🎓", title: "My eligibility", crumb: "My eligibility" },
     add: { icon: "➕", title: "Add a program", crumb: "Add a program" },
@@ -339,13 +351,18 @@
    * availability, completeness) are what sink most applications before anyone
    * reads them. Three of those are in the data, so the site can check them. */
 
+  /* The site is built for one person, so a first visit starts with the two
+   * facts that are already known: a junior when she applies, and a US
+   * citizen. GPA stays blank; it is hers to type, and it never leaves this
+   * browser. Clearing the page empties all three for good. */
   function loadProfile() {
+    const known = { classYear: "junior", gpa: "", status: "us" };
     try {
       const raw = localStorage.getItem(PROFILE_KEY);
       const p = raw ? JSON.parse(raw) : null;
-      return p && typeof p === "object" ? p : { classYear: "", gpa: "", status: "" };
+      return p && typeof p === "object" ? p : known;
     } catch (err) {
-      return { classYear: "", gpa: "", status: "" };
+      return known;
     }
   }
 
@@ -449,6 +466,7 @@
 
   const CHIP_DEFS = [
     ["top-pick", "⭐ Top picks", (p) => p.priority_hint === "top-pick"],
+    ["strong-fit", "Strong fit for you", (p) => p.fit === "strong"],
     ["open-now", "Accepting now", (p) => urgency(p).phase === "open"],
     ["confirmed", "Date confirmed", (p) => p.deadline_status === "confirmed"],
     ["pediatrics", "Pediatrics", (p) => (p.tracks || []).includes("pediatrics")],
@@ -461,7 +479,8 @@
     ["near-home", "🏠 Can live at home", (p) => !!p.near_home],
   ];
 
-  const FIT_CHIP = ["fits-me", "Fits my profile", fitsMe];
+  // Eligibility only, and worded so it cannot be mistaken for the fit rating.
+  const FIT_CHIP = ["fits-me", "Nothing rules me out", fitsMe];
 
   function chipDef(key) {
     return key === FIT_CHIP[0] ? FIT_CHIP : CHIP_DEFS.find((c) => c[0] === key);
@@ -469,7 +488,7 @@
 
   function matches(p, skip) {
     if (query) {
-      const hay = [p.name, p.org, p.city, p.focus, p.notes, (p.tracks || []).join(" ")].join(" ").toLowerCase();
+      const hay = [p.name, p.org, p.city, p.focus, p.notes, p.fit_note, (p.tracks || []).join(" ")].join(" ").toLowerCase();
       if (!query.split(/\s+/).every((w) => hay.includes(w))) return false;
     }
     for (const key of chips) {
@@ -491,6 +510,8 @@
    * rather than the click count. */
   const SORTERS = {
     deadline: (a, b) => urgency(a).sort - urgency(b).sort,
+    // Best fit first, and the soonest deadline first within a level.
+    fit: (a, b) => fitRank(a) - fitRank(b) || urgency(a).sort - urgency(b).sort,
     name: (a, b) => a.name.localeCompare(b.name),
     org: (a, b) => a.org.localeCompare(b.org),
     city: (a, b) => a.city.localeCompare(b.city),
@@ -527,12 +548,17 @@
     }).join(" ");
   }
 
+  // A program she added herself has no rating, and sorts after every rated one.
+  function fitRank(p) { return FIT_LEVELS[p.fit] ? FIT_LEVELS[p.fit][2] : 4; }
+  function fitPill(p) { return FIT_LEVELS[p.fit] ? tag(FIT_LEVELS[p.fit][0], FIT_LEVELS[p.fit][1]) : ""; }
+
   // --------------------------------------------------------- table view
 
   const COLUMNS = [
     ["name", "Aa", "Program", "name"],
     ["org", "Aa", "Institution", "org"],
     ["deadline", "📅", "Deadline", "deadline"],
+    ["fit", "◎", "Fit", "fit"],
     ["status", "◉", "Status", "status"],
     ["tracks", "≡", "Area", null],
     ["stipend", "#", "Stipend", "stipend"],
@@ -541,7 +567,7 @@
 
   // Deadline is wide enough for "Opens in about 288d est." without the
   // ellipsis eating the est. marker, which is the part that matters.
-  const COL_W = { name: 276, org: 192, deadline: 184, status: 118, tracks: 150, stipend: 82, city: 128 };
+  const COL_W = { name: 276, org: 192, deadline: 184, fit: 104, status: 118, tracks: 150, stipend: 82, city: 128 };
 
   // The red "!" is for the eye; a screen reader gets the reasons as words.
   function conflictFlag(p) {
@@ -571,7 +597,8 @@
           </div>
         </td>
         <td><span class="cell-sub trunc" title="${esc(p.org)}">${esc(p.org)}</span></td>
-        <td class="cell-num">${p.deadline ? urgencyPill(p) : urgencyPill(p)}</td>
+        <td class="cell-num">${urgencyPill(p)}</td>
+        <td>${fitPill(p) || '<span style="color:var(--ink-4)">not rated</span>'}</td>
         <td>${statusSelect(p)}</td>
         <td><span class="taglist">${trackTags(p, 2)}</span></td>
         <td class="cell-num">${fmtMoney(p.stipend_usd) || '<span style="color:var(--ink-4)">not stated</span>'}</td>
@@ -595,7 +622,7 @@
         aria-label="Open ${esc(fullName(p))}" aria-describedby="bt-${esc(p.id)}">
         <div class="bcard__title">${iconFor(p)} ${esc(p.name)}</div>
         <div class="bcard__meta">${esc(p.org)}</div>
-        <div class="bcard__tags" id="bt-${esc(p.id)}">${urgencyPill(p)}${trackTags(p, 1)}</div>
+        <div class="bcard__tags" id="bt-${esc(p.id)}">${urgencyPill(p)}${fitPill(p)}${trackTags(p, 1)}</div>
       </div>`;
   }
 
@@ -652,7 +679,7 @@
           <div class="gcard__body">
             <div class="gcard__title">${esc(p.name)}</div>
             <div class="gcard__meta">${esc(p.org)} · ${esc(p.city)}</div>
-            <div class="gcard__tags" id="gt-${esc(p.id)}">${urgencyPill(p)}${trackTags(p, 1)}</div>
+            <div class="gcard__tags" id="gt-${esc(p.id)}">${urgencyPill(p)}${fitPill(p)}${trackTags(p, 1)}</div>
           </div>
         </div>`;
     }).join("")}</div>`;
@@ -822,6 +849,10 @@
       .sort((a, b) => (a.opens || "").localeCompare(b.opens || ""));
     const portals = DATA.programs.filter((p) => p.priority_hint === "portal");
     const late = DATA.programs.filter((p) => p.priority_hint === "late-backup");
+    // Her best matches whatever their dates, minus anything closed or sent.
+    const strongAll = DATA.programs.filter((p) => p.fit === "strong" && urgency(p).phase !== "closed")
+      .sort((a, b) => urgency(a).sort - urgency(b).sort);
+    const strong = strongAll.filter(unsent);
 
     return `
       <div class="stats">${stats}</div>
@@ -831,7 +862,12 @@
         <div>
           <p><strong>Ask for your letters of recommendation now.</strong> The first ones on your
           list are due in mid-January, faculty write them in batches before winter break, and it
-          is the only thing here that runs on somebody else's calendar.</p>
+          is the only thing here that runs on somebody else's calendar. Start with the PI of your
+          lab, then the professor of the psychology course you TA.</p>
+          <p>Send each one the research version of your resume, with the lab first and your CITI
+          training listed. <a href="#guide/cv-skeleton" data-guide="cv-skeleton">The CV guide</a>
+          has yours laid out, and <a href="#guide/recommendation-request"
+          data-guide="recommendation-request">the letters guide</a> has the email.</p>
         </div>
       </div>
 
@@ -859,6 +895,11 @@
       ${block("Highest-value applications",
         "Ranked for a rising senior aiming at pediatric and neuro research. Four of these are <strong>one application, many labs or institutions</strong>, the best return on a single essay you will find: NIH SIP, Amgen Scholars, the Leadership Alliance and Vanderbilt's umbrella program. Fred Hutch is here because it is restricted to rising seniors, which is exactly your year.",
         topPicks, dueText)}
+
+      ${block("Your strongest fits",
+        "Picked for what you bring: your lab work with participants, your CITI training, your EMT and medical assistant hours, and five years of shadowing a pediatrician. Open one to read why it suits you. Odds, how hard it is to get in, is a separate question."
+          + sentNote(strongAll, strong),
+        strong, dueText)}
 
       ${block("Due in the next 30 days", "Sorted by how little time is left.",
         within30, (p) => {
@@ -1078,13 +1119,17 @@
       <p class="note">The same two letters go to every program, so this is one conversation
       repeated, not one per application. Ask now: the first letters are due in mid-January, and
       faculty write them in batches before winter break.</p>
+      <p class="note">Your strongest two: the PI of your Depression and Anxiety Lab, and the
+      professor of the psychology course you TA, who watched you start the review sessions. The
+      Biology course you are a Learning Assistant for is a good third. For clinical programs, the
+      pediatrician you have shadowed can add a clinical letter, never in place of the research one.</p>
       ${nudge}
       ${recs.length ? `<div class="kitlist">${rows}</div>` : ""}
       <div class="props" style="max-width:560px;margin-top:14px">
         <div class="prop"><label class="prop__k" for="rc-name"><span aria-hidden="true">Aa</span>Name</label>
           <div class="prop__v"><input class="sel sel--boxed" id="rc-name" style="width:100%" placeholder="Dr. Smith"></div></div>
         <div class="prop"><label class="prop__k" for="rc-role"><span aria-hidden="true">\u{1F3AF}</span>How you know them</label>
-          <div class="prop__v"><input class="sel sel--boxed" id="rc-role" style="width:100%" placeholder="Lab PI, or BIOL 230 instructor"></div></div>
+          <div class="prop__v"><input class="sel sel--boxed" id="rc-role" style="width:100%" placeholder="Lab PI, or the psychology course you TA"></div></div>
         <div class="prop"><label class="prop__k" for="rc-email"><span aria-hidden="true">\u2709\uFE0F</span>Email</label>
           <div class="prop__v"><input class="sel sel--boxed" id="rc-email" style="width:100%" placeholder="optional"></div></div>
       </div>
@@ -1162,12 +1207,18 @@
       .map(([v, l]) => `<option value="${v}"${v === current ? " selected" : ""}>${esc(l)}</option>`)
       .join("");
 
+    // Counted over the rated programs, so one she added herself never skews it.
+    const fitCounts = Object.entries(FIT_LEVELS).map(([k, [label, color]]) => `
+      <div class="stat"><div class="stat__n">${DATA.programs.filter((p) => p.fit === k).length}</div>
+      <div class="stat__k">${tag(label, color)}</div></div>`).join("");
+
     return `
       <div class="callout callout--blue">
         <span class="ci">&#128161;</span>
         <div><p>Three things rule applications out before anyone reads them: your year,
-        a GPA floor, and citizenship. Fill these in and every program that conflicts gets
-        flagged, so you do not spend an evening on one you cannot win.</p>
+        a GPA floor, and citizenship. Your year and citizenship start filled in. Add your GPA
+        and any program with a higher floor gets flagged, so you do not spend an evening on
+        one you cannot win.</p>
         <p>This stays in your browser. Nothing is sent anywhere.</p></div>
       </div>
 
@@ -1196,7 +1247,18 @@
         Programs change their rules, and plenty do not publish a GPA floor at all, so the page
         is still the authority.</p>
         <button class="btn" id="pf-clear" type="button" style="background:none;color:var(--ink-2);border:1px solid var(--rule-strong)">Clear my details</button>
-      ` : ""}`;
+      ` : ""}
+
+      <h2 class="h2">How fit is judged</h2>
+      <p class="note">Every program also carries a fit rating, written for you rather than for
+      applicants in general. It weighs what students actually do there against what you bring:
+      a lab where you run participant sessions and code data, three CITI certificates, EMT and
+      medical assistant hours, five years of shadowing a pediatrician, and two teaching jobs.
+      Then against what you want to study: children, development, mood and anxiety, the brain,
+      clinical research. Open any program to read why, in the line headed For you.</p>
+      <div class="stats">${fitCounts}</div>
+      <p class="note">A strong fit can still be hard to get into, and a weak fit is not a bad
+      program, just a poor use of your time. How competitive each one is shows as Odds.</p>`;
   }
 
   // --------------------------------------------------------------- peek
@@ -1272,6 +1334,7 @@
 
       <div class="props">
         ${prop("◉", "Status", statusSelect(p))}
+        ${prop("🎯", "Fit for you", fitPill(p) || '<span class="empty">Not rated</span>')}
         ${prop("📅", "Deadline", p.deadline
             ? urgencyPill(p) + ` <span style="color:var(--ink-3);font-size:13px">${fmtDate(p.deadline, { month: "long", day: "numeric", year: "numeric" })}${p.deadline_status === "confirmed" ? "" : " (projected)"}</span>`
             : '<span class="prop__v empty">Not posted</span>')}
@@ -1281,7 +1344,7 @@
         ${prop("⏱️", "Runs", p.program_dates ? esc(p.program_dates) : '<span class="empty">Not posted</span>')}
         ${prop("#", "Length", p.duration_weeks ? p.duration_weeks + " weeks" : '<span class="empty">Not stated</span>')}
         ${prop("💵", "Stipend", p.stipend_note ? esc(p.stipend_note) : (fmtMoney(p.stipend_usd) || '<span class="empty">Not stated</span>'))}
-        ${prop("🏠", "Housing", esc(HOUSING_LABELS[p.housing] || p.housing) + (p.near_home ? " " + tag("commutable from Leesburg", "green") : ""))}
+        ${prop("🏠", "Housing", esc(HOUSING_LABELS[p.housing] || p.housing) + (p.near_home ? " " + tag("commutable from home", "green") : ""))}
         ${prop("🎲", "Odds", tag(sel[0], sel[1]))}
         ${prop("🛂", "Citizenship", el_.citizenship
             ? esc(CITIZENSHIP_LABELS[el_.citizenship] || el_.citizenship)
@@ -1293,7 +1356,8 @@
 
       <p class="note">${esc(p.focus)}</p>
 
-      ${p.notes ? `<div class="callout callout--blue"><span class="ci">💡</span><div><p>${esc(p.notes)}</p></div></div>` : ""}
+      ${p.fit_note ? `<div class="callout callout--${FIT_LEVELS[p.fit] ? FIT_LEVELS[p.fit][1] : "gray"}"><span class="ci" aria-hidden="true">🎯</span><div><p><strong>For you:</strong> ${esc(p.fit_note)}</p></div></div>` : ""}
+      ${p.notes ?`<div class="callout callout--blue"><span class="ci">💡</span><div><p>${esc(p.notes)}</p></div></div>` : ""}
       ${profileSet() && blockers(p).length ? `<div class="callout callout--red"><span class="ci">&#9888;</span><div><p><strong>Against your profile:</strong> ${esc(blockers(p).join(". "))}. Worth reading the page before you spend time on it.</p></div></div>` : ""}
       ${el_.notes ? `<div class="callout callout--yellow"><span class="ci">⚠️</span><div><p><strong>Eligibility:</strong> ${esc(el_.notes)}</p></div></div>` : ""}
       ${p.deadline_status === "projected" ? `<div class="callout callout--gray"><span class="ci">📌</span><div><p>This date is projected from an earlier cycle. Confirm it on the program page before relying on it.</p></div></div>` : ""}
@@ -1345,7 +1409,7 @@
 
   const SUBS = {
     plan: "Everything in deadline order, with the reusable applications first. Updated from the programs' own pages.",
-    programs: "Every program found so far. Click a row or a card to open it like a Notion page.",
+    programs: "Every program found so far, each rated for how well it fits you. Click a row or a card to open it like a Notion page.",
     tracker: "Grouped by status. Set a status anywhere and it lands here.",
     timeline: 'Opening dates and deadlines in order. <a href="data/deadlines.ics" download>Download the calendar file</a> to get all of this with reminders.',
   };
@@ -1394,6 +1458,7 @@
         <label class="sr-only" for="sort">Sort</label>
         <select class="sel" id="sort">
           <option value="deadline">Sort: deadline</option>
+          <option value="fit">Sort: fit for you</option>
           <option value="name">Sort: name</option>
           <option value="org">Sort: institution</option>
           <option value="stipend">Sort: stipend</option>
@@ -1402,7 +1467,11 @@
         </select>`;
 
       filterbar.hidden = false;
-      const chipDefs = profileSet() ? [FIT_CHIP].concat(CHIP_DEFS) : CHIP_DEFS;
+      // Shown only when her details actually rule something out: a chip that
+      // matches every row is noise, and with her year and citizenship that is
+      // the usual case.
+      const ruling = profileSet() && DATA.programs.some((p) => !fitsMe(p));
+      const chipDefs = ruling || chips.has(FIT_CHIP[0]) ? [FIT_CHIP].concat(CHIP_DEFS) : CHIP_DEFS;
       filterbar.innerHTML = chipDefs.map(([key, label]) =>
         `<button class="chip" data-chip="${key}" aria-pressed="${chips.has(key)}">${esc(label)}<span class="n">${chipCount(key)}</span></button>`).join("");
     } else {
@@ -1838,8 +1907,8 @@
     document.addEventListener("click", (ev) => {
       if (ev.target.id !== "copy-notion") return;
       const rows = visible();
-      const head = "| Program | Institution | Deadline | Status | Area | Stipend | Link |";
-      const rule = "| --- | --- | --- | --- | --- | --- | --- |";
+      const head = "| Program | Institution | Deadline | Fit | Status | Area | Stipend | Link |";
+      const rule = "| --- | --- | --- | --- | --- | --- | --- | --- |";
       const body = rows.map((p) => {
         const d = p.deadline
           ? fmtDate(p.deadline, { month: "short", day: "numeric", year: "numeric" }) +
@@ -1847,7 +1916,7 @@
           : "not posted";
         const areas = (p.tracks || []).map((t) => (TRACKS[t] ? TRACKS[t][0] : t)).join(", ");
         const cell = (v) => String(v == null ? "" : v).replace(/\|/g, "\\|");
-        return `| ${cell(p.name)} | ${cell(p.org)} | ${cell(d)} | ${cell(statusLabel(statusOf(p.id)))} | ${cell(areas)} | ${cell(fmtMoney(p.stipend_usd) || "")} | ${cell(p.url)} |`;
+        return `| ${cell(p.name)} | ${cell(p.org)} | ${cell(d)} | ${cell(FIT_LEVELS[p.fit] ? FIT_LEVELS[p.fit][0] : "")} | ${cell(statusLabel(statusOf(p.id)))} | ${cell(areas)} | ${cell(fmtMoney(p.stipend_usd) || "")} | ${cell(p.url)} |`;
       }).join("\n");
 
       const text = [head, rule, body].join("\n");

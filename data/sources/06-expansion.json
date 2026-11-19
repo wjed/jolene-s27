@@ -38,6 +38,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "possible",
+      "fit_note": "You find a mentor and write a research proposal with them before you apply, and the fields lean basic science and engineering. Worth the effort only if a neuroscience lab will take on a project like your lab's emotion tracking work.",
       "notes": "Different from every other program here: the applicant writes a research PROPOSAL with a prospective mentor rather than just an essay. That means contacting a mentor early is not optional; it is the application. Budget far more time than a standard app, but the proposal itself is excellent practice for graduate fellowships later.",
       "url_verified": true,
       "url_confidence": "high"
@@ -75,6 +77,8 @@
       },
       "requires": [],
       "selectivity": "moderate",
+      "fit": "possible",
+      "fit_note": "This AAMC list sits in its PhD section, and many of its pediatric and clinical entries are already on this site. Searching the page for Clinical and Children's still turns up a few more for you, such as Vanderbilt's clinical research internship.",
       "notes": "Complements Pathways to Science rather than duplicating it: this one is specifically medical schools, which is exactly the right slice. Worth a monthly sweep alongside the NSF REU portal.",
       "priority_hint": "portal",
       "url_verified": true,
@@ -114,7 +118,9 @@
         "personal-statement"
       ],
       "selectivity": "very-high",
-      "notes": "In Ashburn, about 15 minutes from Leesburg. Summer undergraduates now come through HHMI's Cech Fellows Program, nine weeks, so check the Cech Fellows page for the deadline and stipend. The Janelia and Loudoun County internship listed beside it is for high school students. Small and very selective, and best if you lean computational or imaging.",
+      "fit": "possible",
+      "fit_note": "Its labs, close to home, do basic neuroscience and imaging research with a strong tool-building bent, far from your human-subjects work. No prior research is required, so it could test the MD-PhD question, though the match can send you to another HHMI lab.",
+      "notes": "In Ashburn, about 15 minutes from home. Summer undergraduates now come through HHMI's Cech Fellows Program, nine weeks, so check the Cech Fellows page for the deadline and stipend. The Janelia and Loudoun County internship listed beside it is for high school students. Small and very selective, and best if you lean computational or imaging.",
       "url_verified": true,
       "url_confidence": "medium",
       "near_home": true
@@ -153,6 +159,8 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
+      "fit": "possible",
+      "fit_note": "No research or education page lists a summer program for undergraduates, though the research education page says it helps undergraduates find opportunities. If you write, ask about its childhood mental health studies, the closest match to your lab.",
       "notes": "Close to Yale, so a New Haven / Hartford trip could cover both this and the Child Study Center. Smaller applicant pool than the big-name children's hospitals.",
       "url_verified": true,
       "url_confidence": "medium"
@@ -190,6 +198,8 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
+      "fit": "possible",
+      "fit_note": "The one undergraduate summer program the department lists selects only from three Indiana partner schools, so your way in is a cold email. Write to Developmental Medicine or Pediatric Psychology faculty and lead with your mood and anxiety lab work.",
       "notes": "The department page lists training only for physicians, residents and faculty, with no undergraduate program and no application. The only way in is emailing a faculty member whose work you like. INSPIRE and the Medical Neuroscience program above are the real Indiana applications.",
       "url_verified": true,
       "url_confidence": "medium"
@@ -228,6 +238,8 @@
         "cv"
       ],
       "selectivity": "moderate",
+      "fit": "possible",
+      "fit_note": "No summer program here, just a department research page, so this means emailing faculty yourself, with no listed pay or housing in Memphis. The developmental pediatrics, autism and pediatric neuroscience work is close to your interests. Lead with the lab.",
       "notes": "Same city as St. Jude. If you are applying to POE anyway, a direct email here costs nothing, and the pediatric epilepsy work overlaps with the Boston Children's lab on your list. Likely arranged by direct contact rather than a portal.",
       "url_verified": true,
       "url_confidence": "medium"
@@ -265,6 +277,8 @@
         "personal-statement"
       ],
       "selectivity": "moderate",
+      "fit": "good",
+      "fit_note": "Look under the institute's education pages for its Research Summer Scholars program for undergraduates: you rank your top three children's hospital projects and get IRB exposure, where your CITI training helps. The catch is Kansas City with no housing.",
       "notes": "Pairs geographically with Stowers, also in Kansas City, two solid programs in a city almost nobody applies to from the coasts.",
       "url_verified": true,
       "url_confidence": "medium"
@@ -301,6 +315,8 @@
         "cv"
       ],
       "selectivity": "moderate",
+      "fit": "strong",
+      "fit_note": "Each scholar is paired with a mentor on a research study or quality improvement project at a children's hospital and shadows medical and surgical teams. Your CITI training and participant sessions carry straight over, so lead with the lab, then the EMT work.",
       "notes": "Genuine safety. Ohio now has five options on this list, Cincinnati, Nationwide, the two Case Western programs, Cleveland Clinic and this.",
       "url_verified": true,
       "url_confidence": "medium"
@@ -340,6 +356,8 @@
         "2-lor"
       ],
       "selectivity": "high",
+      "fit": "possible",
+      "fit_note": "Expect lab work and coaching on doctoral applications, since the graduate school runs it: new bench skills for you, but little use of your clinical and participant work. Housing and travel are covered.",
       "notes": "CONFIRMED on the page: opens Dec 1, 2026 and closes Mar 1, 2027, later than most of your list.",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
       "url_confidence": "medium",
@@ -383,6 +401,8 @@
         "1-lor"
       ],
       "selectivity": "moderate",
+      "fit": "good",
+      "fit_note": "Mentors come from biomedical sciences, which is strong in neuroscience, and from physical therapy and speech pathology labs, so look for one who studies people the way your lab does. It ends with a research day presentation, and your CV has none yet.",
       "notes": "Less contested than the coastal programs, with a real stipend. The page still shows summer 2026; last cycle closed Thursday, Feb 5, so expect early February and check back in December.",
       "url_verified": true,
       "url_confidence": "high"
@@ -423,6 +443,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "possible",
+      "fit_note": "By its own description this is for students headed to PhD programs, and the coaching is aimed at PhD applications. Apply only if you lean MD-PhD, and know that getting in does not promise you a neuroscience lab.",
       "notes": "CONFIRMED on the page: opened Nov 1, 2026; everything due Feb 1, 2027 at 11:59 p.m. Pacific. The page says it is intended for students pursuing PhD programs, so it is a weaker fit if you are headed to medical school. Decisions mid-March through April.",
       "url_verified": true,
       "url_confidence": "high",
@@ -461,6 +483,8 @@
         "personal-statement"
       ],
       "selectivity": "high",
+      "fit": "weak",
+      "fit_note": "The hub lists no summer program for undergraduates from other schools, and UChicago is not on this year's Leadership Alliance host list. The only way in is emailing a Comer Children's lab yourself, with no listed pay, far from home.",
       "notes": "CORRECTED: the Pritzker Summer Research Program page, with its 30 Nov 2026 deadline, is for the University of Chicago's own MEDICAL students, not undergraduates. Do not chase that date. UChicago is a Leadership Alliance member institution, so the SR-EIP application is the reliable undergraduate route in; this hub is the place to look for a direct lab contact. Comer Children's is the pediatric angle.",
       "url_verified": true,
       "url_confidence": "medium"
@@ -500,6 +524,8 @@
         "1-lor"
       ],
       "selectivity": "moderate",
+      "fit": "weak",
+      "fit_note": "The labs study regeneration and aging in zebrafish, killifish, nematodes and axolotls, all basic bench work with no patients or kids involved. Little of your human-subjects or clinical experience carries over, so spend this application elsewhere.",
       "notes": "Same town as the Jackson Laboratory, so one Bar Harbor application trip covers both, and this one is far less contested than JAX.",
       "url_verified": false,
       "url_confidence": "high",
@@ -540,6 +566,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "possible",
+      "fit_note": "Cancer research is a detour from pediatrics and mental health, and this umbrella mixes lab tracks with clinical and cancer prevention ones. If you apply, pick a clinical or prevention track, where your participant sessions and CITI training count.",
       "notes": "CONFIRMED on the page: opened Nov 16, 2026 and closes Jan 13, 2027. CATALYST is an umbrella over 20 tracks, so read the Programs page and pick the right one. Webinars Nov 19 at 11 a.m., Dec 8 at 9 a.m. and Jan 7 at 12 p.m. Central. If you get an offer, answer by Mar 4.",
       "url_verified": true,
       "url_confidence": "high",
@@ -579,6 +607,8 @@
         "personal-statement"
       ],
       "selectivity": "high",
+      "fit": "possible",
+      "fit_note": "The college summer internship here places students in cancer research labs and aims them at cancer research careers. You would learn lab work from scratch in a field outside your interests, and your human-subjects training would go mostly unused.",
       "notes": "Second UT Southwestern route alongside SURF, which is also an Amgen host, three paths into the same institution.",
       "url_verified": true,
       "url_confidence": "high"
@@ -617,6 +647,8 @@
         "1-lor"
       ],
       "selectivity": "moderate",
+      "fit": "good",
+      "fit_note": "It is open mainly to juniors in your graduating class, and its Clinical and Epi/Health Behavior projects, which use data from people, are where your human-subjects work counts. It is all cancer, not kids, so pick from those mentors when you review the list.",
       "notes": "Markedly less contested than MSK or Dana-Farber while still being an NCI comprehensive cancer center.",
       "url_verified": true,
       "url_confidence": "high"
@@ -655,6 +687,8 @@
         "personal-statement"
       ],
       "selectivity": "high",
+      "fit": "good",
+      "fit_note": "You rank three labs or departments, and the Neuro-Rehabilitation Center has interns helping therapists with patients, a good use of your EMT work. The research labs focus on Alzheimer's, ALS, Parkinson's and stroke, so expect adult neurology, not kids.",
       "notes": "Strong clinical neuroscience exposure, which is harder to find than bench neuroscience. Pairs with Phoenix Children's for one city.",
       "url_verified": true,
       "url_confidence": "medium"
@@ -695,6 +729,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "good",
+      "fit_note": "Made for premed juniors: lab or clinical research, MCAT and application advice, some shadowing. Ask for a clinical placement. One letter must come from outside your school and cover your work with underserved communities, so be sure someone can write it.",
       "notes": "One of the few genuinely pre-med-oriented programs here rather than a PhD-pipeline one, and it covers expenses and housing. Eligibility is specific, so read it first. Second Weill Cornell route alongside the pediatrics internship already on the list. The linked page is the medical education programs index, T-SRF is listed there.",
       "url_verified": true,
       "url_confidence": "medium"

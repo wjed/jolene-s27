@@ -43,7 +43,9 @@
         "2-lor"
       ],
       "selectivity": "high",
-      "notes": "CONFIRMED on the page: the application is open now and closes Tuesday, Jan 26, 2027 at 12 p.m. noon ET. Letters are due Tuesday, Feb 2 at noon ET. There is no central selection: individual NIH investigators pick their own interns and start interviewing in early January, so emailing NIH PIs whose work you like is part of applying, not an extra. Bethesda is a commute from Leesburg, which is why no housing does not matter here.",
+      "fit": "strong",
+      "fit_note": "PIs pick their own interns here, so email pediatric (NICHD) and neuro (NINDS) groups doing human-subjects work in Bethesda, a commute from home. Lead with your participant sessions and CITI training.",
+      "notes": "CONFIRMED on the page: the application is open now and closes Tuesday, Jan 26, 2027 at 12 p.m. noon ET. Letters are due Tuesday, Feb 2 at noon ET. There is no central selection: individual NIH investigators pick their own interns and start interviewing in early January, so emailing NIH PIs whose work you like is part of applying, not an extra. Bethesda is a commute from home, which is why no housing does not matter here.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
       "link_note": "This site blocks automated link checks, so the watcher cannot verify it. Open it in a browser.",
@@ -88,6 +90,8 @@
         "1-lor"
       ],
       "selectivity": "very-high",
+      "fit": "possible",
+      "fit_note": "Every host asks for interest in a PhD or MD-PhD, so apply only if you're seriously weighing MD-PhD. If you are, Howard in DC is one you could do from home, and since each host runs its own application, you can add others.",
       "notes": "BEST VALUE PER UNIT OF EFFORT. You can apply to as many US hosts as you like, and most of the essay is reusable. Each host runs its own application and opens it on its own schedule. One host is Howard University in Washington, which you could do from home. CONFIRMED on the page: Feb 1, 2027 for every US host. About 140 scholars a year across 14 hosts.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
@@ -131,6 +135,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "possible",
+      "fit_note": "Genetics and genomics lab work is the core here, and you'd be learning it from scratch, far from your child development and mood interests. If you apply anyway, choose Bar Harbor, since Farmington does not house students.",
       "notes": "CONFIRMED on the page: opened Nov 2, 2026 and due Jan 25, 2027 at 5 p.m. ET. The best total package on this list. Bar Harbor is residential and Farmington is not, so Bar Harbor is the safer pick. Virtual open houses Dec 8, Dec 14 and Jan 5.",
       "priority_hint": "top-pick",
       "url_confidence": "high",
@@ -176,6 +182,8 @@
         "2-lor"
       ],
       "selectivity": "high",
+      "fit": "possible",
+      "fit_note": "Its own page says it is not designed for clinical medicine careers, so apply only if you can honestly write as an MD-PhD applicant. If you do, rank psychology sites such as Yale, Columbia or Vanderbilt, where your lab work carries over.",
       "notes": "The portal is open now. One application ranks three of the 20 host sites, 8 to 10 weeks depending on the site. Howard University in Washington is the only host you could commute to. Johns Hopkins is not a 2027 host.",
       "priority_hint": "top-pick",
       "url_confidence": "high"
@@ -217,6 +225,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "possible",
+      "fit_note": "Projects are computational or experimental at a genomics institute, you need a PhD or MD-PhD goal, and MCAT prep courses are off limits for the nine weeks. Only worth it if MD-PhD is real; the Stanley Center's psychiatric genetics is nearest your mood work.",
       "contact": "bsrp@broadinstitute.org",
       "notes": "CONFIRMED on the page: open since Oct 26, 2026, closes Jan 10, 2027 at 11:59 p.m. ET, letters due Jan 11. The statement is five short essays, not one. Decisions by mid-March.",
       "url_confidence": "high",
@@ -257,6 +267,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "good",
+      "fit_note": "Built for rising seniors, with a workshop on applying to medical school. Pick the Clinical Research or Public Health Sciences area, where your human-subjects work counts; the catch is a cancer focus and Seattle housing you pay for yourself.",
       "contact": "surp@fredhutch.org",
       "notes": "CONFIRMED on the page: open now, due Friday, Jan 8, 2027 at midnight Pacific, which is 3 a.m. Eastern on Jan 9. Letters are due Jan 15. Decisions by mid-March. Submit early: the page warns the portal can fail under last-minute uploads and late work is not accepted.",
       "priority_hint": "top-pick",
@@ -299,6 +311,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "good",
+      "fit_note": "You can name two or three mentors in your statement, so pick from the labs studying neurodevelopment and autism, the closest thing here to your developmental interests. Expect bench or computational work you'd learn from scratch.",
       "notes": "CONFIRMED on the page: open now, and completed applications, letters included, are due Jan 15 at 11:59 p.m. Pacific, which is 2:59 a.m. Eastern on Jan 16. About 20 students a summer. Bench science, not clinical.",
       "url_confidence": "high",
       "program_dates": "Jun 7 - Aug 7, 2027"
@@ -339,6 +353,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "weak",
+      "fit_note": "Biology and Brain and Cognitive Sciences, the departments nearest your neuroscience interests, aren't in this general track; they run their own Biology/BCS program. This one recruits for MIT graduate degrees and careers in academic research or teaching.",
       "notes": "CONFIRMED on the page: apply by Jan 19, 2027. Stipend, housing and eligibility details are on the separate Application page, so confirm them there.",
       "url_confidence": "medium",
       "program_dates": "Jun 7 - Aug 7, 2027"
@@ -379,6 +395,8 @@
         "2-lor"
       ],
       "selectivity": "very-high",
+      "fit": "good",
+      "fit_note": "Placement is centralized and matched to the interests you state, so name neuroscience. It is pure lab research, though, so your patient contact and human-subjects work count for less than at a hospital-based program.",
       "notes": "CONFIRMED on the page: due Feb 1, 2027. About 25 of more than 700 applicants are accepted. Decisions in mid-March.",
       "url_confidence": "medium",
       "program_dates": "Jun 7 - Aug 13, 2027"
@@ -421,6 +439,8 @@
         "2-lor"
       ],
       "selectivity": "high",
+      "fit": "possible",
+      "fit_note": "Housing is usually covered and each site runs its own application, so distance matters less. Go past the biology filter: psychology sites are where your participant sessions count most, and neuroscience is worth a look too. Check back monthly.",
       "notes": "Not one program but a portal to hundreds. Filter by Biological Sciences and by state. Deadlines run from December to March, so check it monthly. Housing and travel are usually covered, which makes REUs cheaper than many hospital programs.",
       "priority_hint": "portal",
       "url_confidence": "high"
@@ -457,6 +477,8 @@
       },
       "requires": [],
       "selectivity": "moderate",
+      "fit": "good",
+      "fit_note": "The search filters map onto you: pick Psychology & Behavioral Sciences plus Neuroscience, then set the state to Virginia, Maryland or DC to find programs near home. Run that search once a month.",
       "notes": "Use this as a monthly sweep to catch programs this list does not have. Sort by deadline.",
       "priority_hint": "portal",
       "url_confidence": "high"

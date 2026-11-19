@@ -157,9 +157,23 @@ def main() -> int:
         if "google.com/search" in p["url"]:
             err(f"{p['id']}: still points at a search-engine placeholder")
 
+    # ---- fit: every published program should say how well it suits her
+    unrated = [p["id"] for p in programs if not p.get("fit")]
+    if unrated:
+        more = f" and {len(unrated) - 8} more" if len(unrated) > 8 else ""
+        warn(f"{len(unrated)} programs have no fit rating yet: {', '.join(unrated[:8])}{more}")
+    for p in programs:
+        note = p.get("fit_note") or ""
+        if note and not (40 <= len(note) <= 320):
+            warn(f"{p['id']}: fit_note is {len(note)} characters, want 40 to 320")
+        if re.search(r"\b(passionate|leverage|multifaceted|delve|tapestry|invaluable|cutting-edge|world-class)\b", note, re.I):
+            warn(f"{p['id']}: fit_note uses a word the copy rules ban")
+        if re.search(r"\b(GPA|Dean's List)\b", note):
+            err(f"{p['id']}: fit_note mentions GPA, which never goes on the site")
+
     # ---- copy
     for p in programs:
-        for field in ("focus", "notes"):
+        for field in ("focus", "notes", "fit_note"):
             text = p.get(field) or ""
             if "  " in text:
                 warn(f"{p['id']}: double space in {field}")
