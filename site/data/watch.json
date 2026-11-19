@@ -1,11 +1,21 @@
 {
-  "last_run": "2026-11-09",
-  "runs": 11,
+  "last_run": "2026-11-16",
+  "runs": 12,
   "checked": 106,
-  "ok": 86,
-  "blocked": 20,
+  "ok": 88,
+  "blocked": 18,
   "broken": 0,
   "changes": [
+    {
+      "name": "Summer Research Training Program",
+      "org": "UPMC Children's Hospital of Pittsburgh",
+      "what": "now mentions 2027"
+    },
+    {
+      "name": "Summer Undergraduate Research Program (SURP)",
+      "org": "Fred Hutchinson Cancer Center",
+      "what": "page changed"
+    },
     {
       "name": "Broad Summer Research Program (BSRP)",
       "org": "Broad Institute of MIT and Harvard",
@@ -17,13 +27,13 @@
       "what": "page changed"
     },
     {
-      "name": "Newborn Medicine Summer Student Research Program",
-      "org": "Boston Children's Hospital / Beth Israel Deaconess",
+      "name": "MIT Summer Research Program (MSRP)",
+      "org": "Massachusetts Institute of Technology",
       "what": "page changed"
     },
     {
-      "name": "Summer Student Program (SSP)",
-      "org": "The Jackson Laboratory",
+      "name": "Newborn Medicine Summer Student Research Program",
+      "org": "Boston Children's Hospital / Beth Israel Deaconess",
       "what": "page changed"
     },
     {
@@ -32,28 +42,13 @@
       "what": "page changed"
     },
     {
-      "name": "Amgen Scholars Program (US)",
-      "org": "14 host universities nationally",
-      "what": "page changed"
-    },
-    {
-      "name": "CURE Summer Program (Continuing Umbrella of Research Experiences)",
-      "org": "Dana-Farber/Harvard Cancer Center",
-      "what": "page changed"
-    },
-    {
-      "name": "College COACH Program",
-      "org": "Boston Children's Hospital",
-      "what": "page changed"
-    },
-    {
       "name": "Heart, Lung and Blood (HLB) Summer Research Program",
       "org": "Case Western Reserve University School of Medicine",
       "what": "page changed"
     },
     {
-      "name": "Mechanistic Biology Summer Program (MBSP)",
-      "org": "Memorial Sloan Kettering Cancer Center",
+      "name": "Research Trainees Summer Program",
+      "org": "Children's National Hospital: Center for Precision Medicine & Genomics",
       "what": "page changed"
     },
     {
@@ -62,12 +57,17 @@
       "what": "page changed"
     },
     {
-      "name": "Summer Research Training Program (SRTP)",
-      "org": "UCSF School of Medicine",
+      "name": "Summer Undergraduate Research Program (SURP)",
+      "org": "Icahn School of Medicine at Mount Sinai",
+      "what": "page changed"
+    },
+    {
+      "name": "Summer Research Internships (Office of Trainee Affairs)",
+      "org": "Nationwide Children's Hospital / Abigail Wexner Research Institute",
       "what": "page changed"
     }
   ],
-  "changes_total": 31,
+  "changes_total": 22,
   "blocked_pages": [
     {
       "name": "CHOP Research Institute Summer Scholars Program (CRISSP)",
@@ -150,19 +150,9 @@
       "url": "https://professional.heart.org/en/research-programs/aha-funding-opportunities"
     },
     {
-      "name": "Summer Undergraduate Research Training (SMART) Program",
-      "org": "Baylor College of Medicine / Texas Children's Hospital",
-      "url": "https://www.bcm.edu/education/graduate-school-of-biomedical-sciences/degree-programs-and-certificates/smart-program"
-    },
-    {
       "name": "Undergraduate Clinical Scholars Program (UCSP)",
       "org": "Perelman School of Medicine, University of Pennsylvania",
       "url": "https://www.ucspinfo.org/application.html"
-    },
-    {
-      "name": "Undergraduate Research Program (URP)",
-      "org": "Cold Spring Harbor Laboratory",
-      "url": "https://www.cshl.edu/education/undergraduate-research-program/"
     },
     {
       "name": "Undergraduate research fellowships",

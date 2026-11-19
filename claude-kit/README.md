@@ -187,8 +187,16 @@ experience is genuinely unusual and clinical programs should hear about it. But
 for research applications, the Depression and Anxiety Lab is the thing that
 answers the question they are actually asking, so it goes first.
 
+**Make a research version of your resume.** The one you have now is built for
+clinical jobs: the lab is one line near the bottom and your CITI training is
+not on it. For these applications the lab goes at the top, with real bullets,
+and the CITI certificates go near it. Claude will offer to make it with you,
+and it should be ready before your letter requests go out, since it goes in
+the packet you send your recommenders.
+
 ## If something is wrong
 
-Your profile started from your LinkedIn in October 2026. If a date or a title
+Your profile started from your LinkedIn in October 2026 and was checked against
+your resume in November 2026. If a date or a title
 is off, tell Claude and it will give you a corrected profile to save, or fix it
 in `jolene-profile.md` yourself. That file is the one Claude trusts.

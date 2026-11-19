@@ -55,7 +55,7 @@ seriously want, and three to five to NIH labs before winter break.
 >
 > [PROGRAM NAME] pays its interns a stipend, so I would not need funding from
 > the lab. I am free from [START DATE] to [END DATE], full time. [IF YOU COULD
-> COMMUTE: I live in Leesburg, so I do not need housing.]
+> COMMUTE: I live in Northern Virginia, so I do not need housing.]
 >
 > Are you taking a summer student in 2027? If the program application should name
 > a preferred mentor, I would like to name you, but only if that would be

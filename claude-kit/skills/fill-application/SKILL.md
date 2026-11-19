@@ -43,7 +43,7 @@ compare with the profile:
   raise it.
 - **Residency or home school.** Some programs take only residents of one city
   or state, or only students of the host or partner universities. Her
-  permanent address is in Leesburg, Virginia, and she studies at Penn State,
+  permanent address is in Loudoun County, Virginia, and she studies at Penn State,
   in Pennsylvania.
 - **Anything else the page requires**, such as prior research experience (hers
   is human-subjects psychology, so a demand for bench or wet-lab experience is
@@ -143,9 +143,14 @@ agreed to host me."
 If you cannot find a mentor list, say so rather than writing a vague paragraph.
 
 **Research experience.** Lead with the Depression and Anxiety Lab: participant
-sessions, data coding, technology-based emotion tracking, and her own detail
-from *What she runs herself* when the profile has it. Mention the CITI human
-subjects training, because most undergraduate applicants do not have it.
+sessions, data coding, technology-based emotion tracking, protocol
+troubleshooting, and her own detail from *What she runs herself* when the
+profile has it. Mention the CITI human subjects training, because most
+undergraduate applicants do not have it.
+
+**Clinical experience.** Use the profile's entries as written: the EMT calls,
+the medical assistant summer, the sports medicine work and the pediatric
+shadowing. Her certification is EMT-Basic, so never write paramedic.
 
 **Short answers** such as career goals or why research: draw on *Research
 interests, in her words*. Use the real reason only if the profile says it can

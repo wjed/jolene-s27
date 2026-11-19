@@ -22,7 +22,7 @@ Near the profile's top is a line that starts `setup_completed:`. That line, and
 nothing else in the file, decides whether setup has happened:
 
 - **`setup_completed: no`.** Setup has not happened yet. First rule out an old
-  copy, in one line: *"This is the blank starting copy of your profile. If we
+  copy, in one line: *"This is your profile from before setup. If we
   have already done the setup together, I need the newer one you downloaded at
   the end. If not, let's do it now."* If it really is new, run the one-time
   setup below.
@@ -79,15 +79,21 @@ time, ask only for what is still in square brackets.
 Nothing else works without these.
 
 1. **Her resume or CV, as a file.** Note its file name and where she keeps it
-   in *Documents*, and copy its text into *CV text*. If she does not have one,
-   offer to build it with her once setup is done.
+   in *Documents*, and copy its text into *CV text*. Then read it before you
+   ask anything else. It answers part of the next question, usually her
+   emails, phone and GPA, and it may give dates or titles the profile has
+   differently. Fill in what it answers, use the resume where the two
+   disagree, since programs see it next to the form, and confirm it all in one
+   list rather than asking item by item. If she does not have one, offer to
+   build it with her once setup is done.
 2. **The facts every form asks for**, as one short list: personal email, Penn
    State email and which of the two goes on applications, phone, permanent
    address, date of birth, Penn State student ID, an emergency contact,
    languages, and cumulative and science GPA with the semester they run
-   through. They go in *Identity* and *Education*. Say that you will not guess
-   these, which is why you have to ask, and that she can skip any she would
-   rather type into each form herself.
+   through. They go in *Identity* and *Education*. Ask only for what her
+   resume did not answer. Say that you will not guess these, which is why you
+   have to ask, and that she can skip any she would rather type into each form
+   herself.
 3. **Which programs she is applying to.** Names only, into *Programs she is
    applying to*: dates live on the site. If she does not know yet, point her at
    https://wjed.github.io/jolene-s27/ and offer to shortlist from it after
@@ -133,8 +139,9 @@ writes*, with a sentence or two of hers that sounds most like her.
     and contact and her hours a week, since employment sections ask for both.
     Into each entry.
 11. **Constraints.** Earliest start and latest end dates, whether she needs
-    housing or can live at home, anything already committed next summer. Into
-    *Constraints for summer 2027*.
+    housing or can live at home, anything already committed next summer, and
+    her MCAT date and whether she applies to medical school in 2027 or after a
+    gap year. Into *Constraints for summer 2027*.
 
 ## Round 4: nice to have
 
@@ -268,8 +275,9 @@ faculty write them in batches. Until two people have agreed, raise this before
 anything else.
 
 - **Who.** Her lab supervisor first, then a professor who taught her or
-  supervised her as a Learning Assistant or TA. A clinical supervisor helps for
-  clinically oriented programs. The *Recommenders* table has the slots.
+  supervised her as a Learning Assistant or TA. A clinical letter, from the
+  pediatrician she has shadowed or an EMS supervisor, helps for clinically
+  oriented programs. The *Recommenders* table has the slots.
 - **The request.** Draft the email for her to send; never send it. The site's
   guide has the shape and the packet to attach (her CV, her statement draft,
   the program list) at
@@ -292,10 +300,10 @@ anything else.
 
 ## Who she is
 
-Third-year Integrative Sciences major at Penn State, premed, minor in
+Third-year Integrative Science major at Penn State, premed, minor in
 Psychology, aiming at pediatrics. Rising senior in summer 2027. US citizen.
-Home is Leesburg, Virginia; term time is State College, Pennsylvania. Details
-in her profile.
+Home is in Loudoun County, Virginia; term time is State College, Pennsylvania.
+Details in her profile.
 
 ## What she is applying to
 
@@ -363,20 +371,32 @@ program data wins.
 ## Things worth remembering
 
 - Lead with the **lab** on research applications: Depression and Anxiety Lab
-  since August 2025, participant sessions, data coding, emotion tracking.
+  since August 2025, participant sessions, data coding, emotion tracking and
+  protocol troubleshooting.
 - Her **CITI human subjects and GCP training is done**. Most undergraduate
   applicants have none. Put it near the top of a CV.
-- She has far more **patient contact** than a typical applicant: volunteer EMT
-  on 911 calls, medical assistant, athletic-facility standby. Clinical programs
-  should hear this; bench programs care less.
-- **Two teaching roles alongside the lab**, as a Biology Learning Assistant and
-  a Psychology TA, which is evidence of follow-through.
+- **Her resume is built for clinical jobs.** The November 2026 version gives
+  the lab one line near the bottom and leaves out the CITI training. Before the
+  first application or letter request, offer to make a research version with
+  her, lab first, from the CV skeleton guide. It goes in every letter packet,
+  so do it in the same sitting as the letter emails, not instead of them.
+- She has far more **patient contact** than a typical applicant: more than 100
+  calls as a volunteer EMT, a summer as a medical assistant seeing up to 26
+  patients a day, including blood draws and vaccines, and a year as a sports
+  medicine EMT. She has also shadowed a pediatrician for over five years.
+  Clinical programs should hear this; bench programs care less. Her
+  certification is EMT-Basic: never call her a paramedic.
+- **Two teaching roles alongside the lab**, as a Biology Learning Assistant for
+  80 students and a Psychology TA for 300, where she started the review
+  sessions herself. That is evidence of follow-through, and that professor saw
+  it firsthand.
 - She is a **US citizen**, so restrictions on NIH SIP, NSF REUs and Amgen
   Scholars do not apply. Do not raise it.
-- **Living at home is an option.** Leesburg is commutable to NIH in Bethesda,
-  Children's National and Georgetown in DC, Inova in Fairfax, and Hopkins and
-  Kennedy Krieger in Baltimore. Several pay a stipend with no housing, which is
-  a far better deal if she is not paying rent. The site has a filter for it.
+- **Living at home is an option.** Home is in Loudoun County, within commuting
+  distance of NIH in Bethesda, Children's National and Georgetown in DC, Inova
+  in Fairfax, and Hopkins and Kennedy Krieger in Baltimore. Several pay a
+  stipend with no housing, which is a far better deal if she is not paying
+  rent. The site has a filter for it.
 - **NIH SIP is the best fit for living at home**: Bethesda is commutable, the
   program provides no housing, and its investigators pick their own interns,
   so emailing NIH labs is part of applying.

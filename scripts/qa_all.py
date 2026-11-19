@@ -214,13 +214,15 @@ def qa_kit():
     names = z.namelist()
     check("zip has six files", len(names) == 6, len(names))
 
-    # zip contents must match the sources byte for byte
+    # zip contents must match the sources byte for byte, once line endings are
+    # normalized the way kit.py does it. A Windows checkout has CRLF sources and
+    # the zip is LF everywhere, so a raw compare failed on every Windows run.
     mismatched = []
     for n in names:
         src = kit / n.replace("jolene-claude-kit/", "")
         if not src.is_file():
             mismatched.append(n + " (missing source)")
-        elif z.read(n) != src.read_bytes():
+        elif z.read(n) != src.read_bytes().replace(b"\r\n", b"\n"):
             mismatched.append(n + " (differs)")
     check("zip matches sources", not mismatched, mismatched)
 

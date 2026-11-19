@@ -43,7 +43,7 @@ in, use her own lab detail in place of the stock sentence below.
 >
 > Dear Dr. [LAST NAME],
 >
-> I am a third-year Integrative Sciences major at Penn State applying to
+> I am a third-year Integrative Science major at Penn State applying to
 > [PROGRAM NAME] for summer 2027. I am writing because I would like to work in
 > your lab.
 >
